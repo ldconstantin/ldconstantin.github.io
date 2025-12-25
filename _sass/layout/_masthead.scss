@@ -51,17 +51,34 @@
     padding: 0;
     clear: both;
     list-style-type: none;
+
+    display: flex;
+    flex-wrap: nowrap;      // impede que quebre linha
+    gap: 1em;               // espaçamento horizontal controlado
   }
 }
 
 .masthead__menu-item {
+  margin-left: 0.6em;
+  margin-right: 0.8em; // espaçamento entre itens
   background-color: var(--global-bg-color);
-  display: block;
+  display: inline-block;
   list-style-type: none;
   white-space: nowrap;
 
   &--lg {
     padding-right: 2em;
     font-weight: 700;
+  }
+  .persist{
+    margin-left: 1em;
+  }
+  &--lang {
+    font-size: 0.9em;
+    margin-left: 0.5em;
+  }
+  .lang-active {
+    font-weight: 700;
+    color: var(--accent-color);
   }
 }

@@ -98,3 +98,16 @@
 .notice--danger {
   @include notice($danger-color);
 }
+
+.callout {
+  padding: 0.9rem;
+  border-left: 4px solid #f39c12;
+  background: rgba(243, 156, 18, 0.08);
+  margin: 1rem 0;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+.callout--warning {
+  border-color: #f39c12;
+}

@@ -8,16 +8,14 @@
 
 # Basic Site Settings
 locale: "pt-BR"
-site_theme: "if" # Currently available options are "default", "air"
+site_theme: "air_green" # Currently available options are "default", "air"
 title: "Leonardo D. Constantin"
 title_separator: "-"
 name: &name "Leonardo D. Constantin"
 
 description: &description "Website acadêmico e pessoal" # Update this with a general description of your site, this is the default if not overridden by a page
-url:
-  https://ldconstantin.github.io # The base hostname & protocol for your site e.g. "https://[your GitHub username].github.io",
-  # or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
-baseurl: "" # the subpath of your site, e.g. "/blog"
+url: "https://ldconstantin.github.io"
+baseurl: ""
 repository: "ldconstantin/ldconstantin.github.io"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
@@ -26,7 +24,7 @@ repository: "ldconstantin/ldconstantin.github.io"
 author:
   # Biographic information
   avatar: "profile.png"
-  name: "Leonardo D Constantin"
+  name: "Leonardo D. Constantin"
   pronouns: # example: "she/her"
   bio: "Professor de Ciência da Computação"
   location: "Passo Fundo, RS, Brasil"
@@ -59,16 +57,16 @@ author:
 
   # Social media
   artstation: # Username
-  bluesky: # Replace this with you Bluesky username
-  facebook: # ldconstantin
+  bluesky: # Username
+  facebook: # Username
   flickr: # Username
   foursquare: # Username
   goodreads: # Username
   google_plus: # Username
   keybase: # Username
-  instagram: # ldconstantin
+  instagram: # Username
   lastfm: # Username
-  linkedin: ldconstantin
+  linkedin: leodeliyannis
   mastodon: # url
   medium: # url
   pinterest: # Username
@@ -76,12 +74,12 @@ author:
   steam: # Username
   telegram: # url
   tumblr: # Username
-  twitter: # Username for X / Twitter
+  twitter: # Username
   vine: # Username
   weibo: # Username
   wikipedia: # Username
   xing: # Username
-  youtube: # ldconstantin
+  youtube: # Username
   zhihu: # Username
 
 # Publication Category - The following the list of publication categories and their headings
@@ -215,75 +213,65 @@ kramdown:
   enable_coderay: false
 
 # These settings control the types of collections used by the template
+collections_dir: _collections
+
 collections:
   teaching:
     output: true
-    permalink: /:collection/:path/
-  publications:
+
+  research:
     output: true
-    permalink: /:collection/:path/
-  portfolio:
-    output: false
-    permalink: /:collection/:path/
-  talks:
+
+  extension:
     output: true
-    permalink: /:collection/:path/
+
+  activities:
+    output: true
+
+  materials:
+    output: true
 
 # These settings control how pages and collections are included in the site
 defaults:
-  # _posts
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: single
-      author_profile: true
-      read_time: true
-      comments: true
-      share: true
-      related: true
-  # _pages
+  # Pages
   - scope:
       path: ""
       type: pages
     values:
       layout: single
       author_profile: true
-  # _teaching
+
+  # Teaching PT
   - scope:
       path: ""
       type: teaching
     values:
       layout: single
-      author_profile: true
-      share: true
-      comments: true
-  # _publications
+      author_profile: false
+
+  # Publications
   - scope:
       path: ""
       type: publications
     values:
       layout: single
       author_profile: true
-      share: true
-      comments: true
-  # _portfolio
+
+  # Activities
   - scope:
       path: ""
-      type: portfolio
+      type: activities
     values:
       layout: single
       author_profile: true
-      share: true
-      comment: true
-  # _talks
+
+  # Materials
   - scope:
       path: ""
-      type: talks
+      type: materials
     values:
-      layout: talk
+      layout: single
       author_profile: true
-      share: true
 
 # Sass/SCSS
 sass:

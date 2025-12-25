@@ -7,13 +7,17 @@
         <button><span class="navicon"></span></button>
         <ul class="visible-links">
           <li class="masthead__menu-item masthead__menu-item--lg persist"><a href="{{ base_path }}/">{{ site.title }}</a></li>
-          {% for link in site.data.navigation.main %}
-            {% if link.url contains 'http' %}
-              {% assign domain = '' %}
-            {% else %}
-              {% assign domain = base_path %}
-            {% endif %}
-            <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
+          {% assign is_pt = page.url contains '/pt/' %}
+          {% for item in site.data.navigation.items %}
+            <li class="masthead__menu-item">
+              <a href="{% if is_pt %}{{ item.url_pt }}{% else %}{{ item.url_en }}{% endif %}">
+                {% if is_pt %}
+                  {{ item.pt }}
+                {% else %}
+                  {{ item.en }}
+                {% endif %}
+              </a>
+            </li>
           {% endfor %}
           <li id="theme-toggle" class="masthead__menu-item persist tail">
             <a role="button" aria-labelledby="theme-icon"><i id="theme-icon" class="fa-solid fa-sun" aria-hidden="true" title="toggle theme"></i></a>
