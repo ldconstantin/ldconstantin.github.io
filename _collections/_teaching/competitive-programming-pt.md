@@ -4,12 +4,11 @@ lang: pt
 collection: teaching
 discipline: competitive-programming
 title: "Programação Competitiva"
-date: 2025-08-04
 status: current   # current | past | study
 permalink: /ensino/programacao-competitiva/
 type: "Bacharelado em Ciência da Computação"
 venue: "Instituto Federal Sul-rio-grandense"
-date: 2025-08-04
+date: 2026-02-09
 location: "Passo Fundo, RS, Brasil"
 ---
 

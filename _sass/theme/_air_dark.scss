@@ -6,7 +6,7 @@
 $primary-color              : #00adb5;
 $dark-primary-color         : mix(#000, $primary-color, 40%);
 $darker-primary-color       : mix(#000, $primary-color, 60%);
-$light-primary-color        : mix(#fff, $primary-color, 50%);
+$light-primary-color        : mix(#000, $primary-color, 50%);
 
 $background                 : #252a34;
 $background-light           : mix(#fff, $background, 20%);

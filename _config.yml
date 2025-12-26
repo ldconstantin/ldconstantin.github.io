@@ -8,7 +8,7 @@
 
 # Basic Site Settings
 locale: "pt-BR"
-site_theme: "air_green" # Currently available options are "default", "air"
+site_theme: "forest" # available themes are "default", "air", "dirt", "forest", "mint", "sunrise" and "contrast"
 title: "Leonardo D. Constantin"
 title_separator: "-"
 name: &name "Leonardo D. Constantin"
