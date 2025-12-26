@@ -5,7 +5,7 @@ collection: teaching
 discipline: competitive-programming
 title: "Programação Competitiva"
 date: 2025-08-04
-status: past   # current | past | study
+status: current   # current | past | study
 permalink: /ensino/programacao-competitiva/
 type: "Bacharelado em Ciência da Computação"
 venue: "Instituto Federal Sul-rio-grandense"
