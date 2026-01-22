@@ -2,7 +2,6 @@
 layout: archive
 title: "Teaching"
 permalink: /en/teaching/
-author_profile: true
 ---
 
 ### Current courses (2026/1)

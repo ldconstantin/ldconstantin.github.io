@@ -3,7 +3,6 @@ layout: archive
 collection: teaching
 title: "Ensino"
 permalink: /ensino/
-author_profile: true
 ---
 
 Estas são algumas das disciplinas ministradas ou estudadas por mim. <br>
