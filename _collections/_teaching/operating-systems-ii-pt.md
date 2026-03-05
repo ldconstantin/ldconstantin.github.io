@@ -24,14 +24,17 @@ alterações ao longo do semestre.
 ## Ementa
 
 Programação concorrente. Algoritmos de escalonamento de processos. Criação e 
-gerência de processos concorrentes. Criação e gerência de processos concorrentes. 
+gerência de processos concorrentes. 
 Exclusão mútua. Sistemas multithreading. Introdução a programação cliente-servidor. 
 Programação em Sockets. Sistemas operacionais de rede e distribuídos. Sistemas 
 operacionais de tempo real.
 
 ## Materiais & notas
 
-- 📘 Notas de estudo: *(em elaboração)*
+- 📘 Notas de aula:
+
+  - [Aula 01 — Concorrência: condição de corrida e exclusão mútua](/ensino/sistemas-operacionais-ii/aula-01-concorrencia/)
+
 - 📝 Lista de referências: *(em elaboração)*
 
 ## Bibliografia
