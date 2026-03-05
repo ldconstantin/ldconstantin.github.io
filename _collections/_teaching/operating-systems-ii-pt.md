@@ -31,6 +31,9 @@ operacionais de tempo real.
 
 ## Materiais & notas
 
+- 🐧 Máquina virtual Linux - Crunchbang++ (Debian, Openbox)
+[Clique aqui para acessar a VM](https://drive.google.com/drive/folders/1nZ_wcUYjC9bjxpQMTmoRPEySMRajN1uJ?usp=drive_link)
+
 - 📘 Notas de aula:
 
   - [Aula 01 — Concorrência: condição de corrida e exclusão mútua](/ensino/sistemas-operacionais-ii/aula-01-concorrencia/)
