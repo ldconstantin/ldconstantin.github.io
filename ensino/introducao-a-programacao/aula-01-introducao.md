@@ -2,7 +2,7 @@
 layout: single
 lang: pt
 collection: teaching
-title: "Aula 01 — Algoritmos sequenciais: Entrada → Processamento → Saída"
+title: "Aula 01 — Introdução à Programação com JavaScript"
 status: current
 permalink: /ensino/introducao-a-programacao/aula-01-introducao/
 type: "Técnico em Manutenção e Suporte em Informática (TMSI)"
@@ -18,7 +18,7 @@ Disciplina a ser ministrada no semestre 2026/1 para o curso técnico **Técnico 
 Este material apresenta os tópicos e exercícios iniciais. Ajustes de cronograma e referências poderão ocorrer.
 </aside>
 
-## Aula 01 — Algoritmos sequenciais: Entrada → Processamento → Saída
+## Aula 01 — Introdução à Programação com JavaScript
 
 ### Objetivo
 Apresentar o conceito de algoritmo sequencial e praticar a transcrição do raciocínio lógico para programas simples em JavaScript executados no navegador. Usaremos HTML como interface (campos de entrada e área de saída) para reduzir a fricção de `stdin`/`stdout` e focar em **variáveis**, **atribuições** e **expressões aritméticas**.
