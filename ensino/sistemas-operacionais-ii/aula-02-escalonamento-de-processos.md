@@ -1,4 +1,3 @@
-````markdown
 ---
 layout: single
 lang: pt
@@ -320,4 +319,3 @@ int main() {
 - Notas e implementações didáticas disponíveis em materiais de apoio do curso.
 
 ---
-````
