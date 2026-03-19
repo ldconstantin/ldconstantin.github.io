@@ -36,6 +36,7 @@ operacionais de tempo real.
 - 📘 Notas de aula:
   - [Aula 01 — Concorrência: condição de corrida e exclusão mútua](/ensino/sistemas-operacionais-ii/aula-01-concorrencia/)
   - [Aula 02 — Algoritmos de escalonamento de processos](/ensino/sistemas-operacionais-ii/aula-02-escalonamento-de-processos/)
+  - [Aula 03 — Modelos de concorrência](/ensino/sistemas-operacionais-ii/aula-03-modelos-de-concorrencia/)
 
 ## Bibliografia
 
