@@ -4,7 +4,7 @@ lang: pt
 collection: teaching
 title: "Aula 03 — Programação concorrente, modelos de concorrência e controle de concorrência"
 status: current
-permalink: /ensino/sistemas-operacionais-ii/aula-03-programacao-concorrente/
+permalink: /ensino/sistemas-operacionais-ii/aula-03-modelos-de-concorrencia/
 type: "Bacharelado em Ciência da Computação"
 venue: "Instituto Federal Sul-rio-grandense"
 date: 2026-02-26
