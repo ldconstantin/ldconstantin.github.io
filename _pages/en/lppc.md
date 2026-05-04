@@ -4,7 +4,7 @@ ref: lppc
 layout: archive
 title: "LPPC — Passo Fundo Competitive Programming League"
 permalink: /en/lppc/
-author_profile: true
+author_profile: false
 ---
 
 The **LPPC** is an open competitive programming training initiative in Passo Fundo.
