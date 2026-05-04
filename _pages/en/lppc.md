@@ -19,9 +19,9 @@ Its focus is to prepare students for competitions such as:
 
 The LPPC holds weekly competitive programming training sessions.
 
-Meetings usually happen on **Saturday mornings**.
+📅 **Saturday mornings**
 
-The standard time is **08:30 to 11:30**.
+🕘 **Standard time:** 08:30 to 11:30
 
 Format:
 
@@ -39,13 +39,13 @@ Participants should bring their own computer when possible.
 
 ## Next Meeting
 
-**Place:** IFSul — Campus Passo Fundo, during Arena Games.
+📍 **Place:** IFSul — Campus Passo Fundo, during Arena Games.
 
-**Date:** Saturday, May 9, 2026.
+🗓️ **Date:** Saturday, May 9, 2026.
 
-**Time:** 09:00 to 11:30, exceptionally.
+🕘 **Time:** 09:00 to 11:30, exceptionally.
 
-**Room:** to be announced.
+🏫 **Room:** to be announced.
 
 More information and updates will be posted on Discord.
 
@@ -61,7 +61,7 @@ No previous experience is required.
 
 Join the LPPC Discord:
 
-[https://discord.gg/B9htKTd3uJ](https://discord.gg/B9htKTd3uJ)
+👉 [https://discord.gg/B9htKTd3uJ](https://discord.gg/B9htKTd3uJ)
 
 There you will find:
 

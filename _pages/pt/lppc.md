@@ -19,9 +19,9 @@ O foco é preparar estudantes para competições como:
 
 A LPPC realiza treinos semanais de programação competitiva.
 
-Os encontros acontecem, em geral, aos **sábados pela manhã**.
+📅 **Sábados pela manhã**
 
-O horário padrão é das **08:30 às 11:30**.
+🕘 **Horário padrão:** 08:30 às 11:30
 
 Formato:
 
@@ -39,13 +39,13 @@ Também é recomendado trazer computador próprio, sempre que possível.
 
 ## Próximo encontro
 
-**Local:** IFSul — Câmpus Passo Fundo, durante o Arena Games.
+📍 **Local:** IFSul — Câmpus Passo Fundo, durante o Arena Games.
 
-**Data:** sábado, 9 de maio de 2026.
+🗓️ **Data:** sábado, 9 de maio de 2026.
 
-**Horário:** 09:00 às 11:30, excepcionalmente.
+🕘 **Horário:** 09:00 às 11:30, excepcionalmente.
 
-**Sala:** a definir.
+🏫 **Sala:** a definir.
 
 Mais informações e atualizações serão publicadas no Discord.
 
@@ -61,7 +61,7 @@ Não é necessário ter experiência prévia.
 
 Entre no Discord da LPPC:
 
-[https://discord.gg/B9htKTd3uJ](https://discord.gg/B9htKTd3uJ)
+👉 [https://discord.gg/B9htKTd3uJ](https://discord.gg/B9htKTd3uJ)
 
 Lá você encontra:
 
