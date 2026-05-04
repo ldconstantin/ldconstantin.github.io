@@ -9,33 +9,7 @@ author_profile: true
 
 A **LPPC** é uma iniciativa aberta de treinamento em programação competitiva em Passo Fundo.
 
-O foco é preparar estudantes para competições como:
-
-- OBI (Olimpíada Brasileira de Informática)
-- Maratona SBC de Programação
-- ICPC (International Collegiate Programming Contest)
-
-## Encontros semanais
-
-A LPPC realiza treinos semanais de programação competitiva.
-
-📅 **Sábados pela manhã**
-
-🕘 **Horário padrão:** 08:30 às 11:30
-
-Formato:
-
-- breve introdução
-- resolução de problemas
-- discussão das soluções
-
-Os encontros são pensados para diferentes níveis.
-
-Há espaço para iniciantes e para estudantes mais experientes.
-
-Solicita-se que os participantes cheguem com antecedência.
-
-Também é recomendado trazer computador próprio, sempre que possível.
+O foco é preparar estudantes para a OBI, a Maratona SBC de Programação e o ICPC.
 
 ## Próximo encontro
 
@@ -47,28 +21,46 @@ Também é recomendado trazer computador próprio, sempre que possível.
 
 🏫 **Sala:** a definir.
 
-Mais informações e atualizações serão publicadas no Discord.
+👉 **Discord:** [https://discord.gg/B9htKTd3uJ](https://discord.gg/B9htKTd3uJ)
+
+As atualizações sobre sala e encontros serão publicadas no Discord.
+
+## Encontros semanais
+
+📅 **Quando:** sábados pela manhã.
+
+🕘 **Horário padrão:** 08:30 às 11:30.
+
+**Formato:**
+
+- breve introdução
+- resolução de problemas
+- discussão das soluções
+
+Chegue com antecedência.
+
+Traga seu notebook, se possível.
 
 ## Para quem é
 
-- Estudantes do ensino médio, técnico ou superior
-- Pessoas interessadas em algoritmos e resolução de problemas
-- Quem quer começar ou evoluir em programação competitiva
+- estudantes do ensino médio, técnico ou superior
+- pessoas interessadas em algoritmos
+- quem quer começar ou evoluir em programação competitiva
 
 Não é necessário ter experiência prévia.
 
-## Participe
+Há espaço para iniciantes e para estudantes mais experientes.
 
-Entre no Discord da LPPC:
+## No Discord
 
-👉 [https://discord.gg/B9htKTd3uJ](https://discord.gg/B9htKTd3uJ)
+Você encontra:
 
-Lá você encontra:
-
-- avisos sobre os encontros
+- avisos dos encontros
 - materiais de estudo
 - desafios e discussões
 
+👉 [https://discord.gg/B9htKTd3uJ](https://discord.gg/B9htKTd3uJ)
+
 A LPPC está em construção.
 
-A comunidade cresce com a participação de quem está disposto a praticar.
+A comunidade cresce com quem pratica junto.

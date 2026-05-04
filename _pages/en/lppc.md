@@ -9,33 +9,7 @@ author_profile: true
 
 The **LPPC** is an open competitive programming training initiative in Passo Fundo.
 
-Its focus is to prepare students for competitions such as:
-
-- OBI (Brazilian Olympiad in Informatics)
-- Maratona SBC de Programação
-- ICPC (International Collegiate Programming Contest)
-
-## Weekly Meetings
-
-The LPPC holds weekly competitive programming training sessions.
-
-📅 **Saturday mornings**
-
-🕘 **Standard time:** 08:30 to 11:30
-
-Format:
-
-- brief introduction
-- problem solving
-- solution discussion
-
-The meetings are designed for different levels.
-
-There is room for beginners and for more experienced students.
-
-Participants are asked to arrive early.
-
-Participants should bring their own computer when possible.
+Its focus is to prepare students for OBI, Maratona SBC de Programação, and ICPC.
 
 ## Next Meeting
 
@@ -47,28 +21,46 @@ Participants should bring their own computer when possible.
 
 🏫 **Room:** to be announced.
 
-More information and updates will be posted on Discord.
+👉 **Discord:** [https://discord.gg/B9htKTd3uJ](https://discord.gg/B9htKTd3uJ)
+
+Room updates and meeting announcements will be posted on Discord.
+
+## Weekly Meetings
+
+📅 **When:** Saturday mornings.
+
+🕘 **Standard time:** 08:30 to 11:30.
+
+**Format:**
+
+- brief introduction
+- problem solving
+- solution discussion
+
+Arrive early.
+
+Bring your laptop if possible.
 
 ## Who It Is For
 
-- High school, technical, or higher education students
-- People interested in algorithms and problem solving
-- Anyone who wants to start or improve in competitive programming
+- high school, technical, or higher education students
+- people interested in algorithms
+- anyone who wants to start or improve in competitive programming
 
 No previous experience is required.
 
-## Join
+There is room for beginners and for more experienced students.
 
-Join the LPPC Discord:
+## On Discord
 
-👉 [https://discord.gg/B9htKTd3uJ](https://discord.gg/B9htKTd3uJ)
+You will find:
 
-There you will find:
-
-- announcements about meetings
+- meeting announcements
 - study materials
 - challenges and discussions
 
+👉 [https://discord.gg/B9htKTd3uJ](https://discord.gg/B9htKTd3uJ)
+
 The LPPC is under construction.
 
-The community grows through the participation of people willing to practice.
+The community grows when people practice together.
