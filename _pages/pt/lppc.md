@@ -15,19 +15,39 @@ O foco é preparar estudantes para competições como:
 - Maratona SBC de Programação
 - ICPC (International Collegiate Programming Contest)
 
-## Como funciona
+## Encontros semanais
 
-A LPPC organiza treinos semanais com resolução de problemas e discussão de soluções.
+A LPPC realiza treinos semanais de programação competitiva.
 
-Formato típico:
+Os encontros acontecem, em geral, aos **sábados pela manhã**.
 
-- 30 minutos de introdução ou revisão
-- 2 horas de resolução de problemas
-- 30 minutos de discussão
+O horário padrão é das **08:30 às 11:30**.
+
+Formato:
+
+- breve introdução
+- resolução de problemas
+- discussão das soluções
 
 Os encontros são pensados para diferentes níveis.
 
 Há espaço para iniciantes e para estudantes mais experientes.
+
+Solicita-se que os participantes cheguem com antecedência.
+
+Também é recomendado trazer computador próprio, sempre que possível.
+
+## Próximo encontro
+
+**Local:** IFSul — Câmpus Passo Fundo, durante o Arena Games.
+
+**Data:** sábado, 9 de maio de 2026.
+
+**Horário:** 09:00 às 11:30, excepcionalmente.
+
+**Sala:** a definir.
+
+Mais informações e atualizações serão publicadas no Discord.
 
 ## Para quem é
 

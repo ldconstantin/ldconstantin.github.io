@@ -15,19 +15,39 @@ Its focus is to prepare students for competitions such as:
 - Maratona SBC de Programação
 - ICPC (International Collegiate Programming Contest)
 
-## How It Works
+## Weekly Meetings
 
-The LPPC organizes weekly training sessions with problem solving and solution discussion.
+The LPPC holds weekly competitive programming training sessions.
 
-Typical format:
+Meetings usually happen on **Saturday mornings**.
 
-- 30 minutes of introduction or review
-- 2 hours of problem solving
-- 30 minutes of discussion
+The standard time is **08:30 to 11:30**.
+
+Format:
+
+- brief introduction
+- problem solving
+- solution discussion
 
 The meetings are designed for different levels.
 
 There is room for beginners and for more experienced students.
+
+Participants are asked to arrive early.
+
+Participants should bring their own computer when possible.
+
+## Next Meeting
+
+**Place:** IFSul — Campus Passo Fundo, during Arena Games.
+
+**Date:** Saturday, May 9, 2026.
+
+**Time:** 09:00 to 11:30, exceptionally.
+
+**Room:** to be announced.
+
+More information and updates will be posted on Discord.
 
 ## Who It Is For
 
