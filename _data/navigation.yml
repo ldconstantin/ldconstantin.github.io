@@ -1,0 +1,59 @@
+# Navigation items - N-language ready
+# To add a new language: add a key under labels: and urls: for each item.
+
+items:
+  - id: teaching
+    labels:
+      pt: "Ensino"
+      en: "Teaching"
+    urls:
+      pt: /ensino/
+      en: /en/teaching/
+
+  - id: research
+    labels:
+      pt: "Pesquisa"
+      en: "Research"
+    urls:
+      pt: /pesquisa/
+      en: /en/research/
+
+  - id: extension
+    labels:
+      pt: "Extensão"
+      en: "Extension"
+    urls:
+      pt: /extensao/
+      en: /en/extension/
+
+  - id: activities
+    labels:
+      pt: "Atividades"
+      en: "Activities"
+    urls:
+      pt: /atividades/
+      en: /en/activities/
+
+  - id: cv
+    labels:
+      pt: "CV"
+      en: "CV"
+    urls:
+      pt: /cv/
+      en: /en/cv/
+
+  - id: blog
+    labels:
+      pt: "Blog"
+      en: "Blog"
+    urls:
+      pt: /blog/
+      en: /en/blog/
+
+  - id: lppc
+    labels:
+      pt: "🎈 LPPC"
+      en: "🎈 LPPC"
+    urls:
+      pt: /lppc/
+      en: /en/lppc/

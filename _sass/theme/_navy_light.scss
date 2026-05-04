@@ -1,0 +1,195 @@
+/* ==========================================================================
+   Navy skin, based on the Forest skin
+   ========================================================================== */
+
+/* Color codes used for the theme */
+$primary-color              : #2f6fe4;
+$dark-primary-color         : mix(#000, $primary-color, 42%);
+$darker-primary-color       : mix(#000, $primary-color, 62%);
+$light-primary-color        : mix(#fff, $primary-color, 52%);
+
+$background                 : #edf1f6;
+$background-light           : mix(#fff, $background, 22%);
+$background-lighter         : mix(#fff, $background, 92%);
+$text                       : #1e2c40;
+$link                       : #0f2f66;
+$link-dark                  : mix(#000, $link, 12%);
+$link-light                 : mix(#fff, $link, 18%);
+$footer                     : #0f2f66;
+
+/* Color codes used for the site */
+$danger-color               : #ee5f5b;
+$info-color                 : #2f7f93;
+$notice-color               : #7a8288;
+$success-color              : #62c462;
+$warning-color              : #f89406;
+
+/* Other basic settings for the template */
+$border-radius              : 4px;
+$box-shadow                 : 0 1px 1px rgba(0, 0, 0, 0.125);
+$global-transition          : all 0.2s ease-in-out;
+$masthead-height            : 70px;
+$navicon-width              : 28px;
+$navicon-height             : 4px;
+$sidebar-link-max-width     : 250px;
+$sidebar-screen-min-width   : 1024px;
+
+:root {
+    --global-base-color                 : #{$background};
+    --global-bg-color                   : #{$background};
+    --global-footer-bg-color            : #{$footer};
+    --global-border-color               : #{$light-primary-color};
+    --global-dark-border-color          : #{$background-light};
+    --global-code-background-color      : #f7f9fc;
+    --global-code-text-color            : #{$darker-primary-color};
+    --global-fig-caption-color          : #4f6f9d;
+    --global-link-color                 : #{$link};
+    --global-link-color-hover           : #{$link-dark};
+    --global-link-color-visited         : #{$link-light};
+    --global-masthead-link-color        : #{$text};
+    --global-masthead-link-color-hover  : #{$link};
+    --global-text-color                 : #{$text};
+    --global-text-color-light           : #4d709f;
+    --global-thead-color                : #{$background-lighter};
+
+    /* Spoilers */
+    --global-spoiler-bg                 : #f2f5fb;
+    --global-spoiler-border             : #95b4ef;
+    --global-spoiler-text               : #214f9f;
+    --global-spoiler-hover-bg           : #dfebfb;
+    --global-spoiler-content-bg         : #fbfcfe;
+
+    /* Syntax Highlighting (Solarized Light inspired) */
+    --syntax-comment: #8b98a8;
+    --syntax-keyword: #2f6fe4;
+    --syntax-string:  #2f8a97;
+    --syntax-name:    #3f79d0;
+    --syntax-type:    #c95e42;
+    --syntax-literal: #7a66b9;
+    --syntax-base:    #566575;
+}
+
+div.highlighter-rouge,
+figure.highlight {
+    color: var(--global-code-text-color);
+
+    &:before {
+        background-color: var(--global-thead-color);
+        color: var(--global-text-color-light);
+        border-bottom-left-radius: $border-radius;
+    }
+}
+
+.highlight .c { color: var(--syntax-comment); }
+.highlight .err { color: var(--syntax-base); }
+.highlight .g { color: var(--syntax-base); }
+.highlight .k { color: var(--syntax-keyword); }
+.highlight .l { color: var(--syntax-literal); }
+.highlight .n { color: var(--syntax-base); }
+.highlight .o { color: var(--syntax-keyword); }
+.highlight .x { color: var(--syntax-base); }
+.highlight .p { color: var(--syntax-base); }
+.highlight .cm { color: var(--syntax-comment); }
+.highlight .cp { color: var(--syntax-keyword); }
+.highlight .c1 { color: var(--syntax-comment); }
+.highlight .cs { color: var(--syntax-keyword); }
+.highlight .gd { color: var(--syntax-string); }
+.highlight .ge { color: var(--syntax-base); font-style: italic }
+.highlight .gr { color: var(--syntax-type); }
+.highlight .gh { color: var(--syntax-base); }
+.highlight .gi { color: var(--syntax-keyword); }
+.highlight .go { color: var(--syntax-base); }
+.highlight .gp { color: var(--syntax-base); }
+.highlight .gs { color: var(--syntax-base); font-weight: bold }
+.highlight .gu { color: var(--syntax-base); }
+.highlight .gt { color: var(--syntax-base); }
+.highlight .kc { color: var(--syntax-literal); }
+.highlight .kd { color: var(--syntax-keyword); }
+.highlight .kn { color: var(--syntax-keyword); }
+.highlight .kp { color: var(--syntax-keyword); }
+.highlight .kr { color: var(--syntax-keyword); }
+.highlight .kt { color: var(--syntax-type); }
+.highlight .ld { color: var(--syntax-base); }
+.highlight .m { color: var(--syntax-string); }
+.highlight .s { color: var(--syntax-string); }
+.highlight .na { color: var(--syntax-name); }
+.highlight .nb { color: var(--syntax-name); }
+.highlight .nc { color: var(--syntax-name); }
+.highlight .no { color: var(--syntax-literal); }
+.highlight .nd { color: var(--syntax-name); }
+.highlight .ni { color: var(--syntax-literal); }
+.highlight .ne { color: var(--syntax-literal); }
+.highlight .nf { color: var(--syntax-name); }
+.highlight .nl { color: var(--syntax-base); }
+.highlight .nn { color: var(--syntax-name); }
+.highlight .nx { color: var(--syntax-base); }
+.highlight .py { color: var(--syntax-base); }
+.highlight .nt { color: var(--syntax-name); }
+.highlight .nv { color: var(--syntax-name); }
+.highlight .ow { color: var(--syntax-keyword); }
+.highlight .w { color: var(--syntax-base); }
+.highlight .mf { color: var(--syntax-string); }
+.highlight .mh { color: var(--syntax-string); }
+.highlight .mi { color: var(--syntax-string); }
+.highlight .mo { color: var(--syntax-string); }
+.highlight .sb { color: var(--syntax-comment); }
+.highlight .sc { color: var(--syntax-string); }
+.highlight .sd { color: var(--syntax-base); }
+.highlight .s2 { color: var(--syntax-string); }
+.highlight .se { color: var(--syntax-literal); }
+.highlight .sh { color: var(--syntax-base); }
+.highlight .si { color: var(--syntax-string); }
+.highlight .sx { color: var(--syntax-string); }
+.highlight .sr { color: var(--syntax-type); }
+.highlight .s1 { color: var(--syntax-string); }
+.highlight .ss { color: var(--syntax-string); }
+.highlight .bp { color: var(--syntax-name); }
+.highlight .vc { color: var(--syntax-name); }
+.highlight .vg { color: var(--syntax-name); }
+.highlight .vi { color: var(--syntax-name); }
+.highlight .il { color: var(--syntax-string); }
+
+table {
+    border: 1px solid color-mix(in srgb, var(--global-link-color) 36%, var(--global-border-color));
+}
+
+thead {
+    background-color: color-mix(in srgb, var(--global-border-color) 64%, var(--global-bg-color));
+    border-bottom: 1px solid color-mix(in srgb, var(--global-link-color) 40%, var(--global-border-color));
+}
+
+th {
+    border-right: 1px solid color-mix(in srgb, var(--global-link-color) 34%, var(--global-border-color));
+}
+
+td {
+    border-bottom: 1px solid color-mix(in srgb, var(--global-link-color) 30%, var(--global-border-color));
+    border-right: 1px solid color-mix(in srgb, var(--global-link-color) 30%, var(--global-border-color));
+}
+
+td a {
+    color: var(--global-code-text-color);
+    text-decoration: underline;
+    font-weight: 500;
+
+    &:hover {
+        color: var(--global-link-color-hover);
+    }
+
+    &:visited {
+        color: var(--global-code-text-color);
+    }
+}
+
+tr.upcoming-class td {
+    background-color: color-mix(in srgb, var(--global-border-color) 24%, var(--global-bg-color));
+    color: var(--global-text-color);
+    font-weight: 600;
+    border-top: 2px solid color-mix(in srgb, var(--global-link-color) 82%, var(--global-border-color));
+    border-bottom: 2px solid color-mix(in srgb, var(--global-link-color) 82%, var(--global-border-color));
+}
+
+tr.upcoming-class td a {
+    font-weight: bold;
+    color: inherit;
+}

@@ -1,0 +1,74 @@
+{% include base_path %}
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <button><span class="navicon"></span></button>
+        <ul class="visible-links">
+          <li class="masthead__menu-item masthead__menu-item--lg persist"><a href="{{ base_path }}/">{{ site.title }}</a></li>
+          {% assign current_lang = page.lang | default: "pt" %}
+          {% for item in site.data.navigation.items %}
+            <li class="masthead__menu-item">
+              <a href="{{ item.urls[current_lang] | default: item.urls.pt }}">
+                {{ item.labels[current_lang] | default: item.labels.pt }}
+              </a>
+            </li>
+          {% endfor %}
+
+          {% assign pt_url = nil %}
+          {% assign en_url = nil %}
+          {% if page.ref %}
+            {% assign page_translations = site.pages | where: "ref", page.ref %}
+            {% for t in page_translations %}
+              {% if t.lang == "pt" %}
+                {% assign pt_url = t.url %}
+              {% elsif t.lang == "en" %}
+                {% assign en_url = t.url %}
+              {% endif %}
+            {% endfor %}
+            {% for collection in site.collections %}
+              {% for t in collection.docs %}
+                {% if t.ref == page.ref %}
+                  {% if t.lang == "pt" and pt_url == nil %}
+                    {% assign pt_url = t.url %}
+                  {% elsif t.lang == "en" and en_url == nil %}
+                    {% assign en_url = t.url %}
+                  {% endif %}
+                {% endif %}
+              {% endfor %}
+            {% endfor %}
+          {% endif %}
+
+          {% assign switch_url = nil %}
+          {% assign switch_flag = nil %}
+          {% assign switch_label = nil %}
+          {% if page.ref %}
+            {% if current_lang == "pt" and en_url %}
+              {% assign switch_url = en_url %}
+              {% assign switch_flag = "🇬🇧" %}
+              {% assign switch_label = "English version" %}
+            {% elsif current_lang == "en" and pt_url %}
+              {% assign switch_url = pt_url %}
+              {% assign switch_flag = "🇧🇷" %}
+              {% assign switch_label = "Versão em português" %}
+            {% endif %}
+          {% endif %}
+
+          <li id="theme-toggle" class="masthead__menu-item persist tail">
+            <a role="button" aria-labelledby="theme-icon"><i id="theme-icon" class="fa-solid fa-sun" aria-hidden="true" title="toggle theme"></i></a>
+          </li>
+
+          {% if switch_url %}
+            <li class="masthead__menu-item persist tail lang-switcher">
+              <a href="{{ switch_url }}" class="lang-switcher__link" aria-label="{{ switch_label }}" title="{{ switch_label }}">
+                <span class="lang-switcher__flag" aria-hidden="true">{{ switch_flag }}</span>
+              </a>
+            </li>
+          {% endif %}
+        </ul>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>

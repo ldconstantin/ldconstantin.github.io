@@ -1,0 +1,146 @@
+{
+  "basics": {
+    "name": "Leonardo D. Constantin",
+    "email": "leonardoconstantin@ifsul.edu.br",
+    "phone": "",
+    "website": "https://ldconstantin.github.io",
+    "summary": "Professor Substituto no IFSul Câmpus Passo Fundo, atuando em fundamentos da computação, algoritmos, estruturas de dados, sistemas e formação de base em programação.",
+    "location": {
+      "address": "",
+      "postalCode": "",
+      "city": "Passo Fundo",
+      "countryCode": "BR",
+      "region": "RS"
+    },
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "ldconstantin",
+        "url": "https://github.com/ldconstantin"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "leodeliyannis",
+        "url": "https://linkedin.com/in/leodeliyannis"
+      },
+      {
+        "network": "Lattes",
+        "username": "",
+        "url": "http://lattes.cnpq.br/2406882737060045"
+      }
+    ]
+  },
+  "work": [
+    {
+      "company": "IFSul Câmpus Passo Fundo",
+      "position": "Professor Substituto",
+      "startDate": "2025-05-01",
+      "endDate": "",
+      "summary": "Docência em Ciência da Computação, Engenharia Mecânica e ensino técnico em Informática, com planejamento de disciplinas, produção de material didático e consolidação de trilhas formativas em algoritmos, estruturas de dados, sistemas e programação competitiva."
+    },
+    {
+      "company": "Universidade de Passo Fundo",
+      "position": "Assistente de Suporte I",
+      "startDate": "2018-12-01",
+      "endDate": "2019-06-30",
+      "summary": "Instalação e atualização de programas e sistemas operacionais, suporte técnico a usuários e preparação de ambientes computacionais institucionais."
+    }
+  ],
+  "education": [
+    {
+      "institution": "UTFPR-PG",
+      "area": "Ciência da Computação",
+      "studyType": "Mestrado (em andamento)",
+      "startDate": "",
+      "endDate": "",
+      "gpa": null,
+      "courses": []
+    },
+    {
+      "institution": "Universidade de Passo Fundo",
+      "area": "Ciência da Computação",
+      "studyType": "Bacharelado",
+      "startDate": "",
+      "endDate": "2023",
+      "gpa": null,
+      "courses": []
+    }
+  ],
+  "skills": [
+    {
+      "name": "Programming and Algorithms",
+      "keywords": ["C/C++", "Python", "Bash", "JavaScript", "Algorithm design", "Competitive programming"]
+    },
+    {
+      "name": "Operating Systems and Infrastructure",
+      "keywords": ["Linux (Debian, Fedora, Arch Linux)", "Windows", "Software installation and maintenance", "Hardware setup"]
+    },
+    {
+      "name": "Teaching and Academic Work",
+      "keywords": ["Course planning", "Didactic material production", "Problem solving training", "Foundational CS instruction"]
+    }
+  ],
+  "languages": [],
+  "interests": [
+    {
+      "name": "Algorithms & Programming"
+    },
+    {
+      "name": "Data Structures"
+    },
+    {
+      "name": "Competitive Programming"
+    },
+    {
+      "name": "Computer Science Education"
+    },
+    {
+      "name": "Graph Theory"
+    },
+    {
+      "name": "Theory of Computation"
+    }
+  ],
+  "references": [],
+  "publications": [],
+  "presentations": [
+    {
+      "name": "Narrador oficial da Maratona SBC de Programação",
+      "event": "Maratona SBC de Programação",
+      "startDate": "2019-01-01",
+      "endDate": "2025-12-31",
+      "summary": "Atuação pública e histórica vinculada à principal competição universitária de programação do país."
+    }
+  ],
+  "teaching": [
+    {
+      "course": "Programação Competitiva",
+      "institution": "IFSul Câmpus Passo Fundo",
+      "date": "2026-02-09",
+      "role": "Bacharelado em Ciência da Computação",
+      "description": "Disciplina voltada à formação de base e ao repertório algorítmico necessário para resolução rigorosa de problemas de programação competitiva."
+    },
+    {
+      "course": "Estrutura de Dados III",
+      "institution": "IFSul Câmpus Passo Fundo",
+      "date": "2026-02-09",
+      "role": "Bacharelado em Ciência da Computação",
+      "description": "Disciplina sobre análise de algoritmos, ordenação, busca e estruturas clássicas de organização de dados."
+    },
+    {
+      "course": "Sistemas Operacionais II",
+      "institution": "IFSul Câmpus Passo Fundo",
+      "date": "2026-02-09",
+      "role": "Bacharelado em Ciência da Computação",
+      "description": "Disciplina voltada a concorrência, sincronização, programação cliente-servidor e sistemas distribuídos."
+    },
+    {
+      "course": "Introdução à Programação (JS)",
+      "institution": "IFSul Câmpus Passo Fundo",
+      "date": "2026-03-06",
+      "role": "Técnico em Manutenção e Suporte em Informática",
+      "description": "Disciplina introdutória com foco em leitura de problemas, algoritmos, lógica e primeiros passos em programação."
+    }
+  ],
+  "portfolio": []
+}

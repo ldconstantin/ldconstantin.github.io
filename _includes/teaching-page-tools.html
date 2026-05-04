@@ -1,0 +1,14 @@
+{% assign lang = page.lang | default: "pt" %}
+{% assign print_label = "Print or save as PDF" %}
+{% assign study_label = "This page is prepared for browser reading, printing, and offline PDF study." %}
+{% if lang == "pt" %}
+  {% assign print_label = "Imprimir ou salvar em PDF" %}
+  {% assign study_label = "Esta página foi preparada para leitura no navegador, impressão e estudo offline em PDF." %}
+{% endif %}
+
+<div class="teaching-page-tools" aria-label="{{ print_label }}">
+  <p class="teaching-page-tools__note">{{ study_label }}</p>
+  <button class="teaching-page-tools__button" type="button" onclick="window.print()">
+    {{ print_label }}
+  </button>
+</div>

@@ -1,0 +1,17 @@
+{% if include.items and include.items.size > 0 %}
+<div class="teaching-list">
+  <ul>
+  {% for post in include.items %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+      {% if post.summary %}
+        <br><span class="teaching-list__schedule">{{ post.summary }}</span>
+      {% endif %}
+    </li>
+  {% endfor %}
+  </ul>
+</div>
+{% else %}
+{% assign lang = page.lang | default: "pt" %}
+<p>{{ site.data.ui-text[lang].coming_soon | default: "em breve" }}</p>
+{% endif %}

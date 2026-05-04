@@ -1,0 +1,75 @@
+/* ==========================================================================
+   SPOILERS (CODEFORCES STYLE)
+   ========================================================================== */
+
+details.spoiler {
+  margin: 1.5em 0;
+  border: 1px dashed var(--global-spoiler-border);
+  border-radius: 4px;
+  background-color: var(--global-spoiler-bg);
+  font-size: 0.95rem;
+  overflow: hidden;
+
+  summary {
+    padding: 0.6em 1em;
+    cursor: pointer;
+    font-weight: bold;
+    color: var(--global-spoiler-text);
+    outline: none;
+    list-style: none;
+    display: block;
+    user-select: none;
+    
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &:before {
+      content: '▶';
+      display: inline-block;
+      margin-right: 0.6em;
+      font-size: 0.7em;
+      vertical-align: middle;
+      transition: transform 0.2s ease;
+      color: var(--global-spoiler-text);
+    }
+
+    &:hover {
+      background-color: var(--global-spoiler-hover-bg);
+    }
+  }
+
+  &[open] {
+    border: 1px solid var(--global-spoiler-border);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    
+    summary {
+      border-bottom: 1px solid var(--global-spoiler-border);
+      &:before {
+        transform: rotate(90deg);
+      }
+    }
+    
+    .spoiler-content {
+      padding: 0.8em 1.2em 1.2em;
+      background-color: var(--global-spoiler-content-bg);
+      color: var(--global-text-color);
+      
+      /* Reset margins for ANY first elements inside the spoiler content */
+      & > *:first-child { margin-top: 0 !important; }
+      & > *:last-child { margin-bottom: 0 !important; }
+    }
+  }
+}
+
+.page--teaching-lesson details.spoiler {
+  font-size: calc(0.95rem - 1pt);
+}
+
+details.spoiler .spoiler-content {
+  line-height: 1.6;
+
+  > * + * {
+    margin-top: 0.7em;
+  }
+}

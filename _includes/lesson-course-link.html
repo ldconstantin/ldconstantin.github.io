@@ -1,0 +1,4 @@
+{% assign lang = page.lang | default: "pt" %}
+<nav class="lesson-course-link" aria-label="{{ site.data.ui-text[lang].back_to_course | default: 'Voltar para' }}">
+  <p><a href="{{ include.course_url }}">&larr; {{ site.data.ui-text[lang].back_to_course | default: "Voltar para" }} {{ include.course_title }}</a></p>
+</nav>

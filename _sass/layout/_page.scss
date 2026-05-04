@@ -1,0 +1,712 @@
+/* ==========================================================================
+   SINGLE PAGE/POST
+   ========================================================================== */
+
+#main {
+  @include container;
+  @include clearfix;
+  margin-top: 2em;
+  padding-left: 1em;
+  padding-right: 1em;
+  animation: intro 0.3s both;
+  animation-delay: 0.35s;
+
+  @include breakpoint($x-large) {
+    max-width: $x-large;
+  }
+}
+
+.page {
+  @include breakpoint($large) {
+    @include span(10 of 12 last);
+    @include prefix(1 of 12);
+    @include suffix(1.5 of 12);
+  }
+
+  .page__inner-wrap {
+    @include full();
+
+    .page__content,
+    .page__meta,
+    .page__share {
+      @include full();
+    }
+  }
+}
+
+.splash {
+  .page__content {
+    @include breakpoint($large) {
+      @include span(10 of 12 last);
+      @include prefix(1 of 12);
+      @include suffix(1.5 of 12);
+    }
+  }
+}
+
+
+.page__title {
+  margin-top: 0;
+  line-height: 1;
+
+  &+.page__meta {
+    margin-top: -0.5em;
+  }
+}
+
+.page__lead {
+  font-family: $global-font-family;
+  font-size: $type-size-4;
+}
+
+.page__content {
+  h2 {
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid var(--global-border-color);
+  }
+
+  p {
+    font-size: 0.9375rem;
+  }
+
+  p,
+  li,
+  dd,
+  blockquote {
+    text-align: left;
+    hyphens: manual;
+  }
+
+  /* paragraph indents */
+  p {
+    margin: 0 0 $indent-var;
+
+    /* sibling indentation*/
+    @if $paragraph-indent ==true {
+      &+p {
+        text-indent: $indent-var;
+        margin-top: -($indent-var);
+      }
+    }
+  }
+
+  a {
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: underline;
+
+      img {
+        box-shadow: 0 0 10px rgba(#000, 0.25);
+      }
+    }
+  }
+
+  p a {
+    color: var(--global-link-color);
+
+    &:hover {
+      color: var(--global-link-color-hover);
+    }
+  }
+
+  dt {
+    margin-top: 1em;
+    font-family: $sans-serif;
+    font-weight: bold;
+  }
+
+  dd {
+    margin-left: 1em;
+    font-family: $sans-serif;
+    font-size: $type-size-6;
+  }
+
+  .small {
+    font-size: $type-size-6;
+  }
+
+  /* blockquote citations */
+  blockquote+.small {
+    margin-top: -1.5em;
+    padding-left: 1.25rem;
+  }
+}
+
+.page--teaching-lesson {
+  .page__content {
+    h2 {
+      margin-top: 3rem;
+      margin-bottom: 1.2rem;
+    }
+
+    h3 {
+      margin-top: 2.2rem;
+      margin-bottom: 0.9rem;
+    }
+
+    h4 {
+      margin-top: 1.8rem;
+      margin-bottom: 0.8rem;
+    }
+
+    ul,
+    ol,
+    pre,
+    details,
+    figure,
+    .lesson-concept-break {
+      margin-top: 1.25rem;
+      margin-bottom: 1.25rem;
+    }
+  }
+}
+
+.lesson-summary {
+  margin: 2rem 0 2.6rem;
+
+  ol,
+  ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+  }
+
+  li + li {
+    margin-top: 0.45rem;
+  }
+
+  .lesson-summary__subsections {
+    margin-top: 0.45rem;
+    padding-left: 1.1rem;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.lesson-concept-break {
+  height: 0.55rem;
+}
+
+.lesson-figure {
+  margin: 2rem auto 2.8rem;
+  text-align: center;
+
+  .lesson-figure__media {
+    width: min(100%, 42rem);
+    margin: 0 auto;
+  }
+
+  img,
+  svg {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  figcaption {
+    margin-top: 0.7rem;
+    color: var(--global-text-color-light);
+    font-size: 0.9rem;
+    line-height: 1.45;
+    text-align: center;
+  }
+}
+
+.page__hero {
+  position: relative;
+  margin-bottom: 2em;
+  @include clearfix;
+  animation: intro 0.3s both;
+  animation-delay: 0.25s;
+
+  &--overlay {
+    position: relative;
+    margin-bottom: 2em;
+    padding: 3em 0;
+    @include clearfix;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: intro 0.3s both;
+    animation-delay: 0.25s;
+
+    a {
+      color: #fff;
+    }
+
+    .wrapper {
+      padding-left: 1em;
+      padding-right: 1em;
+
+      @include breakpoint($x-large) {
+        max-width: $x-large;
+      }
+    }
+
+    .page__title,
+    .page__meta,
+    .page__lead,
+    .btn {
+      color: #fff;
+      text-shadow: 1px 1px 4px rgba(#000, 0.5);
+    }
+
+    .page__lead {
+      max-width: $medium;
+    }
+
+    .page__title {
+      font-size: $type-size-2;
+
+      @include breakpoint($small) {
+        font-size: $type-size-1;
+      }
+    }
+  }
+}
+
+.page__hero-image {
+  width: 100%;
+  height: auto;
+  -ms-interpolation-mode: bicubic;
+}
+
+.page__hero-caption {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 0 auto;
+  padding: 2px 5px;
+  color: #fff;
+  font-family: $caption-font-family;
+  font-size: $type-size-7;
+  background: #000;
+  text-align: right;
+  z-index: 5;
+  opacity: 0.5;
+  border-radius: $border-radius 0 $border-radius 0;
+
+  @include breakpoint($large) {
+    padding: 5px 10px;
+  }
+
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+/*
+   Social sharing
+   ========================================================================== */
+
+.page__share {
+  margin-top: 2em;
+  padding-top: 1em;
+  border-top: 1px solid var(--global-border-color);
+
+  @include breakpoint(max-width $small) {
+    .btn span {
+      border: 0;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+  }
+}
+
+.page__share-title {
+  margin-bottom: 10px;
+  font-size: $type-size-6;
+  text-transform: uppercase;
+}
+
+
+/*
+   Page meta
+   ========================================================================== */
+
+.page__meta {
+  margin-top: 2em;
+  color: var(--global-text-color-light);
+  font-family: $sans-serif;
+  font-size: $type-size-6;
+
+  p {
+    margin: 0;
+  }
+
+  a {
+    color: inherit;
+  }
+}
+
+.page__meta-title {
+  margin-bottom: 10px;
+  font-size: $type-size-6;
+  text-transform: uppercase;
+}
+
+
+/*
+   Page taxonomy
+   ========================================================================== */
+
+.page__taxonomy {
+  .sep {
+    display: none;
+  }
+
+  strong {
+    margin-right: 10px;
+  }
+}
+
+.page__taxonomy-item {
+  display: inline-block;
+  margin-right: 5px;
+  margin-bottom: 8px;
+  padding: 5px 10px;
+  text-decoration: none;
+  border: 1px solid var(--global-border-color);
+  border-radius: $border-radius;
+
+  &:hover {
+    text-decoration: none;
+    color: var(--global-link-color-hover);
+  }
+}
+
+
+/*
+   Comments
+   ========================================================================== */
+
+.page__comments {
+  @include full();
+}
+
+.page__comments-title {
+  margin-top: 2rem;
+  margin-bottom: 10px;
+  padding-top: 2rem;
+  font-size: $type-size-6;
+  border-top: 1px solid var(--global-border-color);
+  text-transform: uppercase;
+}
+
+.page__comments-form {
+  padding: 1em;
+  background: var(--global-border-color);
+  transition: $global-transition;
+
+  &.disabled {
+
+    input,
+    button,
+    textarea,
+    label {
+      pointer-events: none;
+      cursor: not-allowed;
+      filter: alpha(opacity=65);
+      box-shadow: none;
+      opacity: 0.65;
+    }
+  }
+}
+
+.comment {
+  @include clearfix();
+  margin: 1em 0;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid var(--global-border-color);
+  }
+}
+
+.comment__avatar-wrapper {
+  float: left;
+  width: 60px;
+  height: 60px;
+
+  @include breakpoint($large) {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.comment__avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+
+  @include breakpoint($large) {
+    width: 80px;
+    height: 80px;
+    padding: 5px;
+    border: 1px solid var(--global-border-color);
+  }
+}
+
+.comment__content-wrapper {
+  float: right;
+  width: calc(100% - 60px);
+
+  @include breakpoint($large) {
+    width: calc(100% - 100px);
+  }
+}
+
+.comment__author {
+  margin: 0;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.comment__date {
+  @extend .page__meta;
+  margin: 0;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+
+/*
+   Related
+   ========================================================================== */
+
+.page__related {
+  margin-top: 2em;
+  padding-top: 1em;
+  border-top: 1px solid var(--global-border-color);
+  @include clearfix();
+  float: left;
+
+  @include breakpoint($large) {
+    @include pre(2.5 of 12);
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+.page__related-title {
+  margin-bottom: 10px;
+  font-size: $type-size-6;
+  text-transform: uppercase;
+}
+
+.lesson-summary {
+  margin: 2em 0 1.5em;
+  font-size: $type-size-5;
+
+  h2 {
+    font-size: $type-size-4;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+    border-bottom: 0;
+  }
+
+  ol {
+    margin: 0;
+    padding-left: 2em;
+    line-height: 1.55;
+  }
+
+  ol li {
+    margin-bottom: 0.4em;
+  }
+
+  ol ol {
+    margin-top: 0.35em;
+    padding-left: 1.4em;
+    font-size: 0.97em;
+  }
+
+  a {
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+  }
+}
+
+.course-summary {
+  margin: 1.75em 0 1.5em;
+  font-size: $type-size-5;
+
+  ol {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+    counter-reset: course-item;
+    line-height: 1.55;
+  }
+
+  li {
+    position: relative;
+    margin-bottom: 0.45em;
+    padding-left: 2.2em;
+    list-style: none;
+    counter-increment: course-item;
+  }
+
+  li::before {
+    content: counters(course-item, ".") ". ";
+    position: absolute;
+    left: 0;
+    font-variant-numeric: tabular-nums;
+  }
+
+  li > ol {
+    margin-top: 0.35em;
+    padding-left: 1.2em;
+    font-size: 0.96em;
+  }
+}
+
+.page--teaching-lesson {
+  .page__content {
+    h2 {
+      font-size: calc(#{$type-size-4} - 1pt);
+    }
+
+    h3 {
+      font-size: calc(#{$type-size-5} - 1pt);
+    }
+
+    h4,
+    h5,
+    h6 {
+      font-size: calc(#{$type-size-6} - 1pt);
+    }
+
+    p,
+    li,
+    dt,
+    dd {
+      font-size: calc(1em - 1pt);
+    }
+  }
+
+  .lesson-course-link {
+    font-size: calc(1em - 1pt);
+  }
+
+  .lesson-sequence-nav {
+    font-size: calc(1em - 1pt);
+  }
+
+  .lesson-summary {
+    font-size: calc(#{$type-size-5} - 1pt);
+
+    h2 {
+      font-size: calc(#{$type-size-4} - 1pt);
+    }
+  }
+}
+
+.page--teaching:not(.page--teaching-lesson) {
+  .page__content {
+    p {
+      font-size: calc(1em - 1pt);
+    }
+  }
+
+  .course-summary {
+    font-size: calc(#{$type-size-5} - 1pt);
+  }
+}
+
+.teaching-page-tools {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 0 0 1.5rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--global-border-color);
+  border-radius: 0.5rem;
+  background: rgba(0, 0, 0, 0.02);
+}
+
+.teaching-page-tools__note {
+  margin: 0;
+  font-size: 0.95em;
+}
+
+.teaching-page-tools__button {
+  border: 1px solid var(--global-border-color);
+  border-radius: 0.4rem;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  padding: 0.45rem 0.8rem;
+}
+
+.teaching-page-tools__button:hover,
+.teaching-page-tools__button:focus {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.page--teaching-lesson .page__content h2,
+.page--teaching-lesson .page__content h3,
+.page--teaching-lesson .page__content h4,
+.page--teaching-lesson .page__content h5,
+.page--teaching-lesson .page__content h6,
+.page--teaching-lesson .page__content a[id] {
+  scroll-margin-top: 1.25rem;
+}
+
+@media (max-width: 768px) {
+  .teaching-page-tools {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+.lesson-epigraph {
+  margin: 1.25em 0 1.5em;
+  text-align: right;
+  font-family: Merriweather, Georgia, "Times New Roman", serif;
+}
+
+.lesson-epigraph__quote {
+  font-size: 11.5pt;
+  font-style: italic;
+}
+
+.lesson-epigraph__author {
+  margin-top: 0.2em;
+  font-size: 11.5pt;
+}
+
+.lesson-body {
+  p,
+  li,
+  dd,
+  blockquote {
+    text-align: left;
+    hyphens: none;
+    line-height: 1.56;
+  }
+
+  p {
+    max-width: 70ch;
+    margin-bottom: 0.58rem;
+  }
+}

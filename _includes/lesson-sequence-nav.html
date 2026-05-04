@@ -1,0 +1,17 @@
+{% assign lang = page.lang | default: "pt" %}
+<hr>
+<nav class="lesson-sequence-nav" aria-label="{{ site.data.ui-text[lang].course_main_page | default: 'Página principal da disciplina' }}">
+<p>
+  {% if include.previous_url %}
+    <a href="{{ include.previous_url }}">&larr; {{ include.previous_title }}</a>
+  {% endif %}
+  {% if include.previous_url %}
+    |
+  {% endif %}
+  <a href="{{ include.course_url }}">{{ site.data.ui-text[lang].course_main_page | default: "Página principal da disciplina" }}</a>
+  {% if include.next_url %}
+    |
+    <a href="{{ include.next_url }}">{{ include.next_title }} &rarr;</a>
+  {% endif %}
+</p>
+</nav>
