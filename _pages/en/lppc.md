@@ -22,6 +22,8 @@ Its focus is to prepare students for OBI, Maratona SBC de Programação, and ICP
 
 🏫 **Room:** to be announced.
 
+More information and updates soon on Discord, and on WhatsApp.
+
 ## Weekly Meetings
 
 Format:
@@ -30,9 +32,9 @@ Format:
 - problem solving
 - solution discussion
 
-Arrive early.
+Arrive early. Bring your laptop if possible.
 
-Bring your laptop if possible.
+Follow WhatsApp for quick announcements. Discord is our main space for discussions.
 
 ## Who It Is For
 
@@ -40,12 +42,6 @@ Bring your laptop if possible.
 - people interested in algorithms
 - anyone who wants to start or improve in competitive programming
 
-No previous experience is required.
-
 There is room for beginners and for more experienced students.
 
-The LPPC is under construction.
-
-The community grows when people practice together.
-
-Use WhatsApp for quick announcements and Discord for discussions.
+The LPPC is under construction. The community grows when people practice together.

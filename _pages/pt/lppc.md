@@ -22,6 +22,8 @@ O foco é preparar estudantes para a OBI, a Maratona SBC de Programação e o IC
 
 🏫 **Sala:** a definir.
 
+Mais informações e atualizações em breve no Discord e no WhatsApp.
+
 ## Encontros semanais
 
 Formato:
@@ -30,9 +32,9 @@ Formato:
 - resolução de problemas
 - discussão das soluções
 
-Chegue com antecedência.
+Chegue com antecedência. Traga seu notebook, se possível.
 
-Traga seu notebook, se possível.
+Fique atento ao WhatsApp para avisos rápidos. O Discord é o nosso meio principal para discussões.
 
 ## Para quem é
 
@@ -40,12 +42,6 @@ Traga seu notebook, se possível.
 - pessoas interessadas em algoritmos
 - quem quer começar ou evoluir em programação competitiva
 
-Não é necessário ter experiência prévia.
-
 Há espaço para iniciantes e para estudantes mais experientes.
 
-A LPPC está em construção.
-
-A comunidade cresce com quem pratica junto.
-
-Use o WhatsApp para avisos rápidos e o Discord para discussões.
+A LPPC está em construção. A comunidade cresce com quem pratica junto.
