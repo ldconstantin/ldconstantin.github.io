@@ -20,7 +20,8 @@ Busco desenvolver projetos com escopo bem definido, rigor conceitual, progressã
   <h2>Subáreas de pesquisa</h2>
   <ul>
     <li><a href="/pesquisa/programacao-competitiva-e-formacao-de-base/">Programação Competitiva e Formação de Base</a></li>
-    <li><a href="/pesquisa/educacao-em-computacao/">Educação em Computação</a></li>
+    <li><a href="/pesquisa/educacao-em-programacao-paralela-e-concorrente/">Educação em Programação Paralela e Concorrente</a></li>
+    <li><a href="/pesquisa/historia-regional-da-computacao-de-alto-desempenho/">História Regional da Computação de Alto Desempenho</a></li>
   </ul>
 </div>
 

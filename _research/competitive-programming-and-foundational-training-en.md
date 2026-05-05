@@ -7,6 +7,7 @@ topic: competitive-programming-and-foundational-training
 title: "Competitive Programming and Foundational Training"
 permalink: /en/research/competitive-programming-and-foundational-training/
 research_order: 4
+pagination: false
 summary: "Competitive programming as an environment for mathematical, algorithmic, and disciplinary training, and not only as contest preparation."
 ---
 

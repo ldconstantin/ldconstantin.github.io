@@ -23,7 +23,7 @@ Interesses
 - Programação competitiva
 - Sistemas operacionais e arquitetura de computadores
 - Teoria da computação e teoria dos grafos
-- Educação em computação
+- Educação em programação paralela e concorrente
 
 ---
 

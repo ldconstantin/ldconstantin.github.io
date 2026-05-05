@@ -23,7 +23,7 @@ Interests
 - Competitive Programming
 - Operating Systems and Computer Architecture
 - Theory of Computation and Graph Theory
-- Computing Education
+- Parallel and Concurrent Programming Education
 
 ---
 

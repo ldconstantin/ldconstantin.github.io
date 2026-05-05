@@ -20,7 +20,8 @@ I try to develop projects with well-defined scope, conceptual rigor, clear techn
   <h2>Research subareas</h2>
   <ul>
     <li><a href="/en/research/competitive-programming-and-foundational-training/">Competitive Programming and Foundational Training</a></li>
-    <li><a href="/en/research/computing-education/">Computing Education</a></li>
+    <li><a href="/en/research/parallel-and-concurrent-programming-education/">Parallel and Concurrent Programming Education</a></li>
+    <li><a href="/en/research/regional-history-of-high-performance-computing/">Regional History of High-Performance Computing</a></li>
   </ul>
 </div>
 

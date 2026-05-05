@@ -7,6 +7,7 @@ topic: programacao-competitiva-e-formacao-de-base
 title: "Programação Competitiva e Formação de Base"
 permalink: /pesquisa/programacao-competitiva-e-formacao-de-base/
 research_order: 4
+pagination: false
 summary: "Programação competitiva como ambiente de formação matemática, algorítmica e disciplinar, e não apenas treino para contest."
 ---
 
