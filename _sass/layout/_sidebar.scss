@@ -36,7 +36,7 @@
   }
 
   @include breakpoint($x-large) {
-    max-width: $sidebar-link-max-width;
+    max-width: $sidebar-link-max-width - 10px;
     padding-right: 0;
   }
 
@@ -223,6 +223,10 @@
     margin-top: 10px;
     margin-bottom: 20px;
   }
+}
+
+.sidebar .author__bio {
+  font-size: calc(#{$type-size-6} + 1pt);
 }
 
 .author__urls-wrapper {

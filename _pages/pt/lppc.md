@@ -22,17 +22,11 @@ O foco é preparar estudantes para a OBI, a Maratona SBC de Programação e o IC
 
 🏫 **Sala:** a definir.
 
-👉 **Discord:** [https://discord.gg/B9htKTd3uJ](https://discord.gg/B9htKTd3uJ)
-
 As atualizações sobre sala e encontros serão publicadas no Discord.
 
 ## Encontros semanais
 
-📅 **Quando:** sábados pela manhã.
-
-🕘 **Horário padrão:** 08:30 às 11:30.
-
-**Formato:**
+Formato:
 
 - breve introdução
 - resolução de problemas
@@ -51,16 +45,6 @@ Traga seu notebook, se possível.
 Não é necessário ter experiência prévia.
 
 Há espaço para iniciantes e para estudantes mais experientes.
-
-## No Discord
-
-Você encontra:
-
-- avisos dos encontros
-- materiais de estudo
-- desafios e discussões
-
-👉 [https://discord.gg/B9htKTd3uJ](https://discord.gg/B9htKTd3uJ)
 
 A LPPC está em construção.
 

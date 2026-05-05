@@ -22,17 +22,11 @@ Its focus is to prepare students for OBI, Maratona SBC de Programação, and ICP
 
 🏫 **Room:** to be announced.
 
-👉 **Discord:** [https://discord.gg/B9htKTd3uJ](https://discord.gg/B9htKTd3uJ)
-
 Room updates and meeting announcements will be posted on Discord.
 
 ## Weekly Meetings
 
-📅 **When:** Saturday mornings.
-
-🕘 **Standard time:** 08:30 to 11:30.
-
-**Format:**
+Format:
 
 - brief introduction
 - problem solving
@@ -51,16 +45,6 @@ Bring your laptop if possible.
 No previous experience is required.
 
 There is room for beginners and for more experienced students.
-
-## On Discord
-
-You will find:
-
-- meeting announcements
-- study materials
-- challenges and discussions
-
-👉 [https://discord.gg/B9htKTd3uJ](https://discord.gg/B9htKTd3uJ)
 
 The LPPC is under construction.
 
