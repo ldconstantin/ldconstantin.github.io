@@ -1,0 +1,21 @@
+name: "LPPC"
+logo: "lppc-logo.svg"
+logo_alt: "Logo da LPPC"
+bio:
+  pt: "Liga Passofundense de Programação Competitiva"
+  en: "Passo Fundo Competitive Programming League"
+location:
+  pt: "Passo Fundo, RS"
+  en: "Passo Fundo, RS, Brazil"
+meeting:
+  pt: "Sábados pela manhã"
+  en: "Saturday mornings"
+time:
+  pt: "08:30 às 11:30"
+  en: "08:30 to 11:30"
+links:
+  discord: "https://discord.gg/B9htKTd3uJ"
+  whatsapp:
+  instagram:
+  github:
+  email:

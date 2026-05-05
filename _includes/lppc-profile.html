@@ -1,0 +1,48 @@
+{% include base_path %}
+
+{% assign lang = page.lang | default: site.locale %}
+{% assign lppc = site.data.lppc %}
+{% assign bio = lppc.bio[lang] | default: lppc.bio.pt %}
+{% assign location = lppc.location[lang] | default: lppc.location.pt %}
+{% assign meeting = lppc.meeting[lang] | default: lppc.meeting.pt %}
+{% assign time = lppc.time[lang] | default: lppc.time.pt %}
+
+<div itemscope itemtype="http://schema.org/Organization">
+  {% if lppc.logo %}
+    <div class="author__avatar">
+      <img src="{{ lppc.logo | prepend: "/images/" | prepend: base_path }}" class="author__avatar" alt="{{ lppc.logo_alt | default: lppc.name }}" fetchpriority="high" />
+    </div>
+  {% endif %}
+
+  <div class="author__content">
+    <h3 class="author__name" itemprop="name">{{ lppc.name }}</h3>
+    <p class="author__bio">{{ bio }}</p>
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">
+      {% if lang == "pt" %}Links{% else %}Links{% endif %}
+    </button>
+    <ul class="author__urls social-icons">
+      <li class="author__desktop"><i class="fas fa-fw fa-location-dot icon-pad-right" aria-hidden="true"></i>{{ location }}</li>
+      <li class="author__desktop"><i class="fas fa-fw fa-calendar icon-pad-right" aria-hidden="true"></i>{{ meeting }}</li>
+      <li class="author__desktop"><i class="fas fa-fw fa-clock icon-pad-right" aria-hidden="true"></i>{{ time }}</li>
+
+      {% if lppc.links.discord %}
+        <li><a href="{{ lppc.links.discord }}"><i class="fab fa-fw fa-discord icon-pad-right" aria-hidden="true"></i>Discord</a></li>
+      {% endif %}
+      {% if lppc.links.whatsapp %}
+        <li><a href="{{ lppc.links.whatsapp }}"><i class="fab fa-fw fa-whatsapp icon-pad-right" aria-hidden="true"></i>WhatsApp</a></li>
+      {% endif %}
+      {% if lppc.links.instagram %}
+        <li><a href="{{ lppc.links.instagram }}"><i class="fab fa-fw fa-instagram icon-pad-right" aria-hidden="true"></i>Instagram</a></li>
+      {% endif %}
+      {% if lppc.links.github %}
+        <li><a href="{{ lppc.links.github }}"><i class="fab fa-fw fa-github icon-pad-right" aria-hidden="true"></i>GitHub</a></li>
+      {% endif %}
+      {% if lppc.links.email %}
+        <li><a href="mailto:{{ lppc.links.email }}"><i class="fas fa-fw fa-envelope icon-pad-right" aria-hidden="true"></i>E-mail</a></li>
+      {% endif %}
+    </ul>
+  </div>
+</div>

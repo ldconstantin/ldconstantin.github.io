@@ -5,6 +5,7 @@ layout: archive
 title: "LPPC — Liga Passofundense de Programação Competitiva"
 permalink: /lppc/
 author_profile: false
+lppc_profile: true
 ---
 
 A **LPPC** é uma iniciativa aberta de treinamento em programação competitiva em Passo Fundo.
