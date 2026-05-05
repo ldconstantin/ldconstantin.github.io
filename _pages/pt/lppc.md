@@ -22,12 +22,6 @@ O foco é preparar estudantes para a OBI, a Maratona SBC de Programação e o IC
 
 🏫 **Sala:** a definir.
 
-As atualizações sobre sala e encontros serão publicadas no Discord.
-
-O WhatsApp é usado para comunicação rápida e avisos.
-
-As discussões principais acontecem no Discord.
-
 ## Encontros semanais
 
 Formato:
@@ -53,3 +47,5 @@ Há espaço para iniciantes e para estudantes mais experientes.
 A LPPC está em construção.
 
 A comunidade cresce com quem pratica junto.
+
+Use o WhatsApp para avisos rápidos e o Discord para discussões.

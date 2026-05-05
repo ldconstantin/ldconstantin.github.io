@@ -22,12 +22,6 @@ Its focus is to prepare students for OBI, Maratona SBC de Programação, and ICP
 
 🏫 **Room:** to be announced.
 
-Room updates and meeting announcements will be posted on Discord.
-
-WhatsApp is used for quick communication and announcements.
-
-The main discussions happen on Discord.
-
 ## Weekly Meetings
 
 Format:
@@ -53,3 +47,5 @@ There is room for beginners and for more experienced students.
 The LPPC is under construction.
 
 The community grows when people practice together.
+
+Use WhatsApp for quick announcements and Discord for discussions.
