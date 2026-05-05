@@ -24,6 +24,10 @@ Its focus is to prepare students for OBI, Maratona SBC de Programação, and ICP
 
 Room updates and meeting announcements will be posted on Discord.
 
+WhatsApp is used for quick communication and announcements.
+
+The main discussions happen on Discord.
+
 ## Weekly Meetings
 
 Format:

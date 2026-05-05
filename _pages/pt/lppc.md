@@ -24,6 +24,10 @@ O foco é preparar estudantes para a OBI, a Maratona SBC de Programação e o IC
 
 As atualizações sobre sala e encontros serão publicadas no Discord.
 
+O WhatsApp é usado para comunicação rápida e avisos.
+
+As discussões principais acontecem no Discord.
+
 ## Encontros semanais
 
 Formato:
