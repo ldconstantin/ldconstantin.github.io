@@ -158,6 +158,7 @@ analytics:
 
 # Reading Files
 include:
+  - .well-known
   - .htaccess
   - _pages
   - files
