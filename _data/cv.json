@@ -2,12 +2,9 @@
   "basics": {
     "name": "Leonardo D. Constantin",
     "email": "leonardoconstantin@ifsul.edu.br",
-    "phone": "",
     "website": "https://ldconstantin.github.io",
     "summary": "Professor Substituto no IFSul Câmpus Passo Fundo, atuando em fundamentos da computação, algoritmos, estruturas de dados, sistemas e formação de base em programação.",
     "location": {
-      "address": "",
-      "postalCode": "",
       "city": "Passo Fundo",
       "countryCode": "BR",
       "region": "RS"
@@ -25,7 +22,6 @@
       },
       {
         "network": "Lattes",
-        "username": "",
         "url": "http://lattes.cnpq.br/2406882737060045"
       }
     ]
