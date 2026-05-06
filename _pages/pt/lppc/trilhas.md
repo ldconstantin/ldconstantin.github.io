@@ -8,6 +8,13 @@ author_profile: false
 lppc_profile: true
 ---
 
+## Sumário
+
+- [Trilha principal](#trilha-principal)
+- [Trilhas secundárias técnicas](#trilhas-secundárias-técnicas)
+- [Trilhas secundárias em construção](#trilhas-secundárias-em-construção)
+- [Navegação LPPC](#navegação-lppc)
+
 As trilhas da LPPC organizam diferentes formas de desenvolver raciocínio computacional, prática de programação e maturidade técnica. A programação competitiva permanece como eixo principal, e as demais trilhas ampliam o contato com backend, paralelismo, empreendedorismo tecnológico e segurança.
 
 ## Trilha principal
@@ -95,6 +102,4 @@ A trilha de cibersegurança é voltada ao estudo ético e legal de segurança co
 
 Essas duas trilhas secundárias ainda estão em construção. A proposta é organizar canais separados no Discord para conversa, links e recursos, além de canais de voz quando houver atividade suficiente.
 
-## Navegação LPPC
-
-[Início](/lppc/) · [Sobre](/lppc/sobre/) · [Encontros](/lppc/encontros/) · [Como participar](/lppc/como-participar/) · [Recursos](/lppc/recursos/) · [Código de conduta](/lppc/codigo-de-conduta/)
+{% include lppc/nav-pt.md %}

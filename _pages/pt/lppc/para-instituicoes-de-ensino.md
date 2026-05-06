@@ -8,6 +8,11 @@ author_profile: false
 lppc_profile: true
 ---
 
+## Sumário
+
+- [Formas de incentivo](#formas-de-incentivo)
+- [Navegação LPPC](#navegação-lppc)
+
 A LPPC busca aproximar programação competitiva, raciocínio lógico-matemático e formação técnica de estudantes da região. Escolas de ensino médio, escolas técnicas, institutos federais, faculdades, centros universitários e universidades podem ter papel importante nesse processo.
 
 O apoio institucional mais importante é o incentivo à participação. Divulgar encontros, reconhecer a relevância de competições acadêmicas e permitir que estudantes formem equipes já fortalece a cultura regional de computação.
@@ -24,6 +29,4 @@ A LPPC pode contribuir para a formação de talentos, a melhoria do raciocínio 
 - Indicar estudantes interessados em algoritmos, programação e resolução de problemas.
 - Valorizar a participação em competições como parte da formação técnica.
 
-## Navegação LPPC
-
-[Início](/lppc/) · [Sobre](/lppc/sobre/) · [Encontros](/lppc/encontros/) · [Trilhas](/lppc/trilhas/) · [Como participar](/lppc/como-participar/) · [Código de conduta](/lppc/codigo-de-conduta/)
+{% include lppc/nav-pt.md %}

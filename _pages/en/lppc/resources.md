@@ -8,6 +8,16 @@ author_profile: false
 lppc_profile: true
 ---
 
+## Contents
+
+- [Competitive Programming](#competitive-programming)
+- [OBI And Beginners](#obi-and-beginners)
+- [Backend And Rinha de Backend](#backend-and-rinha-de-backend)
+- [Parallel Programming](#parallel-programming)
+- [Hackathons And Startups](#hackathons-and-startups)
+- [Cybersecurity And CTF](#cybersecurity-and-ctf)
+- [LPPC Navigation](#lppc-navigation)
+
 This page gathers resources by development track. The general orientation is to choose one track, use a small number of resources consistently, and practice regularly instead of trying to follow every link at the same time.
 
 ## Competitive Programming
@@ -75,6 +85,4 @@ This track combines programming, product, and communication. The initial technic
 
 Study cybersecurity only in authorized environments, your own labs, or training platforms. This track must not be used to break into real systems, test third parties without permission, or normalize illegal conduct.
 
-## LPPC Navigation
-
-[Home](/en/lppc/) · [About](/en/lppc/about/) · [Meetings](/en/lppc/meetings/) · [Tracks](/en/lppc/tracks/) · [How to join](/en/lppc/how-to-join/) · [Code of Conduct](/en/lppc/code-of-conduct/)
+{% include lppc/nav-en.md %}

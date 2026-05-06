@@ -8,6 +8,11 @@ author_profile: false
 lppc_profile: true
 ---
 
+## Sumário
+
+- [Como apoiar](#como-apoiar)
+- [Navegação LPPC](#navegação-lppc)
+
 A LPPC é um espaço gratuito de formação técnica em programação competitiva, algoritmos e resolução de problemas. Para empresas da região, a iniciativa pode funcionar como ponto de contato com estudantes, profissionais e pessoas interessadas em desenvolver raciocínio computacional com seriedade.
 
 O benefício principal é indireto e formativo. Participantes que treinam problemas desenvolvem leitura precisa, raciocínio lógico, disciplina de implementação, trabalho em equipe e capacidade de analisar erros.
@@ -25,6 +30,4 @@ Quando uma empresa sedia ou apoia um encontro, seu nome deve ser tratado com res
 - Sugerir desafios técnicos adequados para estudo e discussão.
 - Incentivar participação regular de pessoas interessadas em algoritmos, backend, paralelismo ou segurança.
 
-## Navegação LPPC
-
-[Início](/lppc/) · [Sobre](/lppc/sobre/) · [Encontros](/lppc/encontros/) · [Trilhas](/lppc/trilhas/) · [Como participar](/lppc/como-participar/) · [Código de conduta](/lppc/codigo-de-conduta/)
+{% include lppc/nav-pt.md %}

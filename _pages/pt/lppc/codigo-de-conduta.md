@@ -8,6 +8,16 @@ author_profile: false
 lppc_profile: true
 ---
 
+## Sumário
+
+- [Respeito e convivência](#respeito-e-convivência)
+- [Pessoas, empresas e instituições](#pessoas-empresas-e-instituições)
+- [Autoria e integridade de estudo](#autoria-e-integridade-de-estudo)
+- [Uso de IA generativa](#uso-de-ia-generativa)
+- [Ambientes de segurança](#ambientes-de-segurança)
+- [Aplicação](#aplicação)
+- [Navegação LPPC](#navegação-lppc)
+
 O Código de Conduta da LPPC define as condições mínimas de participação nos encontros, canais digitais e atividades associadas à comunidade. Ele existe para proteger o ambiente de estudo, a convivência entre participantes e a imagem das pessoas, empresas e instituições envolvidas.
 
 ## Respeito e convivência
@@ -18,9 +28,9 @@ Discussões técnicas podem ser firmes, mas devem permanecer orientadas por argu
 
 ## Pessoas, empresas e instituições
 
-Participantes que estejam ligados a escolas, instituições de ensino, empresas ou outras organizações devem tratar esses nomes com máxima consideração em qualquer manifestação pública. A LPPC não admite ofensas a pessoas, empresas ou instituições.
+Participantes que estejam ligados a escolas, instituições de ensino, empresas ou outras organizações devem tratar esses nomes com máxima consideração em qualquer manifestação pública.
 
-Rivalidade acadêmica ou competitiva pode servir como incentivo saudável à preparação. Ela não deve ser usada para rixas, ataques pessoais, desqualificação institucional ou hostilidade entre grupos.
+A rivalidade competitiva deve servir somente como incentivo saudável à preparação. A LPPC não admite ofensas a pessoas, empresas ou instituições.
 
 ## Autoria e integridade de estudo
 
@@ -44,6 +54,4 @@ Na trilha de cibersegurança, toda prática deve ocorrer apenas em ambientes aut
 
 Situações de desrespeito podem levar a orientação, advertência, remoção de mensagens, restrição de participação ou exclusão dos canais da LPPC. A resposta deve considerar a gravidade do caso, a proteção das pessoas envolvidas e a preservação do ambiente de estudo.
 
-## Navegação LPPC
-
-[Início](/lppc/) · [Sobre](/lppc/sobre/) · [Encontros](/lppc/encontros/) · [Trilhas](/lppc/trilhas/) · [Como participar](/lppc/como-participar/) · [Recursos](/lppc/recursos/)
+{% include lppc/nav-pt.md %}

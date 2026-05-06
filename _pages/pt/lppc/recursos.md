@@ -8,6 +8,16 @@ author_profile: false
 lppc_profile: true
 ---
 
+## Sumário
+
+- [Programação competitiva](#programacao-competitiva)
+- [OBI e iniciantes](#obi-e-iniciantes)
+- [Backend e Rinha de Backend](#backend-e-rinha-de-backend)
+- [Programação paralela](#programacao-paralela)
+- [Hackathons e startups](#hackathons-e-startups)
+- [Cibersegurança e CTF](#ciberseguranca-e-ctf)
+- [Navegação LPPC](#navegação-lppc)
+
 Esta página reúne recursos por trilha de desenvolvimento. A orientação geral é escolher uma trilha, usar poucos materiais com consistência e praticar regularmente, em vez de tentar seguir todos os links ao mesmo tempo.
 
 ## Programação competitiva
@@ -78,6 +88,4 @@ Esta trilha combina programação, produto e comunicação. O objetivo técnico 
 
 Estude cibersegurança apenas em ambientes autorizados, laboratórios próprios ou plataformas de treino. A trilha não deve ser usada para invadir sistemas reais, testar terceiros sem permissão ou normalizar condutas ilegais.
 
-## Navegação LPPC
-
-[Início](/lppc/) · [Sobre](/lppc/sobre/) · [Encontros](/lppc/encontros/) · [Trilhas](/lppc/trilhas/) · [Como participar](/lppc/como-participar/) · [Código de conduta](/lppc/codigo-de-conduta/)
+{% include lppc/nav-pt.md %}

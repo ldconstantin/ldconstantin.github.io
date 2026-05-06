@@ -8,7 +8,16 @@ author_profile: false
 lppc_profile: true
 ---
 
-A participação na LPPC é aberta a pessoas de todos os níveis, de diferentes escolas, cursos, instituições e empresas. Não é necessário já ter experiência em competições, mas é necessário participar com respeito, regularidade e disposição para estudar.
+## Sumário
+
+- [Canais](#canais)
+- [Primeiros passos](#primeiros-passos)
+- [Quem pode participar](#quem-pode-participar)
+- [Navegação LPPC](#navegação-lppc)
+
+A participação na LPPC é aberta a pessoas de todos os níveis, de diferentes escolas, cursos, instituições e empresas. A LPPC é um projeto voluntário e sem fins lucrativos, sustentado por estudantes, professores, entusiastas e profissionais de computação.
+
+Não é necessário já ter experiência em competições, mas é necessário participar com respeito, regularidade e disposição para estudar.
 
 Antes de entrar nos canais da comunidade, leia o [Código de Conduta da LPPC](/lppc/codigo-de-conduta/). A participação nos encontros, no Discord e no WhatsApp pressupõe aceitação dessas regras.
 
@@ -30,8 +39,6 @@ O [WhatsApp da LPPC]({{ site.data.lppc.links.whatsapp }}) é usado para avisos r
 
 Podem participar estudantes do ensino médio, técnico, superior, pessoas autodidatas, profissionais e representantes de instituições interessadas em programação competitiva e formação técnica. Há espaço para iniciantes, desde que haja compromisso com estudo e autoria das próprias soluções.
 
-Participantes mais experientes são bem-vindos para praticar, discutir soluções e apoiar a comunidade. A LPPC depende de colaboração responsável, não de competição hostil.
+Participantes mais experientes são bem-vindos para praticar, discutir soluções e apoiar a comunidade. A LPPC depende de colaboração responsável e continuidade na preparação.
 
-## Navegação LPPC
-
-[Início](/lppc/) · [Sobre](/lppc/sobre/) · [Encontros](/lppc/encontros/) · [Trilhas](/lppc/trilhas/) · [Recursos](/lppc/recursos/) · [Código de conduta](/lppc/codigo-de-conduta/)
+{% include lppc/nav-pt.md %}

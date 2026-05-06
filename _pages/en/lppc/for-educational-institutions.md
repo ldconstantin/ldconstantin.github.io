@@ -8,6 +8,11 @@ author_profile: false
 lppc_profile: true
 ---
 
+## Contents
+
+- [Forms Of Support](#forms-of-support)
+- [LPPC Navigation](#lppc-navigation)
+
 LPPC seeks to connect competitive programming, logical-mathematical reasoning, and technical formation for students in the region. High schools, technical schools, federal institutes, colleges, university centers, and universities can play an important role in this process.
 
 The most important form of institutional support is encouraging participation. Publicizing meetings, recognizing the relevance of academic competitions, and allowing students to form teams already strengthens the regional computing culture.
@@ -24,6 +29,4 @@ LPPC can contribute to talent formation, improvement of logical-mathematical rea
 - Refer students interested in algorithms, programming, and problem solving.
 - Value contest participation as part of technical formation.
 
-## LPPC Navigation
-
-[Home](/en/lppc/) · [About](/en/lppc/about/) · [Meetings](/en/lppc/meetings/) · [Tracks](/en/lppc/tracks/) · [How to join](/en/lppc/how-to-join/) · [Code of Conduct](/en/lppc/code-of-conduct/)
+{% include lppc/nav-en.md %}

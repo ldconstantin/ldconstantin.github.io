@@ -8,6 +8,16 @@ author_profile: false
 lppc_profile: true
 ---
 
+## Contents
+
+- [Meeting Format](#meeting-format)
+- [Next Meeting](#next-meeting)
+- [Schedule](#schedule)
+- [Participation](#participation)
+- [LPPC Navigation](#lppc-navigation)
+
+## Meeting Format
+
 LPPC meetings are weekly study and practice activities. The standard format combines a brief introduction, a problem-solving period, and a final discussion about strategies, common mistakes, and possible solutions.
 
 The regular reference time is Saturday morning, from 08:30 to 11:30. Adjustments to place, time, or format may occur depending on space availability, regional events, and prior organization.
@@ -41,6 +51,4 @@ Arrive early and bring your laptop if possible. Discord is the main discussion c
 
 Before participating, read the [LPPC Code of Conduct](/en/lppc/code-of-conduct/). Participation in meetings implies respect for the rules of coexistence, authorship, and responsible tool use.
 
-## LPPC Navigation
-
-[Home](/en/lppc/) · [About](/en/lppc/about/) · [Tracks](/en/lppc/tracks/) · [How to join](/en/lppc/how-to-join/) · [Resources](/en/lppc/resources/) · [Code of Conduct](/en/lppc/code-of-conduct/)
+{% include lppc/nav-en.md %}

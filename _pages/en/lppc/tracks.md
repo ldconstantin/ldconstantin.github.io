@@ -8,6 +8,13 @@ author_profile: false
 lppc_profile: true
 ---
 
+## Contents
+
+- [Main Track](#main-track)
+- [Secondary Technical Tracks](#secondary-technical-tracks)
+- [Secondary Tracks Under Construction](#secondary-tracks-under-construction)
+- [LPPC Navigation](#lppc-navigation)
+
 LPPC tracks organize different ways to develop computational reasoning, programming practice, and technical maturity. Competitive programming remains the main axis, while the other tracks extend contact with backend systems, parallelism, technological entrepreneurship, and security.
 
 ## Main Track
@@ -95,6 +102,4 @@ The cybersecurity track is dedicated to ethical and legal study of computer secu
 
 These two secondary tracks are still under construction. The proposal is to organize separate Discord channels for conversation, links and resources, and voice channels when there is enough activity.
 
-## LPPC Navigation
-
-[Home](/en/lppc/) · [About](/en/lppc/about/) · [Meetings](/en/lppc/meetings/) · [How to join](/en/lppc/how-to-join/) · [Resources](/en/lppc/resources/) · [Code of Conduct](/en/lppc/code-of-conduct/)
+{% include lppc/nav-en.md %}

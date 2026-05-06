@@ -8,6 +8,16 @@ author_profile: false
 lppc_profile: true
 ---
 
+## Sumário
+
+- [Formato dos encontros](#formato-dos-encontros)
+- [Próximo encontro](#próximo-encontro)
+- [Agenda](#agenda)
+- [Participação](#participação)
+- [Navegação LPPC](#navegação-lppc)
+
+## Formato dos encontros
+
 Os encontros da LPPC são atividades semanais de estudo e prática. O formato padrão combina uma introdução breve, um período de resolução de problemas e uma discussão final sobre estratégias, erros comuns e possíveis soluções.
 
 O horário regular de referência é sábado pela manhã, das 08:30 às 11:30. Ajustes de local, horário ou formato podem ocorrer conforme disponibilidade dos espaços, eventos regionais e organização prévia.
@@ -41,6 +51,4 @@ Chegue com antecedência e traga seu notebook, se possível. O Discord é o cana
 
 Antes de participar, leia o [Código de Conduta da LPPC](/lppc/codigo-de-conduta/). A participação nos encontros pressupõe respeito às regras de convivência, autoria e uso responsável de ferramentas.
 
-## Navegação LPPC
-
-[Início](/lppc/) · [Sobre](/lppc/sobre/) · [Trilhas](/lppc/trilhas/) · [Como participar](/lppc/como-participar/) · [Recursos](/lppc/recursos/) · [Código de conduta](/lppc/codigo-de-conduta/)
+{% include lppc/nav-pt.md %}

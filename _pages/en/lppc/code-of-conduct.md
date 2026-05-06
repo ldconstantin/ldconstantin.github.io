@@ -8,6 +8,16 @@ author_profile: false
 lppc_profile: true
 ---
 
+## Contents
+
+- [Respect And Coexistence](#respect-and-coexistence)
+- [People, Companies, And Institutions](#people-companies-and-institutions)
+- [Authorship And Study Integrity](#authorship-and-study-integrity)
+- [Use Of Generative AI](#use-of-generative-ai)
+- [Security Environments](#security-environments)
+- [Enforcement](#enforcement)
+- [LPPC Navigation](#lppc-navigation)
+
 The LPPC Code of Conduct defines the minimum conditions for participation in meetings, digital channels, and activities associated with the community. It exists to protect the study environment, coexistence among participants, and the public image of the people, companies, and institutions involved.
 
 ## Respect And Coexistence
@@ -18,9 +28,9 @@ Technical discussions may be firm, but they must remain guided by arguments, evi
 
 ## People, Companies, And Institutions
 
-Participants connected to schools, educational institutions, companies, or other organizations must treat those names with the highest consideration in any public statement. LPPC does not accept offenses against people, companies, or institutions.
+Participants connected to schools, educational institutions, companies, or other organizations must treat those names with the highest consideration in any public statement.
 
-Academic or competitive rivalry can serve as a healthy incentive for preparation. It must not be used for personal disputes, personal attacks, institutional disqualification, or hostility between groups.
+Competitive rivalry must serve only as a healthy incentive for preparation. LPPC does not accept offenses against people, companies, or institutions.
 
 ## Authorship And Study Integrity
 
@@ -44,6 +54,4 @@ In the cybersecurity track, all practice must occur only in authorized environme
 
 Disrespectful situations may lead to guidance, warning, message removal, participation restriction, or exclusion from LPPC channels. The response should consider the gravity of the case, protection of the people involved, and preservation of the study environment.
 
-## LPPC Navigation
-
-[Home](/en/lppc/) · [About](/en/lppc/about/) · [Meetings](/en/lppc/meetings/) · [Tracks](/en/lppc/tracks/) · [How to join](/en/lppc/how-to-join/) · [Resources](/en/lppc/resources/)
+{% include lppc/nav-en.md %}
