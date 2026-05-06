@@ -4,29 +4,11 @@ ref: lppc-for-educational-institutions
 layout: single
 title: "For Educational Institutions"
 permalink: /en/lppc/for-educational-institutions/
+redirect_to: /en/lppc/support/#educational-institutions
 author_profile: false
 lppc_profile: true
 ---
 
-## Contents
-
-- [Forms Of Support](#forms-of-support)
-- [LPPC Navigation](#lppc-navigation)
-
-LPPC seeks to connect competitive programming, logical-mathematical reasoning, and technical formation for students in the region. High schools, technical schools, federal institutes, colleges, university centers, and universities can play an important role in this process.
-
-The most important form of institutional support is encouraging participation. Publicizing meetings, recognizing the relevance of academic competitions, and allowing students to form teams already strengthens the regional computing culture.
-
-Educational institutions can also host meetings subject to availability, authorization, and prior organization. Providing space does not need to represent a formal partnership; it can simply be a concrete way to support an open educational activity.
-
-LPPC can contribute to talent formation, improvement of logical-mathematical reasoning, and team preparation for competitions such as OBI, Maratona SBC de Programação, and MFP. These results depend on continuity, regular study, and responsible participation.
-
-## Forms Of Support
-
-- Publicize LPPC to students and teachers.
-- Encourage team formation for competitions.
-- Host meetings when space is available.
-- Refer students interested in algorithms, programming, and problem solving.
-- Value contest participation as part of technical formation.
+This page was incorporated into [Support LPPC](/en/lppc/support/#educational-institutions).
 
 {% include lppc/nav-en.md %}

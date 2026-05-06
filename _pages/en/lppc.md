@@ -21,12 +21,9 @@ Participation is open to people from different levels and institutions. LPPC rel
 - [About LPPC](/en/lppc/about/)
 - [Meetings](/en/lppc/meetings/)
 - [Development tracks](/en/lppc/tracks/)
-- [How to join](/en/lppc/how-to-join/)
 - [Resources by track](/en/lppc/resources/)
+- [How to join](/en/lppc/how-to-join/)
 - [Support LPPC](/en/lppc/support/)
-- [For companies](/en/lppc/for-companies/)
-- [For educational institutions](/en/lppc/for-educational-institutions/)
-- [For public institutions](/en/lppc/for-public-institutions/)
 - [Code of Conduct](/en/lppc/code-of-conduct/)
 
 ## Where To Start

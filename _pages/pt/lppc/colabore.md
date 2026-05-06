@@ -11,6 +11,9 @@ lppc_profile: true
 ## Sumário
 
 - [Formas de colaboração](#formas-de-colaboração)
+- [Empresas](#empresas)
+- [Instituições de ensino](#instituições-de-ensino)
+- [Instituições públicas](#instituições-públicas)
 - [Como propor uma colaboração](#como-propor-uma-colaboração)
 - [Navegação LPPC](#navegação-lppc)
 
@@ -28,6 +31,30 @@ Colaborar com a LPPC não significa assumir um compromisso amplo ou permanente. 
 - Organizar links, recursos e materiais de estudo por trilha.
 - Divulgar a LPPC em mídias sociais, murais institucionais, grupos acadêmicos e comunidades técnicas.
 - Ajudar iniciantes a encontrar uma primeira trilha de estudo sem substituir o esforço de cada participante.
+
+## Empresas
+
+Empresas podem colaborar com a LPPC cedendo espaços para encontros, divulgando atividades internamente, incentivando profissionais e estagiários a participar e sugerindo desafios técnicos compatíveis com a formação da comunidade.
+
+O benefício esperado é indireto e formativo. Participantes que treinam problemas desenvolvem leitura precisa, raciocínio lógico, disciplina de implementação, trabalho em equipe e capacidade de analisar erros.
+
+Desafios sugeridos por empresas devem respeitar o objetivo educacional da LPPC. Eles não devem transformar a comunidade em prestação gratuita de serviço, processo seletivo informal ou campanha de marketing.
+
+## Instituições de ensino
+
+Escolas de ensino médio, escolas técnicas, institutos federais, faculdades, centros universitários e universidades podem colaborar divulgando encontros, incentivando equipes e sediando atividades quando houver disponibilidade.
+
+A LPPC pode contribuir para a formação de talentos, para o fortalecimento do raciocínio lógico-matemático e para a preparação de equipes para competições como OBI, Maratona SBC de Programação e MFP. Esses resultados dependem de continuidade, estudo regular e participação responsável.
+
+O apoio institucional não precisa representar parceria formal. Ele pode ser apenas uma forma concreta de incentivar uma atividade educacional aberta.
+
+## Instituições públicas
+
+Instituições públicas podem colaborar fortalecendo o acesso de crianças, adolescentes, estudantes e comunidades locais a atividades de raciocínio, programação e resolução de problemas.
+
+Exemplos incluem sediar oficinas, divulgar atividades em escolas e bibliotecas, incentivar participação em competições como OBM, OBMEP e OBI, e aproximar professores, estudantes e profissionais interessados em olimpíadas científicas e programação competitiva.
+
+Atividades com crianças e adolescentes exigem atenção especial à autorização, segurança, comunicação com responsáveis e regras das instituições envolvidas. A LPPC deve atuar de modo compatível com normas locais e com a proteção dos participantes.
 
 ## Como propor uma colaboração
 

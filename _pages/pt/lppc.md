@@ -21,12 +21,9 @@ A participação é aberta a pessoas de diferentes níveis e instituições. A L
 - [Sobre a LPPC](/lppc/sobre/)
 - [Encontros](/lppc/encontros/)
 - [Trilhas de desenvolvimento](/lppc/trilhas/)
-- [Como participar](/lppc/como-participar/)
 - [Recursos por trilha](/lppc/recursos/)
+- [Como participar](/lppc/como-participar/)
 - [Colabore com a LPPC](/lppc/colabore/)
-- [Para empresas](/lppc/para-empresas/)
-- [Para instituições de ensino](/lppc/para-instituicoes-de-ensino/)
-- [Para instituições públicas](/lppc/para-instituicoes-publicas/)
 - [Código de conduta](/lppc/codigo-de-conduta/)
 
 ## Por onde começar
