@@ -8,40 +8,25 @@ author_profile: false
 lppc_profile: true
 ---
 
-The **LPPC** is an open competitive programming training initiative in Passo Fundo.
+**LPPC** is an independent and open competitive programming training initiative headquartered in Passo Fundo. Its main focus is to build a regional routine of study, practice, and problem discussion for students and professionals interested in algorithms.
 
-Its focus is to prepare students for OBI, Maratona SBC de Programação, and ICPC.
+Participation is open to people from different levels and institutions. To join, read the Code of Conduct, enter the Discord server, and follow announcements through WhatsApp.
 
-## Next Meeting
+{% include lppc/next-meeting.md %}
 
-📍 **Place:** IFSul — Campus Passo Fundo, during Arena Games.
+## Navigation
 
-🗓️ **Date:** Saturday, May 9, 2026.
+- [About LPPC](/en/lppc/about/)
+- [Meetings](/en/lppc/meetings/)
+- [Development tracks](/en/lppc/tracks/)
+- [How to join](/en/lppc/how-to-join/)
+- [Resources by track](/en/lppc/resources/)
+- [For companies](/en/lppc/for-companies/)
+- [For educational institutions](/en/lppc/for-educational-institutions/)
+- [Code of Conduct](/en/lppc/code-of-conduct/)
 
-🕘 **Time:** 09:00 to 11:30, exceptionally.
+## Where To Start
 
-🏫 **Room:** to be announced.
+If you want to practice competitive programming, start with the meetings page and take part in the weekly activities. If you represent a school, educational institution, or company, see the specific pages for simple forms of support.
 
-More information and updates soon on Discord, and on WhatsApp.
-
-## Weekly Meetings
-
-Format:
-
-- brief introduction
-- problem solving
-- solution discussion
-
-Arrive early. Bring your laptop if possible.
-
-Follow WhatsApp for quick announcements. Discord is our main space for discussions.
-
-## Who It Is For
-
-- high school, technical, or higher education students
-- people interested in algorithms
-- anyone who wants to start or improve in competitive programming
-
-There is room for beginners and for more experienced students.
-
-The LPPC is under construction. The community grows when people practice together.
+The immediate goal is to bring together people willing to study regularly. LPPC grows through consistent practice, responsible solution discussion, and respect for the learning process.
