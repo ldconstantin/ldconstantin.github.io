@@ -64,7 +64,7 @@ test('sidebar headings navigate and course links remain nested under their semes
   await semester.locator(':scope > button').click();
   await semester.locator('a[href="#introducao-a-linguagem-de-programacao-cpp"]').click();
   await page.waitForURL(base + '/ensino/#introducao-a-linguagem-de-programacao-cpp');
-  assert.equal(await page.locator('#site-nav a[aria-current="location"]').getAttribute('href'), '#introducao-a-linguagem-de-programacao-cpp');
+  await page.locator('#site-nav a[href="#introducao-a-linguagem-de-programacao-cpp"][aria-current="location"]').waitFor();
 });
 test('search finds visible course descriptions in each language', async t => {
   const page = await open(t);
@@ -74,7 +74,7 @@ test('search finds visible course descriptions in each language', async t => {
     await page.locator('pagefind-input input').fill(query);
     await page.locator(`pagefind-results a[href$="${target}"]`).waitFor();
     await page.keyboard.press('Escape');
-    assert.equal(await page.locator('pagefind-modal-trigger button').getAttribute('aria-expanded'), 'false');
+    await page.waitForFunction(() => document.querySelector('pagefind-modal-trigger button')?.getAttribute('aria-expanded') === 'false');
   }
 });
 test('home portrait is served locally and decodes without a GitHub request', async t => {
