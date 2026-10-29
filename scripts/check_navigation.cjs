@@ -79,14 +79,14 @@ test('search finds visible course descriptions in each language', async t => {
 });
 test('home portrait is served locally and decodes without a GitHub request', async t => {
   const page = await open(t);
-  const remoteImages = [];
-  page.on('request', r => {if (r.resourceType() === 'image' && /github/.test(new URL(r.url()).hostname)) remoteImages.push(r.url());});
+  const externalImages = [];
+  page.on('request', r => {if (r.resourceType() === 'image' && new URL(r.url()).origin !== new URL(base).origin) externalImages.push(r.url());});
   await visit(page, '/en/');
   const image = page.locator('.home-profile__photo');
   const data = await image.evaluate(async el => {await el.decode(); return {src: el.currentSrc, width: el.naturalWidth};});
   assert.equal(new URL(data.src).origin, new URL(base).origin);
   assert.ok(data.width >= 316);
-  assert.deepEqual(remoteImages, []);
+  assert.deepEqual(externalImages, []);
 });
 test('Portuguese search results retain homepage language with blocked storage', async t => {
   const page = await open(t, 'en-US', true);
