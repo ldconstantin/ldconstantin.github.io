@@ -4,6 +4,11 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+    inputs:
+      deploy:
+        description: Deploy the validated site to GitHub Pages
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -25,20 +30,39 @@ jobs:
         with:
           ruby-version: '3.4'
           bundler-cache: true
-      - name: Build Jekyll website
-        run: bundle exec jekyll build
       - name: Set up Node.js for Pagefind
         uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Build Jekyll website
+        run: bundle exec jekyll build
+      - name: Validate bilingual routes and language redirects
+        run: |
+          python3 scripts/check_bilingual_site.py _site
+          node scripts/check_language_redirect.cjs
+      - name: Validate deployment under a subpath
+        run: |
+          bundle exec jekyll build --baseurl /project --destination /tmp/site-subpath
+          python3 scripts/check_bilingual_site.py /tmp/site-subpath /project
       - name: Build Pagefind search index
         run: npx --yes pagefind@1.5.2 --site _site
+      - name: Install browser checks
+        run: |
+          npm install --prefix "$RUNNER_TEMP/site-browser-check" --no-package-lock --no-save playwright@1.58.2
+          node "$RUNNER_TEMP/site-browser-check/node_modules/playwright/cli.js" install --with-deps chromium
+      - name: Check navigation in Chromium
+        env:
+          PLAYWRIGHT_MODULE: ${{ runner.temp }}/site-browser-check/node_modules/playwright
+        run: |
+          bundle exec jekyll serve --detach --host 127.0.0.1 --port 4000 --skip-initial-build
+          node scripts/check_navigation.cjs
       - name: Upload website artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: _site/
 
   deploy:
+    if: github.event_name == 'workflow_dispatch' && inputs.deploy == true
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

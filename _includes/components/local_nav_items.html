@@ -1,0 +1,27 @@
+{% assign heading_start = '<h' | append: include.level %}
+{% assign entries = include.html | split: heading_start %}
+<ul class="nav-list"{% if include.parent_id %} id="local-subnav-{{ include.parent_id | escape }}"{% endif %}>
+  {% for entry in entries offset:1 %}
+    {% assign heading_start = '<h' | append: include.level %}
+    {% assign heading_end = '</h' | append: include.level | append: '>' %}
+    {% assign heading = entry | split: heading_end | first %}
+    {% assign heading_opening = heading | split: '>' | first %}
+    {% assign heading_id = heading_opening | split: 'id="' | last | split: '"' | first %}
+    {% assign heading_title = heading | prepend: heading_start | strip_html | strip %}
+    {% if heading_opening contains 'id="' and heading_title != '' %}
+      {% assign child_level = include.level | plus: 1 %}
+      {% assign child_start = '<h' | append: child_level %}
+      {% assign has_children = false %}
+      {% if include.level < 4 and entry contains child_start %}{% assign has_children = true %}{% endif %}
+      <li class="nav-list-item{% if has_children %} local-nav-parent{% endif %}">
+        <a class="nav-list-link" href="#{{ heading_id | escape }}">{{ heading_title | escape }}</a>
+        {% if has_children %}
+          <button class="nav-list-expander btn-reset" type="button" aria-expanded="false" aria-controls="local-subnav-{{ heading_id | escape }}" aria-label="{{ ui.expand_section }} {{ heading_title | escape }}">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
+          </button>
+          {% include components/local_nav_items.html html=entry level=child_level parent_id=heading_id %}
+        {% endif %}
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>

@@ -1,19 +1,31 @@
+{% assign english = false %}
+{% if page.locale == 'en' or page.detect_language %}{% assign english = true %}{% endif %}
+{% assign redirect_url = page.redirect_to | relative_url %}
+{% if page.locale == 'pt' and page.redirect_to == '/' %}{% assign redirect_url = redirect_url | append: '?lang=pt' %}{% endif %}
+{% assign portuguese_url = redirect_url %}
+{% if page.detect_language %}
+  {% assign portuguese_url = page.redirect_to_pt | relative_url %}
+  {% if page.redirect_to_pt == '/' %}{% assign portuguese_url = portuguese_url | append: '?lang=pt' %}{% endif %}
+{% endif %}
+{% assign redirect_page = site.pages | where: 'url', page.redirect_to | first %}
 <!DOCTYPE html>
-<html lang="{{ site.lang }}">
+<html lang="{{ page.lang | default: site.lang }}">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="refresh" content="0; url={{ page.redirect_to | relative_url }}">
+  <script type="application/json" id="language-section-map">{{ site.data.section_translations[redirect_page.translation_key] | jsonify }}</script>
+  <script src="{{ '/assets/js/language-redirect.js' | relative_url }}" data-en-url="{{ redirect_url }}" data-pt-url="{{ portuguese_url }}"{% if page.locale %} data-locale="{{ page.locale }}"{% endif %}></script>
+  <noscript><meta http-equiv="refresh" content="0; url={{ redirect_url }}"></noscript>
   <link rel="canonical" href="{{ page.redirect_to | absolute_url }}">
-  <title>Endereço atualizado</title>
+  <title>{% if english %}Address updated{% else %}Endereço atualizado{% endif %}</title>
   <script src="{{ '/assets/js/theme.js' | relative_url }}"></script>
   <link rel="stylesheet" href="{{ '/assets/css/just-the-docs-default.css' | relative_url }}">
 </head>
 <body>
   <main class="main-content redirect-page">
-    <h1>Endereço atualizado</h1>
-    <p>Este endereço mudou.</p>
-    <p><a href="{{ page.redirect_to | relative_url }}">Ir para a página atual</a></p>
+    <h1>{% if english %}Address updated{% else %}Endereço atualizado{% endif %}</h1>
+    <p>{% if english %}This address has changed.{% else %}Este endereço mudou.{% endif %}</p>
+    <p><a href="{{ redirect_url }}">{% if english %}Go to the current page{% else %}Ir para a página atual{% endif %}</a></p>
   </main>
 </body>
 </html>

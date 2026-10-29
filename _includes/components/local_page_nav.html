@@ -1,40 +1,7 @@
 {% assign sections = include.page_content | split: '<h2' %}
-  <nav id="site-nav" class="site-nav local-page-nav" aria-label="Seções de {{ page.title | default: 'página' | escape }}"{% if sections.size <= 1 %} hidden{% endif %}>
-    {% if sections.size > 1 %}
-    <h2 class="nav-category">Nesta página</h2>
-    <ul class="nav-list">
-      {% for section in sections offset:1 %}
-        {% assign heading = section | split: '</h2>' | first %}
-        {% assign heading_id = heading | split: 'id="' | last | split: '"' | first %}
-        {% assign heading_title = heading | prepend: '<h2' | strip_html | strip %}
-        {% if heading contains 'id="' and heading_title != '' %}
-          {% assign subsections = section | split: '<h3' %}
-          <li class="nav-list-item{% if subsections.size > 1 %} local-nav-parent{% endif %}">
-            {% if subsections.size > 1 %}
-              <button class="nav-list-expander btn-reset" type="button" aria-expanded="false" aria-controls="local-subnav-{{ heading_id | escape }}">
-                <span>{{ heading_title | escape }}</span>
-                <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg>
-              </button>
-            {% else %}
-              <a class="nav-list-link" href="#{{ heading_id | escape }}">{{ heading_title | escape }}</a>
-            {% endif %}
-            {% if subsections.size > 1 %}
-              <ul class="nav-list" id="local-subnav-{{ heading_id | escape }}">
-                {% for subsection in subsections offset:1 %}
-                  {% assign subheading = subsection | split: '</h3>' | first %}
-                  {% assign subheading_id = subheading | split: 'id="' | last | split: '"' | first %}
-                  {% assign subheading_title = subheading | prepend: '<h3' | strip_html | strip %}
-                  {% if subheading contains 'id="' and subheading_title != '' %}
-                    <li class="nav-list-item">
-                      <a class="nav-list-link" href="#{{ subheading_id | escape }}">{{ subheading_title | escape }}</a>
-                    </li>
-                  {% endif %}
-                {% endfor %}
-              </ul>
-            {% endif %}
-          </li>
-        {% endif %}
-      {% endfor %}
-    </ul>
-    {% endif %}
-  </nav>
+<nav id="site-nav" class="site-nav local-page-nav" aria-label="{{ ui.sections }} {{ page.title | escape }}"{% if sections.size <= 1 %} hidden{% endif %}>
+  {% if sections.size > 1 %}
+    <h2 class="nav-category">{{ ui.on_this_page }}</h2>
+    {% include components/local_nav_items.html html=include.page_content level=2 %}
+  {% endif %}
+</nav>

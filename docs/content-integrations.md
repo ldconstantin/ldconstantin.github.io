@@ -2,8 +2,7 @@
 
 ## Author content without per-page setup
 
-The template enables content technologies found in the local Just the Docs and
-Academic Pages references. Use an isolated source fixture when browser checks
+The website shares one content loader across both languages. Use an isolated source fixture when browser checks
 need sample content. Figures in code examples are illustrative.
 
 Kramdown interprets unescaped `|` characters as table columns, even in otherwise
@@ -22,14 +21,13 @@ between fields or escape a literal vertical bar as `\|`.
 | Icons | Font Awesome or Academicons classes with visible labels | Versioned CSS and font resources |
 | Emoji | `:airplane:` and other supported shortcodes | `jemoji` |
 | Sitemap and robots | Site pages | `jekyll-sitemap`; `/sitemap.xml` and `/robots.txt` |
-| Redirects | `redirect_from` in front matter | `jekyll-redirect-from`; legacy root redirects also remain valid |
+| Redirects | Explicit destinations in `aliases/`; `redirect_from` where appropriate | Shared redirect layout preserves query/hash and uses a shared section translation map; `jekyll-redirect-from` handles plugin aliases |
 | Gist embeds | The plugin's Liquid `gist` tag | `jekyll-gist`; fetching a gist is a build-time network operation |
 | SEO metadata | Page title and site configuration | Existing `jekyll-seo-tag` from the theme |
 
-Marp is not included in either checked-out reference and is not a Jekyll
-Markdown renderer. Marp slide decks require a separate export to HTML or PDF
+Marp is not a Jekyll Markdown renderer. Marp slide decks require a separate export to HTML or PDF
 with Marp CLI before they can be linked or embedded. The Jekyll build does not
-invoke Marp or require Node.js.
+invoke Marp. Pagefind search indexing separately requires Node.js and npx.
 
 Plotly blocks use JSON, not executable JavaScript. Explicit author layout
 properties override theme defaults. Add a `description` and a data table or
@@ -79,25 +77,31 @@ still renders with source labels. The two libraries are tested together.
 The site does not publish posts, feeds, or paginated blog pages. The Gemfile
 lists the sitemap, redirect, gist, and emoji plugins. `bundle install` installs
 them locally in the existing project bundle. GitHub Actions builds with Ruby
-3.4. No JavaScript build tool or node_modules directory is required.
+3.4 and uses the versioned `Gemfile.lock` for dependency resolution. Pagefind
+1.5.2 runs through npx after Jekyll; no project `node_modules` directory is
+required. CI also runs bilingual-route and language-redirect checks.
 Analytics, comment-provider accounts, and personal profile identifiers are
-separate owner-specific integrations, not automatic content rendering.
+maintained separately from content rendering.
 
 ## Verification
 
-The browser review at `/tmp/afm-media-review/` exercises actual CDN libraries,
-not mocked renderer functions. It checks TeX and MathML, rendered Mermaid SVG,
-Plotly bars, a Leaflet map with loaded tiles, icons, TOC, emoji, footnotes,
-clipboard controls, theme changes, and responsive layout. It also checks that
-malformed Mermaid/Plotly source and blocked CDN requests leave readable fallbacks
-without uncaught browser exceptions.
+Run the build and routing checks in the [bilingual guide](bilingual-content.md),
+then generate Pagefind's index as shown in the [README](../README.md). Confirm
+that both course titles and descriptions appear in search and that placeholder,
+redirect, and error pages remain excluded. Do not remove meaningful content
+from indexing merely to shorten result excerpts.
 
-The current build publishes the site's pages, sitemap, robots file, and
-redirects. It does not generate a posts feed or pagination pages.
+When changing the media loader or dependency versions, exercise TeX and MathML,
+Mermaid SVG, Plotly charts, Leaflet maps and tiles, icons, TOC, emoji, footnotes,
+clipboard controls, both themes, and narrow layouts in a browser. Check malformed
+source and blocked CDN requests for readable fallbacks and uncaught exceptions.
+Recheck integrations after changing their implementation or dependency versions.
 
-The Gist tag is enabled through its official plugin; a live remote gist fetch
-is not part of these checks. Browser and structure checks do not establish
-complete assistive-technology accessibility for arbitrary authored charts.
+The build publishes content pages, a sitemap, robots file, and redirects. It
+does not generate a posts feed or pagination pages. The Gist tag is enabled
+through its official plugin; a live remote fetch needs its own check. Build and
+structure checks do not establish assistive-technology accessibility for
+arbitrary authored charts.
 
 ## Primary documentation
 

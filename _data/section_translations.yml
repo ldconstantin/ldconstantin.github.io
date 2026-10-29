@@ -1,0 +1,27 @@
+home:
+  education: formação-acadêmica
+  professional-experience: experiencia-profissional
+  substitute-instructor-in-basic-technical-and-technological-education-ebtt: professor-substituto-de-ensino-básico-técnico-e-tecnológico-ebtt
+  selected-achievements: resultados-relevantes
+  programming-and-spoken-languages: linguagens-e-idiomas
+teaching:
+  current-courses-title: disciplinas-atuais-titulo
+  data-structures-iii: estruturas-de-dados-iii
+  operating-systems-ii: sistemas-operacionais-ii
+  web-page-development: criacao-de-paginas-web
+  object-oriented-programming: linguagem-de-programacao-orientada-a-objetos
+  previous-courses: disciplinas-anteriores
+  logic-and-algorithms: logica-e-algoritmos
+  competitive-programming: programacao-competitiva
+  introduction-to-cpp: introducao-a-linguagem-de-programacao-cpp
+  introduction-to-javascript: introducao-a-linguagem-de-programacao-javascript
+  algorithm-analysis-and-complexity: analise-e-complexidade-de-algoritmos
+  topics-under-development: disciplinas-em-estudo
+  ai-literacy: letramento-em-inteligencia-artificial
+research:
+  competitive-programming: programação-competitiva
+  algorithms-and-data-structures: algoritmos-e-estruturas-de-dados
+  computing-education: educação-em-computação
+extension:
+  other-activities: outras-atividades
+  other-programming-community-activities: outras-atividades-na-comunidade-de-programação

@@ -1,4 +1,11 @@
+{% if page.detect_language %}
+<script type="application/json" id="language-section-map">{{ site.data.section_translations[page.translation_key] | jsonify }}</script>
+<script src="{{ '/assets/js/language-redirect.js' | relative_url }}" data-en-url="{{ '/en/' | relative_url }}" data-pt-url="{{ '/' | relative_url }}"></script>
+{% endif %}
 <script src="{{ '/assets/js/theme.js' | relative_url }}"></script>
+{% if page.translation_key == 'home' %}
+<link rel="preload" as="image" href="{{ '/assets/images/profile.webp' | relative_url }}" fetchpriority="high">
+{% endif %}
 <link rel="stylesheet" href="{{ '/pagefind/pagefind-component-ui.css' | relative_url }}">
 <script type="module" src="{{ '/pagefind/pagefind-component-ui.js' | relative_url }}"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -6,3 +13,11 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&amp;family=Roboto+Condensed:wght@300..700&amp;family=Roboto+Flex:ital,opsz,wght@0,8..144,300..700;1,8..144,300..700&amp;display=block">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.4/css/academicons.min.css">
+{% if page.translation_key and page.layout != 'redirect' %}
+  {% assign translations = site.pages | where: 'translation_key', page.translation_key %}
+  {% for translation in translations %}
+<link rel="alternate" hreflang="{{ translation.lang }}" href="{{ translation.url | absolute_url }}">
+  {% endfor %}
+{% endif %}
+<script defer src="{{ '/assets/js/language-preference.js' | relative_url }}"></script>
+<script defer src="{{ '/assets/js/local-page-nav.js' | relative_url }}"></script>

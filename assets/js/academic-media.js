@@ -4,6 +4,7 @@ const config = JSON.parse(settings?.textContent || '{}');
 for (const [name, url] of Object.entries(config)) {
   if (typeof url === 'string' && url.startsWith('/') && !url.startsWith('//')) config[name] = (settings.dataset.baseurl || '') + url;
 }
+const english = document.documentElement.lang === 'en-US';
 const loaded = new Map();
 const diagrams = [];
 const charts = [];
@@ -37,17 +38,17 @@ function frame(code, label, description) {
   caption.textContent = description;
   const details = document.createElement('details');
   const summary = document.createElement('summary');
-  summary.textContent = 'Ver o código e os dados usados';
+  summary.textContent = (english ? 'View the source code and data' : 'Ver o código e os dados usados');
   details.append(summary);
   if (!source.querySelector('button')) {
     const copy = document.createElement('button');
     copy.type = 'button';
     copy.className = 'btn media-copy';
-    copy.textContent = 'Copiar código';
+    copy.textContent = (english ? 'Copy code' : 'Copiar código');
     const text = code.textContent;
     copy.addEventListener('click', async () => {
-      try { await navigator.clipboard.writeText(text); copy.textContent = 'Código copiado'; }
-      catch { copy.textContent = 'Selecione o código para copiar'; }
+      try { await navigator.clipboard.writeText(text); copy.textContent = (english ? 'Code copied' : 'Código copiado'); }
+      catch { copy.textContent = (english ? 'Select the code to copy it' : 'Selecione o código para copiar'); }
     });
     details.append(copy);
   }
@@ -62,7 +63,7 @@ function failure(node, error) {
   const message = document.createElement('p');
   message.className = 'media-error';
   message.setAttribute('role', 'status');
-  message.textContent = 'Não foi possível mostrar este conteúdo. Você ainda pode ver o código usado.';
+  message.textContent = (english ? 'This content could not be displayed. You can still view its source code.' : 'Não foi possível mostrar este conteúdo. Você ainda pode ver o código usado.');
   if (node.figure) {
     node.details.open = true;
     if (!node.figure.querySelector('.media-error')) node.figure.append(message);
@@ -125,7 +126,7 @@ async function initMermaid() {
   try {
     ({default: mermaid} = await import(config.mermaid));
     await Promise.race([document.fonts.ready, new Promise(resolve => setTimeout(resolve, 5000))]);
-    for (const block of blocks) diagrams.push({...frame(block, 'mermaid', 'Diagrama. O código mostra como os elementos se relacionam.'), source: block.textContent});
+    for (const block of blocks) diagrams.push({...frame(block, 'mermaid', (english ? 'Diagram. The source code shows how the elements relate.' : 'Diagrama. O código mostra como os elementos se relacionam.')), source: block.textContent});
     await redraw();
   } catch (error) { blocks.forEach(block => failure(block.closest('pre') || block, error)); }
 }
@@ -140,7 +141,7 @@ async function initPlotly(mathReady) {
       try {
         const spec = JSON.parse(block.textContent);
         if (!Array.isArray(spec.data)) throw new Error('Plotly requires a data array');
-        const record = {...frame(block, 'plotly', spec.description || 'Gráfico interativo. Consulte o código para ver os valores.'), spec};
+        const record = {...frame(block, 'plotly', spec.description || (english ? 'Interactive chart. See the source code for the values.' : 'Gráfico interativo. Consulte o código para ver os valores.')), spec};
         charts.push(record);
         new ResizeObserver(() => {if (record.target.offsetWidth && record.target.classList.contains('js-plotly-plot')) window.Plotly.Plots.resize(record.target);}).observe(record.target);
       } catch (error) { failure(block.closest('pre') || block, error); }
@@ -187,12 +188,12 @@ async function initMaps() {
       let record;
       try {
         const spec = JSON.parse(block.textContent);
-        record = frame(block, 'leaflet', spec.description || 'Mapa interativo. Consulte o código para ver as coordenadas.');
+        record = frame(block, 'leaflet', spec.description || (english ? 'Interactive map. See the source code for the coordinates.' : 'Mapa interativo. Consulte o código para ver as coordenadas.'));
         const map = window.L.map(record.target, {scrollWheelZoom: false}).setView(spec.center || [0, 0], spec.zoom ?? 2);
         window.L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {maxZoom: 19, attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'}).addTo(map);
         for (const marker of spec.markers || []) {
-          const label = document.createElement('span'); label.textContent = marker.label || 'Ponto de demonstração';
-          window.L.marker([marker.lat, marker.lon], {alt: marker.label || 'Ponto de demonstração'}).addTo(map).bindPopup(label);
+          const label = document.createElement('span'); label.textContent = marker.label || (english ? 'Example location' : 'Ponto de demonstração');
+          window.L.marker([marker.lat, marker.lon], {alt: marker.label || (english ? 'Example location' : 'Ponto de demonstração')}).addTo(map).bindPopup(label);
         }
         if (spec.geojson) window.L.geoJSON(spec.geojson).addTo(map);
         new ResizeObserver(() => {if (record.target.offsetWidth) map.invalidateSize();}).observe(record.target);
@@ -205,7 +206,7 @@ async function initMaps() {
 new MutationObserver(() => redraw()).observe(document.documentElement, {attributes: true, attributeFilter: ['data-theme']});
 function start() {
   // Native JTD creates copy controls in its earlier DOMContentLoaded listener.
-  document.querySelectorAll('.highlighter-rouge > button').forEach(button => button.setAttribute('aria-label', 'Copiar código'));
+  document.querySelectorAll('.highlighter-rouge > button').forEach(button => button.setAttribute('aria-label', (english ? 'Copy code' : 'Copiar código')));
   const mathReady = initMath();
   Promise.allSettled([mathReady, initMermaid(), initPlotly(mathReady), initMaps()]);
 }

@@ -25,7 +25,8 @@
     const button = document.getElementById('theme-toggle');
     if (button) {
       button.setAttribute('aria-pressed', String(theme === 'dark'));
-      button.title = theme === 'dark' ? 'Usar tema claro' : 'Usar tema escuro';
+      const english = root.lang === 'en-US';
+      button.title = theme === 'dark' ? (english ? 'Use light theme' : 'Usar tema claro') : (english ? 'Use dark theme' : 'Usar tema escuro');
       button.setAttribute('aria-label', button.title);
     }
   }

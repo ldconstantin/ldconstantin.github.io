@@ -1,9 +1,8 @@
 title: "Leonardo D. Constantin"
-template_name: "Academic Flight Manual"
-description: "Sou professor de Computação. Neste site, apresento minhas aulas e meus interesses de pesquisa."
+description: "I teach computing. This site presents my courses and research interests."
 url: "https://ldconstantin.github.io"
 baseurl: ""
-lang: pt-BR
+lang: en-US
 repository: ldconstantin/ldconstantin.github.io
 
 theme: just-the-docs
@@ -35,9 +34,21 @@ academic_media:
 back_to_top: true
 back_to_top_text: "Voltar ao início da página"
 
+include:
+  - _pages
+
+defaults:
+  - scope:
+      path: "_pages/pt"
+    values:
+      description: "Sou professor de Computação. Neste site, apresento minhas aulas e meus interesses de pesquisa."
+  - scope:
+      path: "_pages/en"
+    values:
+      description: "I teach computing. This site presents my courses and research interests."
+
 exclude:
-  - publicacoes.md
-  - sobre.md
+  - AGENTS.md
   - .aws/
   - .github/
   - Gemfile
@@ -45,6 +56,14 @@ exclude:
   - LICENSE
   - README.md
   - docs/
+  - backups/
+  - history/
+  - review/
+  - reviews/
+  - tmp/
+  - local-checks/
+  - node_modules/
   - inir/
+  - scripts/
   - references/
   - vendor/

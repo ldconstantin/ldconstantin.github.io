@@ -1,19 +1,22 @@
-# Academic Flight Manual
+# Website writing and design guide
 
 ## Purpose
 
-Help readers find academic information, understand it, and take the next step.
-The template combines Just the Docs' structure and Pagefind search, Academic Pages'
-navigation and light/dark behavior, and Just the Docs' light and dark palettes and quiet separators.
+Help students, colleagues, and other readers find information about Leonardo
+D. Constantin's academic background, teaching, research interests, and extension
+activities. The website uses Just the Docs' structure, Pagefind search,
+Academic Pages' navigation and light/dark behavior, and the Air color theme.
 
-Keep the existing header, sidebar, search control, and content positions. Use the
-template name for identity. Use ordinary words for controls; aviation terms
-such as cockpit, mission, or checklist must not replace familiar page labels.
+Use Leonardo's name as the site identity and familiar words for navigation and
+controls. Keep the header, sidebar, search control, and content positions
+consistent across pages.
 
 ## Writing rules
 
-The public site defaults to Brazilian Portuguese. Apply these principles to
-new content and to content revisions:
+Keep repository documentation and commit messages in English.
+The website has Brazilian Portuguese and American English pages. Follow the
+[bilingual content guide](bilingual-content.md) for language selection and routes.
+Apply these principles to new content and to content revisions:
 
 - State the page's subject first. Give the reader a clear next step when one
   exists.
@@ -32,7 +35,7 @@ new content and to content revisions:
   sources for academic claims. Do not fill empty pages with invented work.
 
 ASD-STE100 defines controlled English for technical documentation. Its writing
-discipline informs this template, but its English dictionary is not a
+discipline informs the website's prose, but its English dictionary is not a
 Portuguese vocabulary rule. Do not describe Portuguese pages as ASD-STE100
 conformant. No automatic sentence-length score proves that text is clear.
 
@@ -44,25 +47,32 @@ the default face, Roboto Condensed is used in the sidebar, and code uses IBM
 Plex Mono. Quotations and captions use Roboto Flex. Reading text has a 1.5 line
 height.
 
-The centered desktop manual uses a 15rem sidebar and a 47rem content region
+The centered desktop layout uses a 15rem sidebar and a 47rem content region
 (including its padding). The intermediate sidebar is 14.5rem; navigation keeps
 its existing 50rem and 66.5rem breakpoints. At the default browser size, prose
 uses 18px on desktop and mobile. Headings use the Academic Pages scale and bold
 weights; headings and navigation use natural letter spacing and sentence case.
 The root follows the reader's browser font preference rather than shrinking
-on small screens. Header links wrap when needed. The homepage sidebar shows
-the owner's profile; on other pages, it shows headings from the open page.
-Pagefind search opens in a modal from a magnifying-glass button immediately left
-of the light/dark toggle. The dialog supports keyboard search and section results.
-Only the main page content is indexed, excluding navigation and footer material.
+on small screens. Header links wrap when needed. The sidebar links to H2, H3, and H4 headings
+from the open page, including explicitly anchored sections and the homepage.
+Parent headings retain their own section links alongside expansion controls.
+The professional profile appears in the homepage's main content and uses a
+shared optimized local image with descriptive alternative text.
+The portrait is `assets/images/profile.webp`, preloaded on both homepages.
+Replace that file deliberately when updating the photo; it does not make a
+runtime request to GitHub.
+Pagefind search opens in a modal from a magnifying-glass button in the header,
+alongside the language and light/dark controls. The dialog supports keyboard search.
+Only the main page content is indexed, including course descriptions and titles,
+excluding navigation and footer material. About and Publications placeholders
+stay out of search and the sitemap until substantive content is ready.
 The Ensino page presents current, previous, and proposed course titles with
 short descriptions and no links to course pages. Individual course pages and
 lesson files are not currently published. Keep profile metadata at a
-consistent readable size and
-public profile links use a compact height with fine pointers and stay at least
-44px high with coarse pointers. Sidebar
-metadata and navigation use 16px; footer text uses 14px. Section links and
-44px expansion buttons are separate controls. Neutral surfaces and consistent
+consistent readable size. Public profile links use a compact height with fine
+pointers and stay at least 44px high with coarse pointers. Sidebar navigation
+uses 16px; footer text uses 14px. Headings with subsections have expansion
+buttons; leaf entries link directly to their headings. Neutral surfaces and consistent
 insets group the sidebar without gradients or additional colored bands.
 The site uses the Air color theme, with separate light and dark Sass files;
 the header button changes the mode. Table cells and code blocks use 16px.
@@ -85,21 +95,20 @@ simplifying text. Provide a technical version when needed.
 
 Color reinforces meaning. Readers must also receive that meaning without
 color. The base palette does not assign a different color to each discipline.
-The Just the Docs palette identifies links and navigation. Link underlines,
+The Air palette identifies links and navigation. Link underlines,
 selected-state marks and named controls communicate their purpose independently
 of color. Accent colors do not mean “approved”, “safe”, “complete”, or “published”.
 
-The light palette adapts `references/just-the-docs/_sass/color_schemes/light.scss`:
-white reading areas, `#f5f6fa` sidebars, `#5c5962` body text, `#27262b` headings,
-`#6855a8` links and `#eeebee` separators. Dark mode follows its `dark.scss`:
-`#27262b` pages and sidebars, `#302d36` raised surfaces, `#e6e1e8` body text,
-`#f5f6fa` headings, `#a99bdc` links and `#44434d` separators. The link and brand
-accents stay muted purple in both modes; their brightness changes for contrast. Structural dividers
+The light Air palette uses `#f7f8f8` reading areas and `#353f44` body text;
+dark mode uses `#283034` and `#e6eae9`. Link colors derive from `#2a5978`
+in light mode and `#79b6d0` in dark mode, with adjustments in the Sass files.
+The sidebar, separators, hover backgrounds, and secondary text derive from
+the background and text colors. Structural dividers
 remain 1px and use the separator token in both themes. Focus outlines and
 selected-state underlines remain stronger than decorative dividers.
-Filled actions use white ink on `#594786` in both Just the Docs modes.
-Aviator's mint and the previous aviation-blue palette are historical references;
-they do not define the current site's tokens.
+Filled actions use white ink on the theme's brand color. The exact color
+definitions are in `_sass/theme/_air_light.scss` and `_sass/theme/_air_dark.scss`.
+The [color theme guide](color-themes.md) records their relationship to Academic Pages.
 
 | Role in SCSS | Meaning | Visible cue beyond color |
 | --- | --- | --- |
@@ -111,17 +120,14 @@ they do not define the current site's tokens.
 | `--site-rule` | Separation | Grouping only; a quiet rule must not be the only control boundary |
 | `--site-control` | Identifiable control boundary | Search field shape and explicit label; contrast checked separately from decorative rules |
 | `--site-action-ink` | Text on filled action backgrounds | Action text and the button boundary |
-| `--site-brand-ink` | Text and icons on filled brand surfaces | Site name, template label, and menu icon |
+| `--site-brand-ink` | Text and icons on filled brand surfaces | Use only against the corresponding brand background |
 
-The header links to the site's main pages. On interior pages, the sidebar links
-to sections and subsections; on the homepage, it shows profile links.
+The header links to Teaching, Research, and Extension in the current language.
+The sidebar lists sections and subsections of the current page.
 The current header destination exposes
 `aria-current="page"`. Keyboard focus uses an outline.
 The theme control uses distinct sun/moon shapes and a named pressed state.
-The labelled selector immediately above the sidebar footer chooses the color
-palette independently; all palettes have light and dark modes. Just the Docs
-stays the default.
-See [color themes](color-themes.md) for the palette sources and adaptations.
+The header's theme button switches between Air's light and dark modes.
 Do not depend on tooltips as the only accessible label.
 
 If status messages are added, show a visible label such as “Informação”,
@@ -167,9 +173,5 @@ screen-reader compatibility, or comprehension by the intended audience.
   and [non-text contrast](https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html):
   the contrast targets used for review.
 
-The rules above are the template's design policy, informed by these sources.
+The rules above are the website's design policy, informed by these sources.
 They are not a reproduction of the standards or a certification.
-
-The [aviation documentation study](aviation-design-study.md) records the
-manuals inspected for the visual treatment, the adaptations made, and the
-layout and behavior verification boundaries.

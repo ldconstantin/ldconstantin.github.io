@@ -1,8 +1,14 @@
-# Primary site pages.
-main:
-- title: Ensino
-  url: /teaching/
-- title: Pesquisa
-  url: /research/
-- title: Extensão
-  url: /extension/
+pt:
+  - title: Ensino
+    url: /ensino/
+  - title: Pesquisa
+    url: /pesquisa/
+  - title: Extensão
+    url: /extensao/
+en:
+  - title: Teaching
+    url: /en/teaching/
+  - title: Research
+    url: /en/research/
+  - title: Extension
+    url: /en/extension/

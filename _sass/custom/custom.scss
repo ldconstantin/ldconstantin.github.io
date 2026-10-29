@@ -24,6 +24,33 @@
   &:focus-visible { outline-color: var(--site-link); }
 }
 .site-search-trigger { margin-right: 0.25rem; }
+.language-toggle {
+  display: inline-flex;
+  align-items: center;
+  flex: 0 0 auto;
+  gap: 0.25rem;
+  margin-inline: 0.25rem;
+  font-size: 0.8rem;
+  line-height: 1;
+  white-space: nowrap;
+}
+.language-option {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 24px;
+  height: 44px;
+  color: var(--site-muted);
+  font-weight: 600;
+  text-decoration: none;
+
+  span { padding-block: 0.4rem; border-bottom: 1px solid transparent; }
+  &[aria-current="page"] { color: var(--site-link); font-weight: 700; }
+  &[aria-current="page"] span { border-bottom-color: currentColor; }
+  &:hover { color: var(--site-link); text-decoration: none; }
+  &:focus-visible { outline: 2px solid var(--site-link); outline-offset: 2px; }
+}
+.language-separator { color: var(--site-muted); }
 .theme-toggle { margin-right: 0.6rem; }
 
 // Pagefind replaces this visible fallback button when its module loads.
@@ -296,7 +323,8 @@ hr {
 
   h1,
   h2,
-  h3 {
+  h3,
+  h4 {
     color: var(--site-heading);
   }
 
@@ -457,6 +485,8 @@ body { line-height: 1.5; }
   line-height: 1.25;
 }
 .site-header .site-button { color: var(--site-heading); }
+.site-header .site-button:hover,
+.site-header .site-button:focus-visible { background: var(--site-hover); }
 .side-bar { box-shadow: none; }
 .side-bar .site-nav .nav-list .nav-list-item .nav-list-link {
   border-radius: 0;
@@ -492,19 +522,20 @@ body { line-height: 1.5; }
 }
 #site-nav.local-page-nav .local-nav-parent {
   display: grid;
-  grid-template-columns: minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) 2.75rem;
 }
+#site-nav.local-page-nav .local-nav-parent > .nav-list-link { grid-column: 1; grid-row: 1; padding-right: 0.25rem; }
 #site-nav.local-page-nav .local-nav-parent > .nav-list-expander {
   position: static;
-  grid-column: 1;
+  grid-column: 2;
   grid-row: 1;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  width: 100%;
+  justify-content: center;
+  width: 2.75rem;
   height: auto;
   min-height: 2.75rem;
-  padding: 0.5rem var(--sidebar-title-indent);
+  padding: 0.5rem;
   color: var(--site-text);
   font: inherit;
   font-size: 1rem;
@@ -522,8 +553,9 @@ body { line-height: 1.5; }
   color: var(--site-text);
   background-image: none;
 }
-#site-nav.local-page-nav .local-nav-parent > .nav-list { grid-column: 1 / -1; grid-row: 2; }
-#site-nav.local-page-nav > .nav-list > .nav-list-item > .nav-list {
+#site-nav.local-page-nav .local-nav-parent > .nav-list { grid-column: 1 / -1; grid-row: 2; display: none; }
+#site-nav.local-page-nav .local-nav-parent.active > .nav-list { display: block; }
+#site-nav.local-page-nav .nav-list-item > .nav-list {
   padding-left: 0.75rem;
 }
 #site-nav.local-page-nav .nav-list-expander svg {
@@ -619,12 +651,12 @@ b, strong { font-weight: 700; }
 .side-bar > .site-nav > .nav-list > .nav-list-item > .nav-list-link { padding-inline: var(--sidebar-title-indent); }
 .side-bar strong { font-weight: 700; }
 
-.main-content li > h3 { font-size: 1em !important; margin: 1.5rem 0 0.25rem; }
-.main-content li > h3 > .anchor-heading { display: none; }
-.main-content li > h3 + p { color: var(--site-text); font-size: 1rem; line-height: 1.5; margin: 0; }
+.main-content li > :is(h3, h4) { font-size: 1em !important; margin: 1.5rem 0 0.25rem; text-transform: none; letter-spacing: normal; }
+.main-content li > :is(h3, h4) > .anchor-heading { display: none; }
+.main-content li > :is(h3, h4) + p { color: var(--site-text); font-size: 1rem; line-height: 1.5; margin: 0; }
 
 .main-content h1, .academic-hero h1 { font-family: $sidebar-font-family; font-weight: 700; }
-.main-content h2[id], .main-content h3[id] { scroll-margin-top: 1.5rem; }
+.main-content :is(h2, h3, h4)[id] { scroll-margin-top: 1.5rem; }
 .main-content-wrap { padding-top: 1rem; }
 
 .main-content .page-footer {
@@ -726,9 +758,11 @@ b, strong { font-weight: 700; }
 }
 
 @media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
   .academic-nav-list a,
   .academic-nav-list a::after,
   .theme-toggle,
+  .language-toggle,
   .site-search-trigger,
   #site-nav.local-page-nav .nav-list-expander svg { transition: none; }
 }

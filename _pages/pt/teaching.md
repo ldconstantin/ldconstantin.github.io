@@ -2,8 +2,11 @@
 title: Ensino
 layout: default
 nav_order: 1
-permalink: /teaching/
 has_toc: false
+lang: pt-BR
+locale: pt
+translation_key: teaching
+permalink: /ensino/
 ---
 
 # Ensino
@@ -18,19 +21,19 @@ Aqui estão as disciplinas atuais, anteriores e em estudo. Os materiais de aula 
   <ul class="home-course-list" role="list">
     <li>
       <h3 id="estruturas-de-dados-iii">Estruturas de Dados III</h3>
-      <p data-pagefind-ignore>Algoritmos de ordenação e busca de dados</p>
+      <p>Algoritmos de ordenação e busca de dados</p>
     </li>
     <li>
       <h3 id="sistemas-operacionais-ii">Sistemas Operacionais II</h3>
-      <p data-pagefind-ignore>Programação concorrente, sincronização e sistemas de tempo real</p>
+      <p>Programação concorrente, sincronização e sistemas de tempo real</p>
     </li>
     <li>
       <h3 id="criacao-de-paginas-web">Criação de Páginas Web</h3>
-      <p data-pagefind-ignore>Criação de páginas com HTML, CSS e JavaScript</p>
+      <p>Criação de páginas com HTML, CSS e JavaScript</p>
     </li>
     <li>
       <h3 id="linguagem-de-programacao-orientada-a-objetos">Linguagem de Programação Orientada a Objetos</h3>
-      <p data-pagefind-ignore>Padrões de projeto e arquiteturas de software em Python</p>
+      <p>Padrões de projeto e arquiteturas de software em Python</p>
     </li>
   </ul>
 </section>
@@ -41,16 +44,16 @@ Aqui estão as disciplinas atuais, anteriores e em estudo. Os materiais de aula 
 
 <ul class="home-course-list" role="list">
   <li>
-    <h3 id="logica-e-algoritmos">Lógica e Algoritmos</h3>
-    <p data-pagefind-ignore>Lógica e programação em Python para Engenharia Mecânica.</p>
+    <h4 id="logica-e-algoritmos">Lógica e Algoritmos</h4>
+    <p>Lógica e programação em Python para Engenharia Mecânica.</p>
   </li>
   <li>
-    <h3 id="programacao-competitiva">Programação Competitiva</h3>
-    <p data-pagefind-ignore>Algoritmos e estratégias para resolver problemas em competições.</p>
+    <h4 id="programacao-competitiva">Programação Competitiva</h4>
+    <p>Algoritmos e estratégias para resolver problemas em competições.</p>
   </li>
   <li>
-    <h3 id="introducao-a-linguagem-de-programacao-cpp">Introdução à Linguagem de Programação C++</h3>
-    <p data-pagefind-ignore>Compilação, tipos de dados, estruturas de controle, funções e biblioteca padrão em C++.</p>
+    <h4 id="introducao-a-linguagem-de-programacao-cpp">Introdução à Linguagem de Programação C++</h4>
+    <p>Compilação, tipos de dados, estruturas de controle, funções e biblioteca padrão em C++.</p>
   </li>
 </ul>
 
@@ -58,12 +61,12 @@ Aqui estão as disciplinas atuais, anteriores e em estudo. Os materiais de aula 
 
 <ul class="home-course-list" role="list">
   <li>
-    <h3 id="introducao-a-linguagem-de-programacao-javascript">Introdução à Linguagem de Programação JavaScript</h3>
-    <p data-pagefind-ignore>Algoritmos e criação de aplicações básicas para páginas web.</p>
+    <h4 id="introducao-a-linguagem-de-programacao-javascript">Introdução à Linguagem de Programação JavaScript</h4>
+    <p>Algoritmos e criação de aplicações básicas para páginas web.</p>
   </li>
   <li>
-    <h3 id="analise-e-complexidade-de-algoritmos">Análise e Complexidade de Algoritmos</h3>
-    <p data-pagefind-ignore>Análise do tempo e da memória usados pelos algoritmos.</p>
+    <h4 id="analise-e-complexidade-de-algoritmos">Análise e Complexidade de Algoritmos</h4>
+    <p>Análise do tempo e da memória usados pelos algoritmos.</p>
   </li>
 </ul>
 

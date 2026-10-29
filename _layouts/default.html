@@ -1,11 +1,13 @@
 ---
 layout: table_wrappers
 ---
+{% assign locale = page.locale | default: 'en' %}
+{% assign ui = site.data.locales[locale] %}
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: 'pt-BR' }}" data-site-theme="{{ site.site_theme | default: 'air' }}">
+<html lang="{{ page.lang | default: site.lang }}" data-site-theme="{{ site.site_theme | default: 'air' }}">
 {% include head.html %}
 <body>
-  <a class="skip-to-main" href="#main-content">Pular para o conteúdo principal</a>
+  <a class="skip-to-main" href="#main-content">{{ ui.skip }}</a>
   <pagefind-config base-url="{{ '/' | relative_url }}" bundle-path="{{ '/pagefind/' | relative_url }}" excerpt-length="20"></pagefind-config>
   {% include icons/icons.html %}
   {% if page.nav_enabled == true %}
@@ -19,9 +21,9 @@ layout: table_wrappers
     {% include components/header.html %}
     <div class="main-content-wrap">
       {% capture breadcrumbs %}{% include components/breadcrumbs.html %}{% endcapture %}
-      {{ breadcrumbs | replace: 'aria-label="Breadcrumb"', 'aria-label="Caminho de navegação"' }}
+      {{ breadcrumbs }}
       <div id="main-content" class="main-content">
-        <main lang="{{ page.lang | default: site.lang }}" data-pagefind-body>
+        <main lang="{{ page.lang | default: site.lang }}" {% unless page.search_exclude %}data-pagefind-body{% endunless %}{% if page.translation_key == 'home' and locale == 'pt' %} data-pagefind-meta="url:{{ '/?lang=pt' | relative_url }}"{% endif %}>
           {% if site.heading_anchors != false %}
             {% include vendor/anchor_headings.html html=content beforeHeading="true" anchorBody="<svg viewBox=\"0 0 16 16\" aria-hidden=\"true\"><use xlink:href=\"#svg-link\"></use></svg>" anchorClass="anchor-heading" anchorAttrs="aria-labelledby=\"%html_id%\"" %}
           {% else %}
@@ -29,7 +31,7 @@ layout: table_wrappers
           {% endif %}
           {% if page.has_toc != false %}{% include components/children_nav.html %}{% endif %}
         </main>
-        <div class="page-footer">{% include components/footer.html %}</div>
+        <div class="page-footer">{% capture page_footer %}{% include components/footer.html %}{% endcapture %}{{ page_footer | replace: site.back_to_top_text, ui.back_to_top }}</div>
       </div>
     </div>
   </div>

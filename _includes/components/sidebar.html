@@ -1,9 +1,11 @@
 <header class="side-bar">
   <div class="site-header">
-    <a href="{{ '/' | relative_url }}" class="site-title lh-tight">
+    {% assign home_url = '/?lang=pt' %}
+    {% if locale == 'en' %}{% assign home_url = '/en/' %}{% endif %}
+    <a href="{{ home_url | relative_url }}" class="site-title lh-tight">
       <span class="site-owner">{% include title.html %}</span>
     </a>
-    <button id="menu-button" class="site-button btn-reset" aria-label="Abrir ou fechar o menu" aria-expanded="false">
+    <button id="menu-button" class="site-button btn-reset" aria-label="{{ ui.menu }}" aria-expanded="false">
       <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><use xlink:href="#svg-menu"></use></svg>
     </button>
   </div>

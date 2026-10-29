@@ -2,7 +2,10 @@
 title: Pesquisa
 layout: default
 nav_order: 2
-permalink: /research/
+lang: pt-BR
+locale: pt
+translation_key: research
+permalink: /pesquisa/
 ---
 
 # Pesquisa
@@ -26,9 +29,3 @@ Temas de interesse acadêmico. Esta página não lista projetos de pesquisa em a
 - Ensino de programação na Educação Profissional e Tecnológica
 - Elaboração de questões e avaliações
 - Qualidade e limites das respostas da IA generativa
-
-## Relação com minhas atividades
-
-- Ensino: [disciplinas e roteiros]({{ '/teaching/' | relative_url }}).
-- Trabalho: [experiência profissional]({{ '/' | relative_url }}#experiencia-profissional).
-- Extensão: [atividades de extensão]({{ '/extension/' | relative_url }}).

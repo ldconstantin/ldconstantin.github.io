@@ -3,11 +3,15 @@ title: Início
 layout: home
 nav_order: 1
 nav_exclude: true
+lang: pt-BR
+locale: pt
+translation_key: home
 permalink: /
+detect_language: true
 ---
 
 <section class="home-profile" aria-label="Perfil de Leonardo D. Constantin" itemscope itemtype="https://schema.org/Person">
-  <img class="home-profile__photo" src="https://github.com/ldconstantin.png?size=400" width="158" height="158" alt="Foto de Leonardo D. Constantin" itemprop="image" fetchpriority="high">
+  <img class="home-profile__photo" src="{{ '/assets/images/profile.webp' | relative_url }}" width="158" height="158" alt="Foto de Leonardo D. Constantin" itemprop="image" fetchpriority="high" loading="eager" decoding="async">
   <div class="home-profile__details">
     <h1 itemprop="name">Leonardo D. Constantin</h1>
     <p class="home-profile__role" itemprop="jobTitle">Professor de Ciência da Computação</p>
@@ -24,7 +28,7 @@ permalink: /
 ## Formação acadêmica
 
 - **Bacharel em Ciência da Computação** — Universidade de Passo Fundo (UPF), 2023.
-- **Pós-graduação em Docência no Ensino Superior** — UPF, iniciada em 2025.
+- **Especialização em Metodologias Ativas para Docência no Ensino Superior** — UPF, iniciada e concluída em 2026.
 
 ## Experiência profissional {#experiencia-profissional}
 
@@ -38,7 +42,7 @@ Instituto Federal Sul-rio-grandense (IFSul), Câmpus Passo Fundo · desde maio d
 
 ## Resultados relevantes
 
-- Treinador da equipe do IFSul Câmpus Passo Fundo (vice-campeã sub-regional em 2025).
+- Treinador da equipe do IFSul Câmpus Passo Fundo, vice-campeã sub-regional e finalista brasileira da Maratona SBC de Programação em 2025.
 - Final Brasileira da Maratona SBC de Programação: competidor em 2017 e 2018; integrante da equipe campeã sub-regional em 2018.
 - Narrador oficial da Maratona SBC de Programação no Brasil, de 2019 a 2025.
 
