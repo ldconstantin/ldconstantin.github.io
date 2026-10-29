@@ -42,10 +42,10 @@ conformant. No automatic sentence-length score proves that text is clear.
 ## Readability and Easy Read
 
 Use left-aligned text, visible section boundaries, descriptive links, and
-short reading blocks. Preserve text resizing and browser zoom. Roboto Flex is
-the default face, Roboto Condensed is used in the sidebar, and code uses IBM
-Plex Mono. Quotations and captions use Roboto Flex. Reading text has a 1.5 line
-height.
+short reading blocks. Preserve text resizing and browser zoom. Body text and
+navigation use the operating system's sans-serif fonts, and code uses its
+monospace fonts. This avoids downloading web fonts before the page can render.
+Reading text has a 1.5 line height.
 
 The centered desktop layout uses a 15rem sidebar and a 47rem content region
 (including its padding). The intermediate sidebar is 14.5rem; navigation keeps

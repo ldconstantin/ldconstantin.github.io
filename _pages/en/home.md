@@ -14,12 +14,12 @@ permalink: /en/
   <div class="home-profile__details">
     <h1 itemprop="name">Leonardo D. Constantin</h1>
     <p class="home-profile__role" itemprop="jobTitle">Computer Science Professor</p>
-    <p itemprop="worksFor"><i class="fa-solid fa-building-columns" aria-hidden="true"></i> IFSul Passo Fundo</p>
-    <p itemprop="homeLocation"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Passo Fundo, RS, Brazil</p>
+    <p itemprop="worksFor">IFSul Passo Fundo</p>
+    <p itemprop="homeLocation">Passo Fundo, RS, Brazil</p>
     <p class="home-profile__links">
-      <a href="https://www.linkedin.com/in/ldconstantin/"><i class="fa-brands fa-linkedin" aria-hidden="true"></i> LinkedIn</a>
-      <a href="http://lattes.cnpq.br/2406882737060045"><i class="fa-solid fa-graduation-cap" aria-hidden="true"></i> Lattes</a>
-      <a href="https://github.com/ldconstantin"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub</a>
+      <a href="https://www.linkedin.com/in/ldconstantin/">LinkedIn</a>
+      <a href="http://lattes.cnpq.br/2406882737060045">Lattes</a>
+      <a href="https://github.com/ldconstantin">GitHub</a>
     </p>
   </div>
 </section>

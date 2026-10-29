@@ -18,7 +18,7 @@ between fields or escape a literal vertical bar as `\|`.
 | Syntax highlighting | A language-labelled code fence | Native Kramdown/Rouge and Just the Docs |
 | Code copying | Code fences and media source disclosures | Native JTD buttons or a media-source button; HTTPS or localhost clipboard support |
 | Tables, footnotes, TOC | Standard Markdown and Kramdown `{:toc}` | Native Jekyll/Kramdown |
-| Icons | Font Awesome or Academicons classes with visible labels | Versioned CSS and font resources |
+| Icons | Inline SVGs and visible text labels | Theme SVG sprite or authored inline SVG; no external icon fonts |
 | Emoji | `:airplane:` and other supported shortcodes | `jemoji` |
 | Sitemap and robots | Site pages | `jekyll-sitemap`; `/sitemap.xml` and `/robots.txt` |
 | Redirects | Explicit destinations in `aliases/`; `redirect_from` where appropriate | Shared redirect layout preserves query/hash and uses a shared section translation map; `jekyll-redirect-from` handles plugin aliases |
@@ -48,8 +48,9 @@ block does not stop the other integrations. Math follows the page text color.
 `academic_media`. Each library loads only when relevant content exists in the
 page. Math detection ignores code samples.
 Set a specific resource to `false` to disable it, or `academic_media: false` to
-disable the entire media loader. Font Awesome 6.7.2 and Academicons 1.9.4 CSS
-are linked in `_includes/head_custom.html`; the browser loads fonts when used.
+disable the entire media loader. The site uses local system font stacks and
+text-labelled profile links, so its initial view does not fetch web fonts or
+icon fonts from third-party hosts.
 
 These defaults need an internet connection for CDN resources and map tiles.
 To self-host, download complete dependency distributions and their licenses,

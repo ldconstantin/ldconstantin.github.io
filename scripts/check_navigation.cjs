@@ -77,16 +77,18 @@ test('search finds visible course descriptions in each language', async t => {
     await page.waitForFunction(() => document.querySelector('pagefind-modal-trigger button')?.getAttribute('aria-expanded') === 'false');
   }
 });
-test('home portrait is served locally and decodes without a GitHub request', async t => {
+test('homepage assets stay on the site and the portrait decodes', async t => {
   const page = await open(t);
-  const externalImages = [];
-  page.on('request', r => {if (r.resourceType() === 'image' && new URL(r.url()).origin !== new URL(base).origin) externalImages.push(r.url());});
+  const externalRequests = [];
+  page.on('request', r => {if (/^https?:/.test(r.url()) && new URL(r.url()).origin !== new URL(base).origin) externalRequests.push(r.url());});
   await visit(page, '/en/');
+  await page.waitForLoadState('load');
+  await page.evaluate(() => document.fonts.ready);
   const image = page.locator('.home-profile__photo');
   const data = await image.evaluate(async el => {await el.decode(); return {src: el.currentSrc, width: el.naturalWidth};});
   assert.equal(new URL(data.src).origin, new URL(base).origin);
   assert.ok(data.width >= 316);
-  assert.deepEqual(externalImages, []);
+  assert.deepEqual(externalRequests, []);
 });
 test('Portuguese search results retain homepage language with blocked storage', async t => {
   const page = await open(t, 'en-US', true);
