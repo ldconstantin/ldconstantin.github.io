@@ -1,0 +1,4 @@
+{% if site.academic_media != false %}
+<script type="application/json" id="academic-media-config" data-baseurl="{{ site.baseurl | escape }}">{{ site.academic_media | jsonify }}</script>
+<script type="module" src="{{ '/assets/js/academic-media.js' | relative_url }}"></script>
+{% endif %}

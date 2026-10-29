@@ -1,0 +1,23 @@
+$background: #283034;
+$text: #e6eae9;
+$link: #79b6d0;
+$action: #285570;
+
+:root[data-site-theme="air"][data-theme="dark"] {
+  color-scheme: dark;
+  --site-background: #{$background};
+  --site-surface: #{mix($text, $background, 3%)};
+  --site-sidebar: #{mix($text, $background, 4%)};
+  --site-text: #{$text};
+  --site-heading: #{$text};
+  --site-link: #{adjust-color($link, $saturation: 6%, $lightness: 2%)};
+  --site-muted: #{mix($text, $background, 85%)};
+  --site-hover: #{mix($text, $background, 8%)};
+  --site-rule: #{mix($text, $background, 24%)};
+  --site-control: #{mix($text, $background, 68%)};
+  --site-brand: #{adjust-color($action, $saturation: 6%)};
+  --site-brand-ink: #ffffff;
+  --site-action-ink: #ffffff;
+  --site-blue-subtle: #{mix($text, $background, 12%)};
+  --site-page-shadow: rgba(0, 0, 0, 0.15);
+}

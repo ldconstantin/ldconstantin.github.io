@@ -1,0 +1,734 @@
+// Air light/dark theme files follow Academic Pages' per-mode structure.
+@import "theme/air_light";
+@import "theme/air_dark";
+
+.theme-toggle,
+.site-search-trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+  margin: 0;
+  padding: 0;
+  color: var(--site-link);
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  transition: transform 160ms ease;
+
+  &[hidden] { display: none; }
+  &:hover { background: var(--site-hover); transform: translateY(-1px); }
+  &:focus-visible { outline-color: var(--site-link); }
+}
+.site-search-trigger { margin-right: 0.25rem; }
+.theme-toggle { margin-right: 0.6rem; }
+
+// Pagefind replaces this visible fallback button when its module loads.
+.site-search-fallback {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  color: inherit;
+  background: transparent;
+  border: 0;
+
+  svg { transform: scaleX(-1); }
+}
+.site-search-trigger:not(:defined) { cursor: default; }
+.site-search-trigger:not(:defined):hover { background: transparent; transform: none; }
+
+// Pagefind's packaged stylesheet has high-specificity button rules.
+.main-header .site-search-trigger .pf-trigger-btn {
+  justify-content: center !important;
+  width: 44px !important;
+  height: 44px !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border-color: transparent !important;
+}
+.main-header .site-search-trigger .pf-trigger-icon {
+  width: 19.8px !important;
+  height: 19.8px !important;
+  background: var(--site-link) !important;
+  transform: scaleX(-1) !important;
+}
+
+:root[data-theme] {
+  --pf-font: "Roboto Flex", sans-serif;
+  --pf-text: var(--site-text);
+  --pf-text-secondary: var(--site-muted);
+  --pf-text-muted: var(--site-muted);
+  --pf-background: var(--site-surface);
+  --pf-border: var(--site-rule);
+  --pf-border-focus: var(--site-control);
+  --pf-hover: var(--site-hover);
+  --pf-mark: var(--site-link);
+  --pf-outline-focus: var(--site-link);
+  --pf-result-title-font-size: 1rem;
+  --pf-result-excerpt-font-size: 0.9375rem;
+}
+
+.theme-moon { display: none; }
+[data-theme="dark"] .theme-sun { display: none; }
+[data-theme="dark"] .theme-moon { display: block; }
+
+[data-theme="dark"] {
+  .site-footer a,
+  .breadcrumb-nav a { color: var(--site-link); }
+  .side-bar,
+  .academic-hero,
+  hr,
+  th,
+  td { border-color: var(--site-rule); }
+  table,
+  th,
+  td,
+  pre,
+  code,
+  .highlight { color: var(--site-text); background: var(--site-surface); }
+}
+
+body {
+  font-family: $body-font-family;
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: var(--site-text);
+  background: var(--site-background);
+}
+
+input, button, select, textarea {
+  font-family: inherit;
+  font-weight: inherit;
+}
+
+a, a:visited { color: var(--site-link); }
+a:not([class]):hover { text-decoration-color: currentColor; }
+
+.main-content blockquote,
+.main-content q,
+.main-content figcaption {
+  font-family: $body-font-family;
+}
+
+code, pre, kbd, samp {
+  font-family: $mono-font-family;
+  font-weight: 400;
+}
+
+code { font-size: 0.875em !important; }
+
+.side-bar {
+  background: var(--site-sidebar);
+  border-right-color: var(--site-rule);
+  scrollbar-width: thin;
+  scrollbar-color: var(--site-control) var(--site-sidebar);
+}
+
+.site-header {
+  flex-shrink: 0;
+  background: transparent;
+  border-bottom: 1px solid var(--site-rule);
+}
+
+.site-title {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  color: var(--site-heading);
+
+  &:hover {
+    color: var(--site-heading);
+    background: transparent;
+  }
+}
+
+.site-owner {
+  font-size: 1.1875rem;
+  font-weight: 500;
+}
+
+.site-header .site-button {
+  color: var(--site-heading);
+}
+
+.site-header .site-button .icon {
+  color: inherit;
+}
+
+.side-bar .site-nav { padding-top: 0; min-height: 0; }
+.side-bar .site-nav .nav-list .nav-list-item .nav-list-link {
+  color: var(--site-text);
+
+  &:hover,
+  &.active {
+    box-shadow: none;
+    color: var(--site-link);
+    background: var(--site-hover);
+  }
+
+  &.active {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.2em;
+  }
+}
+
+.side-bar .site-nav .nav-list .nav-list-item .nav-list-expander {
+  color: var(--site-link);
+}
+
+.breadcrumb-nav a {
+  color: var(--site-link);
+  text-decoration: underline;
+  text-underline-offset: 0.18em;
+}
+
+hr {
+  background-color: var(--site-rule);
+}
+
+.main-content blockquote {
+  margin: 10px 0;
+  padding-left: 1rem;
+  border-left: 1px solid var(--site-control);
+}
+
+.btn {
+  color: var(--site-link);
+  background: var(--site-surface);
+  border-color: var(--site-control);
+  box-shadow: none;
+
+  &:hover { background: var(--site-hover); }
+}
+
+.btn-primary, .btn-primary:visited, .btn-primary:hover {
+  color: var(--site-action-ink);
+  background: var(--site-brand);
+}
+
+.site-footer a {
+  color: var(--site-link);
+}
+
+.site-footer {
+  position: static;
+  margin-top: auto;
+  padding-inline: var(--sidebar-title-indent);
+  color: var(--site-muted);
+  font-size: 0.875rem;
+
+  .academic-sidebar-footer {
+    margin: 0;
+  }
+}
+
+// Just the Docs hides its header on mobile when a sidebar exists.
+// The section navigation must stay visible independently of the menu.
+.side-bar + .main .main-header,
+.side-bar + .main .main-header.nav-open {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.3rem;
+  min-height: 3.75rem;
+  height: auto;
+  background: var(--site-sidebar);
+  border-bottom: 3px solid transparent;
+  box-shadow: inset 0 -1px 0 var(--site-rule);
+}
+
+.academic-nav {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+.academic-nav-list {
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+  width: max-content;
+  min-width: 100%;
+  margin: 0;
+  padding: 0 0.7rem;
+  list-style: none;
+
+  li {
+    margin: 0;
+  }
+
+  a {
+    display: block;
+    padding: 1.03rem 0.65rem;
+    color: var(--site-link);
+    font-size: 0.9225rem;
+    font-weight: 500;
+    text-decoration: none;
+    white-space: nowrap;
+    border-bottom: 3px solid transparent;
+
+    &:hover,
+    &:focus-visible,
+    &[aria-current="page"] {
+      color: var(--site-link);
+    }
+  }
+}
+
+.main-content {
+  a:not(.btn) {
+    color: var(--site-link);
+  }
+
+  // Reading links stay identifiable when colors cannot be distinguished.
+  p a:not(.btn),
+  li a:not(.btn) {
+    text-decoration: underline;
+    text-underline-offset: 0.18em;
+  }
+
+  h1,
+  h2,
+  h3 {
+    color: var(--site-heading);
+  }
+
+  h2 {
+    box-shadow: none;
+  }
+
+  table {
+    font-variant-numeric: lining-nums tabular-nums;
+    box-shadow: none;
+  }
+
+  th {
+    color: var(--site-heading);
+    background: var(--site-hover);
+  }
+
+  th, td {
+    border-color: var(--site-rule);
+  }
+
+  ol > li::marker {
+    color: var(--site-link);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+.academic-hero {
+  margin: 0 0 2rem;
+  padding: 0.75rem 0 1.5rem;
+  border-bottom: 1px solid var(--site-rule);
+
+  h1 {
+    max-width: 24ch;
+    font-size: 1.563em !important;
+    line-height: 1.2;
+  }
+
+  p {
+    max-width: 60ch;
+    font-size: 1.125rem;
+    line-height: 1.5;
+  }
+}
+
+:focus-visible {
+  outline: 3px solid var(--site-link);
+  outline-offset: 2px;
+}
+
+@media (max-width: 49.99rem) {
+  .side-bar + .main .main-header {
+    flex-wrap: nowrap;
+  }
+
+  .main-header .aux-nav {
+    display: none;
+  }
+
+  .academic-nav-list a {
+    padding: 0.85rem 0.65rem;
+  }
+}
+
+@media (forced-colors: active) {
+  :focus-visible { outline-color: Highlight; }
+  .academic-nav-list a { border-bottom-color: Canvas; }
+  .academic-nav-list a[aria-current="page"] { border-bottom-color: LinkText; }
+  .academic-nav-list a::after { background: LinkText; }
+  .nav-list .nav-list-item .nav-list-link.active {
+    text-decoration: underline;
+    box-shadow: none;
+  }
+}
+
+@media print {
+  :root, :root[data-theme="dark"] {
+    --site-background: #fff;
+    --site-surface: #fff;
+    --site-text: #111;
+    --site-heading: #111;
+    --site-link: #111;
+    --site-muted: #333;
+    --site-hover: #eee;
+    --site-rule: #777;
+    --site-brand: #fff;
+    --site-brand-ink: #111;
+    --site-control: #333;
+    --site-action-ink: #111;
+  }
+  .site-title { font-weight: 500 !important; }
+}
+
+// Interactive content stays inside the reading column and preserves its source.
+.academic-media {
+  max-width: 100%;
+  margin: 1.5rem 0;
+
+  figcaption { margin: 0.75rem 0; color: var(--site-text); }
+  summary { cursor: pointer; color: var(--site-link); text-decoration: underline; }
+  details { margin-top: 0.75rem; }
+  pre { max-width: 100%; overflow-x: auto; }
+}
+
+.media-output { max-width: 100%; min-width: 0; }
+.media-mermaid { overflow-x: auto; }
+.media-mermaid svg { display: block; max-width: 100%; height: auto; margin: auto; }
+.media-plotly, .media-leaflet { height: 24rem; }
+.media-leaflet { z-index: 0; }
+.main-content .leaflet-control-attribution,
+.main-content .leaflet-bar a,
+.main-content .leaflet-popup-content-wrapper,
+.main-content .leaflet-popup-tip {
+  color: var(--site-text);
+  background: var(--site-surface);
+}
+.main-content .leaflet-control-attribution a { color: var(--site-link); }
+.main-content .leaflet-bar a:hover { background: var(--site-hover); }
+.media-error { border-left: 1px solid var(--site-control); padding-left: 1rem; }
+
+mjx-container[display="true"] { max-width: 100%; overflow-x: auto; overflow-y: hidden; }
+
+.main-content .note { border-left: 1px solid var(--site-control); padding: 0.75rem 1rem; background: var(--site-surface); color: var(--site-text); }
+
+// Manual layout: a compact navigation column beside a comfortable reading measure.
+html { font-size: 100% !important; }
+body { line-height: 1.5; }
+.main-content { font-family: $body-font-family; font-size: 1.125rem; line-height: 1.5; }
+.side-bar { font-family: $sidebar-font-family; }
+.side-bar { --sidebar-title-indent: 1.25rem; font-weight: 400; }
+.main-content p, .main-content li { line-height: 1.5; }
+.main-content h1, .main-content h2, .main-content h3,
+.main-content h4, .main-content h5, .main-content h6 {
+  margin: 2em 0 0.5em;
+  font-family: $body-font-family;
+  font-weight: 700;
+  line-height: 1.2;
+  text-wrap: balance;
+  text-transform: none;
+  letter-spacing: 0;
+}
+.main-content h1 { margin-top: 0; font-size: 1.563em !important; }
+.main-content h2 { font-size: 1.25em !important; }
+.main-content h3 { font-size: 1em !important; }
+.main-content h4, .main-content h5, .main-content h6 { font-size: 1em !important; }
+.main-content p { margin: 0 0 1.3em; text-wrap: pretty; }
+.main-content h2 {
+  padding-bottom: 0;
+  border-bottom: 0;
+  box-shadow: none;
+}
+.site-header { border-bottom-color: var(--site-rule); }
+.site-title { gap: 0.18rem; padding-inline: var(--sidebar-title-indent); font-family: $sidebar-font-family; }
+.site-title .site-owner {
+  order: 0;
+  font-size: 1.1875rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+.site-header .site-button { color: var(--site-heading); }
+.side-bar { box-shadow: none; }
+.side-bar .site-nav .nav-list .nav-list-item .nav-list-link {
+  border-radius: 0;
+  min-height: 44px;
+  font-size: 1rem !important;
+  font-weight: 400;
+  line-height: 1.4;
+  padding-block: 0.6rem;
+}
+.side-bar .site-nav .nav-list .nav-list-item .nav-list-link.active {
+  color: var(--site-link);
+  font-weight: 600;
+  background-image: none;
+}
+.side-bar .nav-category {
+  margin: 0 0 0.5rem;
+  padding: 0.25rem var(--sidebar-title-indent);
+  color: var(--site-heading);
+  font-size: 1rem !important;
+  font-weight: 600;
+  line-height: 1.5;
+  text-transform: none;
+  letter-spacing: 0;
+  border: 0;
+}
+.side-bar .local-page-nav { padding-block: 1.5rem; }
+#site-nav.local-page-nav .nav-list .nav-list-item .nav-list-link {
+  display: flex;
+  align-items: center;
+  min-height: 2.75rem;
+  line-height: 1.4;
+  padding: 0.5rem var(--sidebar-title-indent);
+}
+#site-nav.local-page-nav .local-nav-parent {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+}
+#site-nav.local-page-nav .local-nav-parent > .nav-list-expander {
+  position: static;
+  grid-column: 1;
+  grid-row: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+  min-height: 2.75rem;
+  padding: 0.5rem var(--sidebar-title-indent);
+  color: var(--site-text);
+  font: inherit;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.25;
+  text-align: left;
+  transform: none;
+}
+#site-nav.local-page-nav .local-nav-parent > .nav-list-expander:hover,
+#site-nav.local-page-nav .local-nav-parent > .nav-list-expander:focus-visible {
+  color: var(--site-link);
+  background: var(--site-hover);
+}
+#site-nav.local-page-nav .local-nav-parent.active > .nav-list-expander {
+  color: var(--site-text);
+  background-image: none;
+}
+#site-nav.local-page-nav .local-nav-parent > .nav-list { grid-column: 1 / -1; grid-row: 2; }
+#site-nav.local-page-nav > .nav-list > .nav-list-item > .nav-list {
+  padding-left: 0.75rem;
+}
+#site-nav.local-page-nav .nav-list-expander svg {
+  display: block;
+  width: 1.25rem;
+  height: 1.25rem;
+  flex: 0 0 1.25rem;
+  transform: none;
+  transition: transform 160ms ease;
+}
+#site-nav.local-page-nav .nav-list-item.active > .nav-list-expander svg { transform: rotate(90deg); }
+#site-nav.local-page-nav > .nav-list > .nav-list-item > .nav-list > .nav-list-item > .nav-list-link {
+  color: var(--site-muted);
+}
+.breadcrumb-nav { margin-top: 0.75rem; }
+.breadcrumb-nav-list { display: flex; align-items: baseline; gap: 0.5rem; margin: 0 0 1rem; }
+.breadcrumb-nav-list-item { display: flex; align-items: baseline; gap: 0.5rem; min-width: 0; font-size: 0.9375rem !important; }
+.breadcrumb-nav-list-item:first-child { flex: 0 0 auto; }
+.breadcrumb-nav-list-item::after { display: none; }
+.breadcrumb-nav-list-item + .breadcrumb-nav-list-item::before { display: block; flex: 0 0 auto; color: var(--site-muted); content: "/"; }
+.side-bar + .main .main-header,
+.side-bar + .main .main-header.nav-open {
+  border-bottom: 1px solid var(--site-rule);
+  box-shadow: none;
+}
+.academic-nav { overflow: visible; }
+.academic-nav-list {
+  width: auto;
+  min-width: 0;
+  flex-wrap: wrap;
+  gap: 0;
+  padding: 0.3rem 0.5rem;
+}
+@media (min-width: 50rem) {
+  .academic-nav-list { padding-inline: 1.5rem; }
+  .side-bar + .main .main-header,
+  .side-bar + .main .main-header.nav-open {
+    height: 3.75rem;
+    background: var(--site-background);
+  }
+}
+.academic-nav-list a {
+  padding: 0.55rem 0.5rem;
+  min-height: 44px;
+  min-width: 44px;
+  font-family: $body-font-family;
+  font-size: 1rem;
+  font-weight: 500;
+  position: relative;
+  border-bottom-color: transparent;
+  border-bottom-width: 2px;
+  text-align: center;
+
+  &::after {
+    position: absolute;
+    right: 0.5rem;
+    bottom: -2px;
+    left: 0.5rem;
+    height: 2px;
+    background: var(--site-link);
+    content: "";
+    display: none;
+  }
+
+  &:hover::after,
+  &:focus-visible::after,
+  &[aria-current]::after { display: block; }
+}
+.academic-nav-list a:hover,
+.academic-nav-list a:focus-visible { background: var(--site-hover); }
+.theme-toggle, .site-search-trigger { align-self: center; }
+.site-footer { font-size: 0.875rem !important; }
+.skip-to-main, .skip-to-main:focus { color: var(--site-link); }
+.skip-to-main:focus { background: var(--site-surface); box-shadow: none; }
+::selection { color: var(--site-text); background: var(--site-hover); }
+:focus-visible { outline: 3px solid var(--site-link); outline-offset: 3px; }
+@media (max-width: 49.99rem) {
+  .side-bar { --sidebar-title-indent: 1.25rem; }
+  .main-content { font-size: 1.125rem; }
+  .site-title .site-owner { font-size: 1.1875rem; }
+  .academic-hero { padding-top: 0.5rem; }
+}
+
+// Match Academic Pages' bold heading convention.
+h1, .text-alpha { font-weight: 700; }
+h2, h3, h4, h5, h6, #toctitle, .btn, .main-content dt { font-weight: 700; }
+h4, .text-delta { font-weight: 700; }
+b, strong { font-weight: 700; }
+.nav-category { font-weight: 450; }
+
+// Keep navigation tracking natural.
+.side-bar .site-title, .side-bar .site-owner { letter-spacing: 0 !important; }
+.side-bar > .site-nav > .nav-list > .nav-list-item > .nav-list-link { padding-inline: var(--sidebar-title-indent); }
+.side-bar strong { font-weight: 700; }
+
+.main-content li > h3 { font-size: 1em !important; margin: 1.5rem 0 0.25rem; }
+.main-content li > h3 > .anchor-heading { display: none; }
+.main-content li > h3 + p { color: var(--site-text); font-size: 1rem; line-height: 1.5; margin: 0; }
+
+.main-content h1, .academic-hero h1 { font-family: $sidebar-font-family; font-weight: 700; }
+.main-content h2[id], .main-content h3[id] { scroll-margin-top: 1.5rem; }
+.main-content-wrap { padding-top: 1rem; }
+
+.main-content .page-footer {
+  margin-top: 2rem;
+  color: var(--site-muted);
+  font-size: 0.875rem;
+
+  hr { margin: 0 0 1rem; }
+  p { margin: 0; }
+  .fs-2 { font-size: inherit !important; }
+  a { display: inline-block; min-height: 2.75rem; padding-block: 0.5rem; }
+}
+.main-content ul > li::before,
+.main-content ol > li::before { color: var(--site-muted); }
+.main-content figcaption { font-size: 1rem; }
+.main-content .entry-meta { margin: 0 0 1rem; font-size: 1rem; color: var(--site-muted); }
+.main-content pre { font-size: 1rem; }
+.main-content table { font-size: 1rem; }
+.main-content th, .main-content td { font-size: 1rem !important; }
+.main-content .table-wrapper { box-shadow: none; border-radius: 0; }
+.main-content pre code { font-size: inherit !important; }
+.main-content pre.highlight { border: 0; border-radius: 0; padding: 1rem; }
+.main-content div.highlighter-rouge > div.highlight { border: 0; border-radius: 0; }
+.main-content div.highlighter-rouge, .main-content figure.highlight {
+  border-radius: 0;
+  border-block: 1px solid var(--site-rule);
+  background: var(--site-surface);
+}
+.main-content .highlight span { color: var(--site-text); background: transparent; }
+.main-content .highlight .k, .main-content .highlight .kd,
+.main-content .highlight .kn, .main-content .highlight .nf,
+.main-content .highlight .nc { color: var(--site-link); }
+.main-content .highlight .c, .main-content .highlight .c1,
+.main-content .highlight .cm { color: var(--site-muted); }
+.redirect-page { max-width: $content-width; margin: 3rem auto; padding-inline: 1.25rem; }
+.redirect-page a { display: inline-block; min-height: 2.75rem; padding-block: 0.5rem; }
+
+.home-profile {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  margin-top: 1em;
+}
+.home-profile__photo {
+  flex: 0 0 9.9rem;
+  width: 9.9rem;
+  height: 9.9rem;
+  border-radius: 0.25rem;
+  object-fit: cover;
+}
+.home-profile__details { min-width: 0; }
+.main-content .home-profile__details h1:first-of-type { margin-top: 0; margin-bottom: 0.25rem; }
+.home-profile__details p { margin: 0 0 0.5rem; font-size: 1rem; }
+.home-profile__links { flex-wrap: wrap; gap: 0.5rem 0.625rem; }
+.home-profile__details > p:not(.home-profile__role) {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.375rem;
+}
+.home-profile__role { font-weight: 600; }
+.home-profile__details p i {
+  flex: 0 0 1.375rem;
+  width: 1.375rem;
+  margin-right: 0.25rem;
+  text-align: center;
+}
+.main-content .home-profile__details p a,
+.main-content .home-profile__details p a:visited {
+  display: inline-flex;
+  align-items: center;
+  min-height: 1.5rem;
+  padding-block: 0;
+  color: inherit;
+  text-decoration: none;
+}
+.main-content .home-profile__details p a:hover,
+.main-content .home-profile__details p a:focus-visible {
+  color: var(--site-link);
+  text-decoration: none;
+}
+@media (pointer: coarse) {
+  .home-profile__details > p:not(.home-profile__role),
+  .main-content .home-profile__details p a { min-height: 2.75rem; }
+}
+.home-profile + h2 { margin-top: 2rem; }
+
+@media (max-width: 49.99rem) {
+  .home-profile { gap: 1rem; }
+  .home-profile__photo { flex-basis: 7.2rem; width: 7.2rem; height: 7.2rem; }
+}
+
+@media (max-width: 31.25rem) {
+  .home-profile { flex-direction: column; }
+}
+
+@media (max-width: 24rem) {
+  .academic-nav-list { padding-inline: 0.25rem; }
+  .academic-nav-list a { padding-inline: 0.25rem; font-size: 0.9375rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .academic-nav-list a,
+  .academic-nav-list a::after,
+  .theme-toggle,
+  .site-search-trigger,
+  #site-nav.local-page-nav .nav-list-expander svg { transition: none; }
+}

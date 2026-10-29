@@ -1,0 +1,50 @@
+title: "Leonardo D. Constantin"
+template_name: "Academic Flight Manual"
+description: "Sou professor de Computação. Neste site, apresento minhas aulas e meus interesses de pesquisa."
+url: "https://ldconstantin.github.io"
+baseurl: ""
+lang: pt-BR
+repository: ldconstantin/ldconstantin.github.io
+
+theme: just-the-docs
+search_enabled: false # Pagefind replaces the theme's Lunr search.
+site_theme: air
+color_scheme: light
+sass:
+  # The pinned Just the Docs theme emits these upstream deprecations.
+  silence_deprecations:
+    - import
+    - global-builtin
+    - color-functions
+enable_copy_code_button: true
+heading_anchors: true
+plugins:
+  - jekyll-sitemap
+  - jekyll-redirect-from
+  - jekyll-gist
+  - jemoji
+
+# Loaded automatically when matching content exists; no per-page flags needed.
+academic_media:
+  mathjax: "https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-svg.js"
+  mermaid: "https://cdn.jsdelivr.net/npm/mermaid@11.12.2/dist/mermaid.esm.min.mjs"
+  plotly: "https://cdn.jsdelivr.net/npm/plotly.js@3.6.0/dist/plotly.min.js"
+  leaflet: "https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"
+  leaflet_css: "https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css"
+
+back_to_top: true
+back_to_top_text: "Voltar ao início da página"
+
+exclude:
+  - publicacoes.md
+  - sobre.md
+  - .aws/
+  - .github/
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - docs/
+  - inir/
+  - references/
+  - vendor/

@@ -1,0 +1,46 @@
+---
+layout: table_wrappers
+---
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'pt-BR' }}" data-site-theme="{{ site.site_theme | default: 'air' }}">
+{% include head.html %}
+<body>
+  <a class="skip-to-main" href="#main-content">Pular para o conteúdo principal</a>
+  <pagefind-config base-url="{{ '/' | relative_url }}" bundle-path="{{ '/pagefind/' | relative_url }}" excerpt-length="20"></pagefind-config>
+  {% include icons/icons.html %}
+  {% if page.nav_enabled == true %}
+    {% include components/sidebar.html %}
+  {% elsif layout.nav_enabled == true and page.nav_enabled == nil %}
+    {% include components/sidebar.html %}
+  {% elsif site.nav_enabled != false and layout.nav_enabled == nil and page.nav_enabled == nil %}
+    {% include components/sidebar.html %}
+  {% endif %}
+  <div class="main" id="top">
+    {% include components/header.html %}
+    <div class="main-content-wrap">
+      {% capture breadcrumbs %}{% include components/breadcrumbs.html %}{% endcapture %}
+      {{ breadcrumbs | replace: 'aria-label="Breadcrumb"', 'aria-label="Caminho de navegação"' }}
+      <div id="main-content" class="main-content">
+        <main lang="{{ page.lang | default: site.lang }}" data-pagefind-body>
+          {% if site.heading_anchors != false %}
+            {% include vendor/anchor_headings.html html=content beforeHeading="true" anchorBody="<svg viewBox=\"0 0 16 16\" aria-hidden=\"true\"><use xlink:href=\"#svg-link\"></use></svg>" anchorClass="anchor-heading" anchorAttrs="aria-labelledby=\"%html_id%\"" %}
+          {% else %}
+            {{ content }}
+          {% endif %}
+          {% if page.has_toc != false %}{% include components/children_nav.html %}{% endif %}
+        </main>
+        <div class="page-footer">{% include components/footer.html %}</div>
+      </div>
+    </div>
+  </div>
+  <pagefind-modal>
+    <pagefind-modal-header><pagefind-input></pagefind-input></pagefind-modal-header>
+    <pagefind-modal-body>
+      <pagefind-summary></pagefind-summary>
+      <pagefind-results hide-sub-results></pagefind-results>
+    </pagefind-modal-body>
+    <pagefind-modal-footer><pagefind-keyboard-hints></pagefind-keyboard-hints></pagefind-modal-footer>
+  </pagefind-modal>
+  {% include academic_media.html %}
+</body>
+</html>

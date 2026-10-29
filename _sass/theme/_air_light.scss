@@ -1,0 +1,23 @@
+$background: #f7f8f8;
+$text: #353f44;
+$link: #2a5978;
+$action: #2a5875;
+
+:root[data-site-theme="air"] {
+  color-scheme: light;
+  --site-background: #{$background};
+  --site-surface: #{mix($text, $background, 3%)};
+  --site-sidebar: #{mix($text, $background, 4%)};
+  --site-text: #{$text};
+  --site-heading: #{$text};
+  --site-link: #{adjust-color($link, $saturation: 6%, $lightness: -2%)};
+  --site-muted: #{mix($text, $background, 85%)};
+  --site-hover: #{mix($text, $background, 8%)};
+  --site-rule: #{mix($text, $background, 24%)};
+  --site-control: #{mix($text, $background, 68%)};
+  --site-brand: #{adjust-color($action, $saturation: 6%)};
+  --site-brand-ink: #ffffff;
+  --site-action-ink: #ffffff;
+  --site-blue-subtle: #{mix($text, $background, 12%)};
+  --site-page-shadow: rgba(39, 38, 43, 0.1);
+}

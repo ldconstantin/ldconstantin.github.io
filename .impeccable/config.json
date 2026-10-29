@@ -1,0 +1,26 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "side-tab",
+        "value": "*",
+        "files": [
+          "_sass/custom/custom.scss"
+        ],
+        "createdAt": "2026-10-27T03:00:25.612Z",
+        "reason": "Agent: these borders mark semantic blockquotes, media-load errors, and notes, not card side tabs."
+      },
+      {
+        "rule": "overused-font",
+        "value": "roboto",
+        "files": [
+          "_sass/custom/setup.scss"
+        ],
+        "createdAt": "2026-10-27T11:30:40.493Z",
+        "reason": "Agent: retain the established Roboto Flex and Roboto Condensed faces documented in docs/academic-flight-manual.md; this refinement changes hierarchy and components, not the pinned typefaces."
+      }
+    ]
+  }
+}

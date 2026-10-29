@@ -1,0 +1,434 @@
+{
+  "geometry": [
+    {
+      "width": 1366,
+      "theme": "light",
+      "differences": []
+    },
+    {
+      "width": 1366,
+      "theme": "dark",
+      "differences": []
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "differences": []
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "differences": []
+    }
+  ],
+  "checks": [
+    "1366/light: layout, theme, reload, matched header background and no page overflow",
+    "1366/dark: layout, theme, reload, matched header background and no page overflow",
+    "390/light: layout, theme, reload, matched header background and no page overflow",
+    "390/dark: layout, theme, reload, matched header background and no page overflow",
+    "Keyboard focus visible on theme button",
+    "Native search renders matching results",
+    "Three-level sidebar expansion and header section state",
+    "light: breadcrumb and nested navigation use theme colors",
+    "dark: breadcrumb and nested navigation use theme colors",
+    "Grayscale render captured for non-color cue inspection",
+    "Mobile sidebar opens with native button; header theme button stays in its row",
+    "Forced-colors render captured"
+  ],
+  "screenshots": [
+    "1366-light.png",
+    "1366-dark.png",
+    "390-light.png",
+    "390-dark.png"
+  ],
+  "fonts": [
+    {
+      "family": "Inter",
+      "status": "unloaded",
+      "weight": "400"
+    },
+    {
+      "family": "Inter",
+      "status": "unloaded",
+      "weight": "400"
+    },
+    {
+      "family": "Inter",
+      "status": "unloaded",
+      "weight": "400"
+    },
+    {
+      "family": "Inter",
+      "status": "unloaded",
+      "weight": "400"
+    },
+    {
+      "family": "Inter",
+      "status": "unloaded",
+      "weight": "400"
+    },
+    {
+      "family": "Inter",
+      "status": "unloaded",
+      "weight": "400"
+    },
+    {
+      "family": "Inter",
+      "status": "loaded",
+      "weight": "400"
+    },
+    {
+      "family": "Inter",
+      "status": "unloaded",
+      "weight": "500"
+    },
+    {
+      "family": "Inter",
+      "status": "unloaded",
+      "weight": "500"
+    },
+    {
+      "family": "Inter",
+      "status": "unloaded",
+      "weight": "500"
+    },
+    {
+      "family": "Inter",
+      "status": "unloaded",
+      "weight": "500"
+    },
+    {
+      "family": "Inter",
+      "status": "unloaded",
+      "weight": "500"
+    },
+    {
+      "family": "Inter",
+      "status": "unloaded",
+      "weight": "500"
+    },
+    {
+      "family": "Inter",
+      "status": "unloaded",
+      "weight": "500"
+    },
+    {
+      "family": "Inter",
+      "status": "unloaded",
+      "weight": "600"
+    },
+    {
+      "family": "Inter",
+      "status": "unloaded",
+      "weight": "600"
+    },
+    {
+      "family": "Inter",
+      "status": "unloaded",
+      "weight": "600"
+    },
+    {
+      "family": "Inter",
+      "status": "unloaded",
+      "weight": "600"
+    },
+    {
+      "family": "Inter",
+      "status": "unloaded",
+      "weight": "600"
+    },
+    {
+      "family": "Inter",
+      "status": "unloaded",
+      "weight": "600"
+    },
+    {
+      "family": "Inter",
+      "status": "loaded",
+      "weight": "600"
+    },
+    {
+      "family": "Inter",
+      "status": "unloaded",
+      "weight": "650"
+    },
+    {
+      "family": "Inter",
+      "status": "unloaded",
+      "weight": "650"
+    },
+    {
+      "family": "Inter",
+      "status": "unloaded",
+      "weight": "650"
+    },
+    {
+      "family": "Inter",
+      "status": "unloaded",
+      "weight": "650"
+    },
+    {
+      "family": "Inter",
+      "status": "unloaded",
+      "weight": "650"
+    },
+    {
+      "family": "Inter",
+      "status": "unloaded",
+      "weight": "650"
+    },
+    {
+      "family": "Inter",
+      "status": "loaded",
+      "weight": "650"
+    },
+    {
+      "family": "Inter",
+      "status": "unloaded",
+      "weight": "700"
+    },
+    {
+      "family": "Inter",
+      "status": "unloaded",
+      "weight": "700"
+    },
+    {
+      "family": "Inter",
+      "status": "unloaded",
+      "weight": "700"
+    },
+    {
+      "family": "Inter",
+      "status": "unloaded",
+      "weight": "700"
+    },
+    {
+      "family": "Inter",
+      "status": "unloaded",
+      "weight": "700"
+    },
+    {
+      "family": "Inter",
+      "status": "unloaded",
+      "weight": "700"
+    },
+    {
+      "family": "Inter",
+      "status": "loaded",
+      "weight": "700"
+    },
+    {
+      "family": "Inter",
+      "status": "unloaded",
+      "weight": "750"
+    },
+    {
+      "family": "Inter",
+      "status": "unloaded",
+      "weight": "750"
+    },
+    {
+      "family": "Inter",
+      "status": "unloaded",
+      "weight": "750"
+    },
+    {
+      "family": "Inter",
+      "status": "unloaded",
+      "weight": "750"
+    },
+    {
+      "family": "Inter",
+      "status": "unloaded",
+      "weight": "750"
+    },
+    {
+      "family": "Inter",
+      "status": "unloaded",
+      "weight": "750"
+    },
+    {
+      "family": "Inter",
+      "status": "loaded",
+      "weight": "750"
+    },
+    {
+      "family": "JetBrains Mono",
+      "status": "unloaded",
+      "weight": "400"
+    },
+    {
+      "family": "JetBrains Mono",
+      "status": "unloaded",
+      "weight": "400"
+    },
+    {
+      "family": "JetBrains Mono",
+      "status": "unloaded",
+      "weight": "400"
+    },
+    {
+      "family": "JetBrains Mono",
+      "status": "unloaded",
+      "weight": "400"
+    },
+    {
+      "family": "JetBrains Mono",
+      "status": "unloaded",
+      "weight": "400"
+    },
+    {
+      "family": "JetBrains Mono",
+      "status": "unloaded",
+      "weight": "400"
+    },
+    {
+      "family": "JetBrains Mono",
+      "status": "unloaded",
+      "weight": "400"
+    },
+    {
+      "family": "JetBrains Mono",
+      "status": "unloaded",
+      "weight": "400"
+    },
+    {
+      "family": "JetBrains Mono",
+      "status": "unloaded",
+      "weight": "400"
+    },
+    {
+      "family": "JetBrains Mono",
+      "status": "unloaded",
+      "weight": "400"
+    },
+    {
+      "family": "JetBrains Mono",
+      "status": "unloaded",
+      "weight": "400"
+    },
+    {
+      "family": "JetBrains Mono",
+      "status": "loaded",
+      "weight": "400"
+    },
+    {
+      "family": "JetBrains Mono",
+      "status": "unloaded",
+      "weight": "700"
+    },
+    {
+      "family": "JetBrains Mono",
+      "status": "unloaded",
+      "weight": "700"
+    },
+    {
+      "family": "JetBrains Mono",
+      "status": "unloaded",
+      "weight": "700"
+    },
+    {
+      "family": "JetBrains Mono",
+      "status": "unloaded",
+      "weight": "700"
+    },
+    {
+      "family": "JetBrains Mono",
+      "status": "unloaded",
+      "weight": "700"
+    },
+    {
+      "family": "JetBrains Mono",
+      "status": "loaded",
+      "weight": "700"
+    },
+    {
+      "family": "Merriweather",
+      "status": "unloaded",
+      "weight": "400"
+    },
+    {
+      "family": "Merriweather",
+      "status": "unloaded",
+      "weight": "400"
+    },
+    {
+      "family": "Merriweather",
+      "status": "unloaded",
+      "weight": "400"
+    },
+    {
+      "family": "Merriweather",
+      "status": "unloaded",
+      "weight": "400"
+    },
+    {
+      "family": "Merriweather",
+      "status": "unloaded",
+      "weight": "400"
+    },
+    {
+      "family": "Merriweather",
+      "status": "unloaded",
+      "weight": "400"
+    },
+    {
+      "family": "Merriweather",
+      "status": "unloaded",
+      "weight": "400"
+    },
+    {
+      "family": "Merriweather",
+      "status": "unloaded",
+      "weight": "400"
+    },
+    {
+      "family": "Merriweather",
+      "status": "unloaded",
+      "weight": "400"
+    },
+    {
+      "family": "Merriweather",
+      "status": "loaded",
+      "weight": "400"
+    },
+    {
+      "family": "Merriweather",
+      "status": "unloaded",
+      "weight": "700"
+    },
+    {
+      "family": "Merriweather",
+      "status": "unloaded",
+      "weight": "700"
+    },
+    {
+      "family": "Merriweather",
+      "status": "unloaded",
+      "weight": "700"
+    },
+    {
+      "family": "Merriweather",
+      "status": "unloaded",
+      "weight": "700"
+    },
+    {
+      "family": "Merriweather",
+      "status": "unloaded",
+      "weight": "700"
+    }
+  ],
+  "build": "bundle exec jekyll build: exit 0",
+  "local_links": "37 generated pages: all local destinations and fragments resolve",
+  "backup": "docs/backups/before-aviation-manual-20261022-233920/",
+  "contrast": {
+    "light": {
+      "lowest_checked_text": 5.11,
+      "lowest_control_boundary": 3.88
+    },
+    "dark": {
+      "lowest_checked_text": 5.9,
+      "lowest_control_boundary": 5.21
+    }
+  }
+}

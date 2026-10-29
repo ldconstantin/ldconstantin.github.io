@@ -1,0 +1,7 @@
+---
+layout: default
+---
+
+<h1>{{ page.title | escape }}</h1>
+<p class="entry-meta"><time datetime="{{ page.date | date: '%Y-%m-%d' }}">{% include date_long_pt.html date=page.date %}</time></p>
+{{ content }}

@@ -1,0 +1,8 @@
+# Primary site pages.
+main:
+- title: Ensino
+  url: /teaching/
+- title: Pesquisa
+  url: /research/
+- title: Extensão
+  url: /extension/

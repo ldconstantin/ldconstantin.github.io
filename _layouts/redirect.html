@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="refresh" content="0; url={{ page.redirect_to | relative_url }}">
+  <link rel="canonical" href="{{ page.redirect_to | absolute_url }}">
+  <title>Endereço atualizado</title>
+  <script src="{{ '/assets/js/theme.js' | relative_url }}"></script>
+  <link rel="stylesheet" href="{{ '/assets/css/just-the-docs-default.css' | relative_url }}">
+</head>
+<body>
+  <main class="main-content redirect-page">
+    <h1>Endereço atualizado</h1>
+    <p>Este endereço mudou.</p>
+    <p><a href="{{ page.redirect_to | relative_url }}">Ir para a página atual</a></p>
+  </main>
+</body>
+</html>
