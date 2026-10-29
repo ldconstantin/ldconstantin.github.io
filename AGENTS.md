@@ -62,7 +62,10 @@ new collections unless real content needs them. Preserve academic facts during t
 
 Repository documentation and commit messages use English unless another language
 is explicitly requested, necessary for the task, or recommended by the context;
-public pages remain bilingual. Keep local references, machine configuration,
+public pages remain bilingual. Follow Conventional Commits for every new commit:
+`type(scope): description`, with an optional scope and an English description.
+Use a type that describes the change, such as `fix`, `feat`, `perf`, `docs`,
+`refactor`, `test`, `ci`, or `chore`. Keep local references, machine configuration,
 backups, and review artifacts ignored and excluded from the generated site. Keep
 `Gemfile.lock` versioned. Do not commit, push, enable Pages, or deploy without the
 user's explicit confirmation. Deployment uses a manual workflow with
