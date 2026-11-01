@@ -36,6 +36,7 @@ back_to_top_text: "Voltar ao início da página"
 
 include:
   - _pages
+  - .well-known
 
 defaults:
   - scope:
