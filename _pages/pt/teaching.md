@@ -1,5 +1,6 @@
 ---
 title: Ensino
+description: "Disciplinas de programação, algoritmos, estruturas de dados e sistemas operacionais ministradas em cursos técnicos e superiores."
 layout: default
 nav_order: 1
 has_toc: false

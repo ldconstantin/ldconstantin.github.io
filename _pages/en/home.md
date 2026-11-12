@@ -1,5 +1,6 @@
 ---
 title: Home
+description: "Computer Science instructor at IFSul Passo Fundo, with teaching experience and coaching of competitive programming teams."
 layout: home
 nav_order: 1
 nav_exclude: true

@@ -1,5 +1,6 @@
 ---
 title: Interesses acadêmicos
+description: "Interesses acadêmicos em programação competitiva, algoritmos, estruturas de dados e Educação em Computação."
 layout: default
 nav_order: 2
 lang: pt-BR

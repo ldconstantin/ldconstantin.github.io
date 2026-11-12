@@ -1,5 +1,6 @@
 ---
 title: Teaching
+description: "Programming, algorithms, data structures, and operating systems courses taught in technical and undergraduate programs."
 layout: default
 nav_order: 1
 has_toc: false
