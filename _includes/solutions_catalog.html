@@ -7,12 +7,13 @@
   {% for solution in site.data.icpc_solutions %}
     {% if solution.topics contains category.id %}
     {% assign count = count | plus: 1 %}
-    <li><strong>{% if locale == 'en' %}{{ solution.title_en | escape }}{% else %}{{ solution.title_pt | escape }}{% endif %}</strong>
+    <li><strong><a class="solution-title" href="{% if locale == 'en' %}{{ solution.detail_en | relative_url }}{% else %}{{ solution.detail_pt | relative_url }}{% endif %}">{% if locale == 'en' %}{{ solution.title_en | escape }}{% else %}{{ solution.title_pt | escape }}{% endif %}</a></strong>
       <span class="solution-meta">({% if solution.judge == 'examples' %}{% if locale == 'en' %}algorithm example{% else %}exemplo de algoritmo{% endif %}{% else %}{{ solution.judge }}{% endif %})</span>
+      <p class="solution-summary">{% if locale == 'en' %}{{ solution.summary_en | escape }}{% else %}{{ solution.summary_pt | escape }}{% endif %}</p>
       <div class="solution-links">
         <a href="{{ solution.source | relative_url }}"><code>{{ solution.filename | escape }}</code></a>
-        {% if solution.problem_url %}<a href="{{ solution.problem_url }}">{% if locale == 'en' %}Problem{% else %}Problema{% endif %}</a>{% endif %}
-        <a href="{{ solution.original_url }}">{% if locale == 'en' %}Original commit{% else %}Commit de origem{% endif %}</a>
+        {% if solution.problem_url %}<a href="{{ solution.problem_url }}" target="_blank" rel="noopener noreferrer" aria-label="{% if locale == 'en' %}Original problem (opens in a new tab){% else %}Problema original (abre em nova aba){% endif %}">{% if locale == 'en' %}Problem{% else %}Problema{% endif %}</a>{% endif %}
+        <a href="{{ solution.original_url }}" target="_blank" rel="noopener noreferrer">{% if locale == 'en' %}Original commit{% else %}Commit de origem{% endif %}</a>
       </div>
     </li>
     {% endif %}

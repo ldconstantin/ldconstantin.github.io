@@ -779,3 +779,23 @@ b, strong { font-weight: 700; }
 .solution-meta { color: var(--site-muted); font-size: 0.875em; }
 .solution-links { display: flex; flex-wrap: wrap; gap: 0.35rem 1rem; }
 .solution-links a { font-size: 0.95em; }
+/* Dedicated solution documentation, preserving Mint and existing typography. */
+.solution-article { min-width: 0; }
+.solution-lead { font-weight: 500; }
+.solution-context, .solution-attribution { color: var(--site-muted); }
+.solution-context a { display: inline-block; margin-right: 0.55rem; }
+.solution-summary { margin: 0.2rem 0 0.55rem; }
+.solution-back { margin-bottom: 1rem; }
+.main-content pre.solution-source {
+  max-width: 100%;
+  max-height: 36rem;
+  overflow: auto;
+  padding: 1rem;
+  white-space: pre;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  background: var(--site-surface);
+  border: 1px solid var(--site-rule);
+  tab-size: 4;
+}
+.solution-source code { white-space: pre; }

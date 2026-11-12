@@ -32,6 +32,8 @@ for item in entries:
     assert item["original_commit"] in item["original_url"]
     assert item["topics"] and set(item["topics"]) <= ids
     assert item["validation"] == "compile-only"
+    for field in ["summary_pt", "summary_en", "method_pt", "method_en", "limits_pt", "limits_en", "detail_pt", "detail_en"]:
+        assert isinstance(item[field], str) and len(item[field]) >= 12, (item["id"], field)
     assert "Leonardo Deliyannis Constantin" in path.read_text(encoding="utf-8")
     if item["judge"] == "beecrowd":
         assert re.fullmatch(r"bee[0-9]+(?:-[a-z]+)?\.(?:cpp|py)", name), name
@@ -47,6 +49,9 @@ for item in entries:
 
 # Small behavior checks only for examples with known, locally reproducible outcomes.
 cases = [
+    ("algorithms/kruskal.cpp", "3 3\n0 1 2\n1 2 3\n0 2 9\n", "0 1 2\n1 2 3\n"),
+    ("beecrowd/bee1034-bottomup.cpp", "2\n2 6\n1 3\n3 8\n1 3 4\n", "2\n2\n"),
+    ("beecrowd/bee1500.cpp", "1\n5 5\n0 1 3 2\n1 1 5\n0 2 5 1\n1 1 5\n1 3 3\n", "6\n10\n3\n"),
     ("codeforces/cf122a.cpp", "47\n", "YES\n"),
     ("codeforces/cf266a.cpp", "3\nRRG\n", "1\n"),
     ("codeforces/cf339a.cpp", "3+2+1\n", "1+2+3\n"),
@@ -71,6 +76,33 @@ if len(sys.argv) == 3 and sys.argv[1] == "--site":
     site = Path(sys.argv[2])
     assert (site / "assets/favicon.svg").is_file()
     assert (site / "favicon.ico").is_file()
+    from html.parser import HTMLParser
+    from html import unescape
+    class DetailLinks(HTMLParser):
+        def __init__(self):
+            super().__init__()
+            self.anchors = []
+        def handle_starttag(self, tag, attrs):
+            if tag == "a":
+                self.anchors.append(dict(attrs))
+    for item in entries:
+        for route_key, heading_key in [("detail_pt", "title_pt"), ("detail_en", "title_en")]:
+            route = item[route_key].lstrip("/") + "index.html"
+            detail = (site / route).read_text(encoding="utf-8")
+            parsed = DetailLinks()
+            parsed.feed(detail)
+            assert unescape(item[heading_key]) in unescape(detail), route
+            assert item["source"] in detail, (route, "missing source path")
+            assert item["original_url"] in detail, (route, "missing provenance")
+            assert 'data-solution-source=' in detail, route
+            assert 'solution-source.js' in detail, route
+            assert 'rel="alternate"' in detail, route
+            if item["problem_url"]:
+                external = [a for a in parsed.anchors if a.get("href") == item["problem_url"]]
+                assert external and all(a.get("target") == "_blank" and
+                    "noopener" in a.get("rel", "") and "noreferrer" in a.get("rel", "")
+                    for a in external), (route, "problem links must open in a safe new tab")
+            print("Dedicated page OK:", route)
     for url in ["codigos/index.html", "en/solutions/index.html"]:
         page = (site / url).read_text(encoding="utf-8")
         assert "Academic cap" not in page  # The favicon is external, not a decorative page image.
