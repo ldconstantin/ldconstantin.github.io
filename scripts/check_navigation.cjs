@@ -186,3 +186,22 @@ test('academic typography shrinks 10% while preserving the layout scale', async 
   assert.ok(Math.abs(sizes.content / sizes.root - 1.0125) < 0.01, JSON.stringify(sizes));
   assert.equal(sizes.overflow, false);
 });
+
+test('solution pages explain source in two languages and original problems open new tabs', async t => {
+  const page = await open(t, 'pt-BR', false, 375);
+  await visit(page, '/codigos/');
+  await page.locator('a.solution-title[href="/codigos/bee1500/"]').first().click();
+  await page.waitForURL(base + '/codigos/bee1500/');
+  assert.equal(await page.locator('html').getAttribute('lang'), 'pt-BR');
+  assert.match(await page.locator('h1').first().innerText(), /Consultas/);
+  await page.waitForFunction(() => document.querySelector('pre.solution-source code')?.textContent?.includes('class SegmentTree'));
+  const problem = page.locator('a[href="https://judge.beecrowd.com/pt/problems/view/1500"]').last();
+  assert.equal(await problem.getAttribute('target'), '_blank');
+  assert.match(await problem.getAttribute('rel'), /noopener/);
+  assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false);
+  await page.locator('.language-option[data-locale="en"]').click();
+  await page.waitForURL(base + '/en/solutions/bee1500/');
+  assert.equal(await page.locator('html').getAttribute('lang'), 'en-US');
+  assert.match(await page.locator('h1').first().innerText(), /Lazy/);
+  await page.waitForFunction(() => document.querySelector('pre.solution-source code')?.textContent?.includes('class SegmentTree'));
+});
