@@ -947,6 +947,7 @@ b, strong { font-weight: 700; }
 .solution-related a { display: inline-block; min-height: 2.75rem; padding-block: 0.45rem; }
 
 /* Easy reading: simpler alternate text, not merely enlarged typography. */
+.easy-reading-controls[hidden] { display: none !important; }
 .easy-reading-controls {
   display: flex;
   flex-wrap: wrap;

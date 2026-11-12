@@ -34,7 +34,7 @@ layout: table_wrappers
       {{ breadcrumbs }}
       <div id="main-content" class="main-content">
         {% if easy_available %}
-        <div class="easy-reading-controls" data-pagefind-ignore>
+        <div class="easy-reading-controls" data-easy-reading-controls data-pagefind-ignore hidden>
           <button id="easy-reading-toggle" class="easy-reading-toggle" type="button" aria-pressed="false"
                   aria-controls="easy-reading-panel"
                   data-easy-label="{{ ui.easy_read | escape }}"

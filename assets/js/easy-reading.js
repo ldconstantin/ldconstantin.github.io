@@ -6,6 +6,8 @@
     const panel = document.getElementById('easy-reading-panel');
     const full = document.getElementById('full-reading-content');
     if (!toggle || !panel || !full) return;
+    const controls = document.querySelector('[data-easy-reading-controls]');
+    if (controls) controls.hidden = false;
 
     const preferenceKey = 'academic-easy-reading';
     const helper = document.getElementById('easy-reading-helper');
