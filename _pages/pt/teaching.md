@@ -71,6 +71,10 @@ Disciplinas ministradas em cursos técnicos e superiores, organizadas por semest
   </li>
 </ul>
 
+## Colaboração em material didático
+
+- **Simulado ENADE 2026, Bacharelado em Ciência da Computação (IFSul Passo Fundo):** colaboração na diagramação e na preparação editorial do caderno de questões. Não reivindico autoria dos enunciados ou das questões. O material institucional integral não é distribuído neste site.
+
 ## Disciplinas em estudo
 
 - ### Letramento em Inteligência Artificial {#letramento-em-inteligencia-artificial}
