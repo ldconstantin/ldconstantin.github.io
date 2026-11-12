@@ -102,6 +102,11 @@ if len(sys.argv) == 3 and sys.argv[1] == "--site":
             assert item["original_url"] in detail, (route, "missing provenance")
             assert 'data-solution-source=' in detail, route
             assert 'solution-source.js' in detail, route
+            assert 'prism-bundle.min.js' in detail, route
+            assert 'language-cpp' in detail and 'language-python' in detail, route
+            if item.get("cpp_revised"):
+                assert "Historical C++ source" in detail or "C++ histórico original" in detail
+                assert item["source"] in detail
             assert 'rel="alternate"' in detail, route
             if item["problem_url"]:
                 external = [a for a in parsed.anchors if a.get("href") == item["problem_url"]]

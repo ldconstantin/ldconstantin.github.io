@@ -55,7 +55,12 @@ with tempfile.TemporaryDirectory(prefix="solution-ports-") as directory:
         assert source_cpp.is_file() and source_cpp.suffix == ".cpp"
         assert source_py.is_file() and source_py.suffix == ".py"
         assert original.is_file()
-        assert original.resolve() in (source_cpp.resolve(), source_py.resolve())
+        if entry.get("cpp_revised"):
+            assert entry["source_cpp"].startswith("/assets/coding/icpc-solutions/revised/")
+            assert original.resolve() not in (source_cpp.resolve(), source_py.resolve())
+            assert original.suffix == ".cpp"
+        else:
+            assert original.resolve() in (source_cpp.resolve(), source_py.resolve())
         assert entry["historical_language"] in ("cpp", "python")
         assert entry["adapted_language"] != entry["historical_language"]
         assert entry["adaptation_note_pt"] and entry["adaptation_note_en"]
@@ -79,9 +84,11 @@ with tempfile.TemporaryDirectory(prefix="solution-ports-") as directory:
     # lose the sign of a nonzero interval. The port deliberately corrects it.
     by_id = {entry["id"]: entry for entry in entries}
     case = "2 1\n1000000007 1\nP 1 2\n"
-    corrected = run([sys.executable, "-B",
-                     str(ROOT / by_id["bee1301"]["source_python"].lstrip("/"))], case)
-    assert corrected == "+\n", repr(corrected)
+    for mode in ("source_cpp", "source_python"):
+        path = ROOT / by_id["bee1301"][mode].lstrip("/")
+        command = [str(Path(directory) / "bee1301")] if mode == "source_cpp" else [sys.executable, "-B", str(path)]
+        corrected = run(command, case)
+        assert corrected == "+\n", (mode, repr(corrected))
 
     # Python integer arithmetic avoids the floating-point formula of the
     # historical circle-regions implementation.
@@ -98,5 +105,101 @@ with tempfile.TemporaryDirectory(prefix="solution-ports-") as directory:
     actual = run([sys.executable, "-B",
                   str(ROOT / by_id["bee1034-topdown"]["source_python"].lstrip("/"))], case)
     assert actual == "1500\n"
+
+
+    # Independent oracles, deterministic fixtures. These are regression checks,
+    # not claims of full proof or acceptance by an online judge.
+    import random
+    rng = random.Random(20261112)
+
+    # 1. Range-product sign, including zeros, negative numbers and MOD multiples.
+    for _ in range(60):
+        n = rng.randint(1, 12)
+        initial = [rng.choice([-1000000007, -12, -1, 0, 1, 9, 1000000007])
+                   for _ in range(n)]
+        current = initial.copy()
+        ops, expected = [], []
+        for _ in range(25):
+            if rng.randrange(3) == 0:
+                i = rng.randrange(n)
+                v = rng.choice([-1000000007, -8, -1, 0, 1, 8, 1000000007])
+                ops.append(f"C {i + 1} {v}")
+                current[i] = v
+            else:
+                l, r = sorted(rng.sample(range(n), k=2)) if n > 1 else (0, 0)
+                ops.append(f"P {l + 1} {r + 1}")
+                values = current[l:r + 1]
+                sign = 0 if any(v == 0 for v in values) else (-1 if sum(v < 0 for v in values) % 2 else 1)
+                expected.append("0" if sign == 0 else "-" if sign < 0 else "+")
+        case = f"{n} {len(ops)}\n" + " ".join(map(str, initial)) + "\n" + "\n".join(ops) + "\n"
+        for mode in ("source_cpp", "source_python"):
+            file = ROOT / by_id["bee1301"][mode].lstrip("/")
+            cmd = [str(Path(directory) / "bee1301")] if mode == "source_cpp" else [sys.executable, "-B", str(file)]
+            got = run(cmd, case).strip()
+            assert got == "".join(expected), ("range sign", mode, case, got, expected)
+
+    # 2. Exact circle counts, including a case beyond ordinary double precision.
+    values = [0, 1, 2, 3, 4, 5, 9, 100, 1000000, 2147483647]
+    expected = [1 + math.comb(n, 2) + (math.comb(n, 4) if n >= 4 else 0) for n in values]
+    for mode in ("source_cpp", "source_python"):
+        file = ROOT / by_id["bee2802"][mode].lstrip("/")
+        cmd = [str(Path(directory) / "bee2802")] if mode == "source_cpp" else [sys.executable, "-B", str(file)]
+        got = run(cmd, "\n".join(map(str, values)) + "\n").split()
+        assert got == list(map(str, expected)), ("circle regions", mode, got)
+
+    # 3. Independent undirected-multigraph cycle oracle using DSU.
+    graph_input, graph_expected = [], []
+    for _ in range(100):
+        n = rng.randrange(1, 10)
+        m = rng.randrange(0, 25)
+        edges = [(rng.randrange(n), rng.randrange(n)) for _ in range(m)]
+        parent = list(range(n))
+        def find(x):
+            while parent[x] != x:
+                parent[x] = parent[parent[x]]
+                x = parent[x]
+            return x
+        cyclic = False
+        for u, v in edges:
+            a, b = find(u), find(v)
+            if a == b:
+                cyclic = True
+            else:
+                parent[a] = b
+        count = len({find(i) for i in range(n)})
+        graph_input.append(f"{n} {m}\n" + "".join(f"{u+1} {v+1}\n" for u, v in edges))
+        graph_expected.extend([f"Ciclico: {'Sim' if cyclic else 'Nao'}", f"Componentes conexas: {count}"])
+    case = "".join(graph_input)
+    expected_output = "\n".join(graph_expected) + "\n"
+    for mode in ("source_cpp", "source_python"):
+        file = ROOT / by_id["dfs"][mode].lstrip("/")
+        cmd = [str(Path(directory) / "dfs")] if mode == "source_cpp" else [sys.executable, "-B", str(file)]
+        assert run(cmd, case) == expected_output, ("multigraph DFS", mode)
+
+    # 4. Duplicated roads must preserve the best probability.
+    roads = "3\n4\n1 2 95\n1 2 10\n2 3 50\n1 3 40\n0\n"
+    for mode in ("source_cpp", "source_python"):
+        file = ROOT / by_id["bee1655"][mode].lstrip("/")
+        cmd = [str(Path(directory) / "bee1655")] if mode == "source_cpp" else [sys.executable, "-B", str(file)]
+        assert run(cmd, roads).strip() == "47.500000 percent", ("parallel probabilities", mode)
+
+    # 5. The geometry version must survive large int-sided triangles.
+    triangle = "30000 40000 50000\n"
+    for mode in ("source_cpp", "source_python"):
+        file = ROOT / by_id["bee1219"][mode].lstrip("/")
+        cmd = [str(Path(directory) / "bee1219")] if mode == "source_cpp" else [sys.executable, "-B", str(file)]
+        out = run(cmd, triangle).strip().split()
+        assert len(out) == 3 and all(float(x) > 0 for x in out), ("triangle", mode, out)
+        assert abs(float(out[2]) - math.pi * 10000**2) <= 0.1, ("incircle", mode, out)
+
+    # 6. Deep DP should not rely on 100k levels of recursion.
+    deep = "1\n1 100000\n1\n"
+    for mode in ("source_cpp", "source_python"):
+        file = ROOT / by_id["bee1034-topdown"][mode].lstrip("/")
+        cmd = [str(Path(directory) / "bee1034-topdown")] if mode == "source_cpp" else [sys.executable, "-B", str(file)]
+        assert run(cmd, deep).strip() == "100000", ("deep DP", mode)
+
+    print("Independent property/regression checks passed (range signs, multigraphs, combinatorics, probability, geometry, deep DP).")
+
     print("Three targeted port regressions OK.")
 print("18 dual-language implementations validated.")
