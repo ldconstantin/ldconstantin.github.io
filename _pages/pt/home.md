@@ -54,4 +54,5 @@ Instituto Federal Sul-rio-grandense (IFSul), Câmpus Passo Fundo · desde maio d
 - **Linguagens de programação e scripts:** C, C++, Python, JavaScript e Bash.
 - **Ambiente de trabalho:** Linux.
 - **Idiomas:** português (nativo), inglês (avançado) e espanhol (intermediário).
+
 **Contato profissional:** [LinkedIn](https://www.linkedin.com/in/ldconstantin/).

@@ -53,4 +53,5 @@ Instituto Federal Sul-rio-grandense (IFSul), Passo Fundo Campus · since May 202
 - **Programming and scripting languages:** C, C++, Python, JavaScript, and Bash.
 - **Working environment:** Linux.
 - **Spoken languages:** Portuguese (native), English (advanced), and Spanish (intermediate).
+
 **Professional contact:** [LinkedIn](https://www.linkedin.com/in/ldconstantin/).
