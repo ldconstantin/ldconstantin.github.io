@@ -19,6 +19,8 @@ Topics broadly follow the classification used in my [undergraduate thesis on the
 
 **How to browse:** open a solution title. Its page briefly explains the algorithm, states its limits, and shows the historical code. The original problem opens in a new tab.
 
+The 2017–2018 sources remain unchanged. Each guide offers **C++ and Python tabs**: one contains the historical source, the other a new AI-assisted educational adaptation (2026), clearly identified. Adaptations may fix known limitations; local tests do not establish current online-judge acceptance.
+
 {% include solutions_catalog.html locale="en" %}
 
 ## Use and attribution

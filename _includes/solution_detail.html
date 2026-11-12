@@ -29,13 +29,40 @@
   <p>{% if lang == 'en' %}{{ solution.limits_en | escape }}{% else %}{{ solution.limits_pt | escape }}{% endif %}</p>
   <p>{% if lang == 'en' %}The historical file passed a C++ syntax check or a Python syntax check. Selected files have local smoke tests. This is not a current online-judge acceptance certificate.{% else %}O arquivo histórico passou em uma verificação de sintaxe C++ ou Python. Alguns arquivos têm testes funcionais locais. Isso não comprova aceitação atual no juiz on-line.{% endif %}</p>
 
-  <h2 id="source">{% if lang == 'en' %}Historical source code{% else %}Código-fonte histórico{% endif %}</h2>
-  <div class="solution-links">
-    <a href="{{ solution.source | relative_url }}">{% if lang == 'en' %}Open raw source{% else %}Abrir arquivo-fonte{% endif %} (<code>{{ solution.filename | escape }}</code>)</a>
-    {% if solution.problem_url %}<a href="{{ solution.problem_url }}" target="_blank" rel="noopener noreferrer">{% if lang == 'en' %}Original problem (new tab){% else %}Problema original (nova aba){% endif %}</a>{% endif %}
-    <a href="{{ solution.original_url }}" target="_blank" rel="noopener noreferrer">{% if lang == 'en' %}Original version (new tab){% else %}Versão de origem (nova aba){% endif %}</a>
+  <h2 id="source">{% if lang == 'en' %}Source code: C++ and Python{% else %}Código-fonte: C++ e Python{% endif %}</h2>
+  <p>{% if lang == 'en' %}Compare both implementations. The historical file is kept unchanged; the new adaptation is identified separately.{% else %}Compare as duas implementações. O arquivo histórico está preservado; a nova adaptação é identificada separadamente.{% endif %}</p>
+  <p class="solution-attribution">{% if lang == 'en' %}{{ solution.adaptation_note_en | escape }}{% else %}{{ solution.adaptation_note_pt | escape }}{% endif %}</p>
+  {% if solution.port_difference_pt %}<p class="solution-port-difference">{% if lang == 'en' %}{{ solution.port_difference_en | escape }}{% else %}{{ solution.port_difference_pt | escape }}{% endif %}</p>{% endif %}
+  <div class="solution-code-tabs" data-solution-code-tabs>
+    <div class="solution-code-tablist" role="tablist" aria-label="{% if lang == 'en' %}Source language{% else %}Linguagem do código{% endif %}">
+      <button class="solution-code-tab" type="button" role="tab" id="code-{{ solution.id }}-cpp-tab"
+        aria-controls="code-{{ solution.id }}-cpp-panel" aria-selected="true" tabindex="0">C++</button>
+      <button class="solution-code-tab" type="button" role="tab" id="code-{{ solution.id }}-python-tab"
+        aria-controls="code-{{ solution.id }}-python-panel" aria-selected="false" tabindex="-1">Python</button>
+    </div>
+    <section class="solution-code-panel" role="tabpanel" id="code-{{ solution.id }}-cpp-panel"
+      aria-labelledby="code-{{ solution.id }}-cpp-tab" tabindex="0">
+      <p class="solution-code-provenance">
+        {% if solution.historical_language == 'cpp' %}{% if lang == 'en' %}Historical original{% else %}Original histórico{% endif %}
+        {% else %}{% if lang == 'en' %}New C++ adaptation (AI-assisted, 2026){% else %}Adaptação nova em C++ (com auxílio de IA, 2026){% endif %}{% endif %}
+        · <a href="{{ solution.source_cpp | relative_url }}">{% if lang == 'en' %}Open C++ file{% else %}Abrir arquivo C++{% endif %}</a>
+      </p>
+      <pre class="solution-source" data-solution-source="{{ solution.source_cpp | relative_url }}"><code>{% if lang == 'en' %}Loading source…{% else %}Carregando código…{% endif %}</code></pre>
+    </section>
+    <section class="solution-code-panel" role="tabpanel" id="code-{{ solution.id }}-python-panel"
+      aria-labelledby="code-{{ solution.id }}-python-tab" tabindex="0" hidden>
+      <p class="solution-code-provenance">
+        {% if solution.historical_language == 'python' %}{% if lang == 'en' %}Historical original{% else %}Original histórico{% endif %}
+        {% else %}{% if lang == 'en' %}New Python adaptation (AI-assisted, 2026){% else %}Adaptação nova em Python (com auxílio de IA, 2026){% endif %}{% endif %}
+        · <a href="{{ solution.source_python | relative_url }}">{% if lang == 'en' %}Open Python file{% else %}Abrir arquivo Python{% endif %}</a>
+      </p>
+      <pre class="solution-source" data-solution-source="{{ solution.source_python | relative_url }}"><code>{% if lang == 'en' %}Loading source…{% else %}Carregando código…{% endif %}</code></pre>
+    </section>
   </div>
-  <pre class="solution-source" data-solution-source="{{ solution.source | relative_url }}"><code>{% if lang == 'en' %}Source is also available through the link above.{% else %}O código também está disponível no link acima.{% endif %}</code></pre>
+  <div class="solution-links">
+    {% if solution.problem_url %}<a href="{{ solution.problem_url }}" target="_blank" rel="noopener noreferrer">{% if lang == 'en' %}Original problem (new tab){% else %}Problema original (nova aba){% endif %}</a>{% endif %}
+    <a href="{{ solution.original_url }}" target="_blank" rel="noopener noreferrer">{% if lang == 'en' %}Historical version (new tab){% else %}Versão histórica (nova aba){% endif %}</a>
+  </div>
   <p class="solution-attribution">{% if lang == 'en' %}Attributed author{% else %}Autoria identificada{% endif %}: {{ solution.author | escape }} ·
   {% if lang == 'en' %}Historical repository{% else %}Repositório histórico{% endif %}: <a href="https://github.com/maratonaupf/codigos" target="_blank" rel="noopener noreferrer">Clube de Programação UPF</a>.</p>
 </article>

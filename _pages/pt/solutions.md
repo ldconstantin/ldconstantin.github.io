@@ -19,6 +19,8 @@ A organização segue categorias próximas às utilizadas no [TCC sobre a Marato
 
 **Como navegar:** abra o título de uma solução. A página dedicada explica a ideia do algoritmo em poucas frases, aponta suas limitações e mostra o código histórico. O enunciado original abre em nova aba.
 
+Os arquivos de 2017–2018 permanecem preservados. Cada página oferece **abas C++ e Python**: uma contém o código histórico e a outra, uma adaptação didática nova (2026) com auxílio de IA, identificada explicitamente. As adaptações podem corrigir limitações conhecidas; os testes locais não equivalem a aceitação atual pelo juiz.
+
 {% include solutions_catalog.html locale="pt" %}
 
 ## Uso e procedência

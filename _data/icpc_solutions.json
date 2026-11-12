@@ -139,7 +139,9 @@
     "historical_language": "cpp",
     "adapted_language": "python",
     "adaptation_note_pt": "A versão C++ é histórica. A versão Python foi adaptada em 2026 com auxílio de IA e não é um commit histórico do Clube UPF.",
-    "adaptation_note_en": "The C++ file is historical. Python was adapted in 2026 with AI assistance and is not an original UPF club commit."
+    "adaptation_note_en": "The C++ file is historical. Python was adapted in 2026 with AI assistance and is not an original UPF club commit.",
+    "port_difference_pt": "A adaptação Python usa uma pilha iterativa e mantém os limites históricos de grafos com arestas paralelas.",
+    "port_difference_en": "The Python port uses an explicit stack and retains the documented caveat for parallel edges."
   },
   {
     "id": "bee1655",
@@ -210,7 +212,9 @@
     "historical_language": "cpp",
     "adapted_language": "python",
     "adaptation_note_pt": "A versão C++ é histórica. A versão Python foi adaptada em 2026 com auxílio de IA e não é um commit histórico do Clube UPF.",
-    "adaptation_note_en": "The C++ file is historical. Python was adapted in 2026 with AI assistance and is not an original UPF club commit."
+    "adaptation_note_en": "The C++ file is historical. Python was adapted in 2026 with AI assistance and is not an original UPF club commit.",
+    "port_difference_pt": "A adaptação Python guarda somente o sinal (-1, 0 ou +1), corrigindo o risco de um produto não nulo virar zero pela redução modular usada no C++ histórico.",
+    "port_difference_en": "The Python port stores only the sign (-1, 0, or +1), avoiding the historical C++ modular-product defect that can turn a nonzero product into zero."
   },
   {
     "id": "bee1500",
@@ -351,7 +355,9 @@
     "historical_language": "cpp",
     "adapted_language": "python",
     "adaptation_note_pt": "A versão C++ é histórica. A versão Python foi adaptada em 2026 com auxílio de IA e não é um commit histórico do Clube UPF.",
-    "adaptation_note_en": "The C++ file is historical. Python was adapted in 2026 with AI assistance and is not an original UPF club commit."
+    "adaptation_note_en": "The C++ file is historical. Python was adapted in 2026 with AI assistance and is not an original UPF club commit.",
+    "port_difference_pt": "A adaptação Python conserva a memoização e usa pilha explícita para evitar o limite de profundidade recursiva.",
+    "port_difference_en": "The Python port preserves memoization with an explicit stack to avoid Python's recursion-depth limit."
   },
   {
     "id": "bee1127",
@@ -386,7 +392,9 @@
     "historical_language": "cpp",
     "adapted_language": "python",
     "adaptation_note_pt": "A versão C++ é histórica. A versão Python foi adaptada em 2026 com auxílio de IA e não é um commit histórico do Clube UPF.",
-    "adaptation_note_en": "The C++ file is historical. Python was adapted in 2026 with AI assistance and is not an original UPF club commit."
+    "adaptation_note_en": "The C++ file is historical. Python was adapted in 2026 with AI assistance and is not an original UPF club commit.",
+    "port_difference_pt": "A adaptação Python aplica KMP às diferenças entre notas; transposições preservam essas diferenças.",
+    "port_difference_en": "The Python port applies KMP to pitch differences, which remain unchanged under transposition."
   },
   {
     "id": "bee1219",
@@ -493,7 +501,9 @@
     "historical_language": "cpp",
     "adapted_language": "python",
     "adaptation_note_pt": "A versão C++ é histórica. A versão Python foi adaptada em 2026 com auxílio de IA e não é um commit histórico do Clube UPF.",
-    "adaptation_note_en": "The C++ file is historical. Python was adapted in 2026 with AI assistance and is not an original UPF club commit."
+    "adaptation_note_en": "The C++ file is historical. Python was adapted in 2026 with AI assistance and is not an original UPF club commit.",
+    "port_difference_pt": "A adaptação Python usa combinações inteiras exatas e evita arredondamentos de ponto flutuante.",
+    "port_difference_en": "The Python port uses exact integer combinations instead of floating-point rounding."
   },
   {
     "id": "cf122a",
