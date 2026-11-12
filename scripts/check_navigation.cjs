@@ -350,3 +350,78 @@ test('academic specialization and proposed learning activity are consistent in P
   assert.match(enText, /Demonstration learning activity/);
   assert.match(enText, /not a report of an activity already taught/);
 });
+
+test('easy reading gives a real simplified page, then returns to the complete text', async t => {
+  const page = await open(t, 'pt-BR', false, 375);
+  await visit(page, '/ensino/');
+  const toggle = page.getByRole('button', {name: 'Leitura fácil'});
+  await toggle.waitFor({state: 'visible'});
+  assert.equal(await toggle.getAttribute('aria-pressed'), 'false');
+  await toggle.press('Enter');
+  assert.equal(await toggle.getAttribute('aria-pressed'), 'true');
+  assert.equal(await page.locator('#easy-reading-panel').isVisible(), true);
+  assert.equal(await page.locator('#full-reading-content').isVisible(), false);
+  assert.equal(await page.locator('#site-nav').isVisible(), false);
+  assert.match(await page.locator('#easy-reading-panel').innerText(), /Esta é uma proposta|Essa atividade é uma proposta/);
+  assert.match(await page.locator('#easy-reading-panel').innerText(), /ENADE/);
+  const easy = await page.locator('.easy-reading-panel').evaluate(el => getComputedStyle(el));
+  assert.ok(parseFloat(easy.fontSize) >= 17);
+  await page.getByRole('button', {name: 'Voltar ao texto completo'}).click();
+  assert.equal(await toggle.getAttribute('aria-pressed'), 'false');
+  assert.equal(await page.locator('#full-reading-content').isVisible(), true);
+  assert.equal(await page.locator('#easy-reading-panel').isVisible(), false);
+  assert.match(await page.locator('#full-reading-content').innerText(), /Atividade didática demonstrativa/);
+});
+
+test('easy reading stays available in English and across the language switch', async t => {
+  const page = await open(t, 'pt-BR', false, 375);
+  await visit(page, '/?lang=pt');
+  await page.getByRole('button', {name: 'Leitura fácil'}).click();
+  await page.locator('.language-option[data-locale="en"]').click();
+  await page.waitForURL(base + '/en/');
+  await page.locator('#easy-reading-panel').waitFor({state: 'visible'});
+  assert.match(await page.locator('#easy-reading-panel').innerText(), /I teach computing at IFSul/);
+  const toggle = page.getByRole('button', {name: 'Easy reading'});
+  assert.equal(await toggle.getAttribute('aria-pressed'), 'true');
+  assert.equal(await page.locator('#full-reading-content').isVisible(), false);
+  await toggle.click();
+  assert.equal(await page.locator('#full-reading-content').isVisible(), true);
+});
+
+test('every algorithm guide has a shorter view with source links and no page overflow', async t => {
+  const page = await open(t, 'pt-BR', false, 320);
+  await visit(page, '/codigos/bee1500/');
+  await page.getByRole('button', {name: 'Leitura fácil'}).click();
+  const panel = page.locator('#easy-reading-panel');
+  assert.match(await panel.innerText(), /árvore de segmentos/i);
+  assert.ok((await panel.locator('a[href$="bee1500.cpp"]').count()) >= 1);
+  assert.ok((await panel.locator('a[href$="bee1500.py"]').count()) >= 1);
+  assert.equal(await page.locator('#full-reading-content').isVisible(), false);
+  await page.evaluate(() => { document.documentElement.style.fontSize = '200%'; });
+  assert.ok((await page.evaluate(() => document.documentElement.scrollWidth)) <= 321);
+  await page.getByRole('button', {name: 'Voltar ao texto completo'}).click();
+  await page.getByRole('tab', {name: 'Python'}).click();
+  await page.waitForFunction(() => document.querySelector('[id$="-python-panel"] .token.keyword'));
+});
+
+test('without JavaScript, complete reading remains usable and no inert control appears', async t => {
+  const context = await browser.newContext({locale: 'pt-BR', javaScriptEnabled: false});
+  t.after(() => context.close());
+  const page = await context.newPage();
+  await visit(page, '/pesquisa/');
+  assert.equal(await page.locator('#easy-reading-toggle').isVisible(), false);
+  assert.equal(await page.locator('#easy-reading-panel').isVisible(), false);
+  assert.equal(await page.locator('#full-reading-content').isVisible(), true);
+  assert.match(await page.locator('#full-reading-content').innerText(), /15 problemas de classificação/);
+});
+
+test('easy reading works even when local storage is blocked', async t => {
+  const page = await open(t, 'pt-BR', true);
+  await visit(page, '/extensao/');
+  await page.getByRole('button', {name: 'Leitura fácil'}).click();
+  assert.equal(await page.locator('#easy-reading-panel').isVisible(), true);
+  assert.match(await page.locator('#easy-reading-panel').innerText(), /UFFS/);
+  await page.getByRole('button', {name: 'Voltar ao texto completo'}).click();
+  assert.equal(await page.locator('#full-reading-content').isVisible(), true);
+});
+
