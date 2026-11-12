@@ -165,7 +165,7 @@ test('language links and Portuguese CV fallbacks work without JavaScript', async
   assert.equal(await page.locator('html').getAttribute('lang'), 'pt-BR');
 });
 
-test('academic typography uses a 90% root scale and remains readable on mobile', async t => {
+test('academic typography shrinks 10% while preserving the layout scale', async t => {
   const page = await open(t, 'pt-BR', false, 375);
   await visit(page, '/ensino/');
   const sizes = await page.evaluate(() => {
@@ -182,7 +182,7 @@ test('academic typography uses a 90% root scale and remains readable on mobile',
       overflow: document.documentElement.scrollWidth > window.innerWidth,
     };
   });
-  assert.ok(Math.abs(sizes.root / sizes.browserDefault - 0.9) < 0.01, JSON.stringify(sizes));
-  assert.ok(Math.abs(sizes.content / sizes.root - 1.125) < 0.01, JSON.stringify(sizes));
+  assert.ok(Math.abs(sizes.root / sizes.browserDefault - 1) < 0.01, JSON.stringify(sizes));
+  assert.ok(Math.abs(sizes.content / sizes.root - 1.0125) < 0.01, JSON.stringify(sizes));
   assert.equal(sizes.overflow, false);
 });

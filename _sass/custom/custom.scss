@@ -30,7 +30,7 @@
   flex: 0 0 auto;
   gap: 0.25rem;
   margin-inline: 0.25rem;
-  font-size: 0.8rem;
+  font-size: 0.72rem;
   line-height: 1;
   white-space: nowrap;
 }
@@ -96,8 +96,8 @@
   --pf-hover: var(--site-hover);
   --pf-mark: var(--site-link);
   --pf-outline-focus: var(--site-link);
-  --pf-result-title-font-size: 1rem;
-  --pf-result-excerpt-font-size: 0.9375rem;
+  --pf-result-title-font-size: 0.9rem;
+  --pf-result-excerpt-font-size: 0.84375rem;
 }
 
 .theme-moon { display: none; }
@@ -122,7 +122,7 @@
 
 body {
   font-family: $body-font-family;
-  font-size: 1.125rem;
+  font-size: 1.0125rem;
   font-weight: 400;
   color: var(--site-text);
   background: var(--site-background);
@@ -175,7 +175,7 @@ code { font-size: 0.875em !important; }
 }
 
 .site-owner {
-  font-size: 1.1875rem;
+  font-size: 1.06875rem;
   font-weight: 500;
 }
 
@@ -248,7 +248,7 @@ hr {
   margin-top: auto;
   padding-inline: var(--sidebar-title-indent);
   color: var(--site-muted);
-  font-size: 0.875rem;
+  font-size: 0.7875rem;
 
   .academic-sidebar-footer {
     margin: 0;
@@ -295,7 +295,7 @@ hr {
     display: block;
     padding: 1.03rem 0.65rem;
     color: var(--site-link);
-    font-size: 0.9225rem;
+    font-size: 0.83025rem;
     font-weight: 500;
     text-decoration: none;
     white-space: nowrap;
@@ -365,7 +365,7 @@ hr {
 
   p {
     max-width: 60ch;
-    font-size: 1.125rem;
+    font-size: 1.0125rem;
     line-height: 1.5;
   }
 }
@@ -450,11 +450,11 @@ mjx-container[display="true"] { max-width: 100%; overflow-x: auto; overflow-y: h
 .main-content .note { border-left: 1px solid var(--site-control); padding: 0.75rem 1rem; background: var(--site-surface); color: var(--site-text); }
 
 // Manual layout: a compact navigation column beside a comfortable reading measure.
-// Scale the entire rem/em-based academic type system to 90% without changing font families.
-// The browser's user-configured default font size remains the reference.
-html { font-size: 90% !important; }
+// Keep the root at 100% so reading width, breakpoints and layout dimensions stay unchanged.
+// Only explicitly configured type sizes below are 90% of their previous values.
+html { font-size: 100% !important; }
 body { line-height: 1.5; }
-.main-content { font-family: $body-font-family; font-size: 1.125rem; line-height: 1.5; }
+.main-content { font-family: $body-font-family; font-size: 1.0125rem; line-height: 1.5; }
 .side-bar { font-family: $sidebar-font-family; }
 .side-bar { --sidebar-title-indent: 1.25rem; font-weight: 400; }
 .main-content p, .main-content li { line-height: 1.5; }
@@ -482,7 +482,7 @@ body { line-height: 1.5; }
 .site-title { gap: 0.18rem; padding-inline: var(--sidebar-title-indent); font-family: $sidebar-font-family; }
 .site-title .site-owner {
   order: 0;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 700;
   line-height: 1.25;
   letter-spacing: -0.02em;
@@ -495,7 +495,7 @@ body { line-height: 1.5; }
 .side-bar .site-nav .nav-list .nav-list-item .nav-list-link {
   border-radius: 0;
   min-height: 44px;
-  font-size: 1rem !important;
+  font-size: 0.9rem !important;
   font-weight: 400;
   line-height: 1.4;
   padding-block: 0.6rem;
@@ -509,7 +509,7 @@ body { line-height: 1.5; }
   margin: 0 0 0.5rem;
   padding: 0.25rem var(--sidebar-title-indent);
   color: var(--site-heading);
-  font-size: 1rem !important;
+  font-size: 0.9rem !important;
   font-weight: 600;
   line-height: 1.5;
   text-transform: none;
@@ -542,7 +542,7 @@ body { line-height: 1.5; }
   padding: 0.5rem;
   color: var(--site-text);
   font: inherit;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 400;
   line-height: 1.25;
   text-align: left;
@@ -576,7 +576,7 @@ body { line-height: 1.5; }
 }
 .breadcrumb-nav { margin-top: 0.75rem; }
 .breadcrumb-nav-list { display: flex; align-items: baseline; gap: 0.5rem; margin: 0 0 1rem; }
-.breadcrumb-nav-list-item { display: flex; align-items: baseline; gap: 0.5rem; min-width: 0; font-size: 0.9375rem !important; }
+.breadcrumb-nav-list-item { display: flex; align-items: baseline; gap: 0.5rem; min-width: 0; font-size: 0.84375rem !important; }
 .breadcrumb-nav-list-item:first-child { flex: 0 0 auto; }
 .breadcrumb-nav-list-item::after { display: none; }
 .breadcrumb-nav-list-item + .breadcrumb-nav-list-item::before { display: block; flex: 0 0 auto; color: var(--site-muted); content: "/"; }
@@ -606,7 +606,7 @@ body { line-height: 1.5; }
   min-height: 44px;
   min-width: 44px;
   font-family: $body-font-family;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 500;
   position: relative;
   border-bottom-color: transparent;
@@ -631,15 +631,15 @@ body { line-height: 1.5; }
 .academic-nav-list a:hover,
 .academic-nav-list a:focus-visible { background: var(--site-hover); }
 .theme-toggle, .site-search-trigger { align-self: center; }
-.site-footer { font-size: 0.875rem !important; }
+.site-footer { font-size: 0.7875rem !important; }
 .skip-to-main, .skip-to-main:focus { color: var(--site-link); }
 .skip-to-main:focus { background: var(--site-surface); box-shadow: none; }
 ::selection { color: var(--site-text); background: var(--site-hover); }
 :focus-visible { outline: 3px solid var(--site-link); outline-offset: 3px; }
 @media (max-width: 49.99rem) {
   .side-bar { --sidebar-title-indent: 1.25rem; }
-  .main-content { font-size: 1.125rem; }
-  .site-title .site-owner { font-size: 1.1875rem; }
+  .main-content { font-size: 1.0125rem; }
+  .site-title .site-owner { font-size: 1.06875rem; }
   .academic-hero { padding-top: 0.5rem; }
 }
 
@@ -657,7 +657,7 @@ b, strong { font-weight: 700; }
 
 .main-content li > :is(h3, h4) { font-size: 1em !important; margin: 1.5rem 0 0.25rem; text-transform: none; letter-spacing: normal; }
 .main-content li > :is(h3, h4) > .anchor-heading { display: none; }
-.main-content li > :is(h3, h4) + p { color: var(--site-text); font-size: 1rem; line-height: 1.5; margin: 0; }
+.main-content li > :is(h3, h4) + p { color: var(--site-text); font-size: 0.9rem; line-height: 1.5; margin: 0; }
 
 .main-content h1, .academic-hero h1 { font-family: $sidebar-font-family; font-weight: 700; }
 .main-content :is(h2, h3, h4)[id] { scroll-margin-top: 1.5rem; }
@@ -666,7 +666,7 @@ b, strong { font-weight: 700; }
 .main-content .page-footer {
   margin-top: 2rem;
   color: var(--site-muted);
-  font-size: 0.875rem;
+  font-size: 0.7875rem;
 
   hr { margin: 0 0 1rem; }
   p { margin: 0; }
@@ -675,11 +675,11 @@ b, strong { font-weight: 700; }
 }
 .main-content ul > li::before,
 .main-content ol > li::before { color: var(--site-muted); }
-.main-content figcaption { font-size: 1rem; }
-.main-content .entry-meta { margin: 0 0 1rem; font-size: 1rem; color: var(--site-muted); }
-.main-content pre { font-size: 1rem; }
-.main-content table { font-size: 1rem; }
-.main-content th, .main-content td { font-size: 1rem !important; }
+.main-content figcaption { font-size: 0.9rem; }
+.main-content .entry-meta { margin: 0 0 1rem; font-size: 0.9rem; color: var(--site-muted); }
+.main-content pre { font-size: 0.9rem; }
+.main-content table { font-size: 0.9rem; }
+.main-content th, .main-content td { font-size: 0.9rem !important; }
 .main-content .table-wrapper { box-shadow: none; border-radius: 0; }
 .main-content pre code { font-size: inherit !important; }
 .main-content pre.highlight { border: 0; border-radius: 0; padding: 1rem; }
@@ -713,7 +713,7 @@ b, strong { font-weight: 700; }
 }
 .home-profile__details { min-width: 0; }
 .main-content .home-profile__details h1:first-of-type { margin-top: 0; margin-bottom: 0.25rem; }
-.home-profile__details p { margin: 0 0 0.5rem; font-size: 1rem; }
+.home-profile__details p { margin: 0 0 0.5rem; font-size: 0.9rem; }
 .home-profile__links { flex-wrap: wrap; gap: 0.5rem 0.625rem; }
 .home-profile__details > p:not(.home-profile__role) {
   display: flex;
@@ -752,7 +752,7 @@ b, strong { font-weight: 700; }
 
 @media (max-width: 24rem) {
   .academic-nav-list { padding-inline: 0.25rem; }
-  .academic-nav-list a { padding-inline: 0.25rem; font-size: 0.9375rem; }
+  .academic-nav-list a { padding-inline: 0.25rem; font-size: 0.84375rem; }
 }
 
 @media (prefers-reduced-motion: reduce) {
