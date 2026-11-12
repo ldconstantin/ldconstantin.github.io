@@ -836,3 +836,43 @@ b, strong { font-weight: 700; }
 .solution-code-panel { min-width: 0; }
 .solution-code-panel[hidden] { display: none !important; }
 .solution-code-provenance { color: var(--site-muted); margin: 0.6rem 0; }
+
+/* PrismJS v1.29.0: Mint-friendly syntax highlighting without changing fonts. */
+.solution-source code[class*="language-"],
+.solution-source[class*="language-"] {
+  color: var(--site-text);
+  background: transparent;
+  text-shadow: none;
+  font-family: $mono-font-family;
+  font-variant-ligatures: none;
+}
+.solution-code-tabs {
+  --syntax-comment: #41675e;
+  --syntax-keyword: #712d82;
+  --syntax-string: #09654c;
+  --syntax-number: #954217;
+  --syntax-function: #184d85;
+}
+[data-theme="dark"] .solution-code-tabs {
+  --syntax-comment: #adcdbf;
+  --syntax-keyword: #e4b4ed;
+  --syntax-string: #91dbbc;
+  --syntax-number: #ffc490;
+  --syntax-function: #a4c7ff;
+}
+.solution-source .token.comment,
+.solution-source .token.prolog,
+.solution-source .token.doctype { color: var(--syntax-comment); }
+.solution-source .token.keyword,
+.solution-source .token.boolean,
+.solution-source .token.important { color: var(--syntax-keyword); }
+.solution-source .token.string,
+.solution-source .token.char,
+.solution-source .token.attr-value { color: var(--syntax-string); }
+.solution-source .token.number,
+.solution-source .token.constant { color: var(--syntax-number); }
+.solution-source .token.function,
+.solution-source .token.class-name,
+.solution-source .token.builtin { color: var(--syntax-function); }
+.solution-source .token.operator,
+.solution-source .token.punctuation { color: var(--site-text); }
