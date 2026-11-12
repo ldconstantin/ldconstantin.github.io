@@ -11,25 +11,18 @@ def minimum_blocks(coins, target):
     # evita limite de recursão do Python para alvos grandes.
     coins = sorted({c for c in coins if c > 0})
     memo = {0: 0}
-    scheduled = {target}
-    stack = [(target, False)]
+    stack = [target]
     while stack:
-        x, ready = stack.pop()
+        x = stack[-1]
         if x in memo:
+            stack.pop()
             continue
-        if ready:
-            memo[x] = min((memo[x - c] + 1 for c in coins if c <= x),
-                          default=INF)
-            scheduled.discard(x)
+        missing = next((x - c for c in coins if c <= x and x - c not in memo), None)
+        if missing is not None:
+            stack.append(missing)
             continue
-        stack.append((x, True))
-        for c in coins:
-            child = x - c
-            if child < 0:
-                break
-            if child not in memo and child not in scheduled:
-                scheduled.add(child)
-                stack.append((child, False))
+        memo[x] = min((memo[x - c] + 1 for c in coins if c <= x), default=INF)
+        stack.pop()
     return memo[target]
 
 
