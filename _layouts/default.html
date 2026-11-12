@@ -39,7 +39,9 @@ layout: table_wrappers
                   aria-controls="easy-reading-panel"
                   data-easy-label="{{ ui.easy_read | escape }}"
                   data-full-label="{{ ui.full_reading | escape }}">{{ ui.easy_read | escape }}</button>
-          <span class="easy-reading-helper">{{ ui.easy_read_helper | escape }}</span>
+          <span class="easy-reading-helper" id="easy-reading-helper"
+                data-default="{{ ui.easy_read_helper | escape }}"
+                data-active="{{ ui.easy_read_active | escape }}">{{ ui.easy_read_helper | escape }}</span>
         </div>
         {% endif %}
         <main lang="{{ page.lang | default: site.lang }}" {% unless page.search_exclude %}data-pagefind-body{% endunless %}{% if page.translation_key == 'home' and locale == 'pt' %} data-pagefind-meta="url:{{ '/?lang=pt' | relative_url }}"{% endif %}>

@@ -8,8 +8,7 @@
     if (!toggle || !panel || !full) return;
 
     const preferenceKey = 'academic-easy-reading';
-    const easyLabel = toggle.dataset.easyLabel;
-    const fullLabel = toggle.dataset.fullLabel;
+    const helper = document.getElementById('easy-reading-helper');
 
     function readPreference() {
       try { return window.localStorage.getItem(preferenceKey) === 'easy'; }
@@ -23,7 +22,7 @@
       panel.hidden = !enabled;
       full.hidden = enabled;
       toggle.setAttribute('aria-pressed', String(enabled));
-      toggle.textContent = enabled ? fullLabel : easyLabel;
+      if (helper) helper.textContent = enabled ? helper.dataset.active : helper.dataset.default;
       document.body.classList.toggle('easy-reading-active', enabled);
       if (moveFocus) {
         const heading = (enabled ? panel : full).querySelector('h1');
