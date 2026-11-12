@@ -1,5 +1,6 @@
 ---
 title: Extension
+description: "University extension, Maratona SBC team coaching, and development-environment automation at FabSoft."
 layout: default
 nav_order: 3
 lang: en-US

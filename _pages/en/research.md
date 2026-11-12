@@ -1,5 +1,6 @@
 ---
 title: Academic interests
+description: "Academic interests in competitive programming, algorithms, data structures, and computing education."
 layout: default
 nav_order: 2
 lang: en-US

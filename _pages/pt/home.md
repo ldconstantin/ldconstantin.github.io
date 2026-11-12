@@ -1,5 +1,6 @@
 ---
 title: Início
+description: "Professor de Ciência da Computação no IFSul Passo Fundo, com experiência docente e treinamento de equipes para competições de programação."
 layout: home
 nav_order: 1
 nav_exclude: true

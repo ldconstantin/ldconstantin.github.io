@@ -1,5 +1,6 @@
 ---
 title: Extensão
+description: "Extensão universitária, treinamento de equipes da Maratona SBC e automação de ambientes de desenvolvimento na FabSoft."
 layout: default
 nav_order: 3
 lang: pt-BR
