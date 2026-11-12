@@ -5,7 +5,7 @@ with my academic background, professional experience, teaching, research
 interests, and extension activities. The site is available in Brazilian
 Portuguese and American English.
 
-The website uses Jekyll, [Just the Docs](https://just-the-docs.com/), and
+The website  uses Jekyll, [Just the Docs](https://just-the-docs.com/), and
 [Pagefind](https://pagefind.app/). Its section navigation and light/dark behavior
 draw on Academic Pages. Local reference checkouts are excluded from the
 published website.
