@@ -1,5 +1,6 @@
 ---
 title: Home
+description: "Computer Science instructor at IFSul Passo Fundo, with teaching experience and coaching of competitive programming teams."
 layout: home
 nav_order: 1
 nav_exclude: true
@@ -24,7 +25,13 @@ permalink: /en/
   </div>
 </section>
 
-I teach computing in technical and undergraduate programs, covering programming, algorithms, data structures, and operating systems. My background also includes competing in programming contests and coaching teams for the Maratona SBC de Programação.
+I teach computing at IFSul Passo Fundo in technical and undergraduate programs. I also coach teams for programming contests, including the Maratona SBC de Programação.
+
+## Selected achievements
+
+- Coach of the IFSul Passo Fundo Campus team, subregional runner-up and Brazilian finalist in the Maratona SBC de Programação in 2025.
+- Brazilian finals of the Maratona SBC de Programação: contestant in 2017 and 2018; member of the subregional championship team in 2018.
+- Official commentator for the Maratona SBC de Programação in Brazil from 2019 to 2025.
 
 ## Professional experience {#professional-experience}
 
@@ -36,12 +43,6 @@ Instituto Federal Sul-rio-grandense (IFSul), Passo Fundo Campus · since May 202
 - Teaching technical and undergraduate courses in Algorithms and Programming, Data Structures, Algorithm Analysis, and Operating Systems.
 - Developing learning activities, assessments, and teaching materials.
 
-## Selected achievements
-
-- Coach of the IFSul Passo Fundo Campus team, subregional runner-up and Brazilian finalist in the Maratona SBC de Programação in 2025.
-- Brazilian finals of the Maratona SBC de Programação: contestant in 2017 and 2018; member of the subregional championship team in 2018.
-- Official commentator for the Maratona SBC de Programação in Brazil from 2019 to 2025.
-
 ## Education
 
 - **Bachelor's degree in Computer Science** — Universidade de Passo Fundo (UPF), 2023.
@@ -52,3 +53,5 @@ Instituto Federal Sul-rio-grandense (IFSul), Passo Fundo Campus · since May 202
 - **Programming and scripting languages:** C, C++, Python, JavaScript, and Bash.
 - **Working environment:** Linux.
 - **Spoken languages:** Portuguese (native), English (advanced), and Spanish (intermediate).
+
+**Professional contact:** [LinkedIn](https://www.linkedin.com/in/ldconstantin/).

@@ -1,14 +1,14 @@
 pt:
   - title: Ensino
     url: /ensino/
-  - title: Pesquisa
-    url: /pesquisa/
   - title: Extensão
     url: /extensao/
+  - title: Interesses acadêmicos
+    url: /pesquisa/
 en:
   - title: Teaching
     url: /en/teaching/
-  - title: Research
-    url: /en/research/
   - title: Extension
     url: /en/extension/
+  - title: Academic interests
+    url: /en/research/

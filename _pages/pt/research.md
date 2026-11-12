@@ -1,5 +1,6 @@
 ---
-title: Pesquisa
+title: Interesses acadêmicos
+description: "Interesses acadêmicos em programação competitiva, algoritmos, estruturas de dados e Educação em Computação."
 layout: default
 nav_order: 2
 lang: pt-BR
@@ -8,7 +9,7 @@ translation_key: research
 permalink: /pesquisa/
 ---
 
-# Pesquisa
+# Interesses acadêmicos {#pesquisa}
 
 Meus interesses acadêmicos concentram-se em programação competitiva, algoritmos, estruturas de dados e Educação em Computação, incluindo a avaliação crítica de respostas produzidas por IA generativa.
 

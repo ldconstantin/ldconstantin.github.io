@@ -122,7 +122,7 @@ The [color theme guide](color-themes.md) records their relationship to Academic 
 | `--site-action-ink` | Text on filled action backgrounds | Action text and the button boundary |
 | `--site-brand-ink` | Text and icons on filled brand surfaces | Use only against the corresponding brand background |
 
-The header links to Teaching, Research, and Extension in the current language.
+The header links to Teaching, Extension, and Academic interests in the current language.
 The sidebar lists sections and subsections of the current page.
 The current header destination exposes
 `aria-current="page"`. Keyboard focus uses an outline.
