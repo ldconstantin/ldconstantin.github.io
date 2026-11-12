@@ -1,0 +1,43 @@
+{% assign solution = site.data.icpc_solutions | where: 'id', include.solution_id | first %}
+{% assign lang = include.locale | default: 'pt' %}
+{% if solution %}
+<p class="solution-back"><a href="{% if lang == 'en' %}{{ '/en/solutions/' | relative_url }}{% else %}{{ '/codigos/' | relative_url }}{% endif %}">{% if lang == 'en' %}← All solutions{% else %}← Todas as soluções{% endif %}</a></p>
+
+<article class="solution-article">
+  <h1>{% if lang == 'en' %}{{ solution.title_en | escape }}{% else %}{{ solution.title_pt | escape }}{% endif %}</h1>
+  <p class="solution-lead">{% if lang == 'en' %}{{ solution.summary_en | escape }}{% else %}{{ solution.summary_pt | escape }}{% endif %}</p>
+  <p class="solution-context"><strong>{% if lang == 'en' %}Platform{% else %}Plataforma{% endif %}:</strong>
+    {% if solution.judge == 'examples' %}{% if lang == 'en' %}Algorithm example{% else %}Exemplo de algoritmo{% endif %}{% else %}{{ solution.judge }}{% endif %}
+    · <strong>{% if lang == 'en' %}Topics{% else %}Assuntos{% endif %}:</strong>
+    {% for category in site.data.icpc_categories %}{% if solution.topics contains category.id %}{% unless forloop.first %}{% endunless %}<a href="{% if lang == 'en' %}{{ '/en/solutions/' | relative_url }}{% else %}{{ '/codigos/' | relative_url }}{% endif %}#solutions-{{ category.id }}">{% if lang == 'en' %}{{ category.en }}{% else %}{{ category.pt }}{% endif %}</a> {% endif %}{% endfor %}
+  </p>
+
+  <h2 id="approach">{% if lang == 'en' %}Approach{% else %}Ideia da solução{% endif %}</h2>
+  <p>{% if lang == 'en' %}{{ solution.method_en | escape }}{% else %}{{ solution.method_pt | escape }}{% endif %}</p>
+
+  {% if solution.complexity_pt %}
+  <h2 id="complexity">{% if lang == 'en' %}Complexity{% else %}Complexidade{% endif %}</h2>
+  <p>{% if lang == 'en' %}{{ solution.complexity_en | escape }}{% else %}{{ solution.complexity_pt | escape }}{% endif %}</p>
+  {% endif %}
+
+  {% if solution.example_pt %}
+  <h2 id="example">{% if lang == 'en' %}Small example{% else %}Exemplo curto{% endif %}</h2>
+  <p>{% if lang == 'en' %}{{ solution.example_en | escape }}{% else %}{{ solution.example_pt | escape }}{% endif %}</p>
+  {% endif %}
+
+  <h2 id="limits">{% if lang == 'en' %}Limits and validation{% else %}Limites e validação{% endif %}</h2>
+  <p>{% if lang == 'en' %}{{ solution.limits_en | escape }}{% else %}{{ solution.limits_pt | escape }}{% endif %}</p>
+  <p>{% if lang == 'en' %}The historical file passed a C++ syntax check or a Python syntax check. Selected files have local smoke tests. This is not a current online-judge acceptance certificate.{% else %}O arquivo histórico passou em uma verificação de sintaxe C++ ou Python. Alguns arquivos têm testes funcionais locais. Isso não comprova aceitação atual no juiz on-line.{% endif %}</p>
+
+  <h2 id="source">{% if lang == 'en' %}Historical source code{% else %}Código-fonte histórico{% endif %}</h2>
+  <div class="solution-links">
+    <a href="{{ solution.source | relative_url }}">{% if lang == 'en' %}Open raw source{% else %}Abrir arquivo-fonte{% endif %} (<code>{{ solution.filename | escape }}</code>)</a>
+    {% if solution.problem_url %}<a href="{{ solution.problem_url }}" target="_blank" rel="noopener noreferrer">{% if lang == 'en' %}Original problem (new tab){% else %}Problema original (nova aba){% endif %}</a>{% endif %}
+    <a href="{{ solution.original_url }}" target="_blank" rel="noopener noreferrer">{% if lang == 'en' %}Original version (new tab){% else %}Versão de origem (nova aba){% endif %}</a>
+  </div>
+  <pre class="solution-source" data-solution-source="{{ solution.source | relative_url }}"><code>{% if lang == 'en' %}Source is also available through the link above.{% else %}O código também está disponível no link acima.{% endif %}</code></pre>
+  <p class="solution-attribution">{% if lang == 'en' %}Attributed author{% else %}Autoria identificada{% endif %}: {{ solution.author | escape }} ·
+  {% if lang == 'en' %}Historical repository{% else %}Repositório histórico{% endif %}: <a href="https://github.com/maratonaupf/codigos" target="_blank" rel="noopener noreferrer">Clube de Programação UPF</a>.</p>
+</article>
+<script defer src="{{ '/assets/js/solution-source.js' | relative_url }}"></script>
+{% endif %}
