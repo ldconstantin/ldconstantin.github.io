@@ -40,82 +40,37 @@ jobs:
         run: |
           python3 scripts/check_bilingual_site.py _site
           node scripts/check_language_redirect.cjs
-      - name: Validate generated page SEO metadata
+      - name: Validate built page SEO
         run: |
           python3 - <<'PY'
-          from html.parser import HTMLParser
           from pathlib import Path
+          from html.parser import HTMLParser
           import re
-
-          routes = {
-              "_pages/pt/home.md": "_site/index.html",
-              "_pages/en/home.md": "_site/en/index.html",
-              "_pages/pt/teaching.md": "_site/ensino/index.html",
-              "_pages/en/teaching.md": "_site/en/teaching/index.html",
-              "_pages/pt/extension.md": "_site/extensao/index.html",
-              "_pages/en/extension.md": "_site/en/extension/index.html",
-              "_pages/pt/research.md": "_site/pesquisa/index.html",
-              "_pages/en/research.md": "_site/en/research/index.html",
-          }
-
-          class HeadTags(HTMLParser):
+          class Tags(HTMLParser):
               def __init__(self):
                   super().__init__()
                   self.tags = []
-
-              def handle_starttag(self, tag, attrs):
-                  if tag in ("meta", "link"):
-                      self.tags.append((tag, dict(attrs)))
-
-          for source, output in routes.items():
-              match = re.search(r'^description: "([^"]+)"        run: |
-          bundle exec jekyll build --baseurl /project --destination /tmp/site-subpath
-          python3 scripts/check_bilingual_site.py /tmp/site-subpath /project
-      - name: Build Pagefind search index
-        run: npx --yes pagefind@1.5.2 --site _site
-      - name: Install browser checks
-        run: |
-          npm install --prefix "$RUNNER_TEMP/site-browser-check" --no-package-lock --no-save playwright@1.58.2
-          node "$RUNNER_TEMP/site-browser-check/node_modules/playwright/cli.js" install --with-deps chromium
-      - name: Check navigation in Chromium
-        env:
-          PLAYWRIGHT_MODULE: ${{ runner.temp }}/site-browser-check/node_modules/playwright
-        run: |
-          bundle exec jekyll serve --detach --host 127.0.0.1 --port 4000 --skip-initial-build
-          node scripts/check_navigation.cjs
-      - name: Upload website artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: _site/
-
-  deploy:
-    if: (github.event_name == 'workflow_dispatch' && inputs.deploy == true) || (github.event_name == 'push' && contains(github.event.head_commit.message, '[deploy]'))
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-24.04
-    needs: build
-    permissions:
-      pages: write
-      id-token: write
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
-, Path(source).read_text(), re.M)
-              assert match, f"Missing description in {source}"
-              tags = HeadTags()
-              tags.feed(Path(output).read_text())
-              descriptions = [data.get("content") for kind, data in tags.tags
-                              if kind == "meta" and data.get("name") == "description"]
-              canonical = [data.get("href") for kind, data in tags.tags
-                           if kind == "link" and data.get("rel") == "canonical"]
-              languages = {data.get("hreflang") for kind, data in tags.tags
-                           if kind == "link" and data.get("rel") == "alternate"}
-              assert descriptions == [match.group(1)], f"{output}: {descriptions!r}"
-              assert len(canonical) == 1 and canonical[0].startswith("https://"), output
-              assert {"pt-BR", "en-US"} <= languages, f"{output}: {languages!r}"
-              print(f"{output}: description, canonical and hreflang verified")
+              def handle_starttag(self, name, attrs):
+                  if name in ('meta', 'link'):
+                      self.tags.append((name, dict(attrs)))
+          routes = {'home':'index.html','teaching':'ensino/index.html',
+                    'extension':'extensao/index.html','research':'pesquisa/index.html'}
+          english = {'home':'en/index.html','teaching':'en/teaching/index.html',
+                     'extension':'en/extension/index.html','research':'en/research/index.html'}
+          for lang, mapping in [('pt',routes),('en',english)]:
+              for name, out in mapping.items():
+                  source = Path('_pages') / lang / (name + '.md')
+                  desc = re.search(r'^description: "([^"]+)"$', source.read_text(), re.M)
+                  assert desc, source
+                  parser = Tags()
+                  parser.feed((Path('_site') / out).read_text())
+                  descriptions = [v.get('content') for tag,v in parser.tags if tag=='meta' and v.get('name')=='description']
+                  canonical = [v.get('href') for tag,v in parser.tags if tag=='link' and v.get('rel')=='canonical']
+                  alternates = {v.get('hreflang') for tag,v in parser.tags if tag=='link' and v.get('rel')=='alternate'}
+                  assert descriptions == [desc.group(1)], (source,descriptions)
+                  assert len(canonical)==1 and canonical[0].startswith('https://'), out
+                  assert {'pt-BR','en-US'} <= alternates, (out, alternates)
+                  print(out, 'description/canonical/hreflang OK')
           PY
       - name: Validate deployment under a subpath
         run: |
