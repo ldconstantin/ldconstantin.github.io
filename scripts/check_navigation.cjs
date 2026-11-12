@@ -96,7 +96,7 @@ test('Portuguese search results retain homepage language with blocked storage', 
     await visit(page, '/ensino/');
     await page.locator('pagefind-modal-trigger button:not([disabled])').click();
     await page.locator('pagefind-input input').fill('bacharel');
-    const result = page.locator('pagefind-results a').first();
+    const result = page.locator('pagefind-results a[href*="?lang=pt"]').first();
     await result.waitFor();
     if (input === 'mouse') await result.click();
     else await result.press('Enter');
