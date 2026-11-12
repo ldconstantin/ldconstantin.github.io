@@ -52,6 +52,10 @@
         · <a href="{{ solution.source_cpp | relative_url }}">{% if lang == 'en' %}Open C++ file{% else %}Abrir arquivo C++{% endif %}</a>
         {% if solution.cpp_revised %} · <a href="{{ solution.source | relative_url }}">{% if lang == 'en' %}Historical C++ source{% else %}C++ histórico original{% endif %}</a>{% endif %}
       </p>
+      <div class="solution-code-tools">
+        <button type="button" class="solution-code-copy" data-copy-code disabled aria-label="{% if lang == 'en' %}Copy C++ code{% else %}Copiar código C++{% endif %}">{% if lang == 'en' %}Copy code{% else %}Copiar código{% endif %}</button>
+        <span class="solution-copy-feedback" data-copy-status role="status" aria-live="polite"></span>
+      </div>
       <pre class="solution-source" data-solution-source="{{ solution.source_cpp | relative_url }}"><code class="language-cpp">{% if lang == 'en' %}Loading source…{% else %}Carregando código…{% endif %}</code></pre>
     </section>
     <section class="solution-code-panel" role="tabpanel" id="code-{{ solution.id }}-python-panel"
@@ -61,6 +65,10 @@
         {% else %}{% if lang == 'en' %}New Python adaptation (AI-assisted, 2026){% else %}Adaptação nova em Python (com auxílio de IA, 2026){% endif %}{% endif %}
         · <a href="{{ solution.source_python | relative_url }}">{% if lang == 'en' %}Open Python file{% else %}Abrir arquivo Python{% endif %}</a>
       </p>
+      <div class="solution-code-tools">
+        <button type="button" class="solution-code-copy" data-copy-code disabled aria-label="{% if lang == 'en' %}Copy Python code{% else %}Copiar código Python{% endif %}">{% if lang == 'en' %}Copy code{% else %}Copiar código{% endif %}</button>
+        <span class="solution-copy-feedback" data-copy-status role="status" aria-live="polite"></span>
+      </div>
       <pre class="solution-source" data-solution-source="{{ solution.source_python | relative_url }}"><code class="language-python">{% if lang == 'en' %}Loading source…{% else %}Carregando código…{% endif %}</code></pre>
     </section>
   </div>
