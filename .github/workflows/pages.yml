@@ -2,7 +2,7 @@ name: Publish academic website
 
 on:
   push:
-    branches: [main]
+    branches: [main, content/recruiter-polish]
   workflow_dispatch:
     inputs:
       deploy:
