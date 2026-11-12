@@ -71,6 +71,15 @@ Courses taught in technical and undergraduate programs, organized by term.
   </li>
 </ul>
 
+## Algorithm study materials
+
+Code examples that may support the study of algorithms and data structures. **Publication does not establish that they were used in a particular class.**
+
+- [Kruskal with Union-Find]({{ '/en/solutions/kruskal/' | relative_url }}): graphs, greedy methods, and connected components.
+- [Bottom-up dynamic programming]({{ '/en/solutions/bee1034-bottomup/' | relative_url }}): states, recurrence, and complexity.
+- [Segment tree with lazy propagation]({{ '/en/solutions/bee1500/' | relative_url }}): range updates and sum queries.
+- [Archive of 18 solutions]({{ '/en/solutions/' | relative_url }}): examples by topic, with provenance and known limits.
+
 ## Educational material collaboration
 
 - **2026 ENADE practice examination, BSc in Computer Science (IFSul Passo Fundo):** contributed to layout and editorial preparation of the question booklet. I do not claim authorship of the questions or prompts. The complete institutional material is not distributed on this website.

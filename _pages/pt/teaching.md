@@ -71,6 +71,15 @@ Disciplinas ministradas em cursos técnicos e superiores, organizadas por semest
   </li>
 </ul>
 
+## Materiais para estudo de algoritmos
+
+Exemplos de código que podem apoiar o estudo de algoritmos e estruturas de dados. **Publicação não significa que tenham sido usados em determinada turma.**
+
+- [Kruskal e Union-Find]({{ '/codigos/kruskal/' | relative_url }}): grafos, algoritmos gulosos e componentes conexas.
+- [Programação dinâmica por tabulação]({{ '/codigos/bee1034-bottomup/' | relative_url }}): estados, recorrência e complexidade.
+- [Árvore de segmentos com propagação preguiçosa]({{ '/codigos/bee1500/' | relative_url }}): atualizações de intervalo e consultas de soma.
+- [Catálogo de 18 soluções]({{ '/codigos/' | relative_url }}): exemplos por assunto, com procedência e limites identificados.
+
 ## Colaboração em material didático
 
 - **Simulado ENADE 2026, Bacharelado em Ciência da Computação (IFSul Passo Fundo):** colaboração na diagramação e na preparação editorial do caderno de questões. Não reivindico autoria dos enunciados ou das questões. O material institucional integral não é distribuído neste site.

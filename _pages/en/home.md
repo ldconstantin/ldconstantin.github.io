@@ -32,7 +32,7 @@ I teach computing at IFSul Passo Fundo in technical and undergraduate programs. 
 - **Undergraduate thesis (UPF, 2023):** *Uma análise das provas da Primeira Fase da Maratona SBC de Programação de 2013 a 2023*, supervised by Marcelo Trindade Rebonatto. The study classifies contest problems by difficulty and topics in the Brazilian Computer Society's reference curriculum. [Academic overview]({{ '/en/research/' | relative_url }}).
 - **Undergraduate research (UPF, 2013–2014):** PROBIC/Fapergs research scholarship in a project on digital inclusion and hacker culture in education. [Documented involvement]({{ '/en/research/' | relative_url }}).
 - **University extension:** certified participation in UFFS's Programming Club (2014, 120 hours) and a PAIDEX scholarship at FabSoft/UPF (2017–2018, 772 hours). [Activities and roles]({{ '/en/extension/' | relative_url }}).
-- **Code and educational software:** [ACCEPT Coding Club](https://github.com/acceptcoding/acceptcoding.github.io) and [an archive of 18 historical implementations]({{ '/en/solutions/' | relative_url }}), with provenance in the UPF Programming Club.
+- **Code and educational software:** [ACCEPT Coding Club](https://github.com/acceptcoding/acceptcoding.github.io) and [an archive of 18 historical implementations]({{ '/en/solutions/' | relative_url }}), with provenance in the UPF Programming Club and case studies in [graphs]({{ '/en/solutions/kruskal/' | relative_url }}), [dynamic programming]({{ '/en/solutions/bee1034-bottomup/' | relative_url }}), and [data structures]({{ '/en/solutions/bee1500/' | relative_url }}).
 
 ## Selected achievements
 

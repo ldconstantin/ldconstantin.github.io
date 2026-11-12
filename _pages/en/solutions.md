@@ -17,6 +17,8 @@ Topics broadly follow the classification used in my [undergraduate thesis on the
 
 **Provenance:** every entry links to the historical commit that introduced the file. Original code and comments, including references to "URI", are preserved; filenames have been standardized with the \`bee\` prefix. Verified \`uva\` entries will preserve their identifiers if added in the future. **Successful compilation does not imply acceptance by an online judge**; the archive does not claim current judge verification.
 
+**How to browse:** open a solution title. Its page briefly explains the algorithm, states its limits, and shows the historical code. The original problem opens in a new tab.
+
 {% include solutions_catalog.html locale="en" %}
 
 ## Use and attribution
