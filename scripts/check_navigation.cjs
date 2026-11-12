@@ -276,6 +276,14 @@ test('solution guide remains navigable at narrow viewport and enlarged text', as
     return {viewport: innerWidth, pageWidth: document.documentElement.scrollWidth,
       preViewport: pre.getBoundingClientRect().width, preScrollWidth: pre.scrollWidth};
   });
+  if (layout.pageWidth > layout.viewport + 1) {
+    layout.offenders = await page.evaluate(() => [...document.querySelectorAll('body *')]
+      .map(el => ({tag: el.tagName, cls: String(el.className || '').slice(0, 75),
+        right: Math.round(el.getBoundingClientRect().right), left: Math.round(el.getBoundingClientRect().left),
+        width: Math.round(el.getBoundingClientRect().width),
+        overflowX: getComputedStyle(el).overflowX}))
+      .filter(el => el.right > innerWidth + 1).slice(0, 30));
+  }
   assert.ok(layout.pageWidth <= layout.viewport + 1, JSON.stringify(layout));
   assert.ok(layout.preViewport <= layout.viewport, JSON.stringify(layout));
   await page.evaluate(() => { document.documentElement.style.fontSize = '200%'; });
