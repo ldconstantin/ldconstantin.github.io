@@ -1,0 +1,47 @@
+[
+  {
+    "id": "iniciante",
+    "pt": "Iniciantes e ad-hoc",
+    "en": "Beginner and ad-hoc"
+  },
+  {
+    "id": "estruturas",
+    "pt": "Estruturas de dados",
+    "en": "Data structures"
+  },
+  {
+    "id": "pesquisa",
+    "pt": "Pesquisa e ordenação",
+    "en": "Searching and sorting"
+  },
+  {
+    "id": "paradigmas",
+    "pt": "Paradigmas e programação dinâmica",
+    "en": "Paradigms and dynamic programming"
+  },
+  {
+    "id": "matematica",
+    "pt": "Matemática",
+    "en": "Mathematics"
+  },
+  {
+    "id": "strings",
+    "pt": "Strings",
+    "en": "Strings"
+  },
+  {
+    "id": "grafos",
+    "pt": "Grafos",
+    "en": "Graphs"
+  },
+  {
+    "id": "geometria",
+    "pt": "Geometria",
+    "en": "Geometry"
+  },
+  {
+    "id": "avancados",
+    "pt": "Avançados e raros",
+    "en": "Advanced and rare topics"
+  }
+]
