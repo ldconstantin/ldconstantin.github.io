@@ -46,11 +46,13 @@
     <section class="solution-code-panel" role="tabpanel" id="code-{{ solution.id }}-cpp-panel"
       aria-labelledby="code-{{ solution.id }}-cpp-tab" tabindex="0">
       <p class="solution-code-provenance">
-        {% if solution.historical_language == 'cpp' %}{% if lang == 'en' %}Historical original{% else %}Original histórico{% endif %}
+        {% if solution.cpp_revised %}{% if lang == 'en' %}Revised C++ (AI-assisted, 2026){% else %}C++ revisado (com auxílio de IA, 2026){% endif %}
+        {% elsif solution.historical_language == 'cpp' %}{% if lang == 'en' %}Historical original{% else %}Original histórico{% endif %}
         {% else %}{% if lang == 'en' %}New C++ adaptation (AI-assisted, 2026){% else %}Adaptação nova em C++ (com auxílio de IA, 2026){% endif %}{% endif %}
         · <a href="{{ solution.source_cpp | relative_url }}">{% if lang == 'en' %}Open C++ file{% else %}Abrir arquivo C++{% endif %}</a>
+        {% if solution.cpp_revised %} · <a href="{{ solution.source | relative_url }}">{% if lang == 'en' %}Historical C++ source{% else %}C++ histórico original{% endif %}</a>{% endif %}
       </p>
-      <pre class="solution-source" data-solution-source="{{ solution.source_cpp | relative_url }}"><code>{% if lang == 'en' %}Loading source…{% else %}Carregando código…{% endif %}</code></pre>
+      <pre class="solution-source" data-solution-source="{{ solution.source_cpp | relative_url }}"><code class="language-cpp">{% if lang == 'en' %}Loading source…{% else %}Carregando código…{% endif %}</code></pre>
     </section>
     <section class="solution-code-panel" role="tabpanel" id="code-{{ solution.id }}-python-panel"
       aria-labelledby="code-{{ solution.id }}-python-tab" tabindex="0" hidden>
@@ -59,7 +61,7 @@
         {% else %}{% if lang == 'en' %}New Python adaptation (AI-assisted, 2026){% else %}Adaptação nova em Python (com auxílio de IA, 2026){% endif %}{% endif %}
         · <a href="{{ solution.source_python | relative_url }}">{% if lang == 'en' %}Open Python file{% else %}Abrir arquivo Python{% endif %}</a>
       </p>
-      <pre class="solution-source" data-solution-source="{{ solution.source_python | relative_url }}"><code>{% if lang == 'en' %}Loading source…{% else %}Carregando código…{% endif %}</code></pre>
+      <pre class="solution-source" data-solution-source="{{ solution.source_python | relative_url }}"><code class="language-python">{% if lang == 'en' %}Loading source…{% else %}Carregando código…{% endif %}</code></pre>
     </section>
   </div>
   <div class="solution-links">
@@ -69,5 +71,6 @@
   <p class="solution-attribution">{% if lang == 'en' %}Attributed author{% else %}Autoria identificada{% endif %}: {{ solution.author | escape }} ·
   {% if lang == 'en' %}Historical repository{% else %}Repositório histórico{% endif %}: <a href="https://github.com/maratonaupf/codigos" target="_blank" rel="noopener noreferrer">Clube de Programação UPF</a>.</p>
 </article>
+<script defer data-manual src="{{ '/assets/js/vendor/prism-bundle.min.js' | relative_url }}"></script>
 <script defer src="{{ '/assets/js/solution-source.js' | relative_url }}"></script>
 {% endif %}

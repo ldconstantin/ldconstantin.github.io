@@ -240,3 +240,55 @@ test('two source files remain accessible without JavaScript', async t => {
   assert.ok((await page.locator('a[href="/assets/coding/icpc-solutions/beecrowd/bee1103.cpp"]').count()) >= 1);
   assert.ok((await page.locator('a[href="/assets/coding/icpc-solutions/beecrowd/bee1103.py"]').count()) >= 1);
 });
+
+
+test('Prism syntax highlighting works in both tabs and Mint themes', async t => {
+  const page = await open(t, 'pt-BR', false, 375);
+  const errors = [];
+  page.on('pageerror', error => errors.push(error.message));
+  for (const theme of ['light', 'dark']) {
+    await visit(page, '/codigos/bee1301/');
+    await page.evaluate(value => localStorage.setItem('theme', value), theme);
+    await page.reload({waitUntil: 'domcontentloaded'});
+    const cpp = page.getByRole('tab', {name: 'C++'});
+    const py = page.getByRole('tab', {name: 'Python'});
+    assert.equal(await cpp.getAttribute('aria-selected'), 'true');
+    await page.waitForFunction(() => document.querySelector('[id$="-cpp-panel"] .token.keyword'));
+    assert.ok((await page.locator('[id$="-cpp-panel"] span.token').count()) > 5);
+    assert.ok((await page.locator('a[href$="/revised/bee1301.cpp"]').count()) >= 1);
+    assert.ok((await page.locator('a[href$="/beecrowd/bee1301.cpp"]').count()) >= 1);
+    await py.click();
+    await page.waitForFunction(() => document.querySelector('[id$="-python-panel"] .token.keyword'));
+    assert.ok((await page.locator('[id$="-python-panel"] span.token').count()) > 5);
+    assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false);
+    assert.equal(await page.locator('[id$="-cpp-panel"]').isVisible(), false);
+    assert.equal(await page.locator('[id$="-python-panel"]').isVisible(), true);
+  }
+  assert.deepEqual(errors, [], errors.join('\n'));
+});
+
+test('solution guide remains navigable at narrow viewport and enlarged text', async t => {
+  const page = await open(t, 'pt-BR', false, 320);
+  await visit(page, '/codigos/bee1500/');
+  await page.waitForFunction(() => document.querySelector('[id$="-cpp-panel"] .token.keyword'));
+  const layout = await page.evaluate(() => {
+    const pre = document.querySelector('.solution-source');
+    return {viewport: innerWidth, pageWidth: document.documentElement.scrollWidth,
+      preViewport: pre.getBoundingClientRect().width, preScrollWidth: pre.scrollWidth};
+  });
+  if (layout.pageWidth > layout.viewport + 1) {
+    layout.offenders = await page.evaluate(() => [...document.querySelectorAll('body *')]
+      .map(el => ({tag: el.tagName, cls: String(el.className || '').slice(0, 75),
+        right: Math.round(el.getBoundingClientRect().right), left: Math.round(el.getBoundingClientRect().left),
+        width: Math.round(el.getBoundingClientRect().width),
+        overflowX: getComputedStyle(el).overflowX}))
+      .filter(el => el.right > innerWidth + 1).slice(0, 30));
+  }
+  assert.ok(layout.pageWidth <= layout.viewport + 1, JSON.stringify(layout));
+  assert.ok(layout.preViewport <= layout.viewport, JSON.stringify(layout));
+  await page.evaluate(() => { document.documentElement.style.fontSize = '200%'; });
+  const scaled = await page.evaluate(() => ({
+    pageWidth: document.documentElement.scrollWidth, viewport: innerWidth
+  }));
+  assert.ok(scaled.pageWidth <= scaled.viewport + 1, JSON.stringify(scaled));
+});

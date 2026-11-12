@@ -135,13 +135,14 @@
     "detail_pt": "/codigos/dfs/",
     "detail_en": "/en/solutions/dfs/",
     "source_python": "/assets/coding/icpc-solutions/algorithms/dfs.py",
-    "source_cpp": "/assets/coding/icpc-solutions/algorithms/dfs.cpp",
+    "source_cpp": "/assets/coding/icpc-solutions/revised/dfs.cpp",
     "historical_language": "cpp",
     "adapted_language": "python",
-    "adaptation_note_pt": "A versão C++ é histórica. A versão Python foi adaptada em 2026 com auxílio de IA e não é um commit histórico do Clube UPF.",
-    "adaptation_note_en": "The C++ file is historical. Python was adapted in 2026 with AI assistance and is not an original UPF club commit.",
-    "port_difference_pt": "A adaptação Python usa uma pilha iterativa e mantém os limites históricos de grafos com arestas paralelas.",
-    "port_difference_en": "The Python port uses an explicit stack and retains the documented caveat for parallel edges."
+    "adaptation_note_pt": "O C++ e o Python exibidos são versões didáticas revisadas em 2026 com auxílio de IA. O C++ original histórico está preservado no link de procedência.",
+    "adaptation_note_en": "Displayed C++ and Python are revised educational adaptations (2026, AI-assisted). The historical original C++ is preserved under provenance.",
+    "port_difference_pt": "As versões revisadas identificam cada aresta por um ID para tratar corretamente arestas paralelas e laços, preservando o arquivo C++ histórico separado.",
+    "port_difference_en": "Both revised versions use unique edge IDs for parallel edges and self-loops; the historical C++ source is preserved separately.",
+    "cpp_revised": true
   },
   {
     "id": "bee1655",
@@ -173,11 +174,14 @@
     "detail_pt": "/codigos/bee1655/",
     "detail_en": "/en/solutions/bee1655/",
     "source_python": "/assets/coding/icpc-solutions/beecrowd/bee1655.py",
-    "source_cpp": "/assets/coding/icpc-solutions/beecrowd/bee1655.cpp",
+    "source_cpp": "/assets/coding/icpc-solutions/revised/bee1655.cpp",
     "historical_language": "cpp",
     "adapted_language": "python",
-    "adaptation_note_pt": "A versão C++ é histórica. A versão Python foi adaptada em 2026 com auxílio de IA e não é um commit histórico do Clube UPF.",
-    "adaptation_note_en": "The C++ file is historical. Python was adapted in 2026 with AI assistance and is not an original UPF club commit."
+    "adaptation_note_pt": "O C++ e o Python exibidos são versões didáticas revisadas em 2026 com auxílio de IA. O C++ original histórico está preservado no link de procedência.",
+    "adaptation_note_en": "Displayed C++ and Python are revised educational adaptations (2026, AI-assisted). The historical original C++ is preserved under provenance.",
+    "cpp_revised": true,
+    "port_difference_pt": "A versão C++ revisada preserva a melhor probabilidade entre arestas paralelas e define a diagonal da matriz como 100%.",
+    "port_difference_en": "The revised C++ implementation keeps the maximum probability for parallel edges and sets the matrix diagonal to 100%."
   },
   {
     "id": "bee1301",
@@ -208,13 +212,14 @@
     "detail_pt": "/codigos/bee1301/",
     "detail_en": "/en/solutions/bee1301/",
     "source_python": "/assets/coding/icpc-solutions/beecrowd/bee1301.py",
-    "source_cpp": "/assets/coding/icpc-solutions/beecrowd/bee1301.cpp",
+    "source_cpp": "/assets/coding/icpc-solutions/revised/bee1301.cpp",
     "historical_language": "cpp",
     "adapted_language": "python",
-    "adaptation_note_pt": "A versão C++ é histórica. A versão Python foi adaptada em 2026 com auxílio de IA e não é um commit histórico do Clube UPF.",
-    "adaptation_note_en": "The C++ file is historical. Python was adapted in 2026 with AI assistance and is not an original UPF club commit.",
-    "port_difference_pt": "A adaptação Python guarda somente o sinal (-1, 0 ou +1), corrigindo o risco de um produto não nulo virar zero pela redução modular usada no C++ histórico.",
-    "port_difference_en": "The Python port stores only the sign (-1, 0, or +1), avoiding the historical C++ modular-product defect that can turn a nonzero product into zero."
+    "adaptation_note_pt": "O C++ e o Python exibidos são versões didáticas revisadas em 2026 com auxílio de IA. O C++ original histórico está preservado no link de procedência.",
+    "adaptation_note_en": "Displayed C++ and Python are revised educational adaptations (2026, AI-assisted). The historical original C++ is preserved under provenance.",
+    "port_difference_pt": "A aba C++ agora mostra uma implementação revisada que guarda apenas o sinal dos produtos. O arquivo C++ histórico permanece disponível e contém o defeito da redução modular.",
+    "port_difference_en": "The C++ tab now shows a revised implementation storing product signs only. The historical C++ file remains accessible and contains the modular-reduction defect.",
+    "cpp_revised": true
   },
   {
     "id": "bee1500",
@@ -351,13 +356,14 @@
     "detail_pt": "/codigos/bee1034-topdown/",
     "detail_en": "/en/solutions/bee1034-topdown/",
     "source_python": "/assets/coding/icpc-solutions/beecrowd/bee1034-topdown.py",
-    "source_cpp": "/assets/coding/icpc-solutions/beecrowd/bee1034-topdown.cpp",
+    "source_cpp": "/assets/coding/icpc-solutions/revised/bee1034-topdown.cpp",
     "historical_language": "cpp",
     "adapted_language": "python",
-    "adaptation_note_pt": "A versão C++ é histórica. A versão Python foi adaptada em 2026 com auxílio de IA e não é um commit histórico do Clube UPF.",
-    "adaptation_note_en": "The C++ file is historical. Python was adapted in 2026 with AI assistance and is not an original UPF club commit.",
-    "port_difference_pt": "A adaptação Python conserva a memoização e usa pilha explícita para evitar o limite de profundidade recursiva.",
-    "port_difference_en": "The Python port preserves memoization with an explicit stack to avoid Python's recursion-depth limit."
+    "adaptation_note_pt": "O C++ e o Python exibidos são versões didáticas revisadas em 2026 com auxílio de IA. O C++ original histórico está preservado no link de procedência.",
+    "adaptation_note_en": "Displayed C++ and Python are revised educational adaptations (2026, AI-assisted). The historical original C++ is preserved under provenance.",
+    "port_difference_pt": "A versão C++ revisada simula a memoização com uma pilha explícita para evitar estouro de pilha em instâncias profundas.",
+    "port_difference_en": "The revised C++ version simulates memoized recursion with an explicit stack to avoid deep call-stack overflow.",
+    "cpp_revised": true
   },
   {
     "id": "bee1127",
@@ -426,11 +432,14 @@
     "detail_pt": "/codigos/bee1219/",
     "detail_en": "/en/solutions/bee1219/",
     "source_python": "/assets/coding/icpc-solutions/beecrowd/bee1219.py",
-    "source_cpp": "/assets/coding/icpc-solutions/beecrowd/bee1219.cpp",
+    "source_cpp": "/assets/coding/icpc-solutions/revised/bee1219.cpp",
     "historical_language": "cpp",
     "adapted_language": "python",
-    "adaptation_note_pt": "A versão C++ é histórica. A versão Python foi adaptada em 2026 com auxílio de IA e não é um commit histórico do Clube UPF.",
-    "adaptation_note_en": "The C++ file is historical. Python was adapted in 2026 with AI assistance and is not an original UPF club commit."
+    "adaptation_note_pt": "O C++ e o Python exibidos são versões didáticas revisadas em 2026 com auxílio de IA. O C++ original histórico está preservado no link de procedência.",
+    "adaptation_note_en": "Displayed C++ and Python are revised educational adaptations (2026, AI-assisted). The historical original C++ is preserved under provenance.",
+    "cpp_revised": true,
+    "port_difference_pt": "A versão C++ revisada calcula o produto dos lados em ponto flutuante de precisão estendida, evitando a multiplicação intermediária em inteiro do histórico.",
+    "port_difference_en": "The revised C++ version multiplies side lengths in extended-precision floating point, avoiding historical 32-bit intermediate overflow."
   },
   {
     "id": "bee1103",
@@ -497,13 +506,14 @@
     "detail_pt": "/codigos/bee2802/",
     "detail_en": "/en/solutions/bee2802/",
     "source_python": "/assets/coding/icpc-solutions/beecrowd/bee2802.py",
-    "source_cpp": "/assets/coding/icpc-solutions/beecrowd/bee2802.cpp",
+    "source_cpp": "/assets/coding/icpc-solutions/revised/bee2802.cpp",
     "historical_language": "cpp",
     "adapted_language": "python",
-    "adaptation_note_pt": "A versão C++ é histórica. A versão Python foi adaptada em 2026 com auxílio de IA e não é um commit histórico do Clube UPF.",
-    "adaptation_note_en": "The C++ file is historical. Python was adapted in 2026 with AI assistance and is not an original UPF club commit.",
-    "port_difference_pt": "A adaptação Python usa combinações inteiras exatas e evita arredondamentos de ponto flutuante.",
-    "port_difference_en": "The Python port uses exact integer combinations instead of floating-point rounding."
+    "adaptation_note_pt": "O C++ e o Python exibidos são versões didáticas revisadas em 2026 com auxílio de IA. O C++ original histórico está preservado no link de procedência.",
+    "adaptation_note_en": "Displayed C++ and Python are revised educational adaptations (2026, AI-assisted). The historical original C++ is preserved under provenance.",
+    "port_difference_pt": "A aba C++ revisada calcula combinações com inteiros de 128 bits, evitando erros de arredondamento do arquivo histórico; essa precisão vale para as entradas inteiras suportadas.",
+    "port_difference_en": "The revised C++ tab uses 128-bit integer combinations to avoid floating-point rounding in the historical source, within its supported integer input range.",
+    "cpp_revised": true
   },
   {
     "id": "cf122a",

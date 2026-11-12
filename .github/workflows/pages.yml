@@ -44,6 +44,7 @@ jobs:
         run: |
           python3 scripts/check_solutions.py --site _site
           node --check assets/js/solution-source.js
+          node --check assets/js/vendor/prism-bundle.min.js
       - name: Validate bilingual routes and language redirects
         run: |
           python3 scripts/check_bilingual_site.py _site

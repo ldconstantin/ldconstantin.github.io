@@ -1,4 +1,4 @@
-// Language tabs for the two canonical static source files, no runtime or external API.
+// Source tabs: canonical local files, client-side Prism highlighting, no external services.
 (() => {
   const groups = document.querySelectorAll('[data-solution-code-tabs]');
   for (const group of groups) {
@@ -17,16 +17,19 @@
           return response.text();
         })
         .then(source => {
+          // Prism escapes source text before inserting syntax spans.
           code.textContent = source;
+          if (window.Prism?.languages) window.Prism.highlightElement(code);
           block.dataset.loaded = 'true';
         })
         .catch(() => {
           code.textContent = document.documentElement.lang.startsWith('pt')
-            ? 'Não foi possível carregar este código. Use o link do arquivo acima.'
-            : 'Could not load source code. Use the file link above.';
+            ? 'Não foi possível carregar o código. Use o link do arquivo acima.'
+            : 'Could not load code. Use the file link above.';
           block.dataset.loaded = 'error';
         });
     }
+
     function activate(index, focus) {
       tabs.forEach((tab, i) => {
         const selected = i === index;
@@ -37,6 +40,7 @@
       load(index);
       if (focus) tabs[index].focus();
     }
+
     tabs.forEach((tab, index) => {
       tab.addEventListener('click', () => activate(index, false));
       tab.addEventListener('keydown', event => {

@@ -836,3 +836,80 @@ b, strong { font-weight: 700; }
 .solution-code-panel { min-width: 0; }
 .solution-code-panel[hidden] { display: none !important; }
 .solution-code-provenance { color: var(--site-muted); margin: 0.6rem 0; }
+
+/* PrismJS v1.29.0: Mint-friendly syntax highlighting without changing fonts. */
+.solution-source code[class*="language-"],
+.solution-source[class*="language-"] {
+  color: var(--site-text);
+  background: transparent;
+  text-shadow: none;
+  font-family: $mono-font-family;
+  font-variant-ligatures: none;
+}
+.solution-code-tabs {
+  --syntax-comment: #41675e;
+  --syntax-keyword: #712d82;
+  --syntax-string: #09654c;
+  --syntax-number: #954217;
+  --syntax-function: #184d85;
+}
+[data-theme="dark"] .solution-code-tabs {
+  --syntax-comment: #adcdbf;
+  --syntax-keyword: #e4b4ed;
+  --syntax-string: #91dbbc;
+  --syntax-number: #ffc490;
+  --syntax-function: #a4c7ff;
+}
+.solution-source .token.comment,
+.solution-source .token.prolog,
+.solution-source .token.doctype { color: var(--syntax-comment); }
+.solution-source .token.keyword,
+.solution-source .token.boolean,
+.solution-source .token.important { color: var(--syntax-keyword); }
+.solution-source .token.string,
+.solution-source .token.char,
+.solution-source .token.attr-value { color: var(--syntax-string); }
+.solution-source .token.number,
+.solution-source .token.constant { color: var(--syntax-number); }
+.solution-source .token.function,
+.solution-source .token.class-name,
+.solution-source .token.builtin { color: var(--syntax-function); }
+.solution-source .token.operator,
+.solution-source .token.punctuation { color: var(--site-text); }
+
+// At 320 CSS px, the upstream mobile menu button was 56px and overshot the viewport.
+// Restore a 44px touch target without clipping the document or source code.
+@media (max-width: 31.25rem) {
+  .side-bar .site-header #menu-button {
+    flex: 0 0 44px;
+    width: 44px;
+    min-width: 44px;
+    height: 44px;
+    padding: 0;
+  }
+}
+
+/* Plain-text topic wayfinding: compact, keyboard accessible, no duplicate cards. */
+.solution-topic-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem 0.75rem;
+  margin: 0.75rem 0 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--site-rule);
+}
+.solution-topic-nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  color: var(--site-link);
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+.solution-topic-nav a span {
+  color: var(--site-muted);
+  margin-left: 0.2rem;
+}
+.solution-topic-nav a:focus-visible { outline: 2px solid var(--site-link); outline-offset: 2px; }
