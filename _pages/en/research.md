@@ -1,5 +1,5 @@
 ---
-title: Research
+title: Academic interests
 layout: default
 nav_order: 2
 lang: en-US
@@ -8,7 +8,7 @@ translation_key: research
 permalink: /en/research/
 ---
 
-# Research
+# Academic interests {#research}
 
 My academic interests include competitive programming, algorithms, data structures, and computing education, including critical evaluation of responses produced by generative AI.
 
