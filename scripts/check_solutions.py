@@ -118,6 +118,7 @@ if len(sys.argv) == 3 and sys.argv[1] == "--site":
         page = (site / url).read_text(encoding="utf-8")
         assert "Academic cap" not in page  # The favicon is external, not a decorative page image.
         assert 'rel="icon"' in page
+        assert 'class="solution-topic-nav"' in page and 'href="#solutions-' in page, url
         assert "LinkedIn" in page or "solutions" in page.lower() or "codigos" in page.lower()
         for item in entries:
             assert item["source"] in page, (url, item["source"])

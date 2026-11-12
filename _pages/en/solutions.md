@@ -1,6 +1,6 @@
 ---
 title: Programming solutions
-description: "Curated, historically attributed competitive programming source code by topic, with provenance and compilation checks."
+description: "Bilingual archive of 18 algorithm solutions, with C++ and Python code, explanations, tests and provenance."
 layout: default
 nav_order: 4
 lang: en-US
@@ -11,18 +11,12 @@ permalink: /en/solutions/
 
 # Competitive programming: solutions and materials
 
-An initial selection of **18 historically attributed source files** originally committed to the collective UPF Programming Club repository. It includes Codeforces and beecrowd (formerly URI Online Judge) problems and standalone algorithm demonstrations.
+**18 traceable historical implementations**, organized by topic and connected to my [Maratona SBC undergraduate thesis]({{ '/en/research/' | relative_url }}). Open a solution title for the method, known limits, and C++ and Python versions. Original problem statements open in a new tab.
 
-Topics broadly follow the classification used in my [undergraduate thesis on the Maratona SBC]({{ '/en/research/' | relative_url }}). The same file may appear under multiple topics without being duplicated. Problem difficulty is distinct from topic.
-
-**Provenance:** every entry links to the historical commit that introduced the file. Original code and comments, including references to "URI", are preserved; filenames have been standardized with the \`bee\` prefix. Verified \`uva\` entries will preserve their identifiers if added in the future. **Successful compilation does not imply acceptance by an online judge**; the archive does not claim current judge verification.
-
-**How to browse:** open a solution title. Its page briefly explains the algorithm, states its limits, and shows the historical code. The original problem opens in a new tab.
-
-The 2017–2018 sources remain unchanged. Each guide offers **C++ and Python tabs**: one contains the historical source, the other a new AI-assisted educational adaptation (2026), clearly identified. Adaptations may fix known limitations; local tests do not establish current online-judge acceptance.
+**Provenance and testing:** historical sources from the UPF Programming Club remain unchanged. For **six solutions**, the C++ tab now displays a 2026 revision, while the original remains accessible. AI-assisted adaptations are identified on each page. Compilation and local tests **do not prove current online-judge acceptance**.
 
 {% include solutions_catalog.html locale="en" %}
 
-## Use and attribution
+## Responsible use
 
-Problem statements remain with their platforms and are not reproduced here. Consult the problem link, source code, and original commit when studying an implementation. Historical code may contain outdated decisions and may lack complete tests. The collective project and other contributors retain their respective credits.
+Problem statements belong to their platforms and are not reproduced here. A solution may appear under more than one topic without duplicating its source file. Open the individual page for provenance, known limitations and study options.
