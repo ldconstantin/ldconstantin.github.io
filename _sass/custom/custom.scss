@@ -762,3 +762,18 @@ b, strong { font-weight: 700; }
   .site-search-trigger,
   #site-nav.local-page-nav .nav-list-expander svg { transition: none; }
 }
+
+/* Compact academic profile icons; existing typography stays unchanged. */
+.home-profile__links a { gap: 0.3rem; }
+.home-profile__links a svg {
+  width: 1.1rem;
+  height: 1.1rem;
+  flex: 0 0 auto;
+  color: var(--site-link);
+}
+.solutions-category { margin-block: 1.7rem; }
+.solutions-list { padding-left: 1.4rem; }
+.solutions-list li { margin-bottom: 0.85rem; }
+.solution-meta { color: var(--site-muted); font-size: 0.875em; }
+.solution-links { display: flex; flex-wrap: wrap; gap: 0.35rem 1rem; }
+.solution-links a { font-size: 0.95em; }
