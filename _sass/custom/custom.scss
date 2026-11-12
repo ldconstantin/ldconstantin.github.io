@@ -450,7 +450,9 @@ mjx-container[display="true"] { max-width: 100%; overflow-x: auto; overflow-y: h
 .main-content .note { border-left: 1px solid var(--site-control); padding: 0.75rem 1rem; background: var(--site-surface); color: var(--site-text); }
 
 // Manual layout: a compact navigation column beside a comfortable reading measure.
-html { font-size: 100% !important; }
+// Scale the entire rem/em-based academic type system to 90% without changing font families.
+// The browser's user-configured default font size remains the reference.
+html { font-size: 90% !important; }
 body { line-height: 1.5; }
 .main-content { font-family: $body-font-family; font-size: 1.125rem; line-height: 1.5; }
 .side-bar { font-family: $sidebar-font-family; }
