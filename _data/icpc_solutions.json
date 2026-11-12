@@ -27,7 +27,13 @@
     "complexity_en": "With V vertices and E edges: O(E log E + E α(V)) time; O(V + E) memory.",
     "example_en": "With three vertices and edges weighing 2, 3, and 9, the two lighter edges connect every vertex with total cost 5.",
     "detail_pt": "/codigos/kruskal/",
-    "detail_en": "/en/solutions/kruskal/"
+    "detail_en": "/en/solutions/kruskal/",
+    "source_python": "/assets/coding/icpc-solutions/algorithms/kruskal.py",
+    "source_cpp": "/assets/coding/icpc-solutions/algorithms/kruskal.cpp",
+    "historical_language": "cpp",
+    "adapted_language": "python",
+    "adaptation_note_pt": "A versão C++ é histórica. A versão Python foi adaptada em 2026 com auxílio de IA e não é um commit histórico do Clube UPF.",
+    "adaptation_note_en": "The C++ file is historical. Python was adapted in 2026 with AI assistance and is not an original UPF club commit."
   },
   {
     "id": "prim",
@@ -57,7 +63,13 @@
     "complexity_en": null,
     "example_en": null,
     "detail_pt": "/codigos/prim/",
-    "detail_en": "/en/solutions/prim/"
+    "detail_en": "/en/solutions/prim/",
+    "source_python": "/assets/coding/icpc-solutions/algorithms/prim.py",
+    "source_cpp": "/assets/coding/icpc-solutions/algorithms/prim.cpp",
+    "historical_language": "cpp",
+    "adapted_language": "python",
+    "adaptation_note_pt": "A versão C++ é histórica. A versão Python foi adaptada em 2026 com auxílio de IA e não é um commit histórico do Clube UPF.",
+    "adaptation_note_en": "The C++ file is historical. Python was adapted in 2026 with AI assistance and is not an original UPF club commit."
   },
   {
     "id": "bfs",
@@ -86,7 +98,13 @@
     "complexity_en": null,
     "example_en": null,
     "detail_pt": "/codigos/bfs/",
-    "detail_en": "/en/solutions/bfs/"
+    "detail_en": "/en/solutions/bfs/",
+    "source_python": "/assets/coding/icpc-solutions/algorithms/bfs.py",
+    "source_cpp": "/assets/coding/icpc-solutions/algorithms/bfs.cpp",
+    "historical_language": "cpp",
+    "adapted_language": "python",
+    "adaptation_note_pt": "A versão C++ é histórica. A versão Python foi adaptada em 2026 com auxílio de IA e não é um commit histórico do Clube UPF.",
+    "adaptation_note_en": "The C++ file is historical. Python was adapted in 2026 with AI assistance and is not an original UPF club commit."
   },
   {
     "id": "dfs",
@@ -115,7 +133,13 @@
     "complexity_en": null,
     "example_en": null,
     "detail_pt": "/codigos/dfs/",
-    "detail_en": "/en/solutions/dfs/"
+    "detail_en": "/en/solutions/dfs/",
+    "source_python": "/assets/coding/icpc-solutions/algorithms/dfs.py",
+    "source_cpp": "/assets/coding/icpc-solutions/algorithms/dfs.cpp",
+    "historical_language": "cpp",
+    "adapted_language": "python",
+    "adaptation_note_pt": "A versão C++ é histórica. A versão Python foi adaptada em 2026 com auxílio de IA e não é um commit histórico do Clube UPF.",
+    "adaptation_note_en": "The C++ file is historical. Python was adapted in 2026 with AI assistance and is not an original UPF club commit."
   },
   {
     "id": "bee1655",
@@ -145,7 +169,13 @@
     "complexity_en": null,
     "example_en": null,
     "detail_pt": "/codigos/bee1655/",
-    "detail_en": "/en/solutions/bee1655/"
+    "detail_en": "/en/solutions/bee1655/",
+    "source_python": "/assets/coding/icpc-solutions/beecrowd/bee1655.py",
+    "source_cpp": "/assets/coding/icpc-solutions/beecrowd/bee1655.cpp",
+    "historical_language": "cpp",
+    "adapted_language": "python",
+    "adaptation_note_pt": "A versão C++ é histórica. A versão Python foi adaptada em 2026 com auxílio de IA e não é um commit histórico do Clube UPF.",
+    "adaptation_note_en": "The C++ file is historical. Python was adapted in 2026 with AI assistance and is not an original UPF club commit."
   },
   {
     "id": "bee1301",
@@ -174,7 +204,13 @@
     "complexity_en": null,
     "example_en": null,
     "detail_pt": "/codigos/bee1301/",
-    "detail_en": "/en/solutions/bee1301/"
+    "detail_en": "/en/solutions/bee1301/",
+    "source_python": "/assets/coding/icpc-solutions/beecrowd/bee1301.py",
+    "source_cpp": "/assets/coding/icpc-solutions/beecrowd/bee1301.cpp",
+    "historical_language": "cpp",
+    "adapted_language": "python",
+    "adaptation_note_pt": "A versão C++ é histórica. A versão Python foi adaptada em 2026 com auxílio de IA e não é um commit histórico do Clube UPF.",
+    "adaptation_note_en": "The C++ file is historical. Python was adapted in 2026 with AI assistance and is not an original UPF club commit."
   },
   {
     "id": "bee1500",
@@ -203,7 +239,13 @@
     "complexity_en": "For N positions and Q operations: O(N + Q log N) time and O(N) memory.",
     "example_en": "Start with five zeros. Add 2 to positions 1–3: the total is 6. Then add 1 to positions 2–5: the total is 10.",
     "detail_pt": "/codigos/bee1500/",
-    "detail_en": "/en/solutions/bee1500/"
+    "detail_en": "/en/solutions/bee1500/",
+    "source_python": "/assets/coding/icpc-solutions/beecrowd/bee1500.py",
+    "source_cpp": "/assets/coding/icpc-solutions/beecrowd/bee1500.cpp",
+    "historical_language": "cpp",
+    "adapted_language": "python",
+    "adaptation_note_pt": "A versão C++ é histórica. A versão Python foi adaptada em 2026 com auxílio de IA e não é um commit histórico do Clube UPF.",
+    "adaptation_note_en": "The C++ file is historical. Python was adapted in 2026 with AI assistance and is not an original UPF club commit."
   },
   {
     "id": "bee2531",
@@ -233,7 +275,13 @@
     "complexity_en": null,
     "example_en": null,
     "detail_pt": "/codigos/bee2531/",
-    "detail_en": "/en/solutions/bee2531/"
+    "detail_en": "/en/solutions/bee2531/",
+    "source_python": "/assets/coding/icpc-solutions/beecrowd/bee2531.py",
+    "source_cpp": "/assets/coding/icpc-solutions/beecrowd/bee2531.cpp",
+    "historical_language": "cpp",
+    "adapted_language": "python",
+    "adaptation_note_pt": "A versão C++ é histórica. A versão Python foi adaptada em 2026 com auxílio de IA e não é um commit histórico do Clube UPF.",
+    "adaptation_note_en": "The C++ file is historical. Python was adapted in 2026 with AI assistance and is not an original UPF club commit."
   },
   {
     "id": "bee1034-bottomup",
@@ -262,7 +310,13 @@
     "complexity_en": "For N sizes and target M: O(N × M) time and O(M) memory.",
     "example_en": "With blocks of lengths 1 and 3, a target of 6 needs just two blocks of length 3.",
     "detail_pt": "/codigos/bee1034-bottomup/",
-    "detail_en": "/en/solutions/bee1034-bottomup/"
+    "detail_en": "/en/solutions/bee1034-bottomup/",
+    "source_python": "/assets/coding/icpc-solutions/beecrowd/bee1034-bottomup.py",
+    "source_cpp": "/assets/coding/icpc-solutions/beecrowd/bee1034-bottomup.cpp",
+    "historical_language": "cpp",
+    "adapted_language": "python",
+    "adaptation_note_pt": "A versão C++ é histórica. A versão Python foi adaptada em 2026 com auxílio de IA e não é um commit histórico do Clube UPF.",
+    "adaptation_note_en": "The C++ file is historical. Python was adapted in 2026 with AI assistance and is not an original UPF club commit."
   },
   {
     "id": "bee1034-topdown",
@@ -291,7 +345,13 @@
     "complexity_en": null,
     "example_en": null,
     "detail_pt": "/codigos/bee1034-topdown/",
-    "detail_en": "/en/solutions/bee1034-topdown/"
+    "detail_en": "/en/solutions/bee1034-topdown/",
+    "source_python": "/assets/coding/icpc-solutions/beecrowd/bee1034-topdown.py",
+    "source_cpp": "/assets/coding/icpc-solutions/beecrowd/bee1034-topdown.cpp",
+    "historical_language": "cpp",
+    "adapted_language": "python",
+    "adaptation_note_pt": "A versão C++ é histórica. A versão Python foi adaptada em 2026 com auxílio de IA e não é um commit histórico do Clube UPF.",
+    "adaptation_note_en": "The C++ file is historical. Python was adapted in 2026 with AI assistance and is not an original UPF club commit."
   },
   {
     "id": "bee1127",
@@ -320,7 +380,13 @@
     "complexity_en": null,
     "example_en": null,
     "detail_pt": "/codigos/bee1127/",
-    "detail_en": "/en/solutions/bee1127/"
+    "detail_en": "/en/solutions/bee1127/",
+    "source_python": "/assets/coding/icpc-solutions/beecrowd/bee1127.py",
+    "source_cpp": "/assets/coding/icpc-solutions/beecrowd/bee1127.cpp",
+    "historical_language": "cpp",
+    "adapted_language": "python",
+    "adaptation_note_pt": "A versão C++ é histórica. A versão Python foi adaptada em 2026 com auxílio de IA e não é um commit histórico do Clube UPF.",
+    "adaptation_note_en": "The C++ file is historical. Python was adapted in 2026 with AI assistance and is not an original UPF club commit."
   },
   {
     "id": "bee1219",
@@ -350,7 +416,13 @@
     "complexity_en": null,
     "example_en": null,
     "detail_pt": "/codigos/bee1219/",
-    "detail_en": "/en/solutions/bee1219/"
+    "detail_en": "/en/solutions/bee1219/",
+    "source_python": "/assets/coding/icpc-solutions/beecrowd/bee1219.py",
+    "source_cpp": "/assets/coding/icpc-solutions/beecrowd/bee1219.cpp",
+    "historical_language": "cpp",
+    "adapted_language": "python",
+    "adaptation_note_pt": "A versão C++ é histórica. A versão Python foi adaptada em 2026 com auxílio de IA e não é um commit histórico do Clube UPF.",
+    "adaptation_note_en": "The C++ file is historical. Python was adapted in 2026 with AI assistance and is not an original UPF club commit."
   },
   {
     "id": "bee1103",
@@ -380,7 +452,13 @@
     "complexity_en": null,
     "example_en": null,
     "detail_pt": "/codigos/bee1103/",
-    "detail_en": "/en/solutions/bee1103/"
+    "detail_en": "/en/solutions/bee1103/",
+    "source_python": "/assets/coding/icpc-solutions/beecrowd/bee1103.py",
+    "source_cpp": "/assets/coding/icpc-solutions/beecrowd/bee1103.cpp",
+    "historical_language": "python",
+    "adapted_language": "cpp",
+    "adaptation_note_pt": "A versão Python é histórica. A versão C++ foi adaptada em 2026 com auxílio de IA e não é um commit histórico do Clube UPF.",
+    "adaptation_note_en": "The Python file is historical. C++ was adapted in 2026 with AI assistance and is not an original UPF club commit."
   },
   {
     "id": "bee2802",
@@ -409,7 +487,13 @@
     "complexity_en": null,
     "example_en": null,
     "detail_pt": "/codigos/bee2802/",
-    "detail_en": "/en/solutions/bee2802/"
+    "detail_en": "/en/solutions/bee2802/",
+    "source_python": "/assets/coding/icpc-solutions/beecrowd/bee2802.py",
+    "source_cpp": "/assets/coding/icpc-solutions/beecrowd/bee2802.cpp",
+    "historical_language": "cpp",
+    "adapted_language": "python",
+    "adaptation_note_pt": "A versão C++ é histórica. A versão Python foi adaptada em 2026 com auxílio de IA e não é um commit histórico do Clube UPF.",
+    "adaptation_note_en": "The C++ file is historical. Python was adapted in 2026 with AI assistance and is not an original UPF club commit."
   },
   {
     "id": "cf122a",
@@ -439,7 +523,13 @@
     "complexity_en": null,
     "example_en": null,
     "detail_pt": "/codigos/cf122a/",
-    "detail_en": "/en/solutions/cf122a/"
+    "detail_en": "/en/solutions/cf122a/",
+    "source_python": "/assets/coding/icpc-solutions/codeforces/cf122a.py",
+    "source_cpp": "/assets/coding/icpc-solutions/codeforces/cf122a.cpp",
+    "historical_language": "cpp",
+    "adapted_language": "python",
+    "adaptation_note_pt": "A versão C++ é histórica. A versão Python foi adaptada em 2026 com auxílio de IA e não é um commit histórico do Clube UPF.",
+    "adaptation_note_en": "The C++ file is historical. Python was adapted in 2026 with AI assistance and is not an original UPF club commit."
   },
   {
     "id": "cf266a",
@@ -469,7 +559,13 @@
     "complexity_en": null,
     "example_en": null,
     "detail_pt": "/codigos/cf266a/",
-    "detail_en": "/en/solutions/cf266a/"
+    "detail_en": "/en/solutions/cf266a/",
+    "source_python": "/assets/coding/icpc-solutions/codeforces/cf266a.py",
+    "source_cpp": "/assets/coding/icpc-solutions/codeforces/cf266a.cpp",
+    "historical_language": "cpp",
+    "adapted_language": "python",
+    "adaptation_note_pt": "A versão C++ é histórica. A versão Python foi adaptada em 2026 com auxílio de IA e não é um commit histórico do Clube UPF.",
+    "adaptation_note_en": "The C++ file is historical. Python was adapted in 2026 with AI assistance and is not an original UPF club commit."
   },
   {
     "id": "cf339a",
@@ -499,7 +595,13 @@
     "complexity_en": null,
     "example_en": null,
     "detail_pt": "/codigos/cf339a/",
-    "detail_en": "/en/solutions/cf339a/"
+    "detail_en": "/en/solutions/cf339a/",
+    "source_python": "/assets/coding/icpc-solutions/codeforces/cf339a.py",
+    "source_cpp": "/assets/coding/icpc-solutions/codeforces/cf339a.cpp",
+    "historical_language": "cpp",
+    "adapted_language": "python",
+    "adaptation_note_pt": "A versão C++ é histórica. A versão Python foi adaptada em 2026 com auxílio de IA e não é um commit histórico do Clube UPF.",
+    "adaptation_note_en": "The C++ file is historical. Python was adapted in 2026 with AI assistance and is not an original UPF club commit."
   },
   {
     "id": "cf1015b",
@@ -529,6 +631,12 @@
     "complexity_en": null,
     "example_en": null,
     "detail_pt": "/codigos/cf1015b/",
-    "detail_en": "/en/solutions/cf1015b/"
+    "detail_en": "/en/solutions/cf1015b/",
+    "source_python": "/assets/coding/icpc-solutions/codeforces/cf1015b.py",
+    "source_cpp": "/assets/coding/icpc-solutions/codeforces/cf1015b.cpp",
+    "historical_language": "cpp",
+    "adapted_language": "python",
+    "adaptation_note_pt": "A versão C++ é histórica. A versão Python foi adaptada em 2026 com auxílio de IA e não é um commit histórico do Clube UPF.",
+    "adaptation_note_en": "The C++ file is historical. Python was adapted in 2026 with AI assistance and is not an original UPF club commit."
   }
 ]
