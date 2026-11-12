@@ -11,7 +11,7 @@ permalink: /ensino/
 
 # Ensino
 
-Estas são as disciplinas que ministro ou ministrei em cursos técnicos e superiores, organizadas por período. Os tópicos indicam os conteúdos de cada disciplina; o tema em estudo aparece separadamente.
+Disciplinas ministradas em cursos técnicos e superiores, organizadas por semestre.
 
 <section class="teaching-current-courses" aria-labelledby="disciplinas-atuais-titulo">
   <div class="home-courses-heading">
@@ -21,7 +21,7 @@ Estas são as disciplinas que ministro ou ministrei em cursos técnicos e superi
   <ul class="home-course-list" role="list">
     <li>
       <h3 id="estruturas-de-dados-iii">Estruturas de Dados III</h3>
-      <p>Estudo de algoritmos de ordenação e busca e de suas estratégias de aplicação</p>
+      <p>Algoritmos de ordenação e busca e suas aplicações</p>
     </li>
     <li>
       <h3 id="sistemas-operacionais-ii">Sistemas Operacionais II</h3>
@@ -49,7 +49,7 @@ Estas são as disciplinas que ministro ou ministrei em cursos técnicos e superi
   </li>
   <li>
     <h4 id="programacao-competitiva">Programação Competitiva</h4>
-    <p>Resolução de problemas de programação competitiva por meio de algoritmos e estratégias de solução.</p>
+    <p>Estratégias algorítmicas para resolver problemas de programação competitiva.</p>
   </li>
   <li>
     <h4 id="introducao-a-linguagem-de-programacao-cpp">Introdução à Linguagem de Programação C++</h4>
