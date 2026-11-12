@@ -945,3 +945,54 @@ b, strong { font-weight: 700; }
 }
 .solution-related ul { margin-bottom: 0; }
 .solution-related a { display: inline-block; min-height: 2.75rem; padding-block: 0.45rem; }
+
+/* Easy reading: simpler alternate text, not merely enlarged typography. */
+.easy-reading-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.85rem;
+  padding: 0.45rem 0;
+  margin-bottom: 0.8rem;
+  border-bottom: 1px solid var(--site-rule);
+}
+.easy-reading-toggle,
+.easy-reading-show-full {
+  display: inline-block;
+  min-height: 44px;
+  padding: 0.55rem 0.9rem;
+  font-family: $body-font-family;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--site-link);
+  border: 1px solid var(--site-control);
+  border-radius: 0.3rem;
+  background: var(--site-surface);
+  cursor: pointer;
+}
+.easy-reading-toggle[aria-pressed="true"],
+.easy-reading-toggle:hover,
+.easy-reading-show-full:hover { background: var(--site-hover); }
+.easy-reading-toggle:focus-visible,
+.easy-reading-show-full:focus-visible { outline: 3px solid var(--site-link); outline-offset: 2px; }
+.easy-reading-helper { color: var(--site-muted); font-size: 0.85rem; }
+[data-easy-read-panel][hidden],
+[data-standard-reading][hidden] { display: none !important; }
+.easy-reading-panel {
+  max-width: min(100%, 46ch);
+  overflow-wrap: anywhere;
+  padding-block: 0.5rem 1rem;
+  font-family: $body-font-family;
+  font-size: 1.125rem;
+  line-height: 1.7;
+}
+.easy-reading-panel h1 { font-size: 1.5rem !important; line-height: 1.3; margin: 0 0 1rem; }
+.easy-reading-panel h2 { font-size: 1.25rem !important; line-height: 1.35; margin: 1.4rem 0 0.6rem; }
+.easy-reading-panel p { margin: 0 0 1rem; }
+.easy-reading-panel .easy-reading-note { font-size: 0.9em; color: var(--site-muted); }
+.easy-reading-panel .easy-reading-lead { font-weight: 600; }
+.easy-reading-panel li { margin-bottom: 0.85rem; padding-left: 0.3rem; }
+.easy-reading-panel a { text-decoration: underline; text-underline-offset: 0.2em; }
+.easy-reading-panel ul { padding-left: 1.5rem; }
+.easy-reading-panel .easy-reading-exit { margin-top: 1.5rem; }
+body.easy-reading-active #site-nav.local-page-nav { display: none !important; }

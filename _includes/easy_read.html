@@ -1,0 +1,49 @@
+<section id="easy-reading-panel" class="easy-reading-panel" data-easy-read-panel
+         aria-labelledby="easy-reading-title" data-pagefind-ignore hidden>
+  {% if include.item %}
+    <h1 id="easy-reading-title" tabindex="-1">{{ include.item.title | escape }}</h1>
+    <p class="easy-reading-note">{{ ui.easy_read_note | escape }}</p>
+    <p class="easy-reading-lead">{{ include.item.intro | escape }}</p>
+    <h2>{{ ui.easy_read_points | escape }}</h2>
+    <ul class="easy-reading-points">
+      {% for point in include.item.points %}
+        <li>{{ point | escape }}</li>
+      {% endfor %}
+    </ul>
+    <nav aria-label="{{ ui.easy_read_links | escape }}">
+      <h2>{{ ui.easy_read_links | escape }}</h2>
+      <ul class="easy-reading-links">
+        {% for link in include.item.links %}
+          <li><a href="{{ link.url | relative_url }}">{{ link.label | escape }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+  {% elsif include.solution %}
+    {% assign solution = include.solution %}
+    <h1 id="easy-reading-title" tabindex="-1">{% if include.lang == 'en' %}{{ solution.title_en | escape }}{% else %}{{ solution.title_pt | escape }}{% endif %}</h1>
+    <p class="easy-reading-note">{{ ui.easy_read_note | escape }}</p>
+    <p class="easy-reading-lead">{% if include.lang == 'en' %}{{ solution.summary_en | escape }}{% else %}{{ solution.summary_pt | escape }}{% endif %}</p>
+    <h2>{{ ui.easy_read_solution_method | escape }}</h2>
+    <p>{% if include.lang == 'en' %}{{ solution.method_en | escape }}{% else %}{{ solution.method_pt | escape }}{% endif %}</p>
+    <h2>{{ ui.easy_read_solution_limits | escape }}</h2>
+    <p>{% if include.lang == 'en' %}{{ solution.limits_en | escape }}{% else %}{{ solution.limits_pt | escape }}{% endif %}</p>
+    {% if solution.complexity_pt %}
+      <h2>{{ ui.easy_read_solution_complexity | escape }}</h2>
+      <p>{% if include.lang == 'en' %}{{ solution.complexity_en | escape }}{% else %}{{ solution.complexity_pt | escape }}{% endif %}</p>
+    {% endif %}
+    <p>{{ ui.easy_read_source_note | escape }}</p>
+    <nav aria-label="{{ ui.easy_read_links | escape }}">
+      <h2>{{ ui.easy_read_links | escape }}</h2>
+      <ul class="easy-reading-links">
+        <li><a href="{{ solution.source_cpp | relative_url }}">{{ ui.easy_read_cpp | escape }}</a></li>
+        <li><a href="{{ solution.source_python | relative_url }}">{{ ui.easy_read_python | escape }}</a></li>
+        {% if solution.problem_url %}
+        <li><a href="{{ solution.problem_url }}" target="_blank" rel="noopener noreferrer">{{ ui.easy_read_original_problem | escape }}</a></li>
+        {% endif %}
+      </ul>
+    </nav>
+  {% endif %}
+  <p class="easy-reading-exit">
+    <button class="easy-reading-show-full" type="button" data-easy-reading-full>{{ ui.easy_read_view_full | escape }}</button>
+  </p>
+</section>
