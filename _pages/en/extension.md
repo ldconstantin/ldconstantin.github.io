@@ -21,12 +21,22 @@ This page covers university extension activities and contributions to the progra
 
 **Team coach (2019):** I coached a team that finished as subregional runner-up and reached the Brazilian finals.
 
+## UFFS Programming Club
+
+**Extension-project participant (2014):** I participated in the Programming Club at Universidade Federal da Fronteira Sul in both semesters of 2014, completing **120 certified hours**. The certificate documents participation, not leadership or sole project authorship.
+
 ## FabSoft
 
 Experimental Software Development Factory · UPF · 2017–2018
 {: .entry-meta }
 
+**PAIDEX scholarship holder (April 1, 2017 to January 31, 2018; 772 certified hours):** participated in the *Fábrica Experimental de Desenvolvimento e Teste de Software* project, under the InovaSoftware/UPF program and the supervision of Cristiano Roberto Cervi.
+
 At FabSoft, I helped prepare development environments and wrote scripts to automate the installation and updating of development tools. I used Boxstarter and Chocolatey on Windows and Bash on Manjaro Linux, with KDE Plasma. I also supported decisions about operating-system installation for the IT infrastructure.
+
+## Workshops delivered
+
+- **Install Fest Linux (UPF, 2018):** two-hour workshop for Computer Science students; served as the instructor, as documented by a statement issued by the course coordination on April 3, 2018.
 
 ## Other activities <span id="other-programming-community-activities" aria-hidden="true"></span> {#other-activities}
 

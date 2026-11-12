@@ -71,6 +71,10 @@ Courses taught in technical and undergraduate programs, organized by term.
   </li>
 </ul>
 
+## Educational material collaboration
+
+- **2026 ENADE practice examination, BSc in Computer Science (IFSul Passo Fundo):** contributed to layout and editorial preparation of the question booklet. I do not claim authorship of the questions or prompts. The complete institutional material is not distributed on this website.
+
 ## Topics under development
 
 - ### AI Literacy {#ai-literacy}

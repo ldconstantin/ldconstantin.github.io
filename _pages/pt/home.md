@@ -28,6 +28,13 @@ detect_language: true
 
 Sou professor de Computação no IFSul Passo Fundo, com atuação em cursos técnicos e superiores. Também preparo equipes para competições de programação, incluindo a Maratona SBC de Programação.
 
+## Produção técnica e trajetória acadêmica
+
+- **Trabalho de conclusão de curso (UPF, 2023):** *Uma análise das provas da Primeira Fase da Maratona SBC de Programação de 2013 a 2023*, orientado por Marcelo Trindade Rebonatto. O estudo classifica problemas por dificuldade e tópicos do Currículo de Referência da SBC. [Síntese em Interesses acadêmicos]({{ '/pesquisa/' | relative_url }}).
+- **Iniciação científica (UPF, 2013–2014):** bolsista PROBIC/Fapergs em projeto sobre inclusão digital e cultura hacker na educação. [Atuação documentada]({{ '/pesquisa/' | relative_url }}).
+- **Extensão universitária:** participação certificada no Clube de Programação da UFFS (2014, 120 horas) e bolsa PAIDEX na FabSoft/UPF (2017–2018, 772 horas). [Atividades e funções]({{ '/extensao/' | relative_url }}).
+- **Código e software educacional:** [ACCEPT Coding Club](https://github.com/acceptcoding/acceptcoding.github.io) e [contribuições ao Clube de Programação UPF](https://github.com/maratonaupf/codigos/commits?author=ldconstantin).
+
 ## Resultados relevantes
 
 - Treinador da equipe do IFSul Câmpus Passo Fundo, vice-campeã sub-regional e finalista brasileira da Maratona SBC de Programação em 2025.

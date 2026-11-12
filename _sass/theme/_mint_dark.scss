@@ -1,0 +1,23 @@
+$mint-dark-background: #142922;
+$mint-dark-text: #e4f5ee;
+$mint-dark-link: #8be0b9;
+$mint-dark-action: #146d51;
+
+:root[data-site-theme="mint"][data-theme="dark"] {
+  color-scheme: dark;
+  --site-background: #{$mint-dark-background};
+  --site-surface: #{mix($mint-dark-text, $mint-dark-background, 3%)};
+  --site-sidebar: #{mix($mint-dark-text, $mint-dark-background, 4%)};
+  --site-text: #{$mint-dark-text};
+  --site-heading: #{$mint-dark-text};
+  --site-link: #{$mint-dark-link};
+  --site-muted: #{mix($mint-dark-text, $mint-dark-background, 85%)};
+  --site-hover: #{mix($mint-dark-text, $mint-dark-background, 8%)};
+  --site-rule: #{mix($mint-dark-text, $mint-dark-background, 24%)};
+  --site-control: #{mix($mint-dark-text, $mint-dark-background, 68%)};
+  --site-brand: #{$mint-dark-action};
+  --site-brand-ink: #ffffff;
+  --site-action-ink: #ffffff;
+  --site-blue-subtle: #{mix($mint-dark-text, $mint-dark-background, 12%)};
+  --site-page-shadow: rgba(0, 0, 0, 0.2);
+}

@@ -21,12 +21,22 @@ Esta página reúne atividades de extensão universitária e contribuições à 
 
 **Treinamento de equipe (2019):** preparei uma equipe vice-campeã sub-regional e finalista brasileira.
 
+## Clube de Programação da UFFS
+
+**Participante de projeto de extensão (2014):** participei do Clube de Programação da Universidade Federal da Fronteira Sul nos dois semestres de 2014, totalizando **120 horas certificadas**. A declaração registra participação, sem atribuir coordenação ou autoria integral do projeto.
+
 ## FabSoft
 
 Fábrica Experimental de Desenvolvimento de Software · UPF · de 2017 a 2018
 {: .entry-meta }
 
+**Bolsista PAIDEX (1º/04/2017 a 31/01/2018, 772 horas certificadas):** participação no projeto *Fábrica Experimental de Desenvolvimento e Teste de Software*, vinculado ao programa InovaSoftware/UPF, sob orientação de Cristiano Roberto Cervi.
+
 Na FabSoft, participei da preparação de ambientes de desenvolvimento e escrevi scripts para automatizar a instalação e a atualização de ferramentas. Utilizei Boxstarter e Chocolatey no Windows e Bash no Manjaro Linux, com KDE Plasma. Também apoiei decisões sobre a instalação de sistemas operacionais na infraestrutura de TI.
+
+## Oficinas ministradas
+
+- **Install Fest Linux (UPF, 2018):** oficina de duas horas para estudantes de Ciência da Computação; atuação como ministrante, conforme atestado emitido pela coordenação do curso em 3 de abril de 2018.
 
 ## Outras atividades <span id="outras-atividades-na-comunidade-de-programação" aria-hidden="true"></span> {#outras-atividades}
 
