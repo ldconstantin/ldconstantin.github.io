@@ -799,3 +799,40 @@ b, strong { font-weight: 700; }
   tab-size: 4;
 }
 .solution-source code { white-space: pre; }
+
+/* Accessible C++ / Python source tabs, aligned with the existing Mint palette. */
+.solution-code-tabs {
+  margin: 0.75rem 0 1rem;
+  min-width: 0;
+}
+.solution-code-tablist {
+  display: flex;
+  gap: 0.25rem;
+  border-bottom: 1px solid var(--site-rule);
+}
+.solution-code-tab {
+  appearance: none;
+  background: transparent;
+  color: var(--site-muted);
+  border: 0;
+  border-bottom: 3px solid transparent;
+  border-radius: 0;
+  padding: 0.65rem 1rem;
+  min-height: 2.75rem;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+.solution-code-tab[aria-selected="true"] {
+  color: var(--site-link);
+  border-bottom-color: var(--site-link);
+}
+.solution-code-tab:hover { background: var(--site-hover); }
+.solution-code-tab:focus-visible,
+.solution-code-panel:focus-visible {
+  outline: 2px solid var(--site-link);
+  outline-offset: 2px;
+}
+.solution-code-panel { min-width: 0; }
+.solution-code-panel[hidden] { display: none !important; }
+.solution-code-provenance { color: var(--site-muted); margin: 0.6rem 0; }
