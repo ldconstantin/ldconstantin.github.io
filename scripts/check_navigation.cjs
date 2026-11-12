@@ -307,7 +307,7 @@ test('catalogue lists each solution once and omits empty subject groups', async 
   assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false);
   await page.getByRole('link', {name: /Kruskal/}).first().click();
   await page.waitForURL(base + '/codigos/kruskal/');
-  assert.equal(await page.locator('.solution-related a').count(), 3);
+  assert.equal(await page.locator('.solution-related li > a').count(), 3);
   assert.ok((await page.locator('.solution-related a[href="/codigos/prim/"]').count()) >= 1);
 });
 
