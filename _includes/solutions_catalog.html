@@ -1,0 +1,25 @@
+{% assign locale = include.locale | default: 'pt' %}
+{% for category in site.data.icpc_categories %}
+<section class="solutions-category" aria-labelledby="solutions-{{ category.id }}">
+  <h2 id="solutions-{{ category.id }}">{% if locale == 'en' %}{{ category.en }}{% else %}{{ category.pt }}{% endif %}</h2>
+  <ul class="solutions-list">
+  {% assign count = 0 %}
+  {% for solution in site.data.icpc_solutions %}
+    {% if solution.topics contains category.id %}
+    {% assign count = count | plus: 1 %}
+    <li><strong>{% if locale == 'en' %}{{ solution.title_en | escape }}{% else %}{{ solution.title_pt | escape }}{% endif %}</strong>
+      <span class="solution-meta">({% if solution.judge == 'examples' %}{% if locale == 'en' %}algorithm example{% else %}exemplo de algoritmo{% endif %}{% else %}{{ solution.judge }}{% endif %})</span>
+      <div class="solution-links">
+        <a href="{{ solution.source | relative_url }}"><code>{{ solution.filename | escape }}</code></a>
+        {% if solution.problem_url %}<a href="{{ solution.problem_url }}">{% if locale == 'en' %}Problem{% else %}Problema{% endif %}</a>{% endif %}
+        <a href="{{ solution.original_url }}">{% if locale == 'en' %}Original commit{% else %}Commit de origem{% endif %}</a>
+      </div>
+    </li>
+    {% endif %}
+  {% endfor %}
+  {% if count == 0 %}
+    <li>{% if locale == 'en' %}No audited examples in this category yet.{% else %}Nenhum exemplo auditado nesta categoria ainda.{% endif %}</li>
+  {% endif %}
+  </ul>
+</section>
+{% endfor %}

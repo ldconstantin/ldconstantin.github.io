@@ -34,6 +34,8 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Validate attributed source catalogue and compile historical code
+        run: python3 scripts/check_solutions.py
       - name: Build Jekyll website
         run: bundle exec jekyll build
       - name: Validate bilingual routes and language redirects

@@ -1,3 +1,7 @@
+<link rel="icon" type="image/svg+xml" href="{{ '/assets/favicon.svg' | relative_url }}">
+<link rel="alternate icon" type="image/x-icon" href="{{ '/favicon.ico' | relative_url }}">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#f3faf8">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#142925">
 {% if page.detect_language %}
 <script type="application/json" id="language-section-map">{{ site.data.section_translations[page.translation_key] | jsonify }}</script>
 <script src="{{ '/assets/js/language-redirect.js' | relative_url }}" data-en-url="{{ '/en/' | relative_url }}" data-pt-url="{{ '/' | relative_url }}"></script>

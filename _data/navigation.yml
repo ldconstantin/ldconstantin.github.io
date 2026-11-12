@@ -1,6 +1,8 @@
 pt:
   - title: Ensino
     url: /ensino/
+  - title: Códigos
+    url: /codigos/
   - title: Extensão
     url: /extensao/
   - title: Interesses acadêmicos
@@ -8,6 +10,8 @@ pt:
 en:
   - title: Teaching
     url: /en/teaching/
+  - title: Solutions
+    url: /en/solutions/
   - title: Extension
     url: /en/extension/
   - title: Academic interests

@@ -1,0 +1,318 @@
+[
+  {
+    "id": "kruskal",
+    "filename": "kruskal.cpp",
+    "judge": "examples",
+    "topics": [
+      "grafos",
+      "paradigmas"
+    ],
+    "title_pt": "Árvore geradora mínima: Kruskal",
+    "title_en": "Minimum spanning tree: Kruskal",
+    "source": "/assets/coding/icpc-solutions/algorithms/kruskal.cpp",
+    "problem_url": null,
+    "original_path": "Grafos/kruskal.cpp",
+    "original_commit": "d8e02ce84fc36af64967f3a62f7e512adac7a4f7",
+    "original_url": "https://github.com/maratonaupf/codigos/blob/d8e02ce84fc36af64967f3a62f7e512adac7a4f7/Grafos/kruskal.cpp",
+    "author": "Leonardo Deliyannis Constantin",
+    "validation": "compile-only"
+  },
+  {
+    "id": "prim",
+    "filename": "prim.cpp",
+    "judge": "examples",
+    "topics": [
+      "grafos",
+      "paradigmas"
+    ],
+    "title_pt": "Árvore geradora mínima: Prim",
+    "title_en": "Minimum spanning tree: Prim",
+    "source": "/assets/coding/icpc-solutions/algorithms/prim.cpp",
+    "problem_url": null,
+    "original_path": "Grafos/prim.cpp",
+    "original_commit": "d8e02ce84fc36af64967f3a62f7e512adac7a4f7",
+    "original_url": "https://github.com/maratonaupf/codigos/blob/d8e02ce84fc36af64967f3a62f7e512adac7a4f7/Grafos/prim.cpp",
+    "author": "Leonardo Deliyannis Constantin",
+    "validation": "compile-only"
+  },
+  {
+    "id": "bfs",
+    "filename": "bfs.cpp",
+    "judge": "examples",
+    "topics": [
+      "grafos"
+    ],
+    "title_pt": "Busca em largura (BFS)",
+    "title_en": "Breadth-first search (BFS)",
+    "source": "/assets/coding/icpc-solutions/algorithms/bfs.cpp",
+    "problem_url": null,
+    "original_path": "Grafos/grafos_bfs.cpp",
+    "original_commit": "9a78966078fe522bc5deb00049828ab4ed975b11",
+    "original_url": "https://github.com/maratonaupf/codigos/blob/9a78966078fe522bc5deb00049828ab4ed975b11/Grafos/grafos_bfs.cpp",
+    "author": "Leonardo Deliyannis Constantin",
+    "validation": "compile-only"
+  },
+  {
+    "id": "dfs",
+    "filename": "dfs.cpp",
+    "judge": "examples",
+    "topics": [
+      "grafos"
+    ],
+    "title_pt": "Busca em profundidade (DFS)",
+    "title_en": "Depth-first search (DFS)",
+    "source": "/assets/coding/icpc-solutions/algorithms/dfs.cpp",
+    "problem_url": null,
+    "original_path": "Grafos/grafos_dfs.cpp",
+    "original_commit": "9a78966078fe522bc5deb00049828ab4ed975b11",
+    "original_url": "https://github.com/maratonaupf/codigos/blob/9a78966078fe522bc5deb00049828ab4ed975b11/Grafos/grafos_dfs.cpp",
+    "author": "Leonardo Deliyannis Constantin",
+    "validation": "compile-only"
+  },
+  {
+    "id": "bee1655",
+    "filename": "bee1655.cpp",
+    "judge": "beecrowd",
+    "topics": [
+      "grafos",
+      "paradigmas"
+    ],
+    "title_pt": "Caminhos de maior probabilidade",
+    "title_en": "Maximum-probability paths",
+    "source": "/assets/coding/icpc-solutions/beecrowd/bee1655.cpp",
+    "problem_url": "https://judge.beecrowd.com/pt/problems/view/1655",
+    "original_path": "Grafos/floydWarshall.cpp",
+    "original_commit": "0fccffc416d54ad580f475d63c2e0c925a116344",
+    "original_url": "https://github.com/maratonaupf/codigos/blob/0fccffc416d54ad580f475d63c2e0c925a116344/Grafos/floydWarshall.cpp",
+    "author": "Leonardo Deliyannis Constantin",
+    "validation": "compile-only"
+  },
+  {
+    "id": "bee1301",
+    "filename": "bee1301.cpp",
+    "judge": "beecrowd",
+    "topics": [
+      "estruturas"
+    ],
+    "title_pt": "Produto do intervalo (árvore de segmentos)",
+    "title_en": "Interval product (segment tree)",
+    "source": "/assets/coding/icpc-solutions/beecrowd/bee1301.cpp",
+    "problem_url": "https://judge.beecrowd.com/pt/problems/view/1301",
+    "original_path": "URIOJ/uri1301.cpp",
+    "original_commit": "1f19dfe17da8e26c45e753b32521a4ced9f4fe94",
+    "original_url": "https://github.com/maratonaupf/codigos/blob/1f19dfe17da8e26c45e753b32521a4ced9f4fe94/URIOJ/uri1301.cpp",
+    "author": "Leonardo Deliyannis Constantin",
+    "validation": "compile-only"
+  },
+  {
+    "id": "bee1500",
+    "filename": "bee1500.cpp",
+    "judge": "beecrowd",
+    "topics": [
+      "estruturas"
+    ],
+    "title_pt": "Consultas com atualização preguiçosa",
+    "title_en": "Lazy propagation and range queries",
+    "source": "/assets/coding/icpc-solutions/beecrowd/bee1500.cpp",
+    "problem_url": "https://judge.beecrowd.com/pt/problems/view/1500",
+    "original_path": "URIOJ/uri1500.cpp",
+    "original_commit": "a967af0afd6a263eb85c4e8d857f1e54a49caa96",
+    "original_url": "https://github.com/maratonaupf/codigos/blob/a967af0afd6a263eb85c4e8d857f1e54a49caa96/URIOJ/uri1500.cpp",
+    "author": "Leonardo Deliyannis Constantin",
+    "validation": "compile-only"
+  },
+  {
+    "id": "bee2531",
+    "filename": "bee2531.cpp",
+    "judge": "beecrowd",
+    "topics": [
+      "estruturas",
+      "pesquisa"
+    ],
+    "title_pt": "Consultas de máximo e mínimo",
+    "title_en": "Maximum/minimum range queries",
+    "source": "/assets/coding/icpc-solutions/beecrowd/bee2531.cpp",
+    "problem_url": "https://judge.beecrowd.com/pt/problems/view/2531",
+    "original_path": "URIOJ/uri2531.cpp",
+    "original_commit": "3f17e18a4d2ad2664cbc4c7b197200a0c52a1263",
+    "original_url": "https://github.com/maratonaupf/codigos/blob/3f17e18a4d2ad2664cbc4c7b197200a0c52a1263/URIOJ/uri2531.cpp",
+    "author": "Leonardo Deliyannis Constantin",
+    "validation": "compile-only"
+  },
+  {
+    "id": "bee1034-bottomup",
+    "filename": "bee1034-bottomup.cpp",
+    "judge": "beecrowd",
+    "topics": [
+      "paradigmas"
+    ],
+    "title_pt": "Programação dinâmica: tabulação",
+    "title_en": "Dynamic programming: tabulation",
+    "source": "/assets/coding/icpc-solutions/beecrowd/bee1034-bottomup.cpp",
+    "problem_url": "https://judge.beecrowd.com/pt/problems/view/1034",
+    "original_path": "URIOJ/uri1034-bottomUp.cpp",
+    "original_commit": "13da877057a90154fa5ba464093118c6e0a1fef3",
+    "original_url": "https://github.com/maratonaupf/codigos/blob/13da877057a90154fa5ba464093118c6e0a1fef3/URIOJ/uri1034-bottomUp.cpp",
+    "author": "Leonardo Deliyannis Constantin",
+    "validation": "compile-only"
+  },
+  {
+    "id": "bee1034-topdown",
+    "filename": "bee1034-topdown.cpp",
+    "judge": "beecrowd",
+    "topics": [
+      "paradigmas"
+    ],
+    "title_pt": "Programação dinâmica: memoização",
+    "title_en": "Dynamic programming: memoization",
+    "source": "/assets/coding/icpc-solutions/beecrowd/bee1034-topdown.cpp",
+    "problem_url": "https://judge.beecrowd.com/pt/problems/view/1034",
+    "original_path": "URIOJ/uri1034-topDown.cpp",
+    "original_commit": "13da877057a90154fa5ba464093118c6e0a1fef3",
+    "original_url": "https://github.com/maratonaupf/codigos/blob/13da877057a90154fa5ba464093118c6e0a1fef3/URIOJ/uri1034-topDown.cpp",
+    "author": "Leonardo Deliyannis Constantin",
+    "validation": "compile-only"
+  },
+  {
+    "id": "bee1127",
+    "filename": "bee1127.cpp",
+    "judge": "beecrowd",
+    "topics": [
+      "strings"
+    ],
+    "title_pt": "Comparação de sequências musicais",
+    "title_en": "Musical sequence matching",
+    "source": "/assets/coding/icpc-solutions/beecrowd/bee1127.cpp",
+    "problem_url": "https://judge.beecrowd.com/pt/problems/view/1127",
+    "original_path": "URIOJ/uri1127.cpp",
+    "original_commit": "13da877057a90154fa5ba464093118c6e0a1fef3",
+    "original_url": "https://github.com/maratonaupf/codigos/blob/13da877057a90154fa5ba464093118c6e0a1fef3/URIOJ/uri1127.cpp",
+    "author": "Leonardo Deliyannis Constantin",
+    "validation": "compile-only"
+  },
+  {
+    "id": "bee1219",
+    "filename": "bee1219.cpp",
+    "judge": "beecrowd",
+    "topics": [
+      "geometria",
+      "matematica"
+    ],
+    "title_pt": "Geometria: flores coloridas",
+    "title_en": "Geometry: colored flowers",
+    "source": "/assets/coding/icpc-solutions/beecrowd/bee1219.cpp",
+    "problem_url": "https://judge.beecrowd.com/pt/problems/view/1219",
+    "original_path": "URIOJ/uri1219.cpp",
+    "original_commit": "882d8af0bcaa056848cad0d0178bcdda4adf75c3",
+    "original_url": "https://github.com/maratonaupf/codigos/blob/882d8af0bcaa056848cad0d0178bcdda4adf75c3/URIOJ/uri1219.cpp",
+    "author": "Leonardo Deliyannis Constantin",
+    "validation": "compile-only"
+  },
+  {
+    "id": "bee1103",
+    "filename": "bee1103.py",
+    "judge": "beecrowd",
+    "topics": [
+      "iniciante",
+      "matematica"
+    ],
+    "title_pt": "Aritmética de horários",
+    "title_en": "Clock arithmetic",
+    "source": "/assets/coding/icpc-solutions/beecrowd/bee1103.py",
+    "problem_url": "https://judge.beecrowd.com/pt/problems/view/1103",
+    "original_path": "URIOJ/uri1103.py",
+    "original_commit": "13da877057a90154fa5ba464093118c6e0a1fef3",
+    "original_url": "https://github.com/maratonaupf/codigos/blob/13da877057a90154fa5ba464093118c6e0a1fef3/URIOJ/uri1103.py",
+    "author": "Leonardo Deliyannis Constantin",
+    "validation": "compile-only"
+  },
+  {
+    "id": "bee2802",
+    "filename": "bee2802.cpp",
+    "judge": "beecrowd",
+    "topics": [
+      "matematica"
+    ],
+    "title_pt": "Contagem combinatória",
+    "title_en": "Combinatorial counting",
+    "source": "/assets/coding/icpc-solutions/beecrowd/bee2802.cpp",
+    "problem_url": "https://judge.beecrowd.com/pt/problems/view/2802",
+    "original_path": "URIOJ/uri2802.cpp",
+    "original_commit": "13da877057a90154fa5ba464093118c6e0a1fef3",
+    "original_url": "https://github.com/maratonaupf/codigos/blob/13da877057a90154fa5ba464093118c6e0a1fef3/URIOJ/uri2802.cpp",
+    "author": "Leonardo Deliyannis Constantin",
+    "validation": "compile-only"
+  },
+  {
+    "id": "cf122a",
+    "filename": "cf122a.cpp",
+    "judge": "codeforces",
+    "topics": [
+      "iniciante",
+      "matematica"
+    ],
+    "title_pt": "Divisibilidade",
+    "title_en": "Divisibility",
+    "source": "/assets/coding/icpc-solutions/codeforces/cf122a.cpp",
+    "problem_url": "https://codeforces.com/problemset/problem/122/A",
+    "original_path": "Codeforces/cf122a.cpp",
+    "original_commit": "ade674b02a253e5d7605fbcd8ec7ea9581451bf6",
+    "original_url": "https://github.com/maratonaupf/codigos/blob/ade674b02a253e5d7605fbcd8ec7ea9581451bf6/Codeforces/cf122a.cpp",
+    "author": "Leonardo Deliyannis Constantin",
+    "validation": "compile-only"
+  },
+  {
+    "id": "cf266a",
+    "filename": "cf266a.cpp",
+    "judge": "codeforces",
+    "topics": [
+      "iniciante",
+      "strings"
+    ],
+    "title_pt": "Processamento de sequências",
+    "title_en": "Sequence processing",
+    "source": "/assets/coding/icpc-solutions/codeforces/cf266a.cpp",
+    "problem_url": "https://codeforces.com/problemset/problem/266/A",
+    "original_path": "Codeforces/cf266a.cpp",
+    "original_commit": "ade674b02a253e5d7605fbcd8ec7ea9581451bf6",
+    "original_url": "https://github.com/maratonaupf/codigos/blob/ade674b02a253e5d7605fbcd8ec7ea9581451bf6/Codeforces/cf266a.cpp",
+    "author": "Leonardo Deliyannis Constantin",
+    "validation": "compile-only"
+  },
+  {
+    "id": "cf339a",
+    "filename": "cf339a.cpp",
+    "judge": "codeforces",
+    "topics": [
+      "iniciante",
+      "pesquisa"
+    ],
+    "title_pt": "Ordenação",
+    "title_en": "Sorting",
+    "source": "/assets/coding/icpc-solutions/codeforces/cf339a.cpp",
+    "problem_url": "https://codeforces.com/problemset/problem/339/A",
+    "original_path": "Codeforces/cf339a.cpp",
+    "original_commit": "ade674b02a253e5d7605fbcd8ec7ea9581451bf6",
+    "original_url": "https://github.com/maratonaupf/codigos/blob/ade674b02a253e5d7605fbcd8ec7ea9581451bf6/Codeforces/cf339a.cpp",
+    "author": "Leonardo Deliyannis Constantin",
+    "validation": "compile-only"
+  },
+  {
+    "id": "cf1015b",
+    "filename": "cf1015b.cpp",
+    "judge": "codeforces",
+    "topics": [
+      "strings",
+      "pesquisa"
+    ],
+    "title_pt": "Transformação por trocas adjacentes",
+    "title_en": "Adjacent-swap transformation",
+    "source": "/assets/coding/icpc-solutions/codeforces/cf1015b.cpp",
+    "problem_url": "https://codeforces.com/problemset/problem/1015/B",
+    "original_path": "Codeforces/cf1015b.cpp",
+    "original_commit": "f44bc2ec7fb9f86a5c3d4e6acb2ff3813a84b34d",
+    "original_url": "https://github.com/maratonaupf/codigos/blob/f44bc2ec7fb9f86a5c3d4e6acb2ff3813a84b34d/Codeforces/cf1015b.cpp",
+    "author": "Leonardo Deliyannis Constantin",
+    "validation": "compile-only"
+  }
+]
