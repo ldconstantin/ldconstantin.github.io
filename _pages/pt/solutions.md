@@ -19,4 +19,4 @@ permalink: /codigos/
 
 ## Uso responsável
 
-Os enunciados pertencem às plataformas e não são reproduzidos aqui. A mesma solução pode aparecer em mais de um assunto sem duplicar seu arquivo. Consulte a página individual para o link de procedência, os limites conhecidos e as opções de estudo.
+Os enunciados pertencem às plataformas e não são reproduzidos aqui. Cada solução aparece uma vez em seu assunto principal. Os demais assuntos são mostrados na própria entrada. Consulte a página individual para o link de procedência, os limites conhecidos e as opções de estudo.
