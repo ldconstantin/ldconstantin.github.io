@@ -2,7 +2,7 @@ name: Publish academic website
 
 on:
   push:
-    branches: [main]
+    branches: [main, ci/easy-reading-real-content]
   workflow_dispatch:
     inputs:
       deploy:
