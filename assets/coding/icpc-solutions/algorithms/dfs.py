@@ -5,6 +5,7 @@ import sys
 
 
 def components_and_cycles(adj):
+    """Find components and undirected cycles, including parallel edges and loops."""
     n = len(adj)
     visited = [False] * n
     components = 0
@@ -16,15 +17,16 @@ def components_and_cycles(adj):
         visited[start] = True
         stack = [(start, -1)]
         while stack:
-            u, parent = stack.pop()
-            for v in adj[u]:
-                if not visited[v]:
-                    visited[v] = True
-                    stack.append((v, u))
-                elif v != parent:
+            u, parent_edge = stack.pop()
+            for v, edge_id in adj[u]:
+                if edge_id == parent_edge:
+                    continue
+                if visited[v]:
                     cyclic = True
+                else:
+                    visited[v] = True
+                    stack.append((v, edge_id))
     return components, cyclic
-
 
 def main():
     values = iter(map(int, sys.stdin.buffer.read().split()))
@@ -35,10 +37,10 @@ def main():
         except StopIteration:
             break
         adj = [[] for _ in range(n)]
-        for _ in range(e):
+        for edge_id in range(e):
             u, v = next(values) - 1, next(values) - 1
-            adj[u].append(v)
-            adj[v].append(u)
+            adj[u].append((v, edge_id))
+            adj[v].append((u, edge_id))
         components, cyclic = components_and_cycles(adj)
         out.extend([f"Ciclico: {'Sim' if cyclic else 'Nao'}", f"Componentes conexas: {components}"])
     print("\n".join(out), end="\n" if out else "")
