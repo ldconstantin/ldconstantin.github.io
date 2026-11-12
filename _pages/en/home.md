@@ -53,7 +53,7 @@ Instituto Federal Sul-rio-grandense (IFSul), Passo Fundo Campus · since May 202
 ## Education
 
 - **Bachelor's degree in Computer Science** — Universidade de Passo Fundo (UPF), 2023.
-- **Graduate specialization in Active Learning Methodologies for Higher Education Teaching** — UPF, completed in 2026.
+- **Graduate specialization in *Metodologias Ativas para Desenvolvimento no Ensino Superior*** — UPF, completed in 2026.
 
 ## Programming and spoken languages
 

@@ -54,7 +54,7 @@ Instituto Federal Sul-rio-grandense (IFSul), Câmpus Passo Fundo · desde maio d
 ## Formação acadêmica
 
 - **Bacharel em Ciência da Computação** — Universidade de Passo Fundo (UPF), 2023.
-- **Especialização em Metodologias Ativas para Docência no Ensino Superior** — UPF, concluída em 2026.
+- **Especialização em Metodologias Ativas para Desenvolvimento no Ensino Superior** — UPF, concluída em 2026.
 
 ## Linguagens e idiomas
 
