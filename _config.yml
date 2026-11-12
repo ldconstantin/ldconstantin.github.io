@@ -7,7 +7,7 @@ repository: ldconstantin/ldconstantin.github.io
 
 theme: just-the-docs
 search_enabled: false # Pagefind replaces the theme's Lunr search.
-site_theme: air
+site_theme: mint
 color_scheme: light
 sass:
   # The pinned Just the Docs theme emits these upstream deprecations.

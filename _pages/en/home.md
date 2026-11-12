@@ -27,6 +27,13 @@ permalink: /en/
 
 I teach computing at IFSul Passo Fundo in technical and undergraduate programs. I also coach teams for programming contests, including the Maratona SBC de Programação.
 
+## Technical work and academic background
+
+- **Undergraduate thesis (UPF, 2023):** *Uma análise das provas da Primeira Fase da Maratona SBC de Programação de 2013 a 2023*, supervised by Marcelo Trindade Rebonatto. The study classifies contest problems by difficulty and topics in the Brazilian Computer Society's reference curriculum. [Academic overview]({{ '/en/research/' | relative_url }}).
+- **Undergraduate research (UPF, 2013–2014):** PROBIC/Fapergs research scholarship in a project on digital inclusion and hacker culture in education. [Documented involvement]({{ '/en/research/' | relative_url }}).
+- **University extension:** certified participation in UFFS's Programming Club (2014, 120 hours) and a PAIDEX scholarship at FabSoft/UPF (2017–2018, 772 hours). [Activities and roles]({{ '/en/extension/' | relative_url }}).
+- **Code and educational software:** [ACCEPT Coding Club](https://github.com/acceptcoding/acceptcoding.github.io) and [contributions to the UPF Programming Club](https://github.com/maratonaupf/codigos/commits?author=ldconstantin).
+
 ## Selected achievements
 
 - Coach of the IFSul Passo Fundo Campus team, subregional runner-up and Brazilian finalist in the Maratona SBC de Programação in 2025.

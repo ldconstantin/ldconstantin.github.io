@@ -1,0 +1,24 @@
+// Mint palette: preserve the site's typography and component spacing.
+$mint-background: #f3faf7;
+$mint-text: #203a32;
+$mint-link: #116348;
+$mint-action: #146d51;
+
+:root[data-site-theme="mint"] {
+  color-scheme: light;
+  --site-background: #{$mint-background};
+  --site-surface: #{mix($mint-text, $mint-background, 3%)};
+  --site-sidebar: #{mix($mint-text, $mint-background, 4%)};
+  --site-text: #{$mint-text};
+  --site-heading: #{$mint-text};
+  --site-link: #{$mint-link};
+  --site-muted: #{mix($mint-text, $mint-background, 85%)};
+  --site-hover: #{mix($mint-text, $mint-background, 8%)};
+  --site-rule: #{mix($mint-text, $mint-background, 24%)};
+  --site-control: #{mix($mint-text, $mint-background, 68%)};
+  --site-brand: #{$mint-action};
+  --site-brand-ink: #ffffff;
+  --site-action-ink: #ffffff;
+  --site-blue-subtle: #{mix($mint-text, $mint-background, 12%)};
+  --site-page-shadow: rgba(20, 50, 39, 0.09);
+}
