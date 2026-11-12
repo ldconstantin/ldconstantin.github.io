@@ -25,7 +25,13 @@ detect_language: true
   </div>
 </section>
 
-Atuo no ensino de Computação em cursos técnicos e superiores, nas áreas de programação, algoritmos, estruturas de dados e sistemas operacionais. Minha trajetória também inclui participação em competições de programação e preparação de equipes para a Maratona SBC de Programação.
+Sou professor de Computação no IFSul Passo Fundo, com atuação em cursos técnicos e superiores. Também preparo equipes para competições de programação, incluindo a Maratona SBC de Programação.
+
+## Resultados relevantes
+
+- Treinador da equipe do IFSul Câmpus Passo Fundo, vice-campeã sub-regional e finalista brasileira da Maratona SBC de Programação em 2025.
+- Final Brasileira da Maratona SBC de Programação: competidor em 2017 e 2018; integrante da equipe campeã sub-regional em 2018.
+- Narrador oficial da Maratona SBC de Programação no Brasil, de 2019 a 2025.
 
 ## Experiência profissional {#experiencia-profissional}
 
@@ -37,12 +43,6 @@ Instituto Federal Sul-rio-grandense (IFSul), Câmpus Passo Fundo · desde maio d
 - Docência em cursos técnicos e superiores: Algoritmos e Programação, Estruturas de Dados, Análise de Algoritmos e Sistemas Operacionais.
 - Elaboração de atividades, avaliações e materiais didáticos.
 
-## Resultados relevantes
-
-- Treinador da equipe do IFSul Câmpus Passo Fundo, vice-campeã sub-regional e finalista brasileira da Maratona SBC de Programação em 2025.
-- Final Brasileira da Maratona SBC de Programação: competidor em 2017 e 2018; integrante da equipe campeã sub-regional em 2018.
-- Narrador oficial da Maratona SBC de Programação no Brasil, de 2019 a 2025.
-
 ## Formação acadêmica
 
 - **Bacharel em Ciência da Computação** — Universidade de Passo Fundo (UPF), 2023.
@@ -53,3 +53,4 @@ Instituto Federal Sul-rio-grandense (IFSul), Câmpus Passo Fundo · desde maio d
 - **Linguagens de programação e scripts:** C, C++, Python, JavaScript e Bash.
 - **Ambiente de trabalho:** Linux.
 - **Idiomas:** português (nativo), inglês (avançado) e espanhol (intermediário).
+**Contato profissional:** [LinkedIn](https://www.linkedin.com/in/ldconstantin/).
