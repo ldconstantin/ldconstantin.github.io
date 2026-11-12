@@ -1,4 +1,13 @@
 {% assign locale = include.locale | default: 'pt' %}
+<nav class="solution-topic-nav" aria-label="{% if locale == 'en' %}Jump to solution topics{% else %}Ir para os assuntos das soluções{% endif %}">
+  {% for category in site.data.icpc_categories %}
+    {% assign total = 0 %}
+    {% for solution in site.data.icpc_solutions %}{% if solution.topics contains category.id %}{% assign total = total | plus: 1 %}{% endif %}{% endfor %}
+    {% if total > 0 %}
+      <a href="#solutions-{{ category.id }}">{% if locale == 'en' %}{{ category.en }}{% else %}{{ category.pt }}{% endif %} <span>({{ total }})</span></a>
+    {% endif %}
+  {% endfor %}
+</nav>
 {% for category in site.data.icpc_categories %}
 <section class="solutions-category" aria-labelledby="solutions-{{ category.id }}">
   <h2 id="solutions-{{ category.id }}">{% if locale == 'en' %}{{ category.en }}{% else %}{{ category.pt }}{% endif %}</h2>
