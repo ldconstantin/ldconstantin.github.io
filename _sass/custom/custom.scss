@@ -876,3 +876,15 @@ b, strong { font-weight: 700; }
 .solution-source .token.builtin { color: var(--syntax-function); }
 .solution-source .token.operator,
 .solution-source .token.punctuation { color: var(--site-text); }
+
+// At 320 CSS px, the upstream mobile menu button was 56px and overshot the viewport.
+// Restore a 44px touch target without clipping the document or source code.
+@media (max-width: 31.25rem) {
+  .side-bar .site-header #menu-button {
+    flex: 0 0 44px;
+    width: 44px;
+    min-width: 44px;
+    height: 44px;
+    padding: 0;
+  }
+}
