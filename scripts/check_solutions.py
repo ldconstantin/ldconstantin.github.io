@@ -93,6 +93,12 @@ if len(sys.argv) == 3 and sys.argv[1] == "--site":
             parsed.feed(detail)
             assert unescape(item[heading_key]) in unescape(detail), route
             assert item["source"] in detail, (route, "missing source path")
+            for language_path in ("source_cpp", "source_python"):
+                assert item[language_path] in detail, (route, language_path)
+            assert detail.count('role="tab"') == 2, (route, "tabs missing")
+            assert detail.count('role="tabpanel"') == 2, (route, "panels missing")
+            assert 'aria-selected="true"' in detail and 'aria-selected="false"' in detail
+            assert 'AI' in detail or "IA" in detail or 'auxílio de IA' in detail, route
             assert item["original_url"] in detail, (route, "missing provenance")
             assert 'data-solution-source=' in detail, route
             assert 'solution-source.js' in detail, route

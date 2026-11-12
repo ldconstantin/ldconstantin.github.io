@@ -205,3 +205,38 @@ test('solution pages explain source in two languages and original problems open 
   assert.match(await page.locator('h1').first().innerText(), /Lazy/);
   await page.waitForFunction(() => document.querySelector('pre.solution-source code')?.textContent?.includes('class SegmentTree'));
 });
+
+test('C++ / Python tabs switch source, retain keyboard support and source provenance', async t => {
+  const page = await open(t, 'pt-BR', false, 375);
+  await visit(page, '/codigos/bee1500/');
+  const cpp = page.getByRole('tab', {name: 'C++'});
+  const py = page.getByRole('tab', {name: 'Python'});
+  assert.equal(await cpp.getAttribute('aria-selected'), 'true');
+  await page.waitForFunction(() => document.querySelector('[id$="-cpp-panel"] pre code')?.textContent?.includes('class SegmentTree'));
+  await py.click();
+  assert.equal(await py.getAttribute('aria-selected'), 'true');
+  await page.waitForFunction(() => document.querySelector('[id$="-python-panel"] pre code')?.textContent?.includes('import sys'));
+  assert.equal(await page.locator('[id$="-cpp-panel"]').isVisible(), false);
+  assert.equal(await page.locator('[id$="-python-panel"]').isVisible(), true);
+  await py.press('ArrowLeft');
+  assert.equal(await cpp.getAttribute('aria-selected'), 'true');
+  await cpp.press('End');
+  assert.equal(await py.getAttribute('aria-selected'), 'true');
+  assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false);
+
+  await page.locator('.language-option[data-locale="en"]').click();
+  await page.waitForURL(base + '/en/solutions/bee1500/');
+  assert.equal(await page.getByRole('tab', {name: 'C++'}).getAttribute('aria-selected'), 'true');
+  await page.getByRole('tab', {name: 'Python'}).click();
+  await page.waitForFunction(() => document.querySelector('[id$="-python-panel"] pre code')?.textContent?.includes('import sys'));
+  assert.match(await page.locator('.solution-attribution').first().innerText(), /AI/);
+});
+
+test('two source files remain accessible without JavaScript', async t => {
+  const context = await browser.newContext({locale: 'pt-BR', javaScriptEnabled: false});
+  t.after(() => context.close());
+  const page = await context.newPage();
+  await visit(page, '/codigos/bee1103/');
+  assert.equal(await page.locator('a[href="/assets/coding/icpc-solutions/beecrowd/bee1103.cpp"]').count(), 1);
+  assert.equal(await page.locator('a[href="/assets/coding/icpc-solutions/beecrowd/bee1103.py"]').count(), 1);
+});

@@ -33,6 +33,9 @@
   <p>{% if lang == 'en' %}Compare both implementations. The historical file is kept unchanged; the new adaptation is identified separately.{% else %}Compare as duas implementações. O arquivo histórico está preservado; a nova adaptação é identificada separadamente.{% endif %}</p>
   <p class="solution-attribution">{% if lang == 'en' %}{{ solution.adaptation_note_en | escape }}{% else %}{{ solution.adaptation_note_pt | escape }}{% endif %}</p>
   {% if solution.port_difference_pt %}<p class="solution-port-difference">{% if lang == 'en' %}{{ solution.port_difference_en | escape }}{% else %}{{ solution.port_difference_pt | escape }}{% endif %}</p>{% endif %}
+  <noscript><p>{% if lang == 'en' %}JavaScript is disabled. Open the files directly:{% else %}JavaScript desativado. Abra os arquivos diretamente:{% endif %}
+    <a href="{{ solution.source_cpp | relative_url }}">C++</a> ·
+    <a href="{{ solution.source_python | relative_url }}">Python</a>.</p></noscript>
   <div class="solution-code-tabs" data-solution-code-tabs>
     <div class="solution-code-tablist" role="tablist" aria-label="{% if lang == 'en' %}Source language{% else %}Linguagem do código{% endif %}">
       <button class="solution-code-tab" type="button" role="tab" id="code-{{ solution.id }}-cpp-tab"

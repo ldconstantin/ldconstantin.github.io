@@ -36,6 +36,8 @@ jobs:
           node-version: '22'
       - name: Validate attributed source catalogue and compile historical code
         run: python3 scripts/check_solutions.py
+      - name: Verify dual-language solution implementations
+        run: python3 scripts/check_language_ports.py
       - name: Build Jekyll website
         run: bundle exec jekyll build
       - name: Validate generated solution detail pages
