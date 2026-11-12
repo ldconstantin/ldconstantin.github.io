@@ -10,7 +10,7 @@ permalink: /en/research/
 
 # Research
 
-My academic interests. This page does not list ongoing research projects, student supervision, or published results.
+My academic interests include competitive programming, algorithms, data structures, and computing education, including critical evaluation of responses produced by generative AI.
 
 ## Competitive programming
 

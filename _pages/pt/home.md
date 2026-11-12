@@ -25,10 +25,7 @@ detect_language: true
   </div>
 </section>
 
-## Formação acadêmica
-
-- **Bacharel em Ciência da Computação** — Universidade de Passo Fundo (UPF), 2023.
-- **Especialização em Metodologias Ativas para Docência no Ensino Superior** — UPF, iniciada e concluída em 2026.
+Atuo no ensino de Computação em cursos técnicos e superiores, nas áreas de programação, algoritmos, estruturas de dados e sistemas operacionais. Minha trajetória também inclui participação em competições de programação e preparação de equipes para a Maratona SBC de Programação.
 
 ## Experiência profissional {#experiencia-profissional}
 
@@ -46,7 +43,13 @@ Instituto Federal Sul-rio-grandense (IFSul), Câmpus Passo Fundo · desde maio d
 - Final Brasileira da Maratona SBC de Programação: competidor em 2017 e 2018; integrante da equipe campeã sub-regional em 2018.
 - Narrador oficial da Maratona SBC de Programação no Brasil, de 2019 a 2025.
 
+## Formação acadêmica
+
+- **Bacharel em Ciência da Computação** — Universidade de Passo Fundo (UPF), 2023.
+- **Especialização em Metodologias Ativas para Docência no Ensino Superior** — UPF, concluída em 2026.
+
 ## Linguagens e idiomas
 
-- **Linguagens e ferramentas:** C, C++, Python, JavaScript, Bash e Linux.
+- **Linguagens de programação e scripts:** C, C++, Python, JavaScript e Bash.
+- **Ambiente de trabalho:** Linux.
 - **Idiomas:** português (nativo), inglês (avançado) e espanhol (intermediário).

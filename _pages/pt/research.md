@@ -10,7 +10,7 @@ permalink: /pesquisa/
 
 # Pesquisa
 
-Temas de interesse acadêmico. Esta página não lista projetos de pesquisa em andamento, orientações ou resultados publicados.
+Meus interesses acadêmicos concentram-se em programação competitiva, algoritmos, estruturas de dados e Educação em Computação, incluindo a avaliação crítica de respostas produzidas por IA generativa.
 
 ## Programação competitiva
 

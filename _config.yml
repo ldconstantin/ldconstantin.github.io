@@ -1,5 +1,5 @@
 title: "Leonardo D. Constantin"
-description: "I teach computing. This site presents my courses and research interests."
+description: "Computer Science professor teaching programming, algorithms, data structures, and operating systems."
 url: "https://ldconstantin.github.io"
 baseurl: ""
 lang: en-US
@@ -42,11 +42,11 @@ defaults:
   - scope:
       path: "_pages/pt"
     values:
-      description: "Sou professor de Computação. Neste site, apresento minhas aulas e meus interesses de pesquisa."
+      description: "Professor de Ciência da Computação com experiência no ensino de programação, algoritmos, estruturas de dados e sistemas operacionais."
   - scope:
       path: "_pages/en"
     values:
-      description: "I teach computing. This site presents my courses and research interests."
+      description: "Computer Science professor teaching programming, algorithms, data structures, and operating systems."
 
 exclude:
   - AGENTS.md

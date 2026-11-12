@@ -10,25 +10,27 @@ permalink: /en/extension/
 
 # Extension
 
-Here I describe university extension activities and other contributions to the programming community. Each entry identifies the period, my role, and, where applicable, the institution involved.
+This page covers university extension activities and contributions to the programming community, distinguishing the periods, institutions, and roles involved.
 
 ## Maratona SBC de Programação
 
 UPF · 2014–2018
 {: .entry-meta }
 
-I took part in UPF extension activities related to the Maratona SBC de Programação, a competition in which student teams solve problems using algorithms and programs.
+**UPF extension activities (2014–2018):** I participated in activities related to the Maratona SBC de Programação, where student teams solve problems using algorithms and programs.
 
-My participation in the Maratona SBC de Programação ran from 2016 to 2019. I represented UPF as a contestant from 2016 to 2018, reaching the Brazilian finals in 2017 and 2018 and joining the subregional championship team in 2018. In 2019, I coached a team that finished as subregional runner-up and reached the Brazilian finals.
+**Contestant (2016–2018):** I represented UPF, reached the Brazilian finals in 2017 and 2018, and was part of the subregional championship team in 2018.
+
+**Team coach (2019):** I coached a team that finished as subregional runner-up and reached the Brazilian finals.
 
 ## FabSoft
 
 Experimental Software Development Factory · UPF · 2017–2018
 {: .entry-meta }
 
-At FabSoft, I supported the IT infrastructure by making operating system deployment decisions, including the choice of Manjaro Linux with KDE Plasma.
+At FabSoft, I supported IT infrastructure and the setup of development environments. I helped select operating systems and wrote scripts to install and update development tools.
 
-I also wrote scripts to install and update software development tools: Boxstarter and Chocolatey on Windows, and Bash and shell scripts on Manjaro Linux.
+I used Boxstarter and Chocolatey for automation on Windows and Bash scripts on Manjaro Linux. The Linux environment also used KDE Plasma.
 
 ## Other activities <span id="other-programming-community-activities" aria-hidden="true"></span> {#other-activities}
 

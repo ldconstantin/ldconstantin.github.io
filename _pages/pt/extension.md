@@ -10,25 +10,27 @@ permalink: /extensao/
 
 # Extensão
 
-Reúno aqui atividades vinculadas à extensão universitária e outras contribuições à comunidade de programação. Os registros indicam o período, minha participação e, quando aplicável, a instituição envolvida.
+Esta página reúne atividades de extensão universitária e contribuições à comunidade de programação, distinguindo os períodos, as instituições e as funções exercidas.
 
 ## Maratona SBC de Programação
 
 UPF · de 2014 a 2018
 {: .entry-meta }
 
-Participei de atividades de extensão da UPF relacionadas à Maratona SBC de Programação. A competição reúne equipes de estudantes para resolver problemas por meio de algoritmos e programas.
+**Extensão na UPF (2014–2018):** participei de atividades relacionadas à Maratona SBC de Programação, competição em que equipes de estudantes resolvem problemas por meio de algoritmos e programas.
 
-Minha participação na Maratona SBC de Programação ocorreu de 2016 a 2019. Representei a UPF como competidor de 2016 a 2018; fui finalista brasileiro em 2017 e 2018 e integrei a equipe campeã sub-regional em 2018. Em 2019, treinei uma equipe vice-campeã sub-regional e finalista brasileira.
+**Participação como competidor (2016–2018):** representei a UPF, fui finalista brasileiro em 2017 e 2018 e integrei a equipe campeã sub-regional em 2018.
+
+**Treinamento de equipe (2019):** preparei uma equipe vice-campeã sub-regional e finalista brasileira.
 
 ## FabSoft
 
 Fábrica Experimental de Desenvolvimento de Software · UPF · de 2017 a 2018
 {: .entry-meta }
 
-Na FabSoft, apoiei a infraestrutura de TI tomando decisões sobre a instalação dos sistemas operacionais, com destaque para a escolha do Manjaro Linux com KDE Plasma.
+Na FabSoft, apoiei a infraestrutura de TI e a preparação de ambientes de desenvolvimento. Participei das decisões sobre a instalação de sistemas operacionais e escrevi scripts para instalar e atualizar ferramentas de desenvolvimento.
 
-Também elaborei scripts para instalar e atualizar programas de desenvolvimento de software: no Windows, usei Boxstarter e Chocolatey; no Manjaro Linux, Bash e shell scripts.
+Utilizei Boxstarter e Chocolatey para automação no Windows e scripts Bash no Manjaro Linux. O ambiente Linux adotado incluía KDE Plasma.
 
 ## Outras atividades <span id="outras-atividades-na-comunidade-de-programação" aria-hidden="true"></span> {#outras-atividades}
 

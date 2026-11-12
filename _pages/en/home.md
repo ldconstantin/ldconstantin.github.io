@@ -24,10 +24,7 @@ permalink: /en/
   </div>
 </section>
 
-## Education
-
-- **Bachelor's degree in Computer Science** — Universidade de Passo Fundo (UPF), 2023.
-- **Graduate specialization in Active Learning Methodologies for Higher Education Teaching** — UPF, started and completed in 2026.
+I teach computing in technical and undergraduate programs, covering programming, algorithms, data structures, and operating systems. My background also includes competing in programming contests and coaching teams for the Maratona SBC de Programação.
 
 ## Professional experience {#professional-experience}
 
@@ -45,7 +42,13 @@ Instituto Federal Sul-rio-grandense (IFSul), Passo Fundo Campus · since May 202
 - Brazilian finals of the Maratona SBC de Programação: contestant in 2017 and 2018; member of the subregional championship team in 2018.
 - Official commentator for the Maratona SBC de Programação in Brazil from 2019 to 2025.
 
+## Education
+
+- **Bachelor's degree in Computer Science** — Universidade de Passo Fundo (UPF), 2023.
+- **Graduate specialization in Active Learning Methodologies for Higher Education Teaching** — UPF, completed in 2026.
+
 ## Programming and spoken languages
 
-- **Languages and tools:** C, C++, Python, JavaScript, Bash, and Linux.
+- **Programming and scripting languages:** C, C++, Python, JavaScript, and Bash.
+- **Working environment:** Linux.
 - **Spoken languages:** Portuguese (native), English (advanced), and Spanish (intermediate).

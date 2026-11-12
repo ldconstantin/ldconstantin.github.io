@@ -5,7 +5,7 @@ with my academic background, professional experience, teaching, research
 interests, and extension activities. The site is available in Brazilian
 Portuguese and American English.
 
-The website  uses Jekyll, [Just the Docs](https://just-the-docs.com/), and
+The website uses Jekyll, [Just the Docs](https://just-the-docs.com/), and
 [Pagefind](https://pagefind.app/). Its section navigation and light/dark behavior
 draw on Academic Pages. Local reference checkouts are excluded from the
 published website.
@@ -96,9 +96,9 @@ checks completed and the remaining approval and hosted verification steps.
 
 The `.github/workflows/pages.yml` workflow builds and validates the site on
 pushes to `main`. Configure **Settings → Pages → Build and deployment → Source:
-GitHub Actions** in the repository. Deployment runs only through a manual
-`workflow_dispatch` run with the boolean `deploy` input set to `true`; it defaults
-to `false`. A push or a manual run with the default input does not deploy.
+GitHub Actions** in the repository. Deployment runs through a manual `workflow_dispatch` with `deploy: true`,
+or when a push to `main` has `[deploy]` in its HEAD commit message.
+Ordinary pushes and manual runs with the default `deploy: false` only validate.
 
 Review the final diff and obtain confirmation before committing,
 pushing, or deploying. Use English for repository documentation and commit

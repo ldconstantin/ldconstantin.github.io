@@ -11,7 +11,7 @@ permalink: /ensino/
 
 # Ensino
 
-Aqui estão as disciplinas atuais, anteriores e em estudo. Os materiais de aula e os roteiros de estudo de cada disciplina serão adicionados futuramente.
+Estas são as disciplinas que ministro ou ministrei em cursos técnicos e superiores, organizadas por período. Os tópicos indicam os conteúdos de cada disciplina; o tema em estudo aparece separadamente.
 
 <section class="teaching-current-courses" aria-labelledby="disciplinas-atuais-titulo">
   <div class="home-courses-heading">
@@ -21,19 +21,19 @@ Aqui estão as disciplinas atuais, anteriores e em estudo. Os materiais de aula 
   <ul class="home-course-list" role="list">
     <li>
       <h3 id="estruturas-de-dados-iii">Estruturas de Dados III</h3>
-      <p>Algoritmos de ordenação e busca de dados</p>
+      <p>Estudo de algoritmos de ordenação e busca e de suas estratégias de aplicação</p>
     </li>
     <li>
       <h3 id="sistemas-operacionais-ii">Sistemas Operacionais II</h3>
-      <p>Programação concorrente, sincronização e sistemas de tempo real</p>
+      <p>Programação concorrente, mecanismos de sincronização e sistemas de tempo real</p>
     </li>
     <li>
       <h3 id="criacao-de-paginas-web">Criação de Páginas Web</h3>
-      <p>Criação de páginas com HTML, CSS e JavaScript</p>
+      <p>Estruturação de páginas com HTML, apresentação com CSS e interatividade com JavaScript</p>
     </li>
     <li>
       <h3 id="linguagem-de-programacao-orientada-a-objetos">Linguagem de Programação Orientada a Objetos</h3>
-      <p>Padrões de projeto e arquiteturas de software em Python</p>
+      <p>Programação orientada a objetos em Python, padrões de projeto e arquiteturas de software</p>
     </li>
   </ul>
 </section>
@@ -45,15 +45,15 @@ Aqui estão as disciplinas atuais, anteriores e em estudo. Os materiais de aula 
 <ul class="home-course-list" role="list">
   <li>
     <h4 id="logica-e-algoritmos">Lógica e Algoritmos</h4>
-    <p>Lógica e programação em Python para Engenharia Mecânica.</p>
+    <p>Fundamentos de lógica e programação em Python para Engenharia Mecânica.</p>
   </li>
   <li>
     <h4 id="programacao-competitiva">Programação Competitiva</h4>
-    <p>Algoritmos e estratégias para resolver problemas em competições.</p>
+    <p>Resolução de problemas de programação competitiva por meio de algoritmos e estratégias de solução.</p>
   </li>
   <li>
     <h4 id="introducao-a-linguagem-de-programacao-cpp">Introdução à Linguagem de Programação C++</h4>
-    <p>Compilação, tipos de dados, estruturas de controle, funções e biblioteca padrão em C++.</p>
+    <p>Fundamentos de C++: compilação, tipos, estruturas de controle, funções e biblioteca padrão.</p>
   </li>
 </ul>
 
@@ -62,15 +62,15 @@ Aqui estão as disciplinas atuais, anteriores e em estudo. Os materiais de aula 
 <ul class="home-course-list" role="list">
   <li>
     <h4 id="introducao-a-linguagem-de-programacao-javascript">Introdução à Linguagem de Programação JavaScript</h4>
-    <p>Algoritmos e criação de aplicações básicas para páginas web.</p>
+    <p>Algoritmos em JavaScript e criação de aplicações básicas para páginas web.</p>
   </li>
   <li>
     <h4 id="analise-e-complexidade-de-algoritmos">Análise e Complexidade de Algoritmos</h4>
-    <p>Análise do tempo e da memória usados pelos algoritmos.</p>
+    <p>Análise da complexidade de tempo e de memória de algoritmos.</p>
   </li>
 </ul>
 
 ## Disciplinas em estudo
 
 - ### Letramento em Inteligência Artificial {#letramento-em-inteligencia-artificial}
-  Proposta de estudo dos conceitos, usos e limites da inteligência artificial generativa, com atenção à avaliação das respostas e ao uso responsável.
+  Tema em estudo: conceitos, aplicações e limites da inteligência artificial generativa, avaliação crítica de respostas e uso responsável.
