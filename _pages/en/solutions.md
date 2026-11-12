@@ -19,4 +19,4 @@ permalink: /en/solutions/
 
 ## Responsible use
 
-Problem statements belong to their platforms and are not reproduced here. A solution may appear under more than one topic without duplicating its source file. Open the individual page for provenance, known limitations and study options.
+Problem statements belong to their platforms and are not reproduced here. Each solution appears once under its primary topic, with additional topics displayed in its entry. Open the individual page for provenance, known limitations and study options.

@@ -292,3 +292,61 @@ test('solution guide remains navigable at narrow viewport and enlarged text', as
   }));
   assert.ok(scaled.pageWidth <= scaled.viewport + 1, JSON.stringify(scaled));
 });
+
+test('catalogue lists each solution once and omits empty subject groups', async t => {
+  const page = await open(t, 'pt-BR', false, 375);
+  await visit(page, '/codigos/');
+  assert.equal(await page.locator('a.solution-title').count(), 18);
+  assert.equal(await page.locator('section.solutions-category').count(), 7);
+  assert.equal(await page.locator('.solution-topic-nav a').count(), 7);
+  assert.equal(await page.locator('#solutions-pesquisa').count(), 0);
+  assert.equal(await page.locator('#solutions-avancados').count(), 0);
+  assert.equal(await page.locator('a.solution-title[href="/codigos/kruskal/"]').count(), 1);
+  await page.locator('.solution-topic-nav a[href="#solutions-grafos"]').click();
+  await page.waitForURL(base + '/codigos/#solutions-grafos');
+  assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false);
+  await page.getByRole('link', {name: /Kruskal/}).first().click();
+  await page.waitForURL(base + '/codigos/kruskal/');
+  assert.equal(await page.locator('.solution-related li > a').count(), 3);
+  assert.ok((await page.locator('.solution-related a[href="/codigos/prim/"]').count()) >= 1);
+});
+
+test('copying the selected source preserves the original text and announces success', async t => {
+  const page = await open(t, 'pt-BR', false, 375);
+  await page.addInitScript(() => {
+    Object.defineProperty(navigator, 'clipboard', {
+      configurable: true, value: {writeText: async text => { window.__copiedSource = text; }}
+    });
+  });
+  await visit(page, '/codigos/bee1500/');
+  const cppButton = page.getByRole('button', {name: 'Copiar código C++'});
+  await page.waitForFunction(() => document.querySelector('[id$="-cpp-panel"] [data-copy-code]')?.disabled === false);
+  await cppButton.press('Enter');
+  await page.waitForFunction(() => window.__copiedSource?.includes('class SegmentTree'));
+  assert.match(await page.locator('[id$="-cpp-panel"] [role="status"]').innerText(), /Copiado/);
+  assert.match(await page.evaluate(() => window.__copiedSource), /#include/);
+  await page.getByRole('tab', {name: 'Python'}).click();
+  const pyButton = page.getByRole('button', {name: 'Copiar código Python'});
+  await page.waitForFunction(() => document.querySelector('[id$="-python-panel"] [data-copy-code]')?.disabled === false);
+  await pyButton.click();
+  await page.waitForFunction(() => window.__copiedSource?.includes('import sys'));
+  assert.match(await page.locator('[id$="-python-panel"] [role="status"]').innerText(), /Copiado/);
+  assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false);
+});
+
+test('academic specialization and proposed learning activity are consistent in PT and EN', async t => {
+  const page = await open(t, 'pt-BR');
+  await visit(page, '/?lang=pt');
+  assert.match(await page.locator('main').innerText(), /Metodologias Ativas para Desenvolvimento no Ensino Superior/);
+  await visit(page, '/en/');
+  assert.match(await page.locator('main').innerText(), /Metodologias Ativas para Desenvolvimento no Ensino Superior/);
+  await visit(page, '/ensino/');
+  const ptText = await page.locator('main').innerText();
+  assert.match(ptText, /Atividade didática demonstrativa/);
+  assert.match(ptText, /não um relato de atividade aplicada em turma/);
+  assert.match(ptText, /custo total 5/);
+  await visit(page, '/en/teaching/');
+  const enText = await page.locator('main').innerText();
+  assert.match(enText, /Demonstration learning activity/);
+  assert.match(enText, /not a report of an activity already taught/);
+});

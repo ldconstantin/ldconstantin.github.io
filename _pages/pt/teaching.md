@@ -80,6 +80,25 @@ Exemplos de código que podem apoiar o estudo de algoritmos e estruturas de dado
 - [Árvore de segmentos com propagação preguiçosa]({{ '/codigos/bee1500/' | relative_url }}): atualizações de intervalo e consultas de soma.
 - [Catálogo de 18 soluções]({{ '/codigos/' | relative_url }}): exemplos por assunto, com procedência e limites identificados.
 
+## Atividade didática demonstrativa
+
+**Tema:** comparar Kruskal e Prim para encontrar uma árvore geradora mínima. Esta é uma **proposta para estudo independente**, não um relato de atividade aplicada em turma.
+
+**Pré-requisitos:** representação de grafos não direcionados, ordenação, filas de prioridade e análise assintótica.
+
+**Situação-problema:** uma rede conecta os vértices 0, 1 e 2. As arestas têm custos 2 (0–1), 3 (1–2) e 9 (0–2). É necessário conectar os três vértices com o menor custo total.
+
+**Roteiro de estudo:**
+
+1. Desenhe o grafo. Encontre manualmente as duas arestas que formam uma árvore de custo mínimo e explique por que a terceira é dispensável.
+2. Execute a [implementação de Kruskal]({{ '/codigos/kruskal/' | relative_url }}) e a [implementação de Prim]({{ '/codigos/prim/' | relative_url }}). Compare a seleção de arestas com o custo obtido.
+3. Explique a diferença entre **Union-Find** (Kruskal) e **fila de prioridade** (Prim). Estime suas complexidades para listas de adjacência e ordenação de arestas.
+4. Experimente remover a aresta 1–2. Depois, remova também 0–2. Descreva o que cada implementação faz quando o grafo deixa de ser conexo.
+
+**Resultado esperado:** arestas 0–1 e 1–2, custo total **5** para o grafo original. Em grafo desconexo, o exemplo de Kruskal pode produzir uma floresta e o de Prim calcula apenas a componente de origem; nenhum dos dois deve ser apresentado como uma árvore geradora única nesse caso.
+
+**Critérios de avaliação propostos:** seleção e justificativa da solução (40%); comparação de estratégias e custos computacionais (40%); análise correta dos casos desconexos (20%). Os percentuais são **uma rubrica proposta**, não notas de estudantes.
+
 ## Colaboração em material didático
 
 - **Simulado ENADE 2026, Bacharelado em Ciência da Computação (IFSul Passo Fundo):** colaboração na diagramação e na preparação editorial do caderno de questões. Não reivindico autoria dos enunciados ou das questões. O material institucional integral não é distribuído neste site.

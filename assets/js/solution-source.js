@@ -21,6 +21,8 @@
           code.textContent = source;
           if (window.Prism?.languages) window.Prism.highlightElement(code);
           block.dataset.loaded = 'true';
+          const copy = panels[index].querySelector('[data-copy-code]');
+          if (copy) copy.disabled = false;
         })
         .catch(() => {
           code.textContent = document.documentElement.lang.startsWith('pt')
@@ -29,6 +31,26 @@
           block.dataset.loaded = 'error';
         });
     }
+
+    panels.forEach((panel, index) => {
+      const button = panel.querySelector('[data-copy-code]');
+      const status = panel.querySelector('[data-copy-status]');
+      if (!button || !status) return;
+      button.addEventListener('click', async () => {
+        const block = panel.querySelector('[data-solution-source]');
+        const code = block?.querySelector('code');
+        if (!code || block.dataset.loaded !== 'true') return;
+        try {
+          if (!navigator.clipboard?.writeText) throw new Error('Clipboard API unavailable');
+          await navigator.clipboard.writeText(code.textContent);
+          status.textContent = document.documentElement.lang.startsWith('pt') ? 'Copiado.' : 'Copied.';
+        } catch (_) {
+          status.textContent = document.documentElement.lang.startsWith('pt')
+            ? 'Cópia indisponível. Abra o arquivo pelo link acima.'
+            : 'Copy unavailable. Open the source file using the link above.';
+        }
+      });
+    });
 
     function activate(index, focus) {
       tabs.forEach((tab, i) => {

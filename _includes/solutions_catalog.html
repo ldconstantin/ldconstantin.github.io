@@ -2,23 +2,33 @@
 <nav class="solution-topic-nav" aria-label="{% if locale == 'en' %}Jump to solution topics{% else %}Ir para os assuntos das soluções{% endif %}">
   {% for category in site.data.icpc_categories %}
     {% assign total = 0 %}
-    {% for solution in site.data.icpc_solutions %}{% if solution.topics contains category.id %}{% assign total = total | plus: 1 %}{% endif %}{% endfor %}
+    {% for solution in site.data.icpc_solutions %}{% if solution.primary_topic == category.id %}{% assign total = total | plus: 1 %}{% endif %}{% endfor %}
     {% if total > 0 %}
       <a href="#solutions-{{ category.id }}">{% if locale == 'en' %}{{ category.en }}{% else %}{{ category.pt }}{% endif %} <span>({{ total }})</span></a>
     {% endif %}
   {% endfor %}
 </nav>
 {% for category in site.data.icpc_categories %}
-<section class="solutions-category" aria-labelledby="solutions-{{ category.id }}">
-  <h2 id="solutions-{{ category.id }}">{% if locale == 'en' %}{{ category.en }}{% else %}{{ category.pt }}{% endif %}</h2>
-  <ul class="solutions-list">
   {% assign count = 0 %}
+  {% for solution in site.data.icpc_solutions %}{% if solution.primary_topic == category.id %}{% assign count = count | plus: 1 %}{% endif %}{% endfor %}
+  {% if count > 0 %}
+<section class="solutions-category" aria-labelledby="solutions-{{ category.id }}">
+  <h2 id="solutions-{{ category.id }}">{% if locale == 'en' %}{{ category.en }}{% else %}{{ category.pt }}{% endif %} <span class="solution-category-count">({{ count }})</span></h2>
+  <ul class="solutions-list">
   {% for solution in site.data.icpc_solutions %}
-    {% if solution.topics contains category.id %}
-    {% assign count = count | plus: 1 %}
-    <li><strong><a class="solution-title" href="{% if locale == 'en' %}{{ solution.detail_en | relative_url }}{% else %}{{ solution.detail_pt | relative_url }}{% endif %}">{% if locale == 'en' %}{{ solution.title_en | escape }}{% else %}{{ solution.title_pt | escape }}{% endif %}</a></strong>
+    {% if solution.primary_topic == category.id %}
+    <li id="solution-{{ solution.id }}">
+      <strong><a class="solution-title" href="{% if locale == 'en' %}{{ solution.detail_en | relative_url }}{% else %}{{ solution.detail_pt | relative_url }}{% endif %}">{% if locale == 'en' %}{{ solution.title_en | escape }}{% else %}{{ solution.title_pt | escape }}{% endif %}</a></strong>
       <span class="solution-meta">({% if solution.judge == 'examples' %}{% if locale == 'en' %}algorithm example{% else %}exemplo de algoritmo{% endif %}{% else %}{{ solution.judge }}{% endif %})</span>
       <p class="solution-summary">{% if locale == 'en' %}{{ solution.summary_en | escape }}{% else %}{{ solution.summary_pt | escape }}{% endif %}</p>
+      {% if solution.topics.size > 1 %}
+      <p class="solution-secondary-topics">{% if locale == 'en' %}Also covers:{% else %}Também aborda:{% endif %}
+        {% for secondary in solution.topics offset:1 %}
+          {% assign topic = site.data.icpc_categories | where: 'id', secondary | first %}
+          <span>{% if locale == 'en' %}{{ topic.en }}{% else %}{{ topic.pt }}{% endif %}</span>{% unless forloop.last %}, {% endunless %}
+        {% endfor %}
+      </p>
+      {% endif %}
       <div class="solution-links">
         <a href="{{ solution.source | relative_url }}"><code>{{ solution.filename | escape }}</code></a>
         {% if solution.problem_url %}<a href="{{ solution.problem_url }}" target="_blank" rel="noopener noreferrer" aria-label="{% if locale == 'en' %}Original problem (opens in a new tab){% else %}Problema original (abre em nova aba){% endif %}">{% if locale == 'en' %}Problem{% else %}Problema{% endif %}</a>{% endif %}
@@ -27,9 +37,7 @@
     </li>
     {% endif %}
   {% endfor %}
-  {% if count == 0 %}
-    <li>{% if locale == 'en' %}No audited examples in this category yet.{% else %}Nenhum exemplo auditado nesta categoria ainda.{% endif %}</li>
-  {% endif %}
   </ul>
 </section>
+  {% endif %}
 {% endfor %}

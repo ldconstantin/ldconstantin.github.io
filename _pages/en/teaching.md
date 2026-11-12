@@ -80,6 +80,25 @@ Code examples that may support the study of algorithms and data structures. **Pu
 - [Segment tree with lazy propagation]({{ '/en/solutions/bee1500/' | relative_url }}): range updates and sum queries.
 - [Archive of 18 solutions]({{ '/en/solutions/' | relative_url }}): examples by topic, with provenance and known limits.
 
+## Demonstration learning activity
+
+**Topic:** compare Kruskal and Prim for finding a minimum spanning tree. This is a **self-study proposal**, not a report of an activity already taught to a class.
+
+**Prerequisites:** undirected graphs, sorting, priority queues, and asymptotic analysis.
+
+**Problem:** a network connects vertices 0, 1, and 2. The edges cost 2 (0–1), 3 (1–2), and 9 (0–2). Connect all vertices at minimum total cost.
+
+**Study steps:**
+
+1. Draw the graph. Select the two minimum-cost tree edges manually and explain why the third edge is unnecessary.
+2. Run the [Kruskal implementation]({{ '/en/solutions/kruskal/' | relative_url }}) and the [Prim implementation]({{ '/en/solutions/prim/' | relative_url }}). Compare the selected edges and the total cost.
+3. Explain the difference between **Union-Find** (Kruskal) and a **priority queue** (Prim). Estimate their time complexity for adjacency lists and edge sorting.
+4. Remove edge 1–2, then also remove edge 0–2. Explain what each implementation does when the graph becomes disconnected.
+
+**Expected result:** edges 0–1 and 1–2, with total cost **5** in the original graph. For disconnected graphs, the Kruskal example may yield a forest and the Prim example computes only the starting component; neither result is a spanning tree over all vertices.
+
+**Proposed assessment rubric:** correct selection and justification (40%); comparison of strategies and complexity (40%); analysis of disconnected cases (20%). These percentages describe **a proposed rubric**, not students' marks.
+
 ## Educational material collaboration
 
 - **2026 ENADE practice examination, BSc in Computer Science (IFSul Passo Fundo):** contributed to layout and editorial preparation of the question booklet. I do not claim authorship of the questions or prompts. The complete institutional material is not distributed on this website.

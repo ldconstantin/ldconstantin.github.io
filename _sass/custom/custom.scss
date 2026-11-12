@@ -913,3 +913,35 @@ b, strong { font-weight: 700; }
   margin-left: 0.2rem;
 }
 .solution-topic-nav a:focus-visible { outline: 2px solid var(--site-link); outline-offset: 2px; }
+
+/* Single-entry catalogue, direct code copying and related-solution wayfinding. */
+.solution-category-count { color: var(--site-muted); font-size: 0.85em; font-weight: 400; }
+.solution-secondary-topics { margin: 0 0 0.45rem; color: var(--site-muted); font-size: 0.9em; }
+.solution-code-tools {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.75rem;
+  margin-bottom: 0.55rem;
+}
+.solution-code-copy {
+  min-height: 2.75rem;
+  padding: 0.45rem 0.85rem;
+  color: var(--site-link);
+  background: var(--site-surface);
+  border: 1px solid var(--site-control);
+  border-radius: 0.2rem;
+  font: inherit;
+  cursor: pointer;
+}
+.solution-code-copy:hover:not(:disabled) { background: var(--site-hover); }
+.solution-code-copy:focus-visible { outline: 2px solid var(--site-link); outline-offset: 2px; }
+.solution-code-copy:disabled { opacity: 0.65; cursor: wait; }
+.solution-copy-feedback { color: var(--site-muted); font-size: 0.9em; }
+.solution-related {
+  margin-top: 1.5rem;
+  border-top: 1px solid var(--site-rule);
+  padding-top: 0.5rem;
+}
+.solution-related ul { margin-bottom: 0; }
+.solution-related a { display: inline-block; min-height: 2.75rem; padding-block: 0.45rem; }

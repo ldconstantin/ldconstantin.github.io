@@ -9,7 +9,7 @@
   <p class="solution-context"><strong>{% if lang == 'en' %}Platform{% else %}Plataforma{% endif %}:</strong>
     {% if solution.judge == 'examples' %}{% if lang == 'en' %}Algorithm example{% else %}Exemplo de algoritmo{% endif %}{% else %}{{ solution.judge }}{% endif %}
     · <strong>{% if lang == 'en' %}Topics{% else %}Assuntos{% endif %}:</strong>
-    {% for category in site.data.icpc_categories %}{% if solution.topics contains category.id %}{% unless forloop.first %}{% endunless %}<a href="{% if lang == 'en' %}{{ '/en/solutions/' | relative_url }}{% else %}{{ '/codigos/' | relative_url }}{% endif %}#solutions-{{ category.id }}">{% if lang == 'en' %}{{ category.en }}{% else %}{{ category.pt }}{% endif %}</a> {% endif %}{% endfor %}
+    {% for category in site.data.icpc_categories %}{% if solution.topics contains category.id %}{% if solution.primary_topic == category.id %}<a href="{% if lang == 'en' %}{{ '/en/solutions/' | relative_url }}{% else %}{{ '/codigos/' | relative_url }}{% endif %}#solutions-{{ category.id }}">{% if lang == 'en' %}{{ category.en }}{% else %}{{ category.pt }}{% endif %}</a>{% else %}<span>{% if lang == 'en' %}{{ category.en }}{% else %}{{ category.pt }}{% endif %}</span>{% endif %} {% endif %}{% endfor %}
   </p>
 
   <h2 id="approach">{% if lang == 'en' %}Approach{% else %}Ideia da solução{% endif %}</h2>
@@ -52,6 +52,10 @@
         · <a href="{{ solution.source_cpp | relative_url }}">{% if lang == 'en' %}Open C++ file{% else %}Abrir arquivo C++{% endif %}</a>
         {% if solution.cpp_revised %} · <a href="{{ solution.source | relative_url }}">{% if lang == 'en' %}Historical C++ source{% else %}C++ histórico original{% endif %}</a>{% endif %}
       </p>
+      <div class="solution-code-tools">
+        <button type="button" class="solution-code-copy" data-copy-code disabled aria-label="{% if lang == 'en' %}Copy C++ code{% else %}Copiar código C++{% endif %}">{% if lang == 'en' %}Copy code{% else %}Copiar código{% endif %}</button>
+        <span class="solution-copy-feedback" data-copy-status role="status" aria-live="polite"></span>
+      </div>
       <pre class="solution-source" data-solution-source="{{ solution.source_cpp | relative_url }}"><code class="language-cpp">{% if lang == 'en' %}Loading source…{% else %}Carregando código…{% endif %}</code></pre>
     </section>
     <section class="solution-code-panel" role="tabpanel" id="code-{{ solution.id }}-python-panel"
@@ -61,6 +65,10 @@
         {% else %}{% if lang == 'en' %}New Python adaptation (AI-assisted, 2026){% else %}Adaptação nova em Python (com auxílio de IA, 2026){% endif %}{% endif %}
         · <a href="{{ solution.source_python | relative_url }}">{% if lang == 'en' %}Open Python file{% else %}Abrir arquivo Python{% endif %}</a>
       </p>
+      <div class="solution-code-tools">
+        <button type="button" class="solution-code-copy" data-copy-code disabled aria-label="{% if lang == 'en' %}Copy Python code{% else %}Copiar código Python{% endif %}">{% if lang == 'en' %}Copy code{% else %}Copiar código{% endif %}</button>
+        <span class="solution-copy-feedback" data-copy-status role="status" aria-live="polite"></span>
+      </div>
       <pre class="solution-source" data-solution-source="{{ solution.source_python | relative_url }}"><code class="language-python">{% if lang == 'en' %}Loading source…{% else %}Carregando código…{% endif %}</code></pre>
     </section>
   </div>
@@ -70,6 +78,17 @@
   </div>
   <p class="solution-attribution">{% if lang == 'en' %}Attributed author{% else %}Autoria identificada{% endif %}: {{ solution.author | escape }} ·
   {% if lang == 'en' %}Historical repository{% else %}Repositório histórico{% endif %}: <a href="https://github.com/maratonaupf/codigos" target="_blank" rel="noopener noreferrer">Clube de Programação UPF</a>.</p>
+  <nav class="solution-related" aria-label="{% if lang == 'en' %}Related algorithm solutions{% else %}Soluções relacionadas{% endif %}">
+    <h2>{% if lang == 'en' %}Related solutions{% else %}Soluções relacionadas{% endif %}</h2>
+    <ul>
+      {% for related_id in solution.related_ids %}
+      {% assign related = site.data.icpc_solutions | where: 'id', related_id | first %}
+      {% if related %}
+        <li><a href="{% if lang == 'en' %}{{ related.detail_en | relative_url }}{% else %}{{ related.detail_pt | relative_url }}{% endif %}">{% if lang == 'en' %}{{ related.title_en | escape }}{% else %}{{ related.title_pt | escape }}{% endif %}</a></li>
+      {% endif %}
+      {% endfor %}
+    </ul>
+  </nav>
 </article>
 <script defer data-manual src="{{ '/assets/js/vendor/prism-bundle.min.js' | relative_url }}"></script>
 <script defer src="{{ '/assets/js/solution-source.js' | relative_url }}"></script>

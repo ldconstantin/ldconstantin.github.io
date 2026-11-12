@@ -31,6 +31,11 @@ for item in entries:
     assert re.fullmatch(r"[a-f0-9]{40}", item["original_commit"])
     assert item["original_commit"] in item["original_url"]
     assert item["topics"] and set(item["topics"]) <= ids
+    assert item["primary_topic"] == item["topics"][0], item["id"]
+    assert len(item["related_ids"]) == 3, item["id"]
+    assert len(set(item["related_ids"])) == 3, item["id"]
+    assert item["id"] not in item["related_ids"], item["id"]
+    assert all(other in {entry["id"] for entry in entries} for other in item["related_ids"])
     assert item["validation"] == "compile-only"
     for field in ["summary_pt", "summary_en", "method_pt", "method_en", "limits_pt", "limits_en", "detail_pt", "detail_en"]:
         assert isinstance(item[field], str) and len(item[field]) >= 12, (item["id"], field)
@@ -102,6 +107,12 @@ if len(sys.argv) == 3 and sys.argv[1] == "--site":
             assert item["original_url"] in detail, (route, "missing provenance")
             assert 'data-solution-source=' in detail, route
             assert 'solution-source.js' in detail, route
+            assert detail.count('data-copy-code') == 2, (route, "copy buttons missing")
+            assert 'class="solution-related"' in detail, (route, "related navigation missing")
+            for related_id in item["related_ids"]:
+                related = next(entry for entry in entries if entry["id"] == related_id)
+                target = related["detail_en"] if route_key == "detail_en" else related["detail_pt"]
+                assert f'href="{target}"' in detail, (route, target)
             assert 'prism-bundle.min.js' in detail, route
             assert 'language-cpp' in detail and 'language-python' in detail, route
             if item.get("cpp_revised"):
@@ -119,6 +130,12 @@ if len(sys.argv) == 3 and sys.argv[1] == "--site":
         assert "Academic cap" not in page  # The favicon is external, not a decorative page image.
         assert 'rel="icon"' in page
         assert 'class="solution-topic-nav"' in page and 'href="#solutions-' in page, url
+        categories_used = {entry["primary_topic"] for entry in entries}
+        assert page.count('class="solutions-category"') == len(categories_used), url
+        assert page.count('class="solution-title"') == len(entries), (url, "duplicate solution listings")
+        for category in categories:
+            section_anchor = f'id="solutions-{category["id"]}"'
+            assert (section_anchor in page) == (category["id"] in categories_used), (url, category["id"])
         assert "LinkedIn" in page or "solutions" in page.lower() or "codigos" in page.lower()
         for item in entries:
             assert item["source"] in page, (url, item["source"])
