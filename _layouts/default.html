@@ -3,6 +3,16 @@ layout: table_wrappers
 ---
 {% assign locale = page.locale | default: 'en' %}
 {% assign ui = site.data.locales[locale] %}
+{% assign easy_language_data = site.data.easy_read[locale] %}
+{% assign easy_item = easy_language_data[page.translation_key] %}
+{% assign easy_key_start = page.translation_key | slice: 0, 9 %}
+{% assign easy_solution = nil %}
+{% if easy_key_start == 'solution/' %}
+  {% assign easy_solution_id = page.translation_key | remove_first: 'solution/' %}
+  {% assign easy_solution = site.data.icpc_solutions | where: 'id', easy_solution_id | first %}
+{% endif %}
+{% assign easy_available = false %}
+{% if easy_item or easy_solution %}{% assign easy_available = true %}{% endif %}
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang }}" data-site-theme="{{ site.site_theme | default: 'air' }}">
 {% include head.html %}
@@ -23,13 +33,29 @@ layout: table_wrappers
       {% capture breadcrumbs %}{% include components/breadcrumbs.html %}{% endcapture %}
       {{ breadcrumbs }}
       <div id="main-content" class="main-content">
+        {% if easy_available %}
+        <div class="easy-reading-controls" data-easy-reading-controls data-pagefind-ignore hidden>
+          <button id="easy-reading-toggle" class="easy-reading-toggle" type="button" aria-pressed="false"
+                  aria-controls="easy-reading-panel"
+                  data-easy-label="{{ ui.easy_read | escape }}"
+                  data-full-label="{{ ui.full_reading | escape }}">{{ ui.easy_read | escape }}</button>
+          <span class="easy-reading-helper" id="easy-reading-helper"
+                data-default="{{ ui.easy_read_helper | escape }}"
+                data-active="{{ ui.easy_read_active | escape }}">{{ ui.easy_read_helper | escape }}</span>
+        </div>
+        {% endif %}
         <main lang="{{ page.lang | default: site.lang }}" {% unless page.search_exclude %}data-pagefind-body{% endunless %}{% if page.translation_key == 'home' and locale == 'pt' %} data-pagefind-meta="url:{{ '/?lang=pt' | relative_url }}"{% endif %}>
+          {% if easy_available %}
+            {% include easy_read.html item=easy_item solution=easy_solution lang=locale %}
+            <div id="full-reading-content" data-standard-reading>
+          {% endif %}
           {% if site.heading_anchors != false %}
             {% include vendor/anchor_headings.html html=content beforeHeading="true" anchorBody="<svg viewBox=\"0 0 16 16\" aria-hidden=\"true\"><use xlink:href=\"#svg-link\"></use></svg>" anchorClass="anchor-heading" anchorAttrs="aria-labelledby=\"%html_id%\"" %}
           {% else %}
             {{ content }}
           {% endif %}
           {% if page.has_toc != false %}{% include components/children_nav.html %}{% endif %}
+          {% if easy_available %}</div>{% endif %}
         </main>
         <div class="page-footer">{% capture page_footer %}{% include components/footer.html %}{% endcapture %}{{ page_footer | replace: site.back_to_top_text, ui.back_to_top }}</div>
       </div>

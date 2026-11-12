@@ -1,0 +1,246 @@
+{
+  "pt": {
+    "home": {
+      "title": "Conheça meu trabalho",
+      "intro": "Sou Leonardo D. Constantin. Sou professor de Computação no IFSul, em Passo Fundo.",
+      "points": [
+        "Ensino programação, algoritmos e outras áreas da Computação em cursos técnicos e superiores.",
+        "Também preparo estudantes para competições de programação.",
+        "Concluí o bacharelado em Ciência da Computação na UPF, em 2023.",
+        "Concluí a especialização em Metodologias Ativas para Desenvolvimento no Ensino Superior, na UPF, em 2026.",
+        "No trabalho de graduação, estudei problemas da Maratona SBC de Programação, de 2013 a 2023.",
+        "Este site reúne minhas atividades e 18 exemplos de programas. Cada exemplo tem explicação e código."
+      ],
+      "links": [
+        {
+          "label": "Veja as disciplinas e os materiais de ensino",
+          "url": "/ensino/"
+        },
+        {
+          "label": "Conheça o trabalho de graduação",
+          "url": "/pesquisa/"
+        },
+        {
+          "label": "Explore os exemplos de programação",
+          "url": "/codigos/"
+        }
+      ]
+    },
+    "teaching": {
+      "title": "Meu trabalho como professor",
+      "intro": "Dou aulas em cursos técnicos e superiores no IFSul, em Passo Fundo.",
+      "points": [
+        "No segundo semestre de 2026, ensino Estruturas de Dados III, Sistemas Operacionais II, Criação de Páginas Web e Programação Orientada a Objetos.",
+        "Também já ensinei lógica, algoritmos, C++, JavaScript e programação competitiva.",
+        "Preparei uma atividade de estudo que compara dois algoritmos: Kruskal e Prim.",
+        "Essa atividade é uma proposta. O site não diz que ela já foi aplicada a uma turma.",
+        "Ajudei na diagramação do simulado ENADE de 2026. Não escrevi as questões."
+      ],
+      "links": [
+        {
+          "label": "Veja o exemplo de Kruskal",
+          "url": "/codigos/kruskal/"
+        },
+        {
+          "label": "Veja o exemplo de Prim",
+          "url": "/codigos/prim/"
+        },
+        {
+          "label": "Veja todos os exemplos de código",
+          "url": "/codigos/"
+        }
+      ]
+    },
+    "research": {
+      "title": "Meus estudos acadêmicos",
+      "intro": "Estudo como ensinar programação e como resolver problemas com algoritmos.",
+      "points": [
+        "Em 2023, concluí meu trabalho de graduação na UPF.",
+        "Analisei problemas da primeira fase da Maratona SBC de Programação, de 2013 a 2023.",
+        "Separei duas informações: o assunto de cada problema e sua dificuldade.",
+        "Em 15 problemas, não foi possível identificar o assunto com precisão. Dez deles eram de 2022 e 2023.",
+        "O trabalho explica quais dados faltaram. Também indica estudos que podem continuar essa pesquisa.",
+        "Participei de iniciação científica na UPF entre 2013 e 2014, com bolsa PROBIC/Fapergs."
+      ],
+      "links": [
+        {
+          "label": "Veja o acervo de códigos",
+          "url": "/codigos/"
+        },
+        {
+          "label": "Veja as atividades de ensino",
+          "url": "/ensino/"
+        }
+      ]
+    },
+    "extension": {
+      "title": "Projetos e atividades com a comunidade",
+      "intro": "Participei de projetos universitários e ajudei estudantes a praticar programação.",
+      "points": [
+        "Em 2014, participei do Clube de Programação da UFFS. O certificado registra 120 horas.",
+        "Em 2017 e 2018, fui bolsista na FabSoft, na UPF. O certificado registra 772 horas.",
+        "Na FabSoft, ajudei a preparar computadores e automatizar a instalação de programas.",
+        "Em 2018, ministrei uma oficina de Linux na UPF.",
+        "Participei da Maratona SBC como competidor, treinador e narrador, em períodos diferentes.",
+        "Em 2025, treinei uma equipe do IFSul que chegou à final brasileira da competição."
+      ],
+      "links": [
+        {
+          "label": "Veja minha atuação no ensino",
+          "url": "/ensino/"
+        },
+        {
+          "label": "Conheça os códigos de programação",
+          "url": "/codigos/"
+        }
+      ]
+    },
+    "solutions": {
+      "title": "Aprenda com os exemplos de código",
+      "intro": "Este acervo tem 18 exemplos de algoritmos e programas.",
+      "points": [
+        "Cada exemplo tem uma página própria. Ela explica o problema e a ideia usada para resolvê-lo.",
+        "Você pode consultar uma versão em C++ e outra em Python.",
+        "Os arquivos históricos foram preservados. Algumas versões novas foram criadas ou corrigidas com auxílio de inteligência artificial.",
+        "Os testes feitos neste site não provam que todas as soluções são aceitas hoje nos sites de competição.",
+        "Use o catálogo completo para escolher um assunto e abrir o exemplo."
+      ],
+      "links": [
+        {
+          "label": "Comece por Kruskal: grafos",
+          "url": "/codigos/kruskal/"
+        },
+        {
+          "label": "Veja programação dinâmica",
+          "url": "/codigos/bee1034-bottomup/"
+        },
+        {
+          "label": "Veja uma árvore de segmentos",
+          "url": "/codigos/bee1500/"
+        }
+      ]
+    }
+  },
+  "en": {
+    "home": {
+      "title": "About my work",
+      "intro": "I am Leonardo D. Constantin. I teach computing at IFSul in Passo Fundo, Brazil.",
+      "points": [
+        "I teach programming, algorithms, and other computing subjects in technical and undergraduate courses.",
+        "I also coach students for programming contests.",
+        "I completed my Computer Science degree at UPF in 2023.",
+        "I completed a graduate specialization at UPF in 2026. Its official Portuguese title is Metodologias Ativas para Desenvolvimento no Ensino Superior.",
+        "My undergraduate thesis studied programming contest problems from 2013 to 2023.",
+        "This site presents my academic work and 18 code examples. Each example has an explanation and source files."
+      ],
+      "links": [
+        {
+          "label": "Read about my teaching",
+          "url": "/en/teaching/"
+        },
+        {
+          "label": "Read about my undergraduate thesis",
+          "url": "/en/research/"
+        },
+        {
+          "label": "Explore programming examples",
+          "url": "/en/solutions/"
+        }
+      ]
+    },
+    "teaching": {
+      "title": "My teaching work",
+      "intro": "I teach technical and undergraduate courses at IFSul in Passo Fundo.",
+      "points": [
+        "In the second half of 2026, I teach Data Structures III, Operating Systems II, Web Page Development, and Object-Oriented Programming.",
+        "I have also taught logic, algorithms, C++, JavaScript, and competitive programming.",
+        "I prepared a study activity comparing two algorithms: Kruskal and Prim.",
+        "This activity is a proposal. The website does not claim that it has already been used with a class.",
+        "I helped lay out the 2026 ENADE practice exam booklet. I did not write the questions."
+      ],
+      "links": [
+        {
+          "label": "See the Kruskal example",
+          "url": "/en/solutions/kruskal/"
+        },
+        {
+          "label": "See the Prim example",
+          "url": "/en/solutions/prim/"
+        },
+        {
+          "label": "Explore all code examples",
+          "url": "/en/solutions/"
+        }
+      ]
+    },
+    "research": {
+      "title": "My academic studies",
+      "intro": "I study how to teach programming and solve problems using algorithms.",
+      "points": [
+        "I completed my undergraduate thesis at UPF in 2023.",
+        "I studied problems from the first round of the Maratona SBC programming contest, from 2013 to 2023.",
+        "I examined two things separately: what each problem was about, and how difficult it was.",
+        "For 15 problems, the topic could not be classified precisely. Ten were from 2022 and 2023.",
+        "The thesis explains which information was missing and what further research might help.",
+        "I also held an undergraduate research scholarship at UPF in 2013 and 2014."
+      ],
+      "links": [
+        {
+          "label": "Explore the code archive",
+          "url": "/en/solutions/"
+        },
+        {
+          "label": "Read about teaching",
+          "url": "/en/teaching/"
+        }
+      ]
+    },
+    "extension": {
+      "title": "Projects and community activities",
+      "intro": "I took part in university projects and helped students practice programming.",
+      "points": [
+        "In 2014, I joined the UFFS Programming Club. My certificate records 120 hours.",
+        "In 2017 and 2018, I received a scholarship at FabSoft, UPF. My certificate records 772 hours.",
+        "At FabSoft, I helped prepare computers and automate software installation.",
+        "In 2018, I taught a Linux workshop at UPF.",
+        "I have been a contestant, coach, and commentator for the Maratona SBC contest at different times.",
+        "In 2025, I coached an IFSul team that reached the Brazilian final."
+      ],
+      "links": [
+        {
+          "label": "Read about my teaching",
+          "url": "/en/teaching/"
+        },
+        {
+          "label": "Explore the code archive",
+          "url": "/en/solutions/"
+        }
+      ]
+    },
+    "solutions": {
+      "title": "Learn from code examples",
+      "intro": "This archive contains 18 algorithm and programming examples.",
+      "points": [
+        "Each example has its own page. It explains the problem and the main idea of the solution.",
+        "You can read the C++ and Python versions.",
+        "The historical files are preserved. Some new versions were created or corrected with AI assistance.",
+        "Local tests do not prove that every solution is currently accepted by a contest judge.",
+        "Open the complete catalogue to choose a topic and read a solution."
+      ],
+      "links": [
+        {
+          "label": "Start with Kruskal and graphs",
+          "url": "/en/solutions/kruskal/"
+        },
+        {
+          "label": "Learn about dynamic programming",
+          "url": "/en/solutions/bee1034-bottomup/"
+        },
+        {
+          "label": "See a segment tree",
+          "url": "/en/solutions/bee1500/"
+        }
+      ]
+    }
+  }
+}
